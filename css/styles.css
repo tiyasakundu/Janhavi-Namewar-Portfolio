@@ -1,0 +1,482 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Base Styles for Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        display: none; /* Hide menu by default */
+        z-index: 100;
+        text-align: right;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Show Hamburger menu icon */
+    .hamburger {
+        display: block;
+        font-size: 28px;
+    }
+
+    /* Toggle Menu: When clicked, show the dropdown */
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 70vh;
+    position: relative;
+    padding-left: 100px;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 80%;
+    margin: 0;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    top: -40px; /* Moves the profile image upwards to align with bubbles */
+}
+
+.text-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.bubble-name {
+    background-color: rgba(100, 169, 249, 0.212); /* Light blue background */
+    color: #2980b9;
+    padding: 15px 30px;
+    border-radius: 20px;
+    text-align: left;
+    width: 67%;
+    font-size: 21px;
+    position: absolute;
+    top: -50px;
+    height: 54%;
+    z-index: 0;
+    display: flex;
+    align-items: top;
+    justify-content: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bubble-1, .bubble-2 {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    margin-left: 5px;
+    border-radius: 20px;
+    position: relative;
+    font-size: 20px;
+    /* font-weight: bold; */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    margin-top: 0;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+.bubble-1 {
+    width: 65%;
+    animation-delay: 1s;
+}
+
+.bubble-2 {
+    max-width: 65%;
+    animation-delay: 2s;
+}
+
+/* Resume Button */
+.resume-btn {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid #2980b9;
+    margin-left: 5px;
+    border-radius: 20px;
+    color: #2980b9;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.resume-bubble {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.resume-bubble.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* On hover, change the button color and tilt the icon */
+.resume-btn:hover {
+    background-color: #2980b9; /* Change background to blue on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+.resume-btn:hover i {
+    transform: rotate(20deg);  /* Tilt the PDF icon 20 degrees to the right */
+    transition: transform 0.3s ease;  /* Smooth rotation transition */
+}
+
+/* Icon */
+.resume-btn i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease; /* Smooth rotation when tilting */
+}
+
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    font-size: 4rem;
+    animation: bounce 1.5s infinite;
+    color: #2980b9;
+    text-align: center;
+}
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow for effect */
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+/* Featured Projects Section */
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    color: #2980b9;
+    font-size: 1.2em;
+}
+
+.featured-projects .title h1 {
+    font-size: 2.7rem; /* Increase the size of the heading */
+    font-weight: bold;
+    color: #1e5f89; /* Color to match your theme */
+    text-align: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+}
+/* Background Image Section */
+.project-bg img{
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-item1, .project-item2 {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust the width if needed */
+    margin-right: 1%; /* Spacing between the project items */
+}
+
+.project-item1, .project-item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.case-study-btn {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 12px 22px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure button stays above the image */
+}
+
+.project-item1 .case-study-btn{
+    bottom: 60px; /* Distance from the bottom */
+    left: 16%;
+    background-color: #088F8F;
+    border: 2px solid #088F8F;
+}
+
+.project-item2 .case-study-btn{
+    bottom: 75px; /* Distance from the bottom */
+    left: 15%;
+    background-color: #0A68A7;
+    border: 2px solid #0A68A7;
+}
+.project-item1 .case-study-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+.project-item2 .case-study-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+.tagline .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.tagline .text a {
+    color: #2980b9;
+}
+
+.tagline .text a:hover {
+    color: #11334a;
+}
+
+/* ------------------------ RESPONSIVE STYLES ------------------------ */
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .intro {
+        padding-left: 40px;
+    }
+
+    .profile {
+        gap: 10px;
+    }
+
+    .profile-img {
+        width: 50px;
+        height: 50px;
+        top: -30px;
+    }
+
+    .text-content {
+        max-width: 90%;
+    }
+
+    .bubble-name {
+        font-size: 16px;
+        width: 80%;
+        height: auto;
+    }
+
+    .bubble-1, .bubble-2 {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .bubble-1 {
+        max-width: 100%;
+    }
+
+    .bubble-2 {
+        max-width: 80%;
+    }
+
+    .resume-btn {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+
+    .arrow {
+        font-size: 40px;
+    }
+
+    .featured-projects {
+        font-size: 1em;
+        padding-left: 40px;
+    }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .intro {
+        padding-left: 20px;
+    }
+
+    .profile {
+        gap: 5px;
+    }
+
+    .profile-img {
+        width: 40px;
+        height: 40px;
+        top: -20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .bubble-name {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .bubble-1, .bubble-2 {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .bubble-1 {
+        max-width: 100%;
+    }
+
+    .bubble-2 {
+        max-width: 85%;
+    }
+
+    .resume-btn {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    .arrow {
+        font-size: 30px;
+    }
+
+    .featured-projects {
+        font-size: 0.9em;
+        padding-left: 20px;
+    }
+}

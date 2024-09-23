@@ -28,3 +28,8 @@ window.onscroll = function() {
         document.body.classList.remove('scrolled');
     }
 };
+
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+
