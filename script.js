@@ -33,3 +33,29 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
 
+
+const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+    const carouselInner = carousel.querySelector('.carousel-track');
+    const carouselContent = Array.from(carouselInner.children);
+    
+    // Clone each item and append to the track for infinite effect
+    carouselContent.forEach(item => {
+        const duplicatedItem = item.cloneNode(true);
+        carouselInner.appendChild(duplicatedItem);
+    });
+
+    // Set initial animation
+    carouselInner.style.animation = "move 30s linear infinite";
+
+    // Pause animation on hover
+    carouselInner.addEventListener('mouseenter', () => {
+        carouselInner.style.animationPlayState = 'paused'; // Pause the animation
+    });
+
+    // Resume animation when hover ends
+    carouselInner.addEventListener('mouseleave', () => {
+        carouselInner.style.animationPlayState = 'running'; // Resume the animation
+    });
+});

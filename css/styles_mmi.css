@@ -26,12 +26,14 @@ nav {
 }
 
 nav .logo {
-    height: 50px;
+    height: 60px;
+    margin-left: 30px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    margin-right: 60px;
 }
 
 nav ul li {
@@ -41,7 +43,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -67,6 +69,46 @@ body.scrolled nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.mockup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mockup img {
+    width: 700px; /* Make the card smaller to appear as a box */
+    height: 500px; /* Set height to create square cards */
+    gap: 30px; /* Space between smaller cards */
+    background-color: transparent;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 1.3rem;
+    color: #121212;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #121212;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
 }
 
 /* Responsive Styles using media queries */
