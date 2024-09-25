@@ -64,6 +64,12 @@ body.scrolled nav {
     transition: background-color 0.3s ease-in-out;
 }
 
+.project-bg img{
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 /* Footer Section */
 footer {
