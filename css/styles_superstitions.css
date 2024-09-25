@@ -83,11 +83,11 @@ body.scrolled nav {
 /* Card Styles for Small Boxes */
 .card {
     position: relative;
-    width: 300px; /* Adjusted width for smaller screens */
-    height: 200px; /* Set height to create square cards */
+    width: 500px; /* Adjusted width for smaller screens */
+    height: 250px; /* Set height to create square cards */
     overflow: hidden;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -251,7 +251,7 @@ body.scrolled nav {
 
     .card {
         width: 100%; /* Full width cards on small screens */
-        height: 150px; /* Adjust height */
+        height: 200px; /* Adjust height */
     }
 
     .project-bg img {

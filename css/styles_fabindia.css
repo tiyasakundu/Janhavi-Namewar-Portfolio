@@ -64,11 +64,143 @@ body.scrolled nav {
     transition: background-color 0.3s ease-in-out;
 }
 
-.project-bg img{
+.project-bg img {
     width: 100%; /* Adjust the height as needed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.video {
+    margin: 60px auto; /* Center horizontally and space vertically */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.video img {
+    width: 800px; /* Adjust as necessary */
+    max-width: 100%; /* Make responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.carousel {
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.carousel-track {
+    display: flex;
+}
+
+.carousel-img {
+    height: 350px; /* Fixed height for images */
+    width: 250px; /* Fixed width for images */
+    margin: 20px; /* Space between images */
+    border-radius: 20px; /* Rounded corners */
+    object-fit: cover; /* Cover the container */
+    transition: transform 0.5s ease;
+    filter: brightness(0.7);
+}
+
+/* Image hover effect */
+.carousel-img:hover {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+
+/* Arrow Styles */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 10px;
+    display: none; /* Initially hide the left arrow */
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* 2nd carousel */
+/* Carousel */
+.carousel-2 {
+    position: relative;
+    overflow: hidden; /* Hide overflow to show only active slide */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Optional: Set a max width */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-inner-2 {
+    display: flex; /* Align slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+}
+
+.carousel-2 img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: rgb(34, 34, 34);
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 3rem;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Footer Section */
@@ -98,10 +230,8 @@ footer p {
     margin-bottom: 30px;
 }
 
-
-/* Responsive Styles using media queries */
-@media (max-width: 1024px) {
-    /* Adjust padding for the navbar on smaller devices */
+/* Responsive Styles */
+@media (max-width: 1200px) {
     nav {
         padding: 10px 20px;
     }
@@ -111,12 +241,17 @@ footer p {
     }
 
     nav ul li a {
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
+    .video img {
+        width: 100%; /* Make video image responsive */
+        max-width: 800px; /* Limit max width */
+    }
+
+    .carousel-img {
+        width: 200px; /* Adjust image width for medium screens */
+        height: 300px; /* Maintain aspect ratio */
     }
 }
 
@@ -135,23 +270,22 @@ footer p {
         display: block; /* Show hamburger menu */
     }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    /* Toggle hamburger menu */
     nav.active ul {
         display: flex;
         flex-direction: column;
     }
 
-    .project-bg img {
-        width: 100%;
+    .video {
+        margin: 30px auto; /* Adjust margin for smaller screens */
+    }
+
+    .video img {
+        width: 100%; /* Make video image responsive */
         height: auto; /* Maintain aspect ratio */
+    }
+
+    .carousel-img {
+        width: 200px; /* Further adjust image width for small screens */
     }
 }
 
@@ -165,8 +299,59 @@ footer p {
         font-size: 14px;
     }
 
-    .project-bg img {
-        width: 100%;
-        height: auto;
+    .video img {
+        width: 100%; /* Ensure it takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .carousel-img {
+        width: 70px; /* Further adjust image width */
+        height: 100px;
+        margin: 5px;
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 1rem; /* Smaller font for footer */
+    }
+
+    footer p {
+        font-size: 0.85rem; /* Smaller footer text */
+    }
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.1rem; /* Smaller font size on tablets */
+        padding: 15px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1.5rem; /* Smaller icons on tablets */
+        gap: 15px; /* Reduce gap */
+    }
+
+    footer h3 {
+        font-size: 0.8rem;
+    }
+    footer p {
+        font-size: 0.85rem; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer p {
+        font-size: 0.5rem; /* Even smaller footer text */
     }
 }
