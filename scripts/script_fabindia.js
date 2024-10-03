@@ -99,3 +99,23 @@ setInterval(nextSlide, 3000);
 
 // Show the initial slide
 showSlide(currentSlide)
+
+window.addEventListener("load", function() {
+    var loader = document.getElementById("loader");
+    loader.style.display = "none"; // Hide loader once content loads
+});
+
+
+// Get the current URL path
+const currentPath = window.location.pathname;
+
+// Get all nav links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Loop through the nav links
+navLinks.forEach(link => {
+    // If the link's href matches the current page's path, add the 'active' class
+    if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+    }
+});

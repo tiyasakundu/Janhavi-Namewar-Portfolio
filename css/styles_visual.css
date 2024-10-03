@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background: white;
     color: #333;
     overflow-x: hidden;
@@ -33,7 +33,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 60px;
+    margin-right: 0;
 }
 
 nav ul li {
@@ -50,11 +50,12 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Change navbar background on scroll */
@@ -63,6 +64,73 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow for effect */
     transition: background-color 0.3s ease-in-out;
 }
+
+.hamburger, .cross {
+    display: none;
+}
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 760px) {
+    .hamburger, .cross {
+        display: contents;
+    }
+
+    nav {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
+}
+
 
 /* Skill Buttons Styles */
 .skill-buttons {
@@ -74,6 +142,7 @@ body.scrolled nav {
 
 /* UI UX Button (Make it larger) */
 .skill-btn1 {
+    font-family: 'Work Sans', sans-serif;
     padding: 15px 65px; 
     background-color: white;
     color: #333;
@@ -86,6 +155,7 @@ body.scrolled nav {
 
 /* Visual & Creative Skills Button (Make it smaller) */
 .skill-btn2 {
+    font-family: 'Work Sans', sans-serif;
     padding: 15px 25px; 
     background-color: #2980b9;
     color: white;
@@ -112,7 +182,11 @@ body.scrolled nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px; /* Space between cards */
-    margin: 60px 0;
+    padding-top: 40px;
+    background-image: url('visual design.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Button Styles */
@@ -120,7 +194,7 @@ body.scrolled nav {
     position:absolute;
     padding: 15px 40px;
     margin-top: 240px;
-    left:320px;
+    left:310px;
     color: white;
     border: none;
     text-decoration: none;
@@ -133,19 +207,20 @@ body.scrolled nav {
 }
 
 .image-btn1 {
-    background-color: #2c5a4c;
+    background-color: white;
+    color: #333;
 }
 
 .image-btn2 {
-    background-color: #A52A2A;
+    background-color: #2c5a4c;
 }
 
 .image-btn3 {
-    background-color: #0b3354;
+    background-color: #A52A2A;
 }
 
 .image-btn4 {
-    background-color: #245883;
+    background-color: #0b3354;
 }
 
 
@@ -160,8 +235,12 @@ body.scrolled nav {
     width: 500px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #f9f9f9;
-    margin-top: 20px; /* Add some space above the card */
+    /* margin-top: 20px; Add some space above the card */
+    background-color: transparent;
+}
+
+.card-text {
+    padding-bottom: 40px; /* Ensure extra space below the text of the last card */
 }
 
 /* Image Styling */
@@ -169,7 +248,7 @@ body.scrolled nav {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 20px; /* Rounded bottom corners to match button */
+    border-radius: 20px;
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -190,11 +269,13 @@ body.scrolled nav {
 
 /* Card Text Section */
 .card-text {
+    margin-top: 20px;
     text-align: left; /* Align text to the left */
     width: 500px; /* Match card width */
 }
 
 .card-text h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
     color: #727272;
     padding-bottom: 5px;
 }
@@ -232,10 +313,13 @@ body.scrolled nav {
 
 .carousel-inner {
     display: flex; /* Ensure images are in a row */
+    transition: transform 0.5s ease-in-out;
+    animation: move 60s linear infinite; /* Default infinite animation on larger screens */
 }
 
 .carousel-track {
     display: flex; /* Display images in a row */
+    width: 200%;
 }
 
 .carousel-img {
@@ -252,19 +336,18 @@ body.scrolled nav {
 .carousel-img:hover {
     filter: brightness(1);
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 @keyframes move {
     0% {
-        transform: translateX(0); /* Start from the first image */
-    }
-    50% {
-        transform: translateX(-150%); /* Move to the left, showing the last image */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(0); /* Move back to the first image */
+        transform: translateX(-50%); /* Adjust depending on the number of items */
     }
 }
+
 
 /* Footer Section */
 footer {
@@ -286,6 +369,7 @@ footer .social-icons {
 
 footer h3 {
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 footer p {
@@ -293,3 +377,262 @@ footer p {
     margin-bottom: 30px;
 }
 
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.1rem; /* Smaller font size on tablets */
+        padding: 15px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1.5rem; /* Smaller icons on tablets */
+        gap: 15px; /* Reduce gap */
+    }
+
+    footer h3 {
+        font-size: 0.8rem;
+    }
+    footer p {
+        font-size: 0.85rem; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer p {
+        font-size: 0.5rem; /* Even smaller footer text */
+    }
+}
+
+/* Responsive section for 1024px */
+@media (max-width: 1024px) {
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 30px; /* Increased gap for tablet screens */
+    }
+
+    .skill-btn1 {
+        padding: 12px 85px; /* Medium padding */
+        font-size: 1.5rem;
+    }
+
+    .skill-btn2 {
+        padding: 12px 20px;
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 90%; /* Full width on small screens */
+        max-width: 600px; /* Limit max width */
+        height: auto;
+    }
+
+    .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
+        padding: 12px 20px;
+        font-size: 1.3rem;
+        left: 67%; /* Center the buttons */
+        bottom: 35%;
+    }
+
+    .card img {
+        cursor:default;
+    }
+
+    .card-text {
+        width: 100%; /* Full width for text */
+    }
+
+    .card-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .card-text p {
+        font-size: 1.5rem;
+    }
+
+    .arrow-container {
+        display: none;
+    }
+
+    .carousel-img {
+        height: 300px; /* Reduce image height */
+        margin: 15px; /* Adjust spacing between images */
+    }
+
+    /* Stop the infinite animation for small screens */
+    .carousel-inner {
+        width: 100%;
+        animation: none; /* Disable animation */
+        overflow-x: scroll; /* Enable scrolling on small screens */
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
+    
+
+    .card:hover img {
+        transform: none; /* No zoom */
+        filter: none; /* No brightness change */
+        transition: none; /* Disable transition */
+    }
+    
+
+}
+
+
+/* Responsive section for 768px */
+@media (max-width: 768px) {
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 30px; /* Increased gap for tablet screens */
+    }
+
+    .skill-btn1 {
+        padding: 10px 55px; /* Medium padding */
+        font-size: 1rem;
+    }
+
+    .skill-btn2 {
+        padding: 10px 10px;
+        font-size: 1rem;
+    }
+
+    .image-cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        padding-top: 10px;
+    }
+
+    .card {
+        width: 90%; /* Full width on small screens */
+        max-width: 400px; /* Limit max width */
+    }
+
+    .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+        left: 65%; /* Center the buttons */
+        bottom: 40%;
+    }
+
+    /* Image height adjustment */
+    .card img {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
+
+    .card-text {
+        width: 100%; /* Full width for text */
+    }
+
+    .card-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-text p {
+        font-size: 1rem;
+    }
+
+    .arrow-container {
+        display: none;
+    }
+
+    .carousel-img {
+        height: 200px; /* Further reduce image height */
+        margin: 10px; /* Reduce margin between images */
+    }
+
+    /* Stop the infinite animation for small screens */
+    .carousel-inner {
+        animation: none; /* Disable animation */
+    }
+
+    .card img {
+        cursor:default;
+    }
+
+    .card:hover img {
+        transform: none; /* No zoom */
+        filter: none; /* No brightness change */
+        transition: none; /* Disable transition */
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 30px; /* Increased gap for tablet screens */
+    }
+
+    .skill-btn1 {
+        padding: 8px 55px; /* Medium padding */
+        font-size: 0.8rem;
+    }
+
+    .skill-btn2 {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
+        padding: 9px 18px;
+        font-size: 0.8rem;
+        left: 58%; /* Center the buttons */
+        bottom: 40%;
+    }
+
+    .card {
+        width: 80%; /* Full width on small screens */
+        max-width: 400px; /* Limit max width */
+    }
+
+    .image-cards{
+        padding-top: 10px;
+    }
+
+    .card-text h2 {
+        font-size: 1rem;
+    }
+
+    .card-text p {
+        font-size: 0.8rem;
+    }
+
+    .carousel-img {
+        height: 200px; /* Small image height for mobile */
+        margin: 5px; /* Minimal spacing for mobile */
+    }
+
+    /* Stop the infinite animation for small screens */
+    .carousel-inner {
+        animation: none; /* Disable animation */
+    }
+
+    .card img {
+        cursor:default;
+    }
+
+    .card:hover img {
+        transform: none; /* No zoom */
+        filter: none; /* No brightness change */
+        transition: none; /* Disable transition */
+    }
+
+
+}

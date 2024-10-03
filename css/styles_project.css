@@ -6,8 +6,7 @@
 }
 
 body {
-    /* font-family: 'Arial', 'Helvetica', sans-serif; */
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background: white;
     color: #333;
     overflow-x: hidden;
@@ -34,7 +33,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 60px;
+    margin-right: 0;
 }
 
 nav ul li {
@@ -51,6 +50,89 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow for effect */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hamburger, .cross {
+    display: none;
+}
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 760px) {
+
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    
+    nav {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
+}
+
 /* Skill Buttons Styles */
 .skill-buttons {
     display: flex;
@@ -61,6 +143,7 @@ nav ul li a:hover {
 
 /* UI UX Button (Make it larger) */
 .skill-btn1 {
+    font-family: "Work Sans", sans-serif;
     padding: 15px 65px; /* Increased padding for a larger button */
     background-color: #2980b9;
     color: white;
@@ -73,6 +156,7 @@ nav ul li a:hover {
 
 /* Visual & Creative Skills Button (Make it smaller) */
 .skill-btn2 {
+    font-family: "Work Sans", sans-serif;
     padding: 15px 25px; /* Reduced padding for a smaller button */
     background-color: white;
     color: #333;
@@ -82,7 +166,6 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 
 /* Pop-up Effect on Hover for UI UX Button */
 .skill-btn1:hover {
@@ -94,112 +177,131 @@ nav ul li a:hover {
     color: white;
 }
 
-
-
 /* Projects Section */
 .projects-section {
-    padding: 60px 0;
-    background-color: #ffffff;
+    padding: 0; /* Remove padding for full-width background coverage */
+    margin: 0; /* Ensure no gaps between project cards */
     display: flex;
     flex-direction: column;
-    gap: 80px;
 }
+
 
 /* Project Card */
-.project-card {
+.project-card1, .project-card2, .project-card3 {
+    width: 100vw; /* Full viewport width */
+    position: relative; /* Ensure proper positioning for background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0; /* Remove margin between cards */
+    overflow: hidden;
+    padding-left: 180px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: auto;
-    width: 80%;
-    max-width: 1200px;
-    gap: 20px;
-    margin-bottom: 40px; /* Added margin-bottom for consistent spacing */
-    transition: box-shadow 0.3s ease;
+    z-index: 2; /* Ensure content is above the background */
 }
 
-/* Ensuring consistent spacing across all project cards */
-.project-card:last-child {
-    margin-bottom: 0; /* Remove bottom margin from the last project card */
+/* Background colors for each project card */
+.project-card1 {
+    background-image: url('truble (1).png');
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-/* Image as Separate Card */
+.project-card2 {
+    background-image: url('finvue.png');
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.project-card3 {
+    background-image: url('mmi.png');
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+/* Image styling */
 .project-image {
-    width: 500px; /* Set a fixed width */
-    height: 350px; /* Set height equal to width for a square */
-    object-fit: cover; /* Ensure the image scales correctly within the square */
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-image:hover {
     transform: scale(1.1); /* Pop-up effect */
 }
 
-/* General triangle styling */
-.project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
-    position: absolute;
-    width: 30px;  /* Adjust the size to be like an arrow */
-    height: auto; /* Maintain aspect ratio */
-    top: 0;
-    opacity: 0; /* Initially invisible */
-    filter: blur(10px); /* Initially blurred */
-    transition: opacity 2s ease-out, filter 2s ease-out, transform 0.5s ease-out; /* Smooth transition */
+
+/* Image cards - Initial hidden state */
+.project-image {
+    opacity: 0; /* Invisible at first */
+    transform: translateX(-100%); /* Slide out of the viewport to the left */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smoother transition */
+}
+
+/* Visible state when scrolled into view */
+.project-image-visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Slide into the viewport */
 }
 
 
-/* Apply the animation when the page loads */
+/* Project Info Styling */
+.project-info0, .project-info1, .project-info2 {
+    position: relative;
+    padding-left: 60px;  /* Add padding to prevent triangle overlap with text */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 200px;
+}
+
+.project-info0 h2, .project-info1 h2, .project-info2 h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.project-info0 p, .project-info1 p, .project-info2 p {
+    font-size: 1.1rem;
+}
+
+/* Ensure the triangle animations run */
+.project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
+    position: absolute;
+    width: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 2s ease-out, filter 2s ease-out, transform 0.5s ease-out;
+}
+
 body.loaded .project-info0 .triangle,
 body.loaded .project-info1 .triangle,
 body.loaded .project-info2 .triangle {
-    opacity: 1; /* Fully visible */
-    filter: blur(0); /* Remove blur */
-}
-
-/* Ensure each project-info has relative positioning for proper placement of triangles */
-.project-info0, .project-info1, .project-info2 {
-    position: relative;
-    padding-left: 120px;  /* Add padding to prevent triangle overlap with text */
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-
-
-/* General Project Card Styling */
-.project-card {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    gap: 20px;
-    margin: 0 auto;
-    transition: box-shadow 0.3s ease;
+    opacity: 1;
+    filter: blur(0);
+    animation: triangleFadeIn 1s ease-out forwards;
 }
 
 .project-info0 .triangle {
-    left: 50px;
+    left: 20px;
     transform: translateY(60%);
 }
 
 .project-info1 .triangle {
-    left: 50px;
+    left: 20px;
     transform: translateY(-90%);
 }
 
 .project-info2 .triangle {
-    left: 50px;
+    left: 20px;
     transform: translateY(-70%);
 }
 
-/* Ensure the animation runs once the page is fully loaded */
-body.loaded .project-info0 .triangle,
-body.loaded .project-info1 .triangle,
-body.loaded .project-info2 .triangle {
-    animation: triangleFadeIn 1s ease-out forwards;
-}
-
-/* Keyframe Animation for the triangle fade-in and blur */
 @keyframes triangleFadeIn {
     from {
         opacity: 0;
@@ -212,22 +314,24 @@ body.loaded .project-info2 .triangle {
 }
 
 
+
 /* Project Info 0 */
 .project-info0 {
     width: 50%;
     padding-top: 40px;
-    padding-left: 100px;
     background-color: transparent;
     border-radius: 15px;
 }
 
 .project-info0 h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2rem;
     color: #088F8F;
     margin-bottom: 10px;
 }
 
 .project-info0 h3 {
+    font-weight: 600;
     font-size: 1.2rem;
     margin-top: 20px;
     color: #959494;
@@ -239,12 +343,12 @@ body.loaded .project-info2 .triangle {
     font-size: 1.1rem;
 }
 
-.projects-section .project-card:nth-child(1) p{
+.projects-section .project-card1 p{
     margin-bottom: 30px;
 }
 
 /* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card:nth-child(1) .case-study-btn {
+.projects-section .project-card1 .case-study-btn {
     padding: 12px 30px;
     background-color: #088F8F;
     color: white;
@@ -255,7 +359,7 @@ body.loaded .project-info2 .triangle {
 }
 
 /* Hover effect: pop-up */
-.projects-section .project-card:nth-child(1) .case-study-btn:hover {
+.projects-section .project-card1 .case-study-btn:hover {
     background-color: #065757;
     transform: scale(1.1); /* Pop-up effect */
 }
@@ -264,18 +368,19 @@ body.loaded .project-info2 .triangle {
 .project-info1 {
     width: 50%;
     padding-top: 10px;
-    padding-left: 100px;
     background-color: transparent;
     border-radius: 15px;
 }
 
 .project-info1 h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2rem;
     color: #0A68A7;
     margin-bottom: 10px;
 }
 
 .project-info1 h3 {
+    font-weight: 600;
     font-size: 1.2rem;
     margin-top: 20px;
     color: #959494;
@@ -287,12 +392,12 @@ body.loaded .project-info2 .triangle {
     font-size: 1.1rem;
 }
 
-.projects-section .project-card:nth-child(2) p{
+.projects-section .project-card2 p{
     margin-bottom: 30px;
 }
 
 /* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card:nth-child(2) .case-study-btn {
+.projects-section .project-card2 .case-study-btn {
     padding: 12px 30px;
     background-color: #0A68A7;
     color: white;
@@ -303,7 +408,7 @@ body.loaded .project-info2 .triangle {
 }
 
 /* Hover effect: pop-up */
-.projects-section .project-card:nth-child(2) .case-study-btn:hover {
+.projects-section .project-card2 .case-study-btn:hover {
     background-color: #074670;
     transform: scale(1.1); /* Pop-up effect */
 }
@@ -313,18 +418,19 @@ body.loaded .project-info2 .triangle {
     width: 50%;
     padding-top: 10px;
     padding-bottom: 40px;
-    padding-left: 100px;
     background-color: transparent;
     border-radius: 15px;
 }
 
 .project-info2 h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2rem;
     color: #048BCE;
     margin-bottom: 10px;
 }
 
 .project-info2 h3 {
+    font-weight: 600;
     font-size: 1.2rem;
     margin-top: 20px;
     color: #959494;
@@ -336,12 +442,12 @@ body.loaded .project-info2 .triangle {
     font-size: 1.1rem;
 }
 
-.projects-section .project-card:nth-child(3) p{
+.projects-section .project-card3 p{
     margin-bottom: 30px;
 }
 
 /* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card:nth-child(3) .case-study-btn {
+.projects-section .project-card3 .case-study-btn {
     padding: 12px 30px;
     background-color: #048BCE;
     color: white;
@@ -352,17 +458,19 @@ body.loaded .project-info2 .triangle {
 }
 
 /* Hover effect: pop-up */
-.projects-section .project-card:nth-child(3) .case-study-btn:hover {
+.projects-section .project-card3 .case-study-btn:hover {
     background-color: #036292;
     transform: scale(1.1); /* Pop-up effect */
 }
 
+
 /* Change navbar background on scroll */
 body.scrolled nav {
-    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow for effect */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
 }
+
 /* Footer Section */
 footer {
     text-align: center;
@@ -382,6 +490,7 @@ footer .social-icons {
 }
 
 footer h3 {
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -390,29 +499,287 @@ footer p {
     margin-bottom: 30px;
 }
 
-/* Responsive Styles */
+/* Responsive Footer Styles */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
+    footer {
+        font-size: 1.1rem; /* Smaller font size on tablets */
+        padding: 15px; /* Adjust padding */
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    footer .social-icons {
+        font-size: 1.5rem; /* Smaller icons on tablets */
+        gap: 15px; /* Reduce gap */
     }
 
-    .project-card {
-        flex-direction: column;
+    footer h3 {
+        font-size: 0.8rem;
+    }
+    footer p {
+        font-size: 0.85rem; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
     }
 
-    .project-image, .project-info {
-        width: 100%;
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer p {
+        font-size: 0.5rem; /* Even smaller footer text */
+    }
+}
+
+
+/* <--------------Responsive styles---------------> */
+
+/* Responsive for 1024px */
+@media (max-width: 1024px) {
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 30px; /* Increased gap for tablet screens */
+    }
+
+    .skill-btn1 {
+        padding: 12px 85px; /* Medium padding */
+        font-size: 1.5rem;
+    }
+
+    .skill-btn2 {
+        padding: 12px 20px;
+        font-size: 1.5rem;
     }
 
     .projects-section {
-        padding: 30px;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack project cards vertically */
     }
 
-    .project-info {
-        padding: 20px;
+    .project-card1, .project-card2, .project-card3 {
+        width: 100%; /* Full width for mobile */
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 20px; /* Padding for project cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    /* Image styling */
+    .project-image {
+        width: 70%; /* Full width of the card */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container */
+        opacity: 1; /* Fully visible */
+        border-radius: 35px;
+        transform: translateX(0);
+    }
+
+    /* Project Info Styling */
+    .project-info0, .project-info1, .project-info2 {
+        text-align: left; /* Center align text for better presentation */
+        padding: 60px; /* Adjust padding for smaller screens */
+        width: 90%;
+    }
+
+    .project-card1, .project-card2, .project-card3 {
+        flex-direction: column; /* Ensure the card content stacks vertically */
+    }
+
+    .project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
+        display: none;
+    }
+
+    .project-info0 h2, .project-info1 h2, .project-info2 h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .project-info0 h3, .project-info1 h3, .project-info2 h3 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .project-info0 p, .project-info1 p, .project-info2 p {
+        font-size: 1.4rem; /* Adjust paragraph size */
+    }
+
+    .projects-section .project-card1 .case-study-btn,
+    .projects-section .project-card2 .case-study-btn,
+    .projects-section .project-card3 .case-study-btn{
+        font-size: 1.5rem;
+        padding: 12px 20px;
+    }
+
+    .project-card3{
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+/* Responsive for 768px */
+@media (max-width: 768px) {
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 30px; /* Increased gap for tablet screens */
+    }
+
+    .skill-btn1 {
+        padding: 8px 55px; /* Medium padding */
+        font-size: 0.8rem;
+    }
+
+    .skill-btn2 {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .projects-section {
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack project cards vertically */
+    }
+
+    .project-card1, .project-card2, .project-card3 {
+        width: 100%; /* Full width for mobile */
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 20px; /* Padding for project cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    /* Image styling */
+    .project-image {
+        width: 60%; /* Full width of the card */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container */
+        opacity: 1; /* Fully visible */
+        border-radius: 20px;
+        transform: translateX(0);
+    }
+
+    /* Project Info Styling */
+    .project-info0, .project-info1, .project-info2 {
+        text-align: left; /* Center align text for better presentation */
+        padding: 30px; /* Adjust padding for smaller screens */
+        width: 90%;
+    }
+
+    .project-card1, .project-card2, .project-card3 {
+        flex-direction: column; /* Ensure the card content stacks vertically */
+    }
+
+    .project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
+        display: none;
+    }
+
+    .project-info0 h2, .project-info1 h2, .project-info2 h2 {
+        font-size: 1.2rem; /* Adjust heading size */
+    }
+
+    .project-info0 h3, .project-info1 h3, .project-info2 h3 {
+        font-size: 1rem; /* Adjust heading size */
+    }
+
+    .project-info0 p, .project-info1 p, .project-info2 p {
+        font-size: 0.7rem; /* Adjust paragraph size */
+    }
+
+    .projects-section .project-card1 .case-study-btn,
+    .projects-section .project-card2 .case-study-btn,
+    .projects-section .project-card3 .case-study-btn{
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .project-card3{
+        margin-bottom: 0;
+    }
+}
+
+
+/* Responsive for 480px */
+@media (max-width: 480px) {
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 30px; /* Increased gap for tablet screens */
+    }
+
+    .skill-btn1 {
+        padding: 8px 55px; /* Medium padding */
+        font-size: 0.8rem;
+    }
+
+    .skill-btn2 {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .projects-section {
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack project cards vertically */
+    }
+
+    .project-card1, .project-card2, .project-card3 {
+        width: 100%; /* Full width for mobile */
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 20px; /* Padding for project cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    /* Image styling */
+    .project-image {
+        width: 80%; /* Full width of the card */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container */
+        opacity: 1; /* Fully visible */
+        transform: translateX(0);
+    }
+
+    /* Project Info Styling */
+    .project-info0, .project-info1, .project-info2 {
+        text-align: left; /* Center align text for better presentation */
+        padding: 15px; /* Adjust padding for smaller screens */
+        width: 90%;
+    }
+
+    .project-card1, .project-card2, .project-card3 {
+        flex-direction: column; /* Ensure the card content stacks vertically */
+    }
+
+    .project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
+        display: none;
+    }
+
+    .project-info0 h2, .project-info1 h2, .project-info2 h2 {
+        font-size: 1.2rem; /* Adjust heading size */
+    }
+
+    .project-info0 h3, .project-info1 h3, .project-info2 h3 {
+        font-size: 1rem; /* Adjust heading size */
+    }
+
+    .project-info0 p, .project-info1 p, .project-info2 p {
+        font-size: 0.7rem; /* Adjust paragraph size */
+    }
+
+    .projects-section .project-card1 .case-study-btn,
+    .projects-section .project-card2 .case-study-btn,
+    .projects-section .project-card3 .case-study-btn{
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .project-card3{
+        margin-bottom: 0;
     }
 }

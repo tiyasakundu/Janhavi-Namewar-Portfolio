@@ -6,13 +6,13 @@
 }
 
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background: white;
     color: #333;
     overflow-x: hidden;
 }
 
-/* Base Styles for Navbar */
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 60px;
+    margin-right: 0;
 }
 
 nav ul li {
@@ -50,44 +50,87 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+nav ul li a.active {
+    text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+html {
+    scroll-behavior: smooth;
+}
+
+.hamburger, .cross {
+    display: none;
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow for effect */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 760px) {
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    nav {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 40px;
+        margin-left: 10px;
+    }
+
     nav ul {
         flex-direction: column;
         position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        top: 0;
+        left: 0;
+        height: 100vh;
         width: 100%;
-        display: none; /* Hide menu by default */
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
         z-index: 100;
-        text-align: right;
-        padding: 0;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
-    /* Show Hamburger menu icon */
-    .hamburger {
-        display: block;
-        font-size: 28px;
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
     }
 
-    /* Toggle Menu: When clicked, show the dropdown */
-    nav ul.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
     }
 }
+
 
 .intro {
     display: flex;
@@ -103,7 +146,7 @@ nav ul li a:hover {
     background-repeat: no-repeat;
 }
 
-
+/* Profile Image and Bubble Content */
 .profile {
     display: flex;
     align-items: flex-start;
@@ -131,48 +174,155 @@ nav ul li a:hover {
     width: 100%;
 }
 
+/* Typing text ("Janhavi is typing") */
+.typing-text {
+    position: absolute;
+    top: -16px; /* Adjust this to place it above the typing dots */
+    left: 5%;
+    font-size: 19px;
+    color: #2980b9;
+    opacity: 0; /* Hidden initially */
+    animation: fadeInText 0.85s forwards ease-in-out;
+}
+
+/* Fade in "Janhavi is typing" */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Name bubble */
 .bubble-name {
     background-color: rgba(100, 169, 249, 0.212); /* Light blue background */
     color: #2980b9;
-    padding: 15px 30px;
+    padding: 15px 35px;
     border-radius: 20px;
     text-align: left;
     width: 67%;
-    font-size: 21px;
+    font-size: 20px;
     position: absolute;
     top: -50px;
-    height: 54%;
+    height: 49%;
     z-index: 0;
     display: flex;
     align-items: top;
     justify-content: left;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Hidden initially */
+    transform-origin: top left; /* Set origin for top-left zoom */
+    transform: scale(0.2); /* Start scaled down */
+    animation: zoomInLeft 0.5s forwards ease-in-out;
+    animation-delay: 0.95s; /* After typing dots disappear */
 }
 
+/* Typing dots animation */
+.typing-dots {
+    position: absolute;
+    left: 5%; /* Adjust the position relative to name bubble */
+    top: 15px;
+    bottom: 5px; /* Adjust vertical position if needed */
+    width: 40px; /* Adjust width to accommodate larger dots */
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Appears above the name bubble */
+    opacity: 0; /* Hidden by default */
+    animation: fadeInDots 0.85s forwards ease-in-out;
+}
+
+.typing-dots.second-dots {
+    animation-delay: 1.5s; /* Delay for the second typing dots */
+    top: 100px;
+}
+
+.typing-dots div {
+    width: 8px;  /* Increased dot width */
+    height: 8px;
+    background-color: #2980b9;
+    border-radius: 50%;
+    animation: bounceDots 0.5s infinite ease-in-out;
+}
+
+.typing-dots div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-dots div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInDots {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Bouncing dots animation */
+@keyframes bounceDots {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Chat bubble animations */
 .bubble-1, .bubble-2 {
+    font-weight: 500;
     background-color: #2980b9;
     color: white;
     padding: 15px 30px;
-    margin-left: 5px;
+    margin-left: 6px;
     border-radius: 20px;
     position: relative;
-    font-size: 20px;
-    /* font-weight: bold; */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-    margin-top: 0;
-    animation: fadeIn 1s forwards ease-in-out;
+    font-size: 19px;
+    opacity: 0; /* Hidden initially */
+    transform-origin: top left; /* Set origin for top-left zoom */
+    transform: scale(0.2); /* Start scaled down */
 }
 
 .bubble-1 {
     width: 65%;
-    animation-delay: 1s;
+    animation: zoomInLeft 0.5s forwards ease-in-out;
+    animation-delay: 0.95s; /* Sync with the name bubble */
 }
 
 .bubble-2 {
     max-width: 65%;
-    animation-delay: 2s;
+    animation: zoomInLeft 0.5s forwards ease-in-out;
+    animation-delay: 2.35s; /* Delay for the second bubble */
+}
+
+/* Zoom-in from top-left animation */
+@keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Resume Button */
@@ -186,21 +336,26 @@ nav ul li a:hover {
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 5px;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 18px;
-}
-
-.resume-bubble {
-    opacity: 0;
+    opacity: 0; /* Hidden initially */
     transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    animation: fadeInResume 0.5s forwards ease-in-out;
+    animation-delay: 3s; /* Show after chat bubbles */
 }
 
-.resume-bubble.show {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes fadeInResume {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* On hover, change the button color and tilt the icon */
@@ -214,12 +369,10 @@ nav ul li a:hover {
     transition: transform 0.3s ease;  /* Smooth rotation transition */
 }
 
-/* Icon */
 .resume-btn i {
     font-size: 1.2em;
     transition: transform 0.3s ease; /* Smooth rotation when tilting */
 }
-
 
 .arrow {
     position: absolute;
@@ -227,34 +380,22 @@ nav ul li a:hover {
     transform: translateX(-50%);
     bottom: 30px;
     font-size: 4rem;
-    animation: bounce 1.5s infinite;
+    animation: bounceArrow 1.5s infinite;
     color: #2980b9;
     text-align: center;
     z-index: 1;
 }
 
-
-
-@keyframes bounce {
+/* Bouncing animation for arrow */
+@keyframes bounceArrow {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-20px);
+        transform: translateY(-40px);
     }
     60% {
         transform: translateY(-10px);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -279,10 +420,11 @@ body.scrolled nav {
 }
 
 .title h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2.7rem; /* Increase the size of the heading */
     font-weight: bold;
     color: #1e5f89; /* Color to match your theme */
-    padding-left: 60px;
+    padding-left: 100px;
     margin-bottom: 15px;
 }
 /* Background Image Section */
@@ -310,7 +452,6 @@ body.scrolled nav {
 
 .case-study-btn {
     position: absolute;
-    transform: translateX(-50%);
     padding: 12px 22px;
     color: white;
     border: none;
@@ -318,31 +459,114 @@ body.scrolled nav {
     border-radius: 30px;
     cursor: pointer;
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1; /* Ensure button stays above the image */
 }
 
 .project-item1 .case-study-btn{
     bottom: 60px; /* Distance from the bottom */
-    left: 16%;
+    left: 10%;
     background-color: #088F8F;
     border: 2px solid #088F8F;
 }
 
 .project-item2 .case-study-btn{
     bottom: 75px; /* Distance from the bottom */
-    left: 15%;
+    left: 9%;
     background-color: #0A68A7;
     border: 2px solid #0A68A7;
 }
 .project-item1 .case-study-btn:hover {
-    background-color: white;
-    color: #333;
+    transform: scale(1.1);
+    background-color: #086d6d;
 }
 
 .project-item2 .case-study-btn:hover {
+    background-color: #074e7d;
+    transform: scale(1.1);
+}
+
+/* Experience section */
+.experience {
+    background-color: #f0f0f0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Experience Section Title */
+.experience .title h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 2.7rem; /* Match the font size of the Featured Projects section */
+    font-weight: bold;
+    color: #1e5f89; /* Match the color with the Featured Projects section */
+    /* padding-left: 100px; Add the same padding as Featured Projects */
+    margin-bottom: 15px;
+}
+
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Individual Card Styling */
+.card {
     background-color: white;
-    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 240px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Ensure content starts from the top */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 5px;
+    object-fit: contain;  /* Ensures image is contained without distorting */
+}
+
+.card h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.details-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 40px;
+}
+
+.details-btn:hover {
+    transform: scale(1.1);
+    background-color: #1e5f89;
 }
 
 .tagline .text{
@@ -354,6 +578,7 @@ body.scrolled nav {
     font-size: 1.5rem;
     margin-bottom: 60px;
     margin-top: 60px;
+    text-align: center;
 }
 
 .tagline .text a {
@@ -383,6 +608,7 @@ footer .social-icons {
 }
 
 footer h3 {
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -391,128 +617,391 @@ footer p {
     margin-bottom: 30px;
 }
 
-
-/* ------------------------ RESPONSIVE STYLES ------------------------ */
-
-/* For tablets and larger phones */
+/* Responsive Footer Styles */
 @media (max-width: 768px) {
-    nav ul li {
-        margin: 0 10px;
+    footer {
+        font-size: 1.1rem; /* Smaller font size on tablets */
+        padding: 15px; /* Adjust padding */
     }
 
-    nav ul li a {
-        font-size: 14px;
+    footer .social-icons {
+        font-size: 1.5rem; /* Smaller icons on tablets */
+        gap: 15px; /* Reduce gap */
     }
 
-    .intro {
-        padding-left: 40px;
+    footer h3 {
+        font-size: 0.8rem;
     }
-
-    .profile {
-        gap: 10px;
-    }
-
-    .profile-img {
-        width: 50px;
-        height: 50px;
-        top: -30px;
-    }
-
-    .text-content {
-        max-width: 90%;
-    }
-
-    .bubble-name {
-        font-size: 16px;
-        width: 80%;
-        height: auto;
-    }
-
-    .bubble-1, .bubble-2 {
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-
-    .bubble-1 {
-        max-width: 100%;
-    }
-
-    .bubble-2 {
-        max-width: 80%;
-    }
-
-    .resume-btn {
-        padding: 8px 20px;
-        font-size: 16px;
-    }
-
-    .arrow {
-        font-size: 40px;
-    }
-
-    .featured-projects {
-        font-size: 1em;
-        padding-left: 40px;
+    footer p {
+        font-size: 0.85rem; /* Smaller footer text */
     }
 }
 
-/* For small mobile screens */
 @media (max-width: 480px) {
-    nav ul li {
-        margin: 0 5px;
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
     }
 
-    nav ul li a {
-        font-size: 12px;
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
     }
+
+    footer p {
+        font-size: 0.5rem; /* Even smaller footer text */
+    }
+}
+
+/* ------------------------ RESPONSIVE STYLES ------------------------ */
+
+@media (max-width: 1024px) {
+    .profile {
+        max-width: 90%; /* Increase profile width on smaller screens */
+    }
+
+    .title h1 {
+        font-size: 2.2rem; /* Decrease font size */
+        padding-left: 50px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 48%; /* Two items per row */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    .case-study-btn {
+        padding: 10px 18px; /* Adjust button padding */
+        font-size: 16px; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 15%;
+        left: 16%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 18%;
+        left: 15%;
+    }
+
+    .experience .title h1 {
+        font-size: 2.2rem; /* Decrease font size */
+        padding-left: 50px; /* Adjust padding */
+    }
+
+    .card {
+        width: 45%; /* Adjust card width for two per row */
+        height: auto; /* Adjust height for flexibility */
+    }
+
+}
+
+@media (max-width: 992px) {
 
     .intro {
-        padding-left: 20px;
-    }
-
-    .profile {
-        gap: 5px;
+        padding-left: 50px; /* Reduce padding */
+        height: 40vh;
     }
 
     .profile-img {
-        width: 40px;
-        height: 40px;
-        top: -20px;
+        width: 50px; /* Smaller profile image */
+        height: 50px;
     }
 
-    .text-content {
-        max-width: 100%;
-    }
-
-    .bubble-name {
-        font-size: 14px;
-        width: 90%;
+    .bubble-name{
+        width: 100%;
+        border-radius: 15px;
+        top: -40px;
+        height: 47%;
+        font-size: 18px; /* Smaller bubble text */
+        padding: 10px 20px; /* Smaller bubble padding */
+        
     }
 
     .bubble-1, .bubble-2 {
-        padding: 8px 15px;
-        font-size: 14px;
+        width: 95% ;
+        max-width: 300px;
+        font-size: 16px;
+        border-radius: 15px;
+        padding: 10px 20px
     }
 
-    .bubble-1 {
-        max-width: 100%;
-    }
-
-    .bubble-2 {
-        max-width: 85%;
+    .typing-text {
+        font-size: 18px; /* Smaller typing text */
+        top: -30px;
     }
 
     .resume-btn {
-        padding: 5px 15px;
-        font-size: 14px;
+        padding: 8px 20px; /* Smaller button padding */
+        font-size: 16px; /* Smaller button text */
+        border-radius: 15px;
     }
 
     .arrow {
-        font-size: 30px;
+        font-size: 3rem; /* Smaller size for mobile */
+        bottom: 30px; /* Adjust position closer to the bottom */
+        left: 47%;
     }
 
-    .featured-projects {
-        font-size: 0.9em;
-        padding-left: 20px;
+    .title h1 {
+        font-size: 1.6rem; /* Decrease font size */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 0px; /* Space between items */
+    }
+
+    .case-study-btn {
+        padding: 8px 10px; /* Further adjust button padding */
+        font-size: 14px; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 15%;
+        left: 7%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 18%;
+        left: 7%;
+    }
+    .experience .title h1 {
+        font-size: 1.6rem; /* Decrease font size */
+        padding-left: 20px; /* Adjust padding */
+    }
+
+    .cards-container {
+        flex-direction: row; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 40%; /* Adjust card width for mobile */
+        height: 220px; /* Adjust height for flexibility */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding-left: 20px; /* Reduce padding */
+        height: 50vh;
+    }
+
+    .profile-img {
+        width: 40px; /* Smaller profile image */
+        height: 40px;
+    }
+
+    .bubble-name{
+        width: 94%;
+        border-radius: 15px;
+        top: -40px;
+        height: 47%;
+        font-size: 16px; /* Smaller bubble text */
+        padding: 10px 20px; /* Smaller bubble padding */
+        
+    }
+
+    .bubble-1, .bubble-2 {
+        width: 90% ;
+        max-width: 250px;
+        font-size: 14px;
+        border-radius: 15px;
+        padding: 8px 15px
+    }
+
+    .typing-text {
+        font-size: 14px; /* Smaller typing text */
+        top: -30px;
+    }
+
+    .resume-btn {
+        padding: 8px 20px; /* Smaller button padding */
+    }
+
+    .arrow {
+        font-size: 3rem; /* Smaller size for mobile */
+        bottom: 30px; /* Adjust position closer to the bottom */
+        left: 47%;
+    }
+
+    .title h1 {
+        font-size: 1.4rem; /* Decrease font size */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 15px; /* Space between items */
+    }
+
+    .case-study-btn {
+        padding: 6px 8px; /* Further adjust button padding */
+        font-size: 0.8rem; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 15%;
+        left: 7%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 15%;
+        left: 7%;
+    }
+
+    .experience .title h1 {
+        font-size: 1.4rem; /* Decrease font size */
+        padding-left: 20px; /* Adjust padding */
+    }
+
+    .cards-container {
+        flex-direction: row; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 40%; /* Adjust card width for mobile */
+        height: 220px; /* Adjust height for flexibility */
+    }
+
+    .card h3 {
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    .details-btn {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .tagline .text{
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .case-study-btn {
+        padding: 6px 8px; /* Further adjust button padding */
+        font-size: 0.6rem; /* Decrease font size */
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding-left: 20px; /* Reduce padding */
+        height: 40vh;
+    }
+
+    .bubble-name{
+        width: 85%;
+        border-radius: 15px;
+        top: -40px;
+        height: 48%;
+        font-size: 14px; /* Smaller bubble text */
+        padding: 10px 20px; /* Smaller bubble padding */
+        
+    }
+
+    .bubble-1, .bubble-2 {
+        width: 80% ;
+        max-width: 250px;
+        font-size: 12px;
+        border-radius: 15px;
+        padding: 8px 15px
+    }
+
+    .typing-text {
+        font-size: 14px; /* Smaller typing text */
+        top: -30px;
+    }
+
+    .intro {
+        padding-left: 20px; /* Reduce padding */
+        height: 60vh;
+    }
+
+    .profile-img {
+        width: 40px; /* Smaller profile image */
+        height: 40px;
+    }
+    
+    .resume-btn {
+        padding: 5px 15px; /* Even smaller button padding */
+        border-radius: 10px;
+        font-size: 12px; /* Smaller button text */
+    }
+
+    .arrow {
+        font-size: 2rem; /* Slightly increase size for large screens */
+        bottom: 60px; /* Move slightly higher */
+        left: 47%;
+    }
+
+    .title h1 {
+        font-size: 1.2rem; /* Decrease font size */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 5px; /* Space between items */
+    }
+
+    .case-study-btn {
+        padding: 3px 5px; /* Further adjust button padding */
+        font-size: 9px; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 14%;
+        left: 6%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 14%;
+        left: 5%;
+    }
+    
+
+    .experience .title h1 {
+        font-size: 1.2rem; /* Decrease font size */
+    }
+
+    .cards-container {
+        flex-direction: row; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 40%; /* Adjust card width for mobile */
+        height: 140px; /* Adjust height for flexibility */
+    }
+
+    .card h3 {
+        font-weight: 600;
+        font-size: 0.6rem;
+        margin: 10px 0;
+    }
+
+    .details-btn {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
     }
 }

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background: white;
     color: #333;
     overflow-x: hidden;
@@ -50,6 +50,11 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+
 /* Hamburger Menu Styles */
 .hamburger {
     display: none;
@@ -64,11 +69,41 @@ body.scrolled nav {
     transition: background-color 0.3s ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .project-bg img{
     width: 100%; /* Adjust the height as needed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    margin-top: 50px; /* Adjust this based on the spacing you want */
+}
+
+/* Button styles */
+.nav-button {
+    padding: 15px 30px;
+    background-color: #2980b9; /* Light blue background */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #1e5f89; /* Slightly darker blue on hover */
+    transform:scale(1.1) ;
 }
 
 /* Footer Section */
@@ -91,6 +126,7 @@ footer .social-icons {
 
 footer h3 {
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 footer p {

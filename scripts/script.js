@@ -20,6 +20,20 @@ window.onload = function() {
     }, 3000); // Delay for the resume button
 };
 
+// Get the current URL path
+const currentPath = window.location.pathname;
+
+// Get all nav links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Loop through the nav links
+navLinks.forEach(link => {
+    // If the link's href matches the current page's path, add the 'active' class
+    if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+    }
+});
+
 // Scroll detection for sticky navbar
 window.onscroll = function() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -33,29 +47,133 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
 
-
 const carousels = document.querySelectorAll('.carousel');
 
-carousels.forEach(carousel => {
-    const carouselInner = carousel.querySelector('.carousel-track');
-    const carouselContent = Array.from(carouselInner.children);
-    
-    // Clone each item and append to the track for infinite effect
-    carouselContent.forEach(item => {
-        const duplicatedItem = item.cloneNode(true);
-        carouselInner.appendChild(duplicatedItem);
+// Function to apply or remove infinite animation based on screen size
+function handleCarouselAnimation() {
+    carousels.forEach(carousel => {
+        const carouselInner = carousel.querySelector('.carousel-track');
+        const carouselContent = Array.from(carouselInner.children);
+        
+        // Remove any previously cloned items to prevent duplication
+        while (carouselInner.children.length > carouselContent.length) {
+            carouselInner.removeChild(carouselInner.lastChild);
+        }
+
+        // Clone each item and append to the track for infinite effect
+        carouselContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            carouselInner.appendChild(duplicatedItem);
+        });
+
+        // Check screen width and apply animation only if width is above 1024px
+        if (window.innerWidth > 1024) {
+            // Set initial animation for larger screens
+            carouselInner.style.animation = "move 30s linear infinite";
+
+            // Enable hover pause/resume on larger screens
+            carouselInner.addEventListener('mouseenter', () => {
+                carouselInner.style.animationPlayState = 'paused'; // Pause the animation
+            });
+
+            carouselInner.addEventListener('mouseleave', () => {
+                carouselInner.style.animationPlayState = 'running'; // Resume the animation
+            });
+        } else {
+            // Remove animation for smaller screens and enable horizontal scrolling
+            carouselInner.style.animation = 'none'; // Disable animation
+            carouselInner.style.overflowX = 'auto'; // Enable horizontal scrolling
+            carouselInner.style.scrollBehavior = 'smooth'; // Smooth scrolling
+
+            // Add event listener for horizontal scroll (optional functionality)
+            carouselInner.addEventListener('scroll', () => {
+                // Optional functionality on scroll (you can add code here if needed)
+            });
+
+            // Hide the scrollbar for a cleaner look
+            carouselInner.style.scrollbarWidth = 'none'; // Firefox
+            carouselInner.style.msOverflowStyle = 'none'; // IE/Edge
+        }
+
     });
+}
 
-    // Set initial animation
-    carouselInner.style.animation = "move 30s linear infinite";
+// Run on page load
+handleCarouselAnimation();
 
-    // Pause animation on hover
-    carouselInner.addEventListener('mouseenter', () => {
-        carouselInner.style.animationPlayState = 'paused'; // Pause the animation
-    });
+// Re-check when window is resized
+window.addEventListener('resize', handleCarouselAnimation);
 
-    // Resume animation when hover ends
-    carouselInner.addEventListener('mouseleave', () => {
-        carouselInner.style.animationPlayState = 'running'; // Resume the animation
+
+
+window.addEventListener('load', () => {
+    document.querySelectorAll('.cards-container .card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+        card.classList.add('show');
     });
 });
+
+window.onload = function() {
+    // Function to handle the image animation on scroll
+    function animateImageOnScroll(entries, observer) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('project-image-visible'); // Add visible class to the image
+                }, index * 200); // Stagger animations by 200ms intervals
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+        });
+    }
+
+    // Create an IntersectionObserver to watch the project images
+    const observer = new IntersectionObserver(animateImageOnScroll, {
+        threshold: 0.2 // Trigger when 20% of the element is visible
+    });
+
+    // Select all project images
+    const projectImages = document.querySelectorAll('.project-image');
+
+    // Observe each project image
+    projectImages.forEach(image => {
+        observer.observe(image);
+    });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        const hamburger = document.querySelector('.hamburger');
+        const cross = document.querySelector('.cross');
+
+        // Toggle the menu and icons
+        menu.classList.toggle('show');
+        hamburger.classList.toggle('hidden');
+        cross.classList.toggle('visible');
+    }
+
+    // Close the menu when a menu item is clicked
+    function closeMenu() {
+        const menu = document.querySelector('nav ul');
+        const hamburger = document.querySelector('.hamburger');
+        const cross = document.querySelector('.cross');
+
+        menu.classList.remove('show');
+        hamburger.classList.remove('hidden');
+        cross.classList.remove('visible');
+    }
+
+    // Add event listener for hamburger click
+    document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+    // Add event listener for cross click
+    document.querySelector('.cross').addEventListener('click', toggleMenu);
+
+    // Close the menu when any menu item is clicked
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+});
+
+
+
