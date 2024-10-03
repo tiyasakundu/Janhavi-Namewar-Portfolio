@@ -197,9 +197,20 @@ footer .social-icons {
     color: #121212;
 }
 
+footer .social-icons a {
+    color: #121212; /* Set icon color */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline from link */
+}
+
+footer .social-icons a:hover {
+    color: #0077b5; /* Change color on hover (LinkedIn blue as an example) */
+}
+
 footer h3 {
-    margin-bottom: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 footer p {
@@ -261,10 +272,16 @@ footer p {
         gap: 10px; /* Further reduce gap */
     }
 
+    footer h3{
+        font-size: 0.8rem;
+    }
+
     footer p {
         font-size: 0.5rem; /* Even smaller footer text */
     }
 }
+
+/* Responsiveness for body */
 
 /* For devices with max width 768px */
 @media (max-width: 768px) {
