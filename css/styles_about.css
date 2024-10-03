@@ -332,9 +332,13 @@ html {
     color: #2980b9;          /* Color of the heading */
 }
 
+/* Reduce the width of the <i> tag without affecting the rest of the section */
 .hobby i {
-    font-size: 1rem;         /* Adjust font size for italic text */
-    margin-bottom: 30px;     /* Space below the italic text */
+    display: inline-block; /* Keep it inline but allow width constraints */
+    width: 60%; /* Adjust the width as needed to fit in two lines */
+    font-size: 1rem; /* Adjust font size if needed */
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 30px;
 }
 
 /* Cards Container for Hobby Section */
@@ -529,6 +533,8 @@ footer p {
 
     .hobby i{
         font-size:1.4rem;
+        width: 100%; /* Adjust the width as needed to fit in two lines */
+        line-height: 1.5; /* Improve readability */
     }
 
     .cards h3{
@@ -575,6 +581,8 @@ footer p {
 
     .hobby i{
         font-size:1.2rem;
+        width: 100%; /* Adjust the width as needed to fit in two lines */
+        line-height: 1.5; /* Improve readability */
     }
 
     .cards h3{
@@ -638,6 +646,8 @@ footer p {
 
     .hobby i{
         font-size:1rem;
+        width: 100%; /* Adjust the width as needed to fit in two lines */
+        line-height: 1.5; /* Improve readability */
     }
 
     .cards h3{
@@ -709,6 +719,8 @@ footer p {
     }
 
     .hobby i{
+        width: 100%; /* Adjust the width as needed to fit in two lines */
+        line-height: 1.5; /* Improve readability */
         font-size:0.9rem;
     }
 
