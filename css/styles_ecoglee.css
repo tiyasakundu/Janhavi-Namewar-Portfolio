@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Base Styles for Navbar */
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 60px;
+    margin-right: 0;
 }
 
 nav ul li {
@@ -54,12 +54,8 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+html {
+    scroll-behavior: smooth;
 }
 
 /* Change navbar background on scroll */
@@ -69,8 +65,72 @@ body.scrolled nav {
     transition: background-color 0.3s ease-in-out;
 }
 
-html {
-    scroll-behavior: smooth;
+.hamburger, .cross {
+    display: none;
+}
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 760px) {
+
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    
+    nav {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
 }
 
 .project-bg img{
@@ -149,96 +209,46 @@ footer p {
     margin-bottom: 30px;
 }
 
-/* Responsive Styles using media queries */
-@media (max-width: 1024px) {
-    /* Adjust padding for the navbar on smaller devices */
-    nav {
-        padding: 10px 20px;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-    }
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: none; /* Initially hidden */
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 10px 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        display: none; /* Hide menu by default on smaller screens */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger menu */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    /* Toggle hamburger menu */
-    nav.active ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-bg img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
+.scroll-up-btn:hover {
+    background-color: #1e5f89; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
 }
-
-@media (max-width: 480px) {
-    /* Further reduce padding for extra small devices */
-    nav {
-        padding: 5px 10px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .project-bg img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 
 /* Responsive Footer Styles */
 @media (max-width: 768px) {
     footer {
-        font-size: 1.1rem; /* Smaller font size on tablets */
-        padding: 15px; /* Adjust padding */
+        font-size: 1.3rem;
+        padding: 15px;
     }
 
     footer .social-icons {
-        font-size: 1.5rem; /* Smaller icons on tablets */
-        gap: 15px; /* Reduce gap */
+        font-size: 1.5rem;
+        gap: 15px;
     }
 
     footer h3 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     footer p {
-        font-size: 0.85rem; /* Smaller footer text */
+        font-size: 0.9rem;
     }
 }
 
@@ -255,5 +265,98 @@ footer p {
 
     footer p {
         font-size: 0.5rem; /* Even smaller footer text */
+    }
+}
+
+/* For devices with max width 768px */
+@media (max-width: 768px) {
+
+    .project-bg img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .mockup img {
+        width: 100%; /* Make images full-width */
+        height: auto; /* Adjust height for aspect ratio */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px; /* Reduced space between buttons */
+    }
+}
+
+/* For devices with max width 1024px */
+@media (max-width: 1024px) {
+
+    .project-bg img {
+        width: 100vw; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
+    }
+
+    .mockup img {
+        width: 90%; /* Make images responsive */
+        height: auto; /* Adjust height for aspect ratio */
+        flex-direction: row;
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 50px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 30px; /* Smaller button padding */
+        width: 220px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+/* For devices with max width 480px */
+@media (max-width: 480px) {
+
+    .project-bg img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .mockup img {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 412px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (width: 540px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.6rem;
+        text-align: center;
     }
 }

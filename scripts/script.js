@@ -176,4 +176,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Get the button
+const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+// Show the button when scrolling down
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollUpBtn.style.display = "block"; // Show button
+    } else {
+        scrollUpBtn.style.display = "none"; // Hide button
+    }
+};
+
+// Function to scroll to the top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll effect
+    });
+}
 

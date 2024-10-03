@@ -10,18 +10,16 @@
     <link rel="stylesheet" href="css\styles_ecoglee.css">
 </head>
 
-    <!-- Loader -->
-    <div id="loader">
-        <div class="infinity-loader"></div>
-    </div>
-
 
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <img src="images\Logo.png" alt="Logo" class="logo">
+        <img src="images/Logo.png" alt="Logo" class="logo">
         <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="cross" onclick="toggleMenu()">
+            &#10005; <!-- Cross icon -->
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -57,5 +55,10 @@
         </div>
         <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
     </footer>
+
+        <!-- Scroll Up Button -->
+        <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
+            <i class="fas fa-chevron-up"></i>
+        </button>
     
         <script src="scripts\script.js"></script>

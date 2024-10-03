@@ -394,10 +394,33 @@ footer p {
     margin-bottom: 30px;
 }
 
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: none; /* Initially hidden */
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.scroll-up-btn:hover {
+    background-color: #1e5f89; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
 /* Responsive Footer Styles */
 @media (max-width: 768px) {
     footer {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         padding: 15px;
     }
 
@@ -407,10 +430,10 @@ footer p {
     }
 
     footer h3 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     footer p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -438,8 +461,25 @@ footer p {
     }
 
     .intro-text {
-        padding-right: 0;
         text-align: left;
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .intro-text h1 {
+        font-size: 3rem;
+    }
+
+    .intro-text h2 {
+        font-size: 1.9rem;
+    }
+
+    .intro-text h3 {
+        font-size: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 1.5rem;
     }
 
     .intro-image {
@@ -449,6 +489,26 @@ footer p {
     .card {
         width: 40%;
     }
+
+    #worked-with-section h2{
+        font-size: 2rem;
+    }
+
+    .hobby h2{
+        font-size: 2rem;
+    }
+
+    .hobby i{
+        font-size:1.4rem;
+    }
+
+    .cards h3{
+        font-size: 1.3rem;
+    }
+
+    .cards p{
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -456,8 +516,16 @@ footer p {
         font-size: 2rem;
     }
 
+    .intro-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text h3 {
+        font-size: 1.7rem;
+    }
+
     .intro-text p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .card {
@@ -467,9 +535,29 @@ footer p {
     .intro-image img{
         width: 90%;
     }
+
+    #worked-with-section h2{
+        font-size: 1.8rem;
+    }
+
+    .hobby h2{
+        font-size: 1.8rem;
+    }
+
+    .hobby i{
+        font-size:1.2rem;
+    }
+
+    .cards h3{
+        font-size: 1.2rem;
+    }
+
+    .cards p{
+        font-size: 1rem;
+    }
 }
 
-@media (max-width: 540px) {
+@media (width: 540px) {
 
     .intro-text{
         padding-right: 10px;
@@ -481,6 +569,10 @@ footer p {
 
     .intro-text h2 {
         font-size: 1.2rem;
+    }
+
+    .intro-text h3 {
+        font-size: 1.3rem;
     }
 
     .intro-text p {
@@ -505,6 +597,26 @@ footer p {
 
     .cards{
         width: 30%;
+    }
+
+    #worked-with-section h2{
+        font-size: 1.5rem;
+    }
+
+    .hobby h2{
+        font-size: 1.5rem;
+    }
+
+    .hobby i{
+        font-size:1rem;
+    }
+
+    .cards h3{
+        font-size: 1rem;
+    }
+
+    .cards p{
+        font-size: 0.9rem;
     }
 }
 
@@ -520,15 +632,19 @@ footer p {
     }
 
     .intro-text h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .intro-text h3 {
+        font-size: 1.1rem;
     }
 
     .intro-text p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .intro-image img {
-        max-width: 300px;
+        max-width: 200px;
     }
 
     .card {
@@ -536,7 +652,7 @@ footer p {
     }
 
     .resume-btn {
-        padding: 10px 20px;
+        padding: 8px 16px;
     }
 
     .intro-image img{
@@ -545,5 +661,25 @@ footer p {
 
     .cards{
         width: 30%;
+    }
+
+    #worked-with-section h2{
+        font-size: 1.5rem;
+    }
+
+    .hobby h2{
+        font-size: 1.5rem;
+    }
+
+    .hobby i{
+        font-size:1rem;
+    }
+
+    .cards h3{
+        font-size: 1rem;
+    }
+
+    .cards p{
+        font-size: 0.9rem;
     }
 }

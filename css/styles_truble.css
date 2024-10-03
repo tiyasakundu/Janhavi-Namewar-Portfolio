@@ -171,21 +171,6 @@ body.scrolled nav {
     object-fit: cover; /* Ensure the images cover the container */
 }
 
-/* Responsive Styles for Extra Images */
-@media (max-width: 1024px) {
-    .extra-images img {
-        width: 300px; /* Adjust image size on smaller screens */
-        height: 250px;
-    }
-}
-
-@media (max-width: 768px) {
-    .extra-images img {
-        width: 250px; /* Smaller image size for mobile */
-        height: 200px;
-    }
-}
-
 
 /* Button container styling */
 .button-container {
@@ -243,23 +228,46 @@ footer p {
     margin-bottom: 30px;
 }
 
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: none; /* Initially hidden */
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.scroll-up-btn:hover {
+    background-color: #1e5f89; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
 /* Responsive Footer Styles */
 @media (max-width: 768px) {
     footer {
-        font-size: 1.1rem; /* Smaller font size on tablets */
-        padding: 15px; /* Adjust padding */
+        font-size: 1.3rem;
+        padding: 15px;
     }
 
     footer .social-icons {
-        font-size: 1.5rem; /* Smaller icons on tablets */
-        gap: 15px; /* Reduce gap */
+        font-size: 1.5rem;
+        gap: 15px;
     }
 
     footer h3 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     footer p {
-        font-size: 0.85rem; /* Smaller footer text */
+        font-size: 0.9rem;
     }
 }
 
@@ -276,5 +284,110 @@ footer p {
 
     footer p {
         font-size: 0.5rem; /* Even smaller footer text */
+    }
+}
+
+/* Media Queries */
+
+/* For devices with max width 768px */
+@media (max-width: 768px) {
+
+    .project-bg img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .mockup img {
+        width: 100%; /* Make images full-width */
+        height: auto; /* Adjust height for aspect ratio */
+    }
+
+    .extra-images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 30px; /* Reduced space between images */
+    }
+
+    .extra-images img {
+        width: 90%; /* Make images more responsive */
+    }
+
+    .button-container {
+        flex-direction: row; /* Stack buttons vertically */
+        gap: 20px; /* Reduced space between buttons */
+    }
+}
+
+/* For devices with max width 1024px */
+@media (max-width: 1024px) {
+
+    .project-bg img {
+        width: 100vw; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
+    }
+
+    .mockup img {
+        width: 90%; /* Make images responsive */
+        height: auto; /* Adjust height for aspect ratio */
+        flex-direction: row;
+    }
+
+    .extra-images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 40px; /* Adjust space between images */
+        align-items: center;
+    }
+
+    .extra-images img {
+        width: 40%; /* Make images full-width */
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 30px; /* Smaller button padding */
+        width: 220px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+/* For devices with max width 480px */
+@media (max-width: 480px) {
+
+    .project-bg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .mockup img {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .extra-images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Adjust space between images */
+        align-items: center;
+    }
+
+    .extra-images img {
+        width: 50%; /* Make images full-width */
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 8px 16px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.8rem;
+        text-align: center;
     }
 }
