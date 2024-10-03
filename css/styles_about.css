@@ -278,7 +278,8 @@ html {
 }
 
 .card h3 {
-    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-weight: 300;
     font-size: 1.2rem;
     margin: 10px 0;
 }
@@ -303,6 +304,18 @@ html {
     margin-bottom: 10px;    /* Adds spacing between the list items */
     font-size: 0.9rem;        /* Adjusts font size if needed */
     color: #333;            /* Ensures consistent text color */
+}
+
+.cards-container .card:nth-child(1) .card-img {
+    max-width: 200px;
+    margin-top: 30px;
+}
+
+/* Specific image size adjustment for 2nd, 3rd, and 4th cards */
+.cards-container .card:nth-child(2) .card-img,
+.cards-container .card:nth-child(3) .card-img,
+.cards-container .card:nth-child(4) .card-img {
+    max-height: 75px; /* Decrease the size for these specific cards */
 }
 
 /* Hobby Section */
@@ -676,7 +689,15 @@ footer p {
     }
 
     .cards{
-        width: 30%;
+        width: 40%;
+    }
+
+    .cards:nth-child(1) {
+        width: 50%;
+    }
+
+    .cards:nth-child(2) .card-vid {
+        margin-top: 20px;
     }
 
     #worked-with-section h2{
@@ -688,7 +709,7 @@ footer p {
     }
 
     .hobby i{
-        font-size:1rem;
+        font-size:0.9rem;
     }
 
     .cards h3{
