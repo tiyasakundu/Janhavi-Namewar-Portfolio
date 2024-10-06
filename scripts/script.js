@@ -199,7 +199,8 @@ function scrollToTop() {
 
 function reveal() {
     var reveals = document.querySelectorAll(".project-card");
-    var revealTitle = document.querySelectorAll(".title")
+    var revealTitle = document.querySelectorAll(".title");
+    var revealTitleH1 = document.querySelectorAll(".title h1, .typing-dots.heading-dots");
   
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
@@ -212,17 +213,29 @@ function reveal() {
         reveals[i].classList.remove("active");
       }
     }    
-    for (var i = 0; i < revealTitle.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = revealTitle[i].getBoundingClientRect().top;
-      var elementVisible = 200;
+    // for (var i = 0; i < revealTitle.length; i++) {
+    //   var windowHeight = window.innerHeight;
+    //   var elementTop = revealTitle[i].getBoundingClientRect().top;
+    //   var elementVisible = 200;
   
-      if (elementTop < windowHeight - elementVisible) {
-        revealTitle[i].classList.add("active");
-      } else {
-        revealTitle[i].classList.remove("active");
+    //   if (elementTop < windowHeight - elementVisible) {
+    //     // revealTitle[i].classList.add("active");
+    //   } else {
+    //     // revealTitle[i].classList.remove("active");
+    //   }
+    // }
+
+    for (var i = 0; i < revealTitleH1.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = revealTitleH1[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+    
+        if (elementTop < windowHeight - elementVisible) {
+            revealTitleH1[i].classList.add("animate");}
+        // } else {
+        //     revealTitleH1[i].classList.remove("active");
+        // }
       }
-    }
   }
 
   document.addEventListener("DOMContentLoaded", function () {

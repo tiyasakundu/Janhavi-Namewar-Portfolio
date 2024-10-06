@@ -175,7 +175,7 @@ body.scrolled nav {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     position: relative;
     padding-left: 100px;
     /* background-image: url('Slide 16_9 - 43.png'); */
@@ -485,8 +485,12 @@ body.scrolled nav {
     align-items: center;
     z-index: 1; /* Appears above the name bubble */
     opacity: 0; /* Hidden by default */
-    transition: opacity 0.85s forwards ease-in-out;
-    transition-delay: 1s; 
+}
+
+.typing-dots.heading-dots.animate {
+
+    animation: fadeInDots 0.5s forwards ease-in-out;
+    /* animation-delay: 4s;  */
 }
 
 .typing-dots.heading-dots div {
@@ -509,18 +513,6 @@ body.scrolled nav {
     animation-delay: 0.4s;
 }
 
-/* Animation for fading in and out the dots */
-@keyframes fadeInDots {
-    0% {
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
 /* Featured Projects Title as Bubble */
 .title h1 {
@@ -536,25 +528,18 @@ body.scrolled nav {
     width: fit-content; /* Fit the width of the content */
     height: auto;
     z-index: 0;
-    opacity: 0; /* Hidden initially */
-    transform-origin: top left;
-    transform: scale(0.2); /* Start scaled down */
-    transition: opacity,transform 0.5s forwards ease-in-out;
-    transition-delay: 4s; 
+    opacity: 0;
 }
 
 .title.active {
-    opacity: 1;
-    transform: scale(1);
+    /* opacity: 1; */
 }
 
-.title.active h1{
-    opacity: 1;
-    transform: scale(1);
-}
-
-.title.active .typing-dots{
-    opacity: 1;
+.title h1.animate{
+    transform-origin: top left;
+    transform: scale(0.2); /* Start scaled down */
+    animation: zoomInLeft 0.5s forwards ease-in-out;
+    animation-delay: 0.75s; 
 }
 
 .project-card {
@@ -576,7 +561,7 @@ body.scrolled nav {
     transform: scale(0.2);
     /* transition: transform 2s ease-in-out;  */
     transition-property: transform, opacity;
-    transition-duration: 0.5s;
+    transition-duration: 0.75s;
     transition-behavior: ease-in-out;
 }
 
@@ -584,16 +569,6 @@ body.scrolled nav {
     opacity:1;
     transform: scale(1);
 }
-
-/* Animation Keyframes */
-/* @keyframes zoomInLeft {
-    to {
-        opacity: 1;
-        transform: scale(1); 
-    }
-} */
-
-
 
 
 
@@ -743,55 +718,6 @@ body.scrolled nav {
 }
 
 
-.typing-dots.heading-dots {
-    position: absolute;
-    left: 13%; /* Adjust the position relative to name bubble */
-    top: 30px;
-    bottom: 5px; /* Adjust vertical position if needed */
-    width: 40px; /* Adjust width to accommodate larger dots */
-    height: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1; /* Appears above the name bubble */
-    opacity: 0; /* Hidden by default */
-    animation: fadeInDots 0.85s forwards ease-in-out;
-    animation-delay: 4s; /* Adjust delay for when typing dots appear */
-}
-
-.typing-dots.heading-dots div {
-    width: 8px;  /* Increased dot width */
-    height: 8px;
-    background-color: #2980b9;
-    border-radius: 50%;
-    animation: bounceDots 0.5s infinite ease-in-out;
-}
-
-.typing-dots.heading-dots div:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.typing-dots.heading-dots div:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.typing-dots.heading-dots div:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-/* Animation for fading in and out the dots */
-@keyframes fadeInDots {
-    0% {
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 /* Experience Section Title */
 .experience.title h1 {
     font-family: 'Gilroy-Bold', sans-serif;
@@ -813,17 +739,6 @@ body.scrolled nav {
     animation-delay: 4.7s; /* Heading appears after the typing dots disappear */
 }
 
-/* Animation Keyframes */
-@keyframes zoomInLeft {
-    0% {
-        opacity: 0;
-        transform: scale(0.2); /* Start scaled down */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1); /* End at full scale */
-    }
-}
 
 
 /* Cards Container */
