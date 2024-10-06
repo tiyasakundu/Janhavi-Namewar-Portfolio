@@ -196,3 +196,36 @@ function scrollToTop() {
     });
 }
 
+
+function reveal() {
+    var reveals = document.querySelectorAll(".project-card");
+    var revealTitle = document.querySelectorAll(".title")
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 200;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }    
+    for (var i = 0; i < revealTitle.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = revealTitle[i].getBoundingClientRect().top;
+      var elementVisible = 200;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        revealTitle[i].classList.add("active");
+      } else {
+        revealTitle[i].classList.remove("active");
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", reveal, {passive: true});
+});
+  

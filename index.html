@@ -12,6 +12,13 @@
     
 <body>
 
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images\portg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <!-- Navigation Bar -->
     <nav>
         <img src="images/Logo.png" alt="Logo" class="logo">
@@ -42,7 +49,7 @@
                 </div>
     
                 <!-- First Typing Dots Animation -->
-                <div class="typing-dots">
+                <div class="typing-dots chat-dots">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -75,26 +82,115 @@
     </section>
     
     
+    
     <section class="featured-projects">
         <div class="title">
-            <h1>Featured Projects</h1>
+            <h1>Showcasing my <i>work</i></h1>
+            <!-- Typing dots for heading -->
+            <div class="typing-dots heading-dots">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
+    
         <div class="project-bg">
-            <div class="project-item1">
-                <img src="images\Truble Homepage.png" alt="Project 1">
-                <a href="truble.html" class="case-study-btn">View Case Study</a>
+            <!-- Typing Dots before Project Item 1 -->
+            <div class="typing-dots project-dots project-dots1">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-            <div class="project-item2">
-                <img src="images\Finview Homepage.png" alt="Project 2">
-                <a href="finview.html" class="case-study-btn">View Case Study</a>
+    
+            <!-- Project Item 1 -->
+            <div class="project-item1 project-card">
+                <div class="project-info">
+                    <h2>Immersive Navigation</h2>
+                    <h3>User Research | User Experience</h3>
+                    <p>Internship project at Siemens on immersive experience.</p>
+                    <a href="truble.html" class="case-study-btn">View Case Study</a>
+                </div>
+                <div class="project-image">
+                    <img src="images/Siemens Card.png" alt="Immersive Navigation Project">
+                </div>
             </div>
-        </div> 
-    </section>   
+    
+            <!-- Typing Dots before Project Item 2 -->
+            <div class="typing-dots project-dots project-dots2">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <!-- Project Item 2 -->
+            <div class="project-item2 project-card">
+                <div class="project-info">
+                    <h2>Fact Check & Critical Thinking Application and Browser Extension</h2>
+                    <h3>User Experience Design | User Interface Design</h3>
+                    <p>Lack of critical thinking skills in information evaluation leads to widespread susceptibility of misinformation and disinformation online</p>
+                    <a href="finview.html" class="case-study-btn">View Case Study</a>
+                </div>
+                <div class="project-image">
+                    <img src="images/Truble Card.png" alt="Finview Project">
+                </div>
+            </div>
+
+            <!-- Typing Dots before Project Item 3 -->
+            <div class="typing-dots project-dots project-dots3">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Project Item 3 -->
+            <div class="project-item3 project-card">
+                <div class="project-info">
+                    <h2>Finance Tracking App</h2>
+                    <h3>User Experience Design | User Interface Design</h3>
+                    <p>Designing a finance tracking app for undergraduate college students who find it hard to track on their expenses</p>
+                    <a href="finview.html" class="case-study-btn">View Case Study</a>
+                </div>
+                <div class="project-image">
+                    <img src="images/Finview Card.png" alt="Finview Project">
+                </div>
+            </div>
+
+            <!-- Typing Dots before Project Item 4 -->
+            <div class="typing-dots project-dots project-dots4">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Project Item 4 -->
+            <div class="project-item4 project-card">
+                <div class="project-info">
+                    <h2>MMI: Business Management Live Project</h2>
+                    <h3>User Interface Design</h3>
+                    <p>This app is dedicated to sales force management and marketing activities, encompassing sales, Stock monitoring</p>
+                    <a href="finview.html" class="case-study-btn">View Case Study</a>
+                </div>
+                <div class="project-image">
+                    <img src="images/MMI Card.png" alt="Finview Project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    
 
     <section class="experience">
-            <div class="title">
-                <h1>Industry Experience</h1>
+        <div class="title">
+            <h1>What makes me <i>different?</i></h1>
+            <!-- Typing dots for heading -->
+            <div class="typing-dots heading-dots">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
+        </div>
         <div class="cards-container">
                 <!-- Card 1 -->
         <div class="card">
@@ -163,6 +259,23 @@
         <i class="fas fa-chevron-up"></i>
     </button>
     
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const featuredProjects = document.querySelector('.featured-projects');
+        const sectionOffsetTop = featuredProjects.offsetTop;
+
+        function checkScroll() {
+            const scrollY = window.scrollY || window.pageYOffset; // Get current scroll position
+            if (scrollY + window.innerHeight >= sectionOffsetTop) {
+                featuredProjects.classList.add('visible'); // Add visible class to show the section
+                window.removeEventListener('scroll', checkScroll); // Remove event listener after it becomes visible
+            }
+        }
+
+        // window.addEventListener('scroll', checkScroll); // Listen for scroll events
+    });
+
+    </script> -->
     <script src="scripts\script.js"></script>
     
 </body>
