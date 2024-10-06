@@ -18,6 +18,35 @@ window.onload = function() {
     setTimeout(() => {
         document.querySelector('.resume-bubble').classList.add('show');
     }, 3000); // Delay for the resume button
+
+
+
+        // Function to handle the image animation on scroll
+        function animateImageOnScroll(entries, observer) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('project-image-visible'); // Add visible class to the image
+                    }, index * 200); // Stagger animations by 200ms intervals
+                    observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                }
+            });
+        }
+    
+        // Create an IntersectionObserver to watch the project images
+        const observer = new IntersectionObserver(animateImageOnScroll, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+    
+        // Select all project images
+        const projectImages = document.querySelectorAll('.project-image');
+    
+        // Observe each project image
+        projectImages.forEach(image => {
+            observer.observe(image);
+        });
+    
+        document.getElementById("truble-image").innerHTML = "<img src='images/Truble SVG.svg' height=0 width=0 />";
 };
 
 // Get the current URL path
@@ -112,33 +141,6 @@ window.addEventListener('load', () => {
         card.classList.add('show');
     });
 });
-
-window.onload = function() {
-    // Function to handle the image animation on scroll
-    function animateImageOnScroll(entries, observer) {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('project-image-visible'); // Add visible class to the image
-                }, index * 200); // Stagger animations by 200ms intervals
-                observer.unobserve(entry.target); // Stop observing once the animation is triggered
-            }
-        });
-    }
-
-    // Create an IntersectionObserver to watch the project images
-    const observer = new IntersectionObserver(animateImageOnScroll, {
-        threshold: 0.2 // Trigger when 20% of the element is visible
-    });
-
-    // Select all project images
-    const projectImages = document.querySelectorAll('.project-image');
-
-    // Observe each project image
-    projectImages.forEach(image => {
-        observer.observe(image);
-    });
-};
 
 document.addEventListener('DOMContentLoaded', () => {
     function toggleMenu() {
@@ -242,3 +244,4 @@ function reveal() {
     window.addEventListener("scroll", reveal, {passive: true});
 });
   
+
