@@ -392,11 +392,16 @@ body.scrolled nav {
     padding: 0 180px; /* Increased left padding for better alignment */
 }
 
-#worked-with-section h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2.2rem;
+#worked-with-section h3 {
+    font-size: 1.1rem;
     margin-bottom: 40px;
-    color: #2980b9;
+    color: #333;
+}
+
+#worked-with-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 .typing-dots.heading-dots {
