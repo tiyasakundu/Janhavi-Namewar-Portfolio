@@ -189,8 +189,8 @@ body.scrolled nav {
 }
 
 .profile-section h1 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
     color: #2980b9;
 }
 
@@ -482,6 +482,7 @@ body.scrolled nav {
 .card {
     background-color: white;
     border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 22%;
     padding: 30px 20px;
