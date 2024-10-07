@@ -47,13 +47,13 @@ window.onload = function() {
         });
     
         document.getElementById("truble-image").innerHTML = "<img src='images/Truble SVG.svg' height=0 width=0 />";
-        document.getElementById("immersive-image").innerHTML = "<img src='images/Siemens.svg' height=0 width=0 />";
-        document.getElementById("finview-image").innerHTML = "<img src='images/Finvue SVG.svg' height=0 width=0 />";
-        document.getElementById("mmi-image").innerHTML = "<img src='images/MMI SVG.svg' height=0 width=0 />";
-        document.getElementById("ecoglee-image").innerHTML = "<img src='images/Ecoglee SVG.svg' height=0 width=0 />";
-        document.getElementById("emosign-image").innerHTML = "<img src='images/Emosign.svg' height=0 width=0 />";
-        document.getElementById("fabindia-image").innerHTML = "<img src='images/Fabindia packaging SVG.svg' height=0 width=0 />";
-        document.getElementById("superstitions-image").innerHTML = "<img src='images/Superstition SVG.svg' height=0 width=0 />";
+        // document.getElementById("immersive-image").innerHTML = "<img src='images/Siemens.svg' height=0 width=0 />";
+        // document.getElementById("finview-image").innerHTML = "<img src='images/Finvue SVG.svg' height=0 width=0 />";
+        // document.getElementById("mmi-image").innerHTML = "<img src='images/MMI SVG.svg' height=0 width=0 />";
+        // document.getElementById("ecoglee-image").innerHTML = "<img src='images/Ecoglee SVG.svg' height=0 width=0 />";
+        // document.getElementById("emosign-image").innerHTML = "<img src='images/Emosign.svg' height=0 width=0 />";
+        // document.getElementById("fabindia-image").innerHTML = "<img src='images/Fabindia packaging SVG.svg' height=0 width=0 />";
+        // document.getElementById("superstitions-image").innerHTML = "<img src='images/Superstition SVG.svg' height=0 width=0 />";
 };
 
 // Get the current URL path
