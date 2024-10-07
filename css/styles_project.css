@@ -7,66 +7,102 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background: white;
     color: #333;
     overflow-x: hidden;
+    position: relative;
+    min-height: 200vh; /* Ensures enough content to test scrolling */
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keeps video behind the content */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire background */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Keeps content above video */
+    text-align: center;
+    padding: 20px;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centers the navigation */
     align-items: center;
-    padding: 15px 30px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffb1; /* Adjusted background color */
+    padding: 20px 40px; /* Adjust padding as needed */
+    border-bottom-left-radius: 50px; /* Rounded corners */
+    border-bottom-right-radius: 50px;
+    margin: auto; /* Center the nav bar horizontally */
+    width: 60%; /* Adjust the width to fit in the center */
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
 }
 
 nav .logo {
-    height: 60px;
+    height: 35px;
     margin-left: 30px;
 }
 
+/* Nav list */
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: 0;
+    justify-content: center; /* Center the items within the navbar */
+    width: 100%; /* Full width to evenly space items */
+    max-width: 1200px; /* Maximum width for the navbar */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 20px; /* Space between items */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded links to match the style */
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
     text-decoration: underline;
 }
 
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Change navbar background on scroll */
-body.scrolled nav {
-    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow for effect */
-    transition: background-color 0.3s ease-in-out;
-}
-
+/* Hide hamburger for now */
 .hamburger, .cross {
     display: none;
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
 /* For small screens (max-width: 760px) */
@@ -177,142 +213,166 @@ body.scrolled nav {
     color: white;
 }
 
-/* Projects Section */
-.projects-section {
-    padding: 0; /* Remove padding for full-width background coverage */
-    margin: 0; /* Ensure no gaps between project cards */
+
+/* Profile Section */
+.profile-section {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    padding-left: 80px;
+    margin-bottom: 30px;
 }
 
+.profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-/* Project Card */
-.project-card1, .project-card2, .project-card3 {
-    width: 100vw; /* Full viewport width */
-    position: relative; /* Ensure proper positioning for background */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 0; /* Remove margin between cards */
-    overflow: hidden;
-    padding-left: 180px;
+.profile-section h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 1.5rem;
+    color: #2980b9;
+}
+
+/* Projects Section */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    color: #2980b9;
+    font-size: 1.2em;
+    padding: 0 180px; /* Increased left padding for better alignment */
+    margin-bottom: 150px;
+}
+
+/* Typing Dots Styling */
+.typing-dots.project-dots {
+    position: absolute;
+    left: 12%; /* Adjust the position relative to name bubble */
+    top: 20px;
+    bottom: 5px; /* Adjust vertical position if needed */
+    width: 40px; /* Adjust width to accommodate larger dots */
+    height: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2; /* Ensure content is above the background */
+    z-index: 1; /* Appears above the name bubble */
+    opacity: 0; /* Hidden by default */
+    animation: fadeInDots 0.85s forwards ease-in-out;
 }
 
-/* Background colors for each project card */
-.project-card1 {
-    background-image: url('truble (1).png');
-    padding-top: 30px;
-    padding-bottom: 30px;
+.typing-dots.project-dots div {
+    width: 8px;  /* Increased dot width */
+    height: 8px;
+    background-color: #2980b9;
+    border-radius: 50%;
+    animation: bounceDots 0.5s infinite ease-in-out;
 }
 
-.project-card2 {
-    background-image: url('finvue.png');
-    padding-top: 40px;
-    padding-bottom: 30px;
+.typing-dots.project-dots div:nth-child(1) {
+    animation-delay: 0s;
 }
 
-.project-card3 {
-    background-image: url('mmi.png');
-    padding-top: 40px;
-    padding-bottom: 30px;
+.typing-dots.project-dots div:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
-/* Image styling */
+.typing-dots.project-dots div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.typing-dots.typing-dots.project-dots.active {
+    opacity: 1;
+}
+
+@keyframes fadeInDots {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Bouncing dots animation */
+@keyframes bounceDots {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Project Card */
+.p-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #ffffff; /* Dark card background */
+    border-radius: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    margin-bottom: 25px;
+    width: 100%; /* Full width card */
+    height: 450px;
+    color: #333; /* Text color for better contrast */
+    opacity: 0; 
+    transform-origin: top left;
+    transform: scale(0.2);
+    transition-property: transform, opacity;
+    transition-duration: 0.75s;
+    transition-behavior: ease-in-out;
+}
+
+.p-card.active {
+    opacity:1;
+    transform: scale(1);
+}
+
+
+/* Project Images */
 .project-image {
     width: 500px;
-    height: 350px;
+    height: auto;
     object-fit: cover;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 60px;
 }
 
-.project-image:hover {
-    transform: scale(1.1); /* Pop-up effect */
+/* Project Info */
+.project-info0, .project-info1, .project-info2, .project-info3 {
+    flex-grow: 1;
 }
 
-
-/* Image cards - Initial hidden state */
-.project-image {
-    opacity: 0; /* Invisible at first */
-    transform: translateX(-100%); /* Slide out of the viewport to the left */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smoother transition */
-}
-
-/* Visible state when scrolled into view */
-.project-image-visible {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Slide into the viewport */
-}
-
-
-/* Project Info Styling */
-.project-info0, .project-info1, .project-info2 {
-    position: relative;
-    padding-left: 60px;  /* Add padding to prevent triangle overlap with text */
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 200px;
-}
-
-.project-info0 h2, .project-info1 h2, .project-info2 h2 {
+/* .project-info0 h2, .project-info1 h2, .project-info2 h2, .project-info3 h2 {
     font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.project-info0 p, .project-info1 p, .project-info2 p {
+.project-info0 h3, .project-info1 h3, .project-info2 h3, .project-info3 h3 {
+    font-family: 'Gilroy-Medium', sans-serif;
     font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
 }
 
-/* Ensure the triangle animations run */
-.project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
-    position: absolute;
-    width: 30px;
-    top: 0;
-    opacity: 0;
-    filter: blur(10px);
-    transition: opacity 2s ease-out, filter 2s ease-out, transform 0.5s ease-out;
-}
-
-body.loaded .project-info0 .triangle,
-body.loaded .project-info1 .triangle,
-body.loaded .project-info2 .triangle {
-    opacity: 1;
-    filter: blur(0);
-    animation: triangleFadeIn 1s ease-out forwards;
-}
-
-.project-info0 .triangle {
-    left: 20px;
-    transform: translateY(60%);
-}
-
-.project-info1 .triangle {
-    left: 20px;
-    transform: translateY(-90%);
-}
-
-.project-info2 .triangle {
-    left: 20px;
-    transform: translateY(-70%);
-}
-
-@keyframes triangleFadeIn {
-    from {
-        opacity: 0;
-        filter: blur(10px);
-    }
-    to {
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
+.project-info0 p, .project-info1 p, .project-info2 p, .project-info3 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+} */
 
 
 /* Project Info 0 */
@@ -326,7 +386,7 @@ body.loaded .project-info2 .triangle {
 .project-info0 h2 {
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2rem;
-    color: #088F8F;
+    color: #033353;
     margin-bottom: 10px;
 }
 
@@ -350,7 +410,7 @@ body.loaded .project-info2 .triangle {
 /* Targeting the first project-info's case study button with pop-up effect on hover */
 .projects-section .project-card1 .case-study-btn {
     padding: 12px 30px;
-    background-color: #088F8F;
+    background-color: #033353;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -360,14 +420,15 @@ body.loaded .project-info2 .triangle {
 
 /* Hover effect: pop-up */
 .projects-section .project-card1 .case-study-btn:hover {
-    background-color: #065757;
+    background-color: #052a43;
     transform: scale(1.1); /* Pop-up effect */
 }
 
-/* Project Info 1 */
+
+/* Project Info 0 */
 .project-info1 {
     width: 50%;
-    padding-top: 10px;
+    padding-top: 40px;
     background-color: transparent;
     border-radius: 15px;
 }
@@ -375,7 +436,7 @@ body.loaded .project-info2 .triangle {
 .project-info1 h2 {
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2rem;
-    color: #0A68A7;
+    color: #088F8F;
     margin-bottom: 10px;
 }
 
@@ -399,7 +460,7 @@ body.loaded .project-info2 .triangle {
 /* Targeting the first project-info's case study button with pop-up effect on hover */
 .projects-section .project-card2 .case-study-btn {
     padding: 12px 30px;
-    background-color: #0A68A7;
+    background-color: #088F8F;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -409,15 +470,14 @@ body.loaded .project-info2 .triangle {
 
 /* Hover effect: pop-up */
 .projects-section .project-card2 .case-study-btn:hover {
-    background-color: #074670;
+    background-color: #065757;
     transform: scale(1.1); /* Pop-up effect */
 }
 
-/* Project Info 2 */
+/* Project Info 1 */
 .project-info2 {
     width: 50%;
     padding-top: 10px;
-    padding-bottom: 40px;
     background-color: transparent;
     border-radius: 15px;
 }
@@ -425,7 +485,7 @@ body.loaded .project-info2 .triangle {
 .project-info2 h2 {
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2rem;
-    color: #048BCE;
+    color: #0A68A7;
     margin-bottom: 10px;
 }
 
@@ -449,7 +509,7 @@ body.loaded .project-info2 .triangle {
 /* Targeting the first project-info's case study button with pop-up effect on hover */
 .projects-section .project-card3 .case-study-btn {
     padding: 12px 30px;
-    background-color: #048BCE;
+    background-color: #0A68A7;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -459,55 +519,125 @@ body.loaded .project-info2 .triangle {
 
 /* Hover effect: pop-up */
 .projects-section .project-card3 .case-study-btn:hover {
+    background-color: #074670;
+    transform: scale(1.1); /* Pop-up effect */
+}
+
+/* Project Info 2 */
+.project-info3 {
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.project-info3 h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 2rem;
+    color: #048BCE;
+    margin-bottom: 10px;
+}
+
+.project-info3 h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #959494;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.project-info3 p{
+    font-size: 1.1rem;
+}
+
+.projects-section .project-card4 p{
+    margin-bottom: 30px;
+}
+
+/* Targeting the first project-info's case study button with pop-up effect on hover */
+.projects-section .project-card4 .case-study-btn {
+    padding: 12px 30px;
+    background-color: #048BCE;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    display: inline-block; /* Ensure the button is treated as a block-level element */
+}
+
+/* Hover effect: pop-up */
+.projects-section .project-card4 .case-study-btn:hover {
     background-color: #036292;
     transform: scale(1.1); /* Pop-up effect */
 }
 
 
-/* Change navbar background on scroll */
-body.scrolled nav {
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-}
+
 
 /* Footer Section */
 footer {
     text-align: center;
     margin-top: 80px;
-    font-size: 1.3rem;
-    color: #121212;
+    padding: 10px 0; /* Adds padding to create space inside the footer */
+    background-color: transparent; /* Adjusted background color */
+    /* border-top-left-radius: 50px; 
+    border-top-right-radius:50px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    font-size: 1rem; /* Slightly reduced font size */
+    width: 100%;
+    margin: 0 auto;
+    color: #333; /* Darker text color for better contrast */
 }
 
+/* Social icons */
 footer .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: #121212;
+    gap: 20px; /* Reduced gap for smaller icons */
+    margin: 20px 0; /* Adjusts space around icons */
+    font-size: 1.5rem; /* Icon size */
+    color: #333;
 }
 
 footer .social-icons a {
-    color: #121212; /* Set icon color */
-    transition: color 0.3s ease; /* Smooth transition on hover */
-    text-decoration: none; /* Remove underline from link */
+    color: #333; /* Set icon color */
+    width:45px;
+    background-color: rgba(255, 255, 255, 0.497);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    transition: color 0.3s ease; /* Smooth transitions */
+    text-decoration: none; /* Remove underline */
 }
+
 
 footer .social-icons a:hover {
-    color: #0077b5; /* Change color on hover (LinkedIn blue as an example) */
+    background-color: #0077b5; /* Blue background on hover (LinkedIn example) */
+    color: #fff; /* White icon color on hover */
 }
 
+/* Footer text */
 footer h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
+    margin-top: 20px;
+    color: #333;
     margin-bottom: 20px;
 }
 
 footer p {
-    font-size: 0.95rem;
-    margin-bottom: 30px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666; /* Lighter color for subtext */
+}
+
+/* Copyright section */
+footer .copyright {
+    font-size: 0.8rem;
+    color: #888; /* Lighter gray for copyright text */
+    margin-top: 10px;
 }
 
 /* Scroll Up Button Styles */

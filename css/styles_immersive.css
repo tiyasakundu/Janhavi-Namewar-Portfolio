@@ -1,0 +1,202 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the navigation */
+    align-items: center;
+    background-color: #ffffff22; /* Adjusted background color */
+    padding: 20px 40px; /* Adjust padding as needed */
+    border-bottom-left-radius: 50px; /* Rounded corners */
+    border-bottom-right-radius: 50px;
+    margin: auto; /* Center the nav bar horizontally */
+    width: 60%; /* Adjust the width to fit in the center */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+}
+
+nav .logo {
+    height: 35px;
+    margin-left: 30px;
+}
+
+/* Nav list */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the items within the navbar */
+    width: 100%; /* Full width to evenly space items */
+    max-width: 1200px; /* Maximum width for the navbar */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded links to match the style */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide hamburger for now */
+.hamburger, .cross {
+    display: none;
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+}
+
+.project-bg img{
+    position: relative; /* Ensures children are positioned relative to this container */
+    width: 100%;
+    background-size: cover; /* Ensures image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    margin-top: -80px;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    margin-top: 50px; /* Adjust this based on the spacing you want */
+    margin-bottom: 60px;
+}
+
+/* Button styles */
+.nav-button {
+    padding: 15px 30px;
+    background-color: #2980b9; /* Light blue background */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #1e5f89; /* Slightly darker blue on hover */
+    transform:scale(1.1) ;
+}
+
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 10px 0; /* Adds padding to create space inside the footer */
+    background-color: transparent; /* Adjusted background color */
+    /* border-top-left-radius: 50px; 
+    border-top-right-radius:50px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    font-size: 1rem; /* Slightly reduced font size */
+    width: 100%;
+    margin: 0 auto;
+    color: #333; /* Darker text color for better contrast */
+}
+
+/* Social icons */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap for smaller icons */
+    margin: 20px 0; /* Adjusts space around icons */
+    font-size: 1.5rem; /* Icon size */
+    color: #333;
+}
+
+footer .social-icons a {
+    color: #333; /* Set icon color */
+    width:45px;
+    background-color: rgba(255, 255, 255, 0.497);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    transition: color 0.3s ease; /* Smooth transitions */
+    text-decoration: none; /* Remove underline */
+}
+
+
+footer .social-icons a:hover {
+    background-color: #0077b5; /* Blue background on hover (LinkedIn example) */
+    color: #fff; /* White icon color on hover */
+}
+
+/* Footer text */
+footer h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666; /* Lighter color for subtext */
+}
+
+/* Copyright section */
+footer .copyright {
+    font-size: 0.8rem;
+    color: #888; /* Lighter gray for copyright text */
+    margin-top: 10px;
+}
+
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: none; /* Initially hidden */
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.scroll-up-btn:hover {
+    background-color: #1e5f89; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}

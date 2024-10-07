@@ -12,6 +12,14 @@
 </head>
 
 <body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images\Comp about.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <!-- Navigation Bar -->
     <nav>
         <img src="images/Logo.png" alt="Logo" class="logo">
@@ -29,22 +37,39 @@
         </ul>
     </nav>
 
-    <div class="container"></div>
-        <!-- Main Introduction Section -->
-        <div class="intro-section">
+
+        <!-- Profile Section -->
+    <section class="profile-section">
+        <img src="images\Profile Image.jpeg" alt="Janhavi Namewar" class="profile-image">
+        <h1>Janhavi Namewar</h1>
+    </section>
+
+
+    <div class="container">
+        <!-- Title Section -->
+        <div class="title-section">
+            <h1>Looks like you're curious..! Well, let's make it worth your while</h1>
+            <div class="typing-dots about-dots">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    
+        <!-- Main Introduction Card -->
+        <div class="intro-card">
             <div class="intro-text">
-                <h1>Looks like you're curious..! Well, let's make it worth your while</h1>
                 <h3>Welcome to my digital corner</h3>
-                <p>Where design meets storytelling, and user experiences turn into seamless journeys. I'm <strong>Janhavi Namewar</strong>, a fourth-year <strong>visual communication student</strong> and a <strong>UX designer</strong> about turning complex problems into intuitive, user-centric solutions.</p>
-
-                <p>I believe design touches every area of human thought— <strong>strategy, decision-making, creativity, and social interaction. My focus lies in design research, transforming insights into impactful interventions</strong> while exploring new creative dimensions and collaborating to push boundaries.</p>
-
+                <p>Where design meets storytelling, and user experiences turn into seamless journeys. I'm <strong>Janhavi Namewar</strong>, a fourth-year <strong>visual communication student</strong> and a <strong>UX designer</strong> passionate about turning complex problems into intuitive, user-centric solutions.</p>
+    
+                <p>I believe design touches every area of human thought— <strong>strategy, decision-making, creativity, and social interaction</strong>. My focus lies in design research, transforming insights into impactful interventions while exploring new creative dimensions and collaborating to push boundaries.</p>
+    
                 <h2>Let’s connect, share ideas, and craft something extraordinary together!</h2>
-
+    
                 <!-- Add "View Resume" Button -->
                 <a href="docs\Resume.pdf" class="resume-btn" target="_blank">View Resume</a>
             </div>
-
+    
             <!-- Image Section -->
             <div class="intro-image">
                 <img src="images\aboutimage.jpeg" alt="Janhavi Namewar">
@@ -52,9 +77,18 @@
         </div>
     </div>
     
+    
     <!-- New Section: "I worked with" -->
 <section id="worked-with-section">
-    <h2>I worked with</h2>
+    <div class="title">
+        <h1>I <i>worked</i> with</h1>
+        <!-- Typing dots for heading -->
+        <div class="typing-dots heading-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="cards-container">
         <!-- Card 1 -->
         <div class="card">
@@ -109,58 +143,63 @@
     </div>
 </section>
 
+<!-- Updated Hobby Section -->
 <section class="hobby">
-    <h2>What I Do When I'm Not Working</h2>
-    <i>If you can't find me at my computer, I'm either reading books, exploring new things and places, or just enjoying a good meal at my favourite cafe...!!!!</i>
-    <div class="cards-container-2">
-        <!-- Card 1 -->
-        <div class="cards">
-            <video src="images\icons\reading.mp4" alt="Hobby 1" class="card-vid" autoplay muted loop></video>
-            <h3>Reading Books</h3>
-            <p>(Creative escape)</p>
-        </div>
+    <div class="hobby-card">
+        <h2>What I Do When I'm Not Working</h2>
+        <i>If you can't find me at my computer, I'm either reading books, exploring new things and places, or just enjoying a good meal at my favourite cafe...!!!!</i>
+    
+        <div class="cards-container-2">
+            <!-- Card 1 -->
+            <div class="cards">
+                <video src="images/icons/reading.mp4" alt="Reading Books" class="card-vid" autoplay muted loop></video>
+                <h3>Reading Books</h3>
+                <p>(Creative escape)</p>
+            </div>
 
-        <!-- Card 2 -->
-        <div class="cards">
-            <video src="images\icons\explore.mp4" alt="Hobby 2" class="card-vid" autoplay muted loop></video>
-            <h3>Exploring New Things</h3>
-            <p>(Curious explorer)</p>
-        </div>
+            <!-- Card 2 -->
+            <div class="cards">
+                <video src="images/icons/explore.mp4" alt="Exploring New Things" class="card-vid" autoplay muted loop></video>
+                <h3>Exploring New Things</h3>
+                <p>(Curious explorer)</p>
+            </div>
 
-        <!-- Card 3 -->
-        <div class="cards">
-            <video src="images\icons\cooking.mp4" alt="Hobby 3" class="card-vid" autoplay muted loop></video>
-            <h3>Enjoy Cooking</h3>
-            <p>(Kitchen experiments)</p>
-        </div>
+            <!-- Card 3 -->
+            <div class="cards">
+                <video src="images/icons/cooking.mp4" alt="Enjoy Cooking" class="card-vid" autoplay muted loop></video>
+                <h3>Enjoy Cooking</h3>
+                <p>(Kitchen experiments)</p>
+            </div>
 
-        <!-- Card 4 -->
-        <div class="cards">
-            <video src="images\icons\music.mp4" alt="Hobby 4" class="card-vid" autoplay muted loop></video>
-            <h3>Music</h3>
-            <p>(Rhythmic inspiration)</p>
+            <!-- Card 4 -->
+            <div class="cards">
+                <video src="images/icons/music.mp4" alt="Music" class="card-vid" autoplay muted loop></video>
+                <h3>Music</h3>
+                <p>(Rhythmic inspiration)</p>
+            </div>
         </div>
     </div>
 </section>
 
 
 
-        <!-- Footer Section -->
-        <footer id="contact">
-            <h3>Thank you for your interest in my work. Lets connect!</h3>
-            <div class="social-icons">
-                <a href="mailto:your-email@example.com" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
-                    <i class="fab fa-behance"></i>
-                </a>
-            </div>
-            <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
-        </footer>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="mailto:your-email@example.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <h3>Thank you for your interest in my work. Lets connect!</h3>
+        <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
+    </footer>
 
             <!-- Scroll Up Button -->
     <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">

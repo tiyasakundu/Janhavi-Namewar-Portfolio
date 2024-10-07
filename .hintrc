@@ -11,6 +11,14 @@
         "button-name": "off",
         "link-name": "off"
       }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "video[playsinline]"
+        ]
+      }
     ]
   }
 }

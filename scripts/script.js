@@ -200,9 +200,10 @@ function scrollToTop() {
 
 
 function reveal() {
-    var reveals = document.querySelectorAll(".project-card");
+    var reveals = document.querySelectorAll(".project-card, .about-me-card, .card, .hobby-card");
     var revealTitle = document.querySelectorAll(".title");
     var revealTitleH1 = document.querySelectorAll(".title h1, .typing-dots.heading-dots");
+
   
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
@@ -245,3 +246,62 @@ function reveal() {
 });
   
 
+document.addEventListener("DOMContentLoaded", function() {
+    var typingDots = document.querySelector('.typing-dots.project-dots');
+    var firstCard = document.querySelector(".p-card"); // First project card
+    var otherCards = document.querySelectorAll(".p-card:not(:first-child)"); // All other cards
+
+    // Show typing dots on page load
+    typingDots.classList.add("active");
+
+    // After 3 seconds, hide typing dots and show the first card without scrolling
+    setTimeout(function() {
+        typingDots.classList.remove("active");
+        firstCard.classList.add("active"); // Reveal the first card
+    }, 750); // Delay for typing dots
+
+    // Function to reveal other cards on scroll
+    function revealOnScroll() {
+        var windowHeight = window.innerHeight;
+
+        otherCards.forEach(function(card, index) {
+            var elementTop = card.getBoundingClientRect().top;
+            var elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                card.classList.add("active"); // Reveal the card when it comes into view
+            }
+            else {
+                card.classList.remove("active");
+              }
+        });
+    }
+
+    // Attach the scroll event for the other cards
+    window.addEventListener("scroll", revealOnScroll);
+});
+
+
+
+// Select the arrow element
+const arrow = document.querySelector('.arrow');
+
+// Select the experience section
+const experienceSection = document.querySelector('#experience-section');
+
+// Create an intersection observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Check if the experience section is in view
+        if (entry.isIntersecting) {
+            // Hide the arrow when experience section is in view
+            arrow.style.display = 'none';
+        } else {
+            // Show the arrow when experience section is out of view (if you want it to reappear)
+            arrow.style.display = 'block';
+        }
+    });
+}, { threshold: 0.5 }); // Adjust threshold as needed
+
+// Observe the experience section
+observer.observe(experienceSection);
