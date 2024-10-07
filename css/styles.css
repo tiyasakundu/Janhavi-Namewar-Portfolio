@@ -176,7 +176,7 @@ body.scrolled nav {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 70vh;
+    height: 90vh;
     position: relative;
     padding-left: 100px;
     /* background-image: url('Slide 16_9 - 43.png'); */
@@ -556,6 +556,7 @@ body.scrolled nav {
     border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
+    margin-top: 40px;
     margin-bottom: 25px;
     width: 100%; /* Full width card */
     height: 450px;
@@ -727,6 +728,7 @@ body.scrolled nav {
     border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
+    margin-top: 40px;
     margin-bottom: 150px;
     width: 100%; /* Full width card */
     height: 400px;
@@ -819,6 +821,7 @@ body.scrolled nav {
     border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
     color: #333;
     padding: 30px 20px;
+    margin-top: 40px;
     text-align: center;
     display: flex;
     flex-direction: column;
