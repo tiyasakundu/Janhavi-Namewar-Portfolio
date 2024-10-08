@@ -753,7 +753,7 @@ body.scrolled nav {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-top: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     width: 100%; /* Full width card */
     height: 400px;
     color: #333; /* Text color for better contrast */
@@ -922,6 +922,18 @@ body.scrolled nav {
     justify-content: center; /* Centers the button horizontally */
     width: 100%; /* Ensures the container takes the full width */
     margin-top: 50px; /* Adds some space between the projects and the button */
+    opacity: 0; 
+    transform-origin: top left;
+    transform: scale(0.2);
+    /* transition: transform 2s ease-in-out;  */
+    transition-property: transform, opacity;
+    transition-duration: 0.75s;
+    transition-behavior: ease-in-out;
+}
+
+.button-container.active {
+    opacity:1;
+    transform: scale(1);
 }
 
 /* Button styling */

@@ -152,6 +152,7 @@ function scrollToTop() {
 function reveal() {
     var reveals = document.querySelectorAll(".project-card, .about-me-card, .hobby-card");
     var revealcard = document.querySelectorAll(".card");
+    var revealbutton = document.querySelectorAll(".button-container");
     var revealTitle = document.querySelectorAll(".title");
     var revealTitleH1 = document.querySelectorAll(".title h1, .typing-dots.heading-dots");
 
@@ -167,6 +168,19 @@ function reveal() {
     //     reveals[i].classList.remove("active");
     //   }
     }    
+
+    for (var i = 0; i < revealbutton.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = revealbutton[i].getBoundingClientRect().top;
+        var elementVisible = 50;
+    
+        if (elementTop < windowHeight - elementVisible) {
+            revealbutton[i].classList.add("active");}
+      //   } else {
+      //     reveals[i].classList.remove("active");
+      //   }
+      }  
+
     // for (var i = 0; i < revealTitle.length; i++) {
     //   var windowHeight = window.innerHeight;
     //   var elementTop = revealTitle[i].getBoundingClientRect().top;
