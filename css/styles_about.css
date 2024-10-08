@@ -48,8 +48,8 @@ nav {
     align-items: center;
     background-color: #ffffffb1; /* Adjusted background color */
     padding: 20px 40px; /* Adjust padding as needed */
-    border-bottom-left-radius: 50px; /* Rounded corners */
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 35px; /* Rounded corners */
+    border-bottom-right-radius: 35px;
     margin: auto; /* Center the nav bar horizontally */
     width: 60%; /* Adjust the width to fit in the center */
     position: sticky;
@@ -175,7 +175,7 @@ body.scrolled nav {
 .profile-section {
     display: flex;
     align-items: center;
-    padding-left: 60px;
+    padding-left: 100px;
     padding-top: 60px;
     margin-bottom: 30px;
 }
@@ -201,20 +201,20 @@ body.scrolled nav {
     left: 12%; /* Adjust the position relative to name bubble */
     top: 220px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 40px; /* Adjust width to accommodate larger dots */
+    width: 50px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1; /* Appears above the name bubble */
     opacity: 0; /* Hidden by default */
-    animation: fadeInDots 0.85s forwards ease-in-out;
+    animation: fadeInDots 1s forwards ease-in-out;
 }
 
 
 .typing-dots.about-dots div {
-    width: 8px;  /* Increased dot width */
-    height: 8px;
+    width: 10px;  /* Increased dot width */
+    height: 10px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -276,7 +276,7 @@ body.scrolled nav {
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2.4rem;
     color: #2980b9;
-    margin-left: 80px;
+    margin-left: 120px;
     margin-bottom: 10px;
     margin-top: 20px;
     opacity:0;
@@ -304,9 +304,11 @@ body.scrolled nav {
     align-items: center;
     justify-content: space-between;
     padding: 60px;
+    padding-left: 50px;
     margin: 0 auto;
-    margin-left: 80px;
-    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin-left: 120px;
+    margin-right: 120px;
+    border: 3px solid #297fb94d;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -322,7 +324,6 @@ body.scrolled nav {
     flex: 1;
     padding-right: 20px;
     max-width: 600px;
-    margin: 0 auto;
     text-align: left;
 }
 
@@ -349,22 +350,39 @@ body.scrolled nav {
     margin-top: 30px;
 }
 
+
+/* Resume Button */
 .resume-btn {
     display: inline-block;
-    padding: 12px 25px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #2980b9;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid #2980b9;
+    margin-left: 5px;
+    border-radius: 20px;
+    color: #2980b9;
+    cursor: pointer;
+    transition: all 0.3s;
     margin-top: 40px;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
 }
 
+/* On hover, change the button color and tilt the icon */
 .resume-btn:hover {
-    background-color: #1e5f89;
-    transform: scale(1.1);
+    background-color: #2980b9; /* Change background to blue on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+.resume-btn:hover i {
+    transform: rotate(20deg);  /* Tilt the PDF icon 20 degrees to the right */
+    transition: transform 0.3s ease;  /* Smooth rotation transition */
+}
+
+.resume-btn i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease; /* Smooth rotation when tilting */
 }
 
 .intro-image {
@@ -387,6 +405,7 @@ body.scrolled nav {
     align-items: flex-start; /* Align items to the left */
     justify-content: flex-start;
     position: relative;
+    margin-bottom: 60px;
     color: #2980b9;
     font-size: 1.2em;
     background-color: none;
@@ -410,7 +429,7 @@ body.scrolled nav {
     left: 13%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 40px; /* Adjust width to accommodate larger dots */
+    width: 50px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -426,8 +445,8 @@ body.scrolled nav {
 }
 
 .typing-dots.heading-dots div {
-    width: 8px;  /* Increased dot width */
-    height: 8px;
+    width: 10px;  /* Increased dot width */
+    height: 10px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -489,9 +508,9 @@ body.scrolled nav {
 .card {
     background-color: white;
     border-radius: 20px;
-    border: 3px solid rgba(0, 0, 0, 0.1);
+    border: 3px solid #297fb94d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 22%;
+    width: 23%;
     padding: 30px 20px;
     margin-top: 40px;
     text-align: center;
@@ -543,7 +562,8 @@ body.scrolled nav {
 /* Ensure list items in cards show bullets */
 .card ul {
     list-style-type: disc; /* Ensures bullet points */
-    margin-left: 20px;      /* Adds indentation for bullet list */
+    margin-left: 10px;
+    margin-right: 10px;      /* Adds indentation for bullet list */
     padding-left: 20px;     /* Adds padding for bullets to align properly */
     text-align: left;       /* Aligns the list items to the left */
     align-self: flex-start; /* Align the list to the left within the card */
@@ -570,19 +590,25 @@ body.scrolled nav {
 
 /* Hobby Section */
 .hobby {
-    background-color: transparent; /* Light background color to make the card pop */
-    padding: 60px 0;           /* Space around the entire section */
     display: flex;
-    justify-content: center;    /* Center the card container */
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start;
+    position: relative;
+    color: #333;
+    font-size: 1.2em;
+    background-color: none;
+    padding: 0 180px;
+    margin-bottom: 60px;
 }
 
 .hobby-card {
     background-color: white;    /* White background for the whole card */
     border-radius: 30px;    
-    border: 3px solid rgba(0, 0, 0, 0.1);    /* Rounded corners for the card */
+    border: 3px solid #297fb94d;    /* Rounded corners for the card */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 1200px;          /* Limit the card width */
-    padding: 80px;              /* Padding inside the card */
+    padding: 80px;             /* Padding inside the card */
     text-align: center;         /* Center-align the text */
     opacity: 0; 
     transform-origin: top left;

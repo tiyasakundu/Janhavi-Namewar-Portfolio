@@ -48,8 +48,8 @@ nav {
     align-items: center;
     background-color: #ffffffb1; /* Adjusted background color */
     padding: 20px 40px; /* Adjust padding as needed */
-    border-bottom-left-radius: 50px; /* Rounded corners */
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 35px; /* Rounded corners */
+    border-bottom-right-radius: 35px;
     margin: auto; /* Center the nav bar horizontally */
     width: 60%; /* Adjust the width to fit in the center */
     position: sticky;
@@ -105,6 +105,7 @@ body.scrolled nav {
     background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on scroll */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
+
 
 /* For small screens (max-width: 760px) */
 @media (max-width: 760px) {
@@ -191,10 +192,16 @@ body.scrolled nav {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Visual & Creative Skills Button (Make it smaller) */
+/* Pop-up Effect on Hover for UI UX Button */
+.skill-btn1:hover {
+    transform: scale(1.1); /* Slight pop-up effect */
+}
+
+
+/* Skill Button 2 Styling */
 .skill-btn2 {
     font-family: "Work Sans", sans-serif;
-    padding: 15px 25px; /* Reduced padding for a smaller button */
+    padding: 15px 25px;
     background-color: white;
     color: #333;
     border: 2px solid #2980b9;
@@ -202,16 +209,30 @@ body.scrolled nav {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
-/* Pop-up Effect on Hover for UI UX Button */
-.skill-btn1:hover {
-    transform: scale(1.1); /* Slight pop-up effect */
+/* Arrow icon inside the button */
+.skill-btn2 i {
+    margin-left: 10px; /* Space between text and arrow */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Shifted left initially */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Hover effect for the skill button */
 .skill-btn2:hover {
     background-color: #2980b9;
     color: white;
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Arrow icon transition on hover */
+.skill-btn2:hover i {
+    opacity: 1; /* Make arrow visible */
+    transform: translateX(0); /* Slide arrow into place */
 }
 
 
@@ -219,7 +240,7 @@ body.scrolled nav {
 .profile-section {
     display: flex;
     align-items: center;
-    padding-left: 80px;
+    padding-left: 120px;
     margin-bottom: 30px;
 }
 
@@ -257,7 +278,7 @@ body.scrolled nav {
     left: 12%; /* Adjust the position relative to name bubble */
     top: 20px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 40px; /* Adjust width to accommodate larger dots */
+    width: 50px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -268,8 +289,8 @@ body.scrolled nav {
 }
 
 .typing-dots.project-dots div {
-    width: 8px;  /* Increased dot width */
-    height: 8px;
+    width: 10px;  /* Increased dot width */
+    height: 10px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -322,7 +343,7 @@ body.scrolled nav {
     padding: 50px;
     background-color: #ffffff; /* Dark card background */
     border-radius: 40px;
-    border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
+    border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-bottom: 25px;
@@ -375,6 +396,38 @@ body.scrolled nav {
     margin-bottom: 20px;
 } */
 
+/* General case study button styling */
+.case-study-btn {
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* Arrow icon inside the button */
+.case-study-btn i {
+    margin-left: 10px; /* Space between text and arrow */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Shifted left initially */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for case-study-btn: pop-up and arrow animation */
+.case-study-btn:hover {
+    transform: scale(1.1); /* Pop-up effect */
+}
+
+/* Arrow icon transition on hover */
+.case-study-btn:hover i {
+    opacity: 1; /* Make arrow visible */
+    transform: translateX(0); /* Slide arrow into place */
+}
 
 /* Project Info 0 */
 .project-info0 {
@@ -408,22 +461,12 @@ body.scrolled nav {
     margin-bottom: 30px;
 }
 
-/* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card1 .case-study-btn {
-    padding: 12px 30px;
+/* Specific styling for each project card */
+.project-card1 .case-study-btn {
     background-color: #033353;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
-    display: inline-block; /* Ensure the button is treated as a block-level element */
 }
 
-/* Hover effect: pop-up */
-.projects-section .project-card1 .case-study-btn:hover {
-    background-color: #052a43;
-    transform: scale(1.1); /* Pop-up effect */
-}
+
 
 
 /* Project Info 0 */
@@ -458,22 +501,11 @@ body.scrolled nav {
     margin-bottom: 30px;
 }
 
-/* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card2 .case-study-btn {
-    padding: 12px 30px;
+.project-card2 .case-study-btn {
     background-color: #088F8F;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
-    display: inline-block; /* Ensure the button is treated as a block-level element */
 }
 
-/* Hover effect: pop-up */
-.projects-section .project-card2 .case-study-btn:hover {
-    background-color: #065757;
-    transform: scale(1.1); /* Pop-up effect */
-}
+
 
 /* Project Info 1 */
 .project-info2 {
@@ -507,22 +539,11 @@ body.scrolled nav {
     margin-bottom: 30px;
 }
 
-/* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card3 .case-study-btn {
-    padding: 12px 30px;
+.project-card3 .case-study-btn {
     background-color: #0A68A7;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
-    display: inline-block; /* Ensure the button is treated as a block-level element */
 }
 
-/* Hover effect: pop-up */
-.projects-section .project-card3 .case-study-btn:hover {
-    background-color: #074670;
-    transform: scale(1.1); /* Pop-up effect */
-}
+
 
 /* Project Info 2 */
 .project-info3 {
@@ -557,23 +578,9 @@ body.scrolled nav {
     margin-bottom: 30px;
 }
 
-/* Targeting the first project-info's case study button with pop-up effect on hover */
-.projects-section .project-card4 .case-study-btn {
-    padding: 12px 30px;
+.project-card4 .case-study-btn {
     background-color: #048BCE;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
-    display: inline-block; /* Ensure the button is treated as a block-level element */
 }
-
-/* Hover effect: pop-up */
-.projects-section .project-card4 .case-study-btn:hover {
-    background-color: #036292;
-    transform: scale(1.1); /* Pop-up effect */
-}
-
 
 
 

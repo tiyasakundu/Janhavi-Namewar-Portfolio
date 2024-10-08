@@ -19,8 +19,8 @@ nav {
     align-items: center;
     background-color: #ffffffb1; /* Adjusted background color */
     padding: 20px 40px; /* Adjust padding as needed */
-    border-bottom-left-radius: 50px; /* Rounded corners */
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 35px; /* Rounded corners */
+    border-bottom-right-radius: 35px;
     margin: auto; /* Center the nav bar horizontally */
     width: 60%; /* Adjust the width to fit in the center */
     position: sticky;

@@ -246,7 +246,7 @@ body.scrolled nav {
     border-radius: 20px;
     text-align: left;
     width: 67%;
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
     top: -50px;
     height: 49%;
@@ -439,7 +439,7 @@ body.scrolled nav {
 
 .arrow {
     position: fixed; /* Change position to sticky */
-    left: 50%;
+    left: 48.5%;
     transform: translateX(-50%);
     bottom: 40px; /* Keep the arrow 40px from the bottom of the viewport */
     font-size: 4rem;
@@ -481,7 +481,7 @@ body.scrolled nav {
     left: 13%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 40px; /* Adjust width to accommodate larger dots */
+    width: 50px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -497,8 +497,8 @@ body.scrolled nav {
 }
 
 .typing-dots.heading-dots div {
-    width: 8px;  /* Increased dot width */
-    height: 8px;
+    width: 10px;  /* Increased dot width */
+    height: 10px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -553,7 +553,7 @@ body.scrolled nav {
     padding: 50px;
     background-color: #ffffff; /* Dark card background */
     border-radius: 40px;
-    border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
+    border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-top: 40px;
@@ -584,11 +584,13 @@ body.scrolled nav {
 }
 
 .project-info h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
 
 .project-info p {
+    font-size: 1rem;
     margin-bottom: 15px;
 }
 
@@ -631,7 +633,7 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Button Styling remains unchanged */
+/* Button Styling */
 .case-study-btn {
     position: absolute;
     padding: 12px 22px;
@@ -642,52 +644,73 @@ body.scrolled nav {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 1; /* Ensure button stays above the image */
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
+/* Styling for the Font Awesome arrow icon */
+.case-study-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for the button */
+.case-study-btn:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Arrow icon appears and slides into place on hover */
+.case-study-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(0); /* Slide it to the right of the text */
+}
+
+/* Specific button styles */
 .project-item1 .case-study-btn {
-    bottom: 60px; /* Distance from the bottom */
+    bottom: 60px;
     left: 4%;
     background-color: #033353;
 }
 
 .project-item2 .case-study-btn {
-    bottom: 50px; /* Distance from the bottom */
+    bottom: 50px;
     left: 4%;
     background-color: #088F8F;
 }
 
 .project-item3 .case-study-btn {
-    bottom: 60px; /* Distance from the bottom */
+    bottom: 60px;
     left: 4%;
     background-color: #0A68A7;
 }
 
 .project-item4 .case-study-btn {
-    bottom: 60px; /* Distance from the bottom */
+    bottom: 60px;
     left: 4%;
     background-color: #048BCE;
 }
 
+/* Hover color changes
 .project-item1 .case-study-btn:hover {
-    transform: scale(1.1);
     background-color: #052a43;
 }
 
 .project-item2 .case-study-btn:hover {
-    transform: scale(1.1);
     background-color: #065757;
 }
 
 .project-item3 .case-study-btn:hover {
     background-color: #074e7d;
-    transform: scale(1.1);
 }
 
 .project-item4 .case-study-btn:hover {
     background-color: #036292;
-    transform: scale(1.1);
-}
+} */
+
 
 /* Add responsive design for smaller screens */
 @media screen and (max-width: 768px) {
@@ -725,7 +748,7 @@ body.scrolled nav {
     padding: 50px;
     background-color: #f6f6f6; /* Dark card background */
     border-radius: 40px;
-    border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
+    border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-top: 40px;
@@ -766,21 +789,39 @@ body.scrolled nav {
     color: #2980b9; /* The 'useful' word styled */
 }
 
+/* About Me button styling */
 .about-me-btn {
     margin-top: 20px;
     display: inline-block;
-    padding: 15px 20px;
+    padding: 15px 30px;
     background-color: #2980b9;
     color: white;
     text-decoration: none;
     border-radius: 30px;
     margin-bottom: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
+/* Styling for the Font Awesome arrow icon */
+.about-me-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the About Me button */
 .about-me-btn:hover {
-    background-color: #1e5f89;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Arrow icon appears and slides into place on hover */
+.about-me-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(0); /* Slide it to the right of the text */
 }
 
 
@@ -809,6 +850,7 @@ body.scrolled nav {
     max-width: 1250px;
     margin: 0 auto;
     padding: 20px 0;
+    margin-bottom: 80px;
 }
 
 /* Individual Card Styling */
@@ -818,7 +860,7 @@ body.scrolled nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 20%;
     height: 240px;
-    border: 3px solid rgba(0, 0, 0, 0.1); /* Border similar to the image */
+    border: 3px solid #297fb94d; /* Border similar to the image */
     color: #333;
     padding: 30px 20px;
     margin-top: 40px;
@@ -872,23 +914,47 @@ body.scrolled nav {
     margin: 10px 0;
 }
 
+/* Button styling */
 .details-btn {
     display: inline-block;
-    padding: 15px 30px;
-    font-size: 1rem;
+    padding: 15px 30px; /* Original padding */
+    font-size: 1rem; /* Original font size */
     color: #fff;
     background-color: #2980b9;
     border: none;
     border-radius: 30px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.details-btn:hover {
-    transform: scale(1.1);
-    background-color: #1e5f89;
+/* Styling for the Font Awesome icon */
+.details-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
+
+/* Button hover effect */
+.details-btn:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Icon appears and moves into place on hover */
+.details-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(0); /* Slide it to the right of the text */
+}
+
+/* Additional hover state for arrow */
+.details-btn:hover::after {
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
 
 .tagline .text{
     display: flex;
@@ -897,7 +963,7 @@ body.scrolled nav {
     justify-content: center;
     position: relative;
     font-size: 1.5rem;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     margin-top: 60px;
     text-align: center;
 }

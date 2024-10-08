@@ -159,7 +159,32 @@ body.scrolled nav {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    white-space: nowrap;
 }
+
+/* Arrow icon inside the button */
+.skill-btn1 i {
+    margin-left: 10px; /* Space between text and arrow */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Shifted left initially */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for skill-btn1 */
+.skill-btn1:hover {
+    background-color: #2980b9;
+    color: white;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Arrow icon transition on hover */
+.skill-btn1:hover i {
+    opacity: 1; /* Make arrow visible */
+    transform: translateX(0); /* Slide arrow into place */
+}
+
 
 /* Visual & Creative Skills Button (Make it smaller) */
 .skill-btn2 {
@@ -179,10 +204,6 @@ body.scrolled nav {
     transform: scale(1.1); /* Slight pop-up effect */
 }
 
-.skill-btn1:hover {
-    background-color: #2980b9;
-    color: white;
-}
 
 /* Center image cards */
 .image-cards {
@@ -199,19 +220,22 @@ body.scrolled nav {
 
 /* Button Styles */
 .image-btn1 , .image-btn2 , .image-btn3 , .image-btn4 {
-    position:absolute;
+    position: absolute;
     padding: 15px 40px;
-    margin-top: 240px;
-    left:310px;
+    margin-top: 230px;
+    left: 280px;
     color: white;
     border: none;
     text-decoration: none;
-    border-radius: 30px; /* Rounded corners at the top */
+    border-radius: 30px; /* Rounded corners */
     font-size: 16px;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    white-space: nowrap;
 }
 
 .image-btn1 {
@@ -231,11 +255,25 @@ body.scrolled nav {
     background-color: #0b3354;
 }
 
+/* Arrow icon inside the button */
+.image-btn1 i, .image-btn2 i, .image-btn3 i, .image-btn4 i {
+    margin-left: 10px; /* Space between text and arrow */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Shifted left initially */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 /* Button hover effect */
 .image-btn1:hover , .image-btn2:hover , .image-btn3:hover , .image-btn4:hover {
     transform: scale(1.05); /* Slight scale effect on hover */
 }
+
+/* Arrow icon transition on hover */
+.image-btn1:hover i, .image-btn2:hover i, .image-btn3:hover i, .image-btn4:hover i {
+    opacity: 1; /* Make arrow visible */
+    transform: translateX(0); /* Slide arrow into place */
+}
+
 
 /* Card Styles */
 .card {
@@ -317,6 +355,7 @@ body.scrolled nav {
     position: relative;
     overflow: hidden;
     width: 100%; /* Full width of the carousel */
+    margin-bottom: 60px;
 }
 
 .carousel-inner {
