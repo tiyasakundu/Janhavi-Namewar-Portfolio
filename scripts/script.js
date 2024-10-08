@@ -83,63 +83,6 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
 
-const carousels = document.querySelectorAll('.carousel');
-
-// Function to apply or remove infinite animation based on screen size
-function handleCarouselAnimation() {
-    carousels.forEach(carousel => {
-        const carouselInner = carousel.querySelector('.carousel-track');
-        const carouselContent = Array.from(carouselInner.children);
-        
-        // Remove any previously cloned items to prevent duplication
-        while (carouselInner.children.length > carouselContent.length) {
-            carouselInner.removeChild(carouselInner.lastChild);
-        }
-
-        // Clone each item and append to the track for infinite effect
-        carouselContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            carouselInner.appendChild(duplicatedItem);
-        });
-
-        // Check screen width and apply animation only if width is above 1024px
-        if (window.innerWidth > 1024) {
-            // Set initial animation for larger screens
-            carouselInner.style.animation = "move 30s linear infinite";
-
-            // Enable hover pause/resume on larger screens
-            carouselInner.addEventListener('mouseenter', () => {
-                carouselInner.style.animationPlayState = 'paused'; // Pause the animation
-            });
-
-            carouselInner.addEventListener('mouseleave', () => {
-                carouselInner.style.animationPlayState = 'running'; // Resume the animation
-            });
-        } else {
-            // Remove animation for smaller screens and enable horizontal scrolling
-            carouselInner.style.animation = 'none'; // Disable animation
-            carouselInner.style.overflowX = 'auto'; // Enable horizontal scrolling
-            carouselInner.style.scrollBehavior = 'smooth'; // Smooth scrolling
-
-            // Add event listener for horizontal scroll (optional functionality)
-            carouselInner.addEventListener('scroll', () => {
-                // Optional functionality on scroll (you can add code here if needed)
-            });
-
-            // Hide the scrollbar for a cleaner look
-            carouselInner.style.scrollbarWidth = 'none'; // Firefox
-            carouselInner.style.msOverflowStyle = 'none'; // IE/Edge
-        }
-
-    });
-}
-
-// Run on page load
-handleCarouselAnimation();
-
-// Re-check when window is resized
-window.addEventListener('resize', handleCarouselAnimation);
-
 
 
 window.addEventListener('load', () => {
