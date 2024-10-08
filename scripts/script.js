@@ -150,7 +150,8 @@ function scrollToTop() {
 
 
 function reveal() {
-    var reveals = document.querySelectorAll(".project-card, .about-me-card, .card, .hobby-card");
+    var reveals = document.querySelectorAll(".project-card, .about-me-card, .hobby-card");
+    var revealcard = document.querySelectorAll(".card");
     var revealTitle = document.querySelectorAll(".title");
     var revealTitleH1 = document.querySelectorAll(".title h1, .typing-dots.heading-dots");
 
@@ -161,10 +162,10 @@ function reveal() {
       var elementVisible = 200;
   
       if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+        reveals[i].classList.add("active");}
+    //   } else {
+    //     reveals[i].classList.remove("active");
+    //   }
     }    
     // for (var i = 0; i < revealTitle.length; i++) {
     //   var windowHeight = window.innerHeight;
@@ -185,6 +186,18 @@ function reveal() {
     
         if (elementTop < windowHeight - elementVisible) {
             revealTitleH1[i].classList.add("animate");}
+        // } else {
+        //     revealTitleH1[i].classList.remove("active");
+        // }
+      }
+
+      for (var i = 0; i < revealcard.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = revealcard[i].getBoundingClientRect().top;
+        var elementVisible = 280;
+    
+        if (elementTop < windowHeight - elementVisible) {
+            revealcard[i].classList.add("active");}
         // } else {
         //     revealTitleH1[i].classList.remove("active");
         // }
@@ -221,9 +234,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (elementTop < windowHeight - elementVisible) {
                 card.classList.add("active"); // Reveal the card when it comes into view
             }
-            else {
-                card.classList.remove("active");
-              }
+            // else {
+            //     card.classList.remove("active");
+            //   }
         });
     }
 
@@ -237,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const arrow = document.querySelector('.arrow');
 
 // Select the experience section
-const experienceSection = document.querySelector('#experience-section');
+const experienceSection = document.querySelector('#tagline');
 
 // Create an intersection observer
 const observer = new IntersectionObserver((entries) => {
