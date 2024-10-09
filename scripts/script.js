@@ -156,13 +156,13 @@ function reveal() {
     var revealTitle = document.querySelectorAll(".title");
     var revealTitleH1 = document.querySelectorAll(".title h1, .typing-dots.heading-dots");
 
-  
+
     for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 200;
-  
-      if (elementTop < windowHeight - elementVisible) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 300;
+
+    if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");}
     //   } else {
     //     reveals[i].classList.remove("active");
@@ -172,20 +172,20 @@ function reveal() {
     for (var i = 0; i < revealbutton.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = revealbutton[i].getBoundingClientRect().top;
-        var elementVisible = 50;
+        var elementVisible = 100;
     
         if (elementTop < windowHeight - elementVisible) {
             revealbutton[i].classList.add("active");}
       //   } else {
       //     reveals[i].classList.remove("active");
       //   }
-      }  
+    }  
 
     // for (var i = 0; i < revealTitle.length; i++) {
     //   var windowHeight = window.innerHeight;
     //   var elementTop = revealTitle[i].getBoundingClientRect().top;
     //   var elementVisible = 200;
-  
+    
     //   if (elementTop < windowHeight - elementVisible) {
     //     // revealTitle[i].classList.add("active");
     //   } else {
@@ -203,25 +203,25 @@ function reveal() {
         // } else {
         //     revealTitleH1[i].classList.remove("active");
         // }
-      }
+    }
 
-      for (var i = 0; i < revealcard.length; i++) {
+    for (var i = 0; i < revealcard.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = revealcard[i].getBoundingClientRect().top;
-        var elementVisible = 280;
+        var elementVisible = 300;
     
         if (elementTop < windowHeight - elementVisible) {
             revealcard[i].classList.add("active");}
         // } else {
         //     revealTitleH1[i].classList.remove("active");
         // }
-      }
-  }
+    }
+}
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", reveal, {passive: true});
 });
-  
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var typingDots = document.querySelector('.typing-dots.project-dots');

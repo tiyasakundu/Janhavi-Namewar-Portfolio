@@ -106,24 +106,39 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 
 
 /* For small screens (max-width: 760px) */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .hamburger, .cross {
         display:contents;
     }
 
     nav {
-        height: 60px;
+        width: 100%;
+        padding: 20px 40px;
         display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
     }
 
     nav .logo {
-        height: 40px;
-        margin-left: 10px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     nav ul {
@@ -180,7 +195,6 @@ body.scrolled nav {
     height: 50%;
     position: relative;
     padding-left: 100px;
-    /* background-image: url('Slide 16_9 - 43.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -517,7 +531,6 @@ body.scrolled nav {
     animation-delay: 0.4s;
 }
 
-
 /* Featured Projects Title as Bubble */
 .title h1 {
     font-family: 'Gilroy-Bold', sans-serif;
@@ -549,9 +562,9 @@ body.scrolled nav {
 .project-card {
     position: relative;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
-    padding: 50px;
+    padding: 80px;
     background-color: #ffffff; /* Dark card background */
     border-radius: 40px;
     border: 3px solid #297fb94d; /* Border similar to the image */
@@ -672,14 +685,14 @@ body.scrolled nav {
 
 /* Specific button styles */
 .project-item1 .case-study-btn {
-    bottom: 60px;
-    left: 4%;
+    bottom: 100px;
+    left: 7%;
     background-color: #033353;
 }
 
 .project-item2 .case-study-btn {
-    bottom: 50px;
-    left: 4%;
+    bottom: 70px;
+    left: 7%;
     background-color: #088F8F;
 }
 
@@ -694,39 +707,6 @@ body.scrolled nav {
     left: 4%;
     background-color: #048BCE;
 }
-
-/* Hover color changes
-.project-item1 .case-study-btn:hover {
-    background-color: #052a43;
-}
-
-.project-item2 .case-study-btn:hover {
-    background-color: #065757;
-}
-
-.project-item3 .case-study-btn:hover {
-    background-color: #074e7d;
-}
-
-.project-item4 .case-study-btn:hover {
-    background-color: #036292;
-} */
-
-
-/* Add responsive design for smaller screens */
-@media screen and (max-width: 768px) {
-    .project-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .project-image {
-        margin-top: 20px;
-        flex-basis: auto;
-        width: 100%; /* Full width image on smaller screens */
-    }
-}
-
 
 .about-me-section {
     display: flex;
@@ -799,7 +779,6 @@ body.scrolled nav {
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    margin-bottom: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -901,7 +880,7 @@ body.scrolled nav {
 
 .cards-container .card:nth-child(1) .card-img {
     max-width: 200px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 /* Specific image size adjustment for 2nd, 3rd, and 4th cards */
@@ -986,7 +965,7 @@ body.scrolled nav {
     position: relative;
     font-size: 1.5rem;
     margin-bottom: 100px;
-    margin-top: 60px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -1118,65 +1097,21 @@ footer .copyright {
     }
 
     footer h3{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     footer p {
-        font-size: 0.5rem; /* Even smaller footer text */
+        font-size: 0.6rem; /* Even smaller footer text */
     }
 }
 
 /* ------------------------ RESPONSIVE STYLES ------------------------ */
 
 @media (max-width: 1024px) {
-    .profile {
-        max-width: 90%; /* Increase profile width on smaller screens */
-    }
-
-    .title h1 {
-        font-size: 2.2rem; /* Decrease font size */
-        padding-left: 50px; /* Adjust padding */
-    }
-
-    .project-item1,
-    .project-item2 {
-        width: 100%; /* Two items per row */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Add bottom margin */
-    }
-
-    .case-study-btn {
-        padding: 10px 18px; /* Adjust button padding */
-        font-size: 16px; /* Decrease font size */
-    }
-
-    .project-item1 .case-study-btn {
-        bottom: 13%;
-        left: 8%;
-    }
-
-    .project-item2 .case-study-btn {
-        bottom: 13%;
-        left: 8%;
-    }
-
-    .experience .title h1 {
-        font-size: 2.2rem; /* Decrease font size */
-        padding-left: 50px; /* Adjust padding */
-    }
-
-    .card {
-        width: 45%; /* Adjust card width for two per row */
-        height: auto; /* Adjust height for flexibility */
-    }
-
-}
-
-@media (max-width: 992px) {
-
     .intro {
-        padding-left: 50px; /* Reduce padding */
-        height: 40vh;
+        margin-top: 150px;
+        padding-left: 100px; 
+        height: 20vh;
     }
 
     .profile-img {
@@ -1185,21 +1120,31 @@ footer .copyright {
     }
 
     .bubble-name{
-        width: 100%;
+        width: 150%;
+        max-width: 400px;
         border-radius: 15px;
-        top: -40px;
+        top: -45px;
         height: 47%;
         font-size: 18px; /* Smaller bubble text */
         padding: 10px 20px; /* Smaller bubble padding */
         
     }
 
-    .bubble-1, .bubble-2 {
-        width: 95% ;
-        max-width: 300px;
-        font-size: 16px;
+    .bubble-1 {
+        width: 140% ;
+        max-width: 390px;
+        font-size: 20px;
         border-radius: 15px;
-        padding: 10px 20px
+        padding: 10px 20px;
+    }
+
+    .bubble-2 {
+        width: 140% ;
+        max-width: 390px;
+        font-size: 20px;
+        border-radius: 15px;
+        padding: 8px 15px;
+        margin-top: 5px;
     }
 
     .typing-text {
@@ -1208,71 +1153,160 @@ footer .copyright {
     }
 
     .resume-btn {
-        padding: 8px 20px; /* Smaller button padding */
-        font-size: 16px; /* Smaller button text */
-        border-radius: 15px;
+        padding: 10px 22px; /* Smaller button padding */
     }
 
     .arrow {
-        font-size: 3rem; /* Smaller size for mobile */
+        font-size: 4rem; /* Smaller size for mobile */
         bottom: 30px; /* Adjust position closer to the bottom */
         left: 47%;
     }
 
-    .title h1 {
-        font-size: 1.6rem; /* Decrease font size */
-        padding-left: 30px; /* Adjust padding */
-    }
 
     .project-item1,
     .project-item2 {
-        width: 100%; /* Full width on mobile */
-        margin-bottom: 0px; /* Space between items */
+        width: 100%; /* Two items per row */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin */
     }
 
-    .case-study-btn {
-        padding: 8px 10px; /* Further adjust button padding */
-        font-size: 14px; /* Decrease font size */
+
+    .experience {
+        padding: 0 170px; /* Reduce padding */
+        padding-right: 120px;
+        padding-top: 40px;
+    }
+
+    .featured-projects {
+        padding: 0 170px; /* Reduce padding for smaller screens */
+        padding-right: 120px;
+        margin-bottom: 30px;
+    }
+
+    .project-card {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto; /* Let the height adjust based on content */
+        padding: 50px;
+        margin-top: 10px;
+    }
+
+    .project-info {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 10px; /* Add some space between text and image */
+    }
+
+    .project-info h2 {
+        font-size: 1.6em;
+    }
+
+    .project-info h3 {
+        font-size: 1.2em;
+    }
+
+    .project-info p {
+        font-size: 1em;
+    }
+
+    .project-image {
+        width: 100%; /* Full width for the image */
+    }
+
+    .project-image img {
+        border-radius: 15px;
+        margin-bottom:60px;
     }
 
     .project-item1 .case-study-btn {
-        bottom: 15%;
-        left: 9%;
+        padding: 10px 16px; 
+        font-size: 1em; 
+        bottom: 8%; 
+        left: 35%;
     }
 
     .project-item2 .case-study-btn {
-        bottom: 18%;
-        left: 8%;
-    }
-    .experience .title h1 {
-        font-size: 1.6rem; /* Decrease font size */
-        padding-left: 20px; /* Adjust padding */
+        padding: 10px 16px; 
+        font-size: 1em; 
+        bottom: 6%; 
+        left: 35%;
     }
 
-    .cards-container {
-        flex-direction: row; /* Stack cards vertically */
-        align-items: center; /* Center align cards */
+
+    .typing-dots.heading-dots {
+        left: 20%;
+    }
+
+    .case-study-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
     }
 
     .card {
-        width: 40%; /* Adjust card width for mobile */
-        height: 220px; /* Adjust height for flexibility */
+        width: 45%; /* Adjust card width for two per row */
+        height: auto; /* Adjust height for flexibility */
     }
+
+    .button-container {
+        margin-top: 30px;
+        justify-content: left;
+    }
+
+    .details-btn {
+        margin-top: 10px;
+        font-size: 1em;
+        padding: 10px 16px;
+    }
+
+    .details-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+    
+    .about-me-section {
+        padding: 0 170px; 
+        padding-right: 120px;
+    }
+
+    .about-me-card {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto; /* Let the height adjust based on content */
+        padding: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-card p {
+        font-size: 1.2em;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .about-me-btn {
+        padding: 10px 20px; 
+        font-size: 1.2rem; 
+    }
+
+    .about-me-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
 }
 
 @media (max-width: 768px) {
     .intro {
-        padding-left: 20px; /* Reduce padding */
-        height: 50vh;
+        margin-top: 150px;
+        padding-left: 100px; 
+        height: 20vh;
     }
 
     .profile-img {
-        width: 40px; /* Smaller profile image */
-        height: 40px;
+        width: 50px; /* Smaller profile image */
+        height: 50px;
     }
 
     .bubble-name{
-        width: 94%;
+        width: 150%;
+        max-width: 365px;
         border-radius: 15px;
         top: -40px;
         height: 47%;
@@ -1281,10 +1315,18 @@ footer .copyright {
         
     }
 
-    .bubble-1, .bubble-2 {
-        width: 90% ;
-        max-width: 250px;
-        font-size: 14px;
+    .bubble-1 {
+        width: 140% ;
+        max-width: 350px;
+        font-size: 18px;
+        border-radius: 15px;
+        padding: 10px 20px;
+    }
+
+    .bubble-2 {
+        width: 140% ;
+        max-width: 350px;
+        font-size: 18px;
         border-radius: 15px;
         padding: 8px 15px
     }
@@ -1305,8 +1347,67 @@ footer .copyright {
     }
 
     .title h1 {
-        font-size: 1.4rem; /* Decrease font size */
-        padding-left: 30px; /* Adjust padding */
+        font-size: 1.8em; /* Decrease font size */
+        /* padding-left: 20px; */
+    }
+
+    .featured-projects {
+        padding: 0 170px; /* Reduce padding for smaller screens */
+        padding-right: 120px;
+        margin-bottom: 30px;
+    }
+
+    .project-card {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto; /* Let the height adjust based on content */
+        padding: 50px;
+        margin-top: 10px;
+    }
+
+    .project-info {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 10px; /* Add some space between text and image */
+    }
+
+    .project-info h2 {
+        font-size: 1.6em;
+    }
+
+    .project-info h3 {
+        font-size: 1.2em;
+    }
+
+    .project-info p {
+        font-size: 1em;
+    }
+
+    .project-image {
+        width: 100%; /* Full width for the image */
+    }
+
+    .project-image img {
+        border-radius: 15px;
+        margin-bottom:60px;
+    }
+
+    .project-item1 .case-study-btn {
+        padding: 8px 16px; 
+        font-size: 1em; 
+        bottom: 8%; 
+        left: 27%;
+    }
+
+    .project-item2 .case-study-btn {
+        padding: 8px 16px; 
+        font-size: 1em; 
+        bottom: 6%; 
+        left: 27%;
+    }
+
+
+    .case-study-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
     }
 
     .project-item1,
@@ -1315,77 +1416,101 @@ footer .copyright {
         margin-bottom: 15px; /* Space between items */
     }
 
-    .case-study-btn {
-        padding: 6px 8px; /* Further adjust button padding */
-        font-size: 0.8rem; /* Decrease font size */
+    .typing-dots.heading-dots {
+        left: 24%;
     }
 
-    .project-item1 .case-study-btn {
-        bottom: 15%;
-        left: 8%;
-    }
-
-    .project-item2 .case-study-btn {
-        bottom: 15%;
-        left: 7%;
-    }
-
-    .experience .title h1 {
-        font-size: 1.4rem; /* Decrease font size */
-        padding-left: 20px; /* Adjust padding */
+    .experience {
+        padding: 0 170px; /* Reduce padding */
+        padding-right: 120px;
     }
 
     .cards-container {
-        flex-direction: row; /* Stack cards vertically */
-        align-items: center; /* Center align cards */
+        gap:60px;
+        justify-content: left;
+        padding: 0; /* Remove padding */
+        flex-direction: row; 
+        margin-bottom: 30px;
     }
 
     .card {
-        width: 40%; /* Adjust card width for mobile */
-        height: 220px; /* Adjust height for flexibility */
+        width: 40%; /* Full width for cards */
+        height:170px;
+        margin-top:10px;
     }
 
-    .card h3 {
-        font-weight: 600;
-        font-size: 1rem;
-        margin: 10px 0;
+    .button-container {
+        margin-top: 30px;
+        justify-content: left;
     }
+
     .details-btn {
         margin-top: 10px;
-        font-size: 0.8rem;
+        font-size: 1em;
         padding: 8px 16px;
     }
 
+    .details-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .about-me-section {
+        padding: 0 170px; 
+        padding-right: 120px;
+    }
+
+    .about-me-card {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto; /* Let the height adjust based on content */
+        padding: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-card p {
+        font-size: 1em;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .about-me-btn {
+        padding: 8px 16px; 
+        font-size: 1rem; 
+    }
+
+    .about-me-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
     .tagline .text{
-        font-size: 0.8rem;
+        font-size: 1.3rem;
         padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
 
-@media (max-width: 540px) {
+/* @media (max-width: 540px) {
 
     .case-study-btn {
-        padding: 6px 8px; /* Further adjust button padding */
-        font-size: 0.6rem; /* Decrease font size */
+        padding: 6px 8px; 
+        font-size: 0.6rem; 
     }
 
     .arrow {
         font-size: 2rem;
     }
-}
+} */
 
 @media (max-width: 480px) {
-    .intro {
-        padding-left: 20px; /* Reduce padding */
-        height: 40vh;
-    }
-
     .bubble-name{
         width: 85%;
         border-radius: 15px;
         top: -40px;
         height: 48%;
-        font-size: 14px; /* Smaller bubble text */
+        font-size: 12px; /* Smaller bubble text */
         padding: 10px 20px; /* Smaller bubble padding */
         
     }
@@ -1404,8 +1529,9 @@ footer .copyright {
     }
 
     .intro {
+        margin-top: 150px;
         padding-left: 20px; /* Reduce padding */
-        height: 60vh;
+        height: 20vh;
     }
 
     .profile-img {
@@ -1426,55 +1552,156 @@ footer .copyright {
     }
 
     .title h1 {
-        font-size: 1.2rem; /* Decrease font size */
-        padding-left: 30px; /* Adjust padding */
+        font-size: 1.2em; /* Decrease font size */
+        /* padding-left: 20px; */
     }
 
-    .project-item1,
-    .project-item2 {
-        width: 100%; /* Full width on mobile */
-        margin-bottom: 5px; /* Space between items */
+    .featured-projects {
+        padding: 0 80px; /* Reduce padding for smaller screens */
+        padding-right: 50px;
+        margin-bottom: 30px;
     }
 
-    .case-study-btn {
-        padding: 3px 5px; /* Further adjust button padding */
-        font-size: 9px; /* Decrease font size */
+    .project-card {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto; /* Let the height adjust based on content */
+        padding: 30px;
+        margin-top: 10px;
+    }
+
+    .project-info {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 10px; /* Add some space between text and image */
+    }
+
+    .project-info h2 {
+        font-size: 16px;
+    }
+
+    .project-info h3 {
+        font-size: 14px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+    }
+
+    .project-image {
+        width: 100%; /* Full width for the image */
+    }
+
+    .project-image img {
+        border-radius: 15px;
+        margin-bottom:30px;
     }
 
     .project-item1 .case-study-btn {
-        bottom: 12%;
-        left: 6%;
+        padding: 6px 8px; 
+        font-size: 0.6rem; 
+        bottom: 7%; 
+        left: 24%;
     }
 
     .project-item2 .case-study-btn {
-        bottom: 12%;
-        left: 5%;
+        padding: 6px 8px; 
+        font-size: 0.6rem; 
+        bottom: 5%; 
+        left: 24%;
     }
-    
 
-    .experience .title h1 {
-        font-size: 1.2rem; /* Decrease font size */
+
+    .case-study-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .experience {
+        padding: 0 85px; /* Reduce padding */
+        padding-right: 50px;
+    }
+
+    .typing-dots.heading-dots, .typing-dots.chat-dots, .typing-dots.second-dots {
+        width: 30px; /* Adjust width to accommodate larger dots */
+        height: 10px;
+    }
+
+    .typing-dots.heading-dots {
+        left: 24%;
+    }
+
+    .typing-dots.heading-dots div, .typing-dots.chat-dots div, .typing-dots.second-dots div{
+        width: 6px;  /* Increased dot width */
+        height: 6px;
     }
 
     .cards-container {
-        flex-direction: row; /* Stack cards vertically */
-        align-items: center; /* Center align cards */
+        gap:20px;
+        justify-content: left;
+        padding: 0; /* Remove padding */
+        flex-direction: row; 
+        margin-bottom: 30px;
     }
 
     .card {
-        width: 40%; /* Adjust card width for mobile */
-        height: 140px; /* Adjust height for flexibility */
+        width: 45%; /* Full width for cards */
+        height:80px;
+        margin-top:10px;
     }
 
-    .card h3 {
-        font-weight: 600;
-        font-size: 0.6rem;
-        margin: 10px 0;
+    .button-container {
+        margin-top: 20px;
+        justify-content: left;
     }
 
     .details-btn {
-        margin-top: 10px;
-        font-size: 0.8rem;
-        padding: 8px 16px;
+        font-size: 0.8em;
+        padding: 10px 16px;
     }
+
+    .details-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+    
+    .about-me-section {
+        padding: 0 70px; /* Reduce padding */
+        padding-right: 50px;
+    }
+
+    .about-me-card {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto; /* Let the height adjust based on content */
+        padding: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-card p {
+        font-size: 0.7em;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .about-me-btn {
+        padding: 6px 8px; 
+        font-size: 0.8rem; 
+    }
+
+    .about-me-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .tagline .text{
+        font-size: 0.8rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
 }
