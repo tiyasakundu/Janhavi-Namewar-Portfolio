@@ -1196,3 +1196,45 @@ footer .copyright {
     }
 
 }
+
+@media (max-width: 392px){
+    .hobby {
+        padding: 0 60px;
+        padding-right: 40px;
+    }
+
+    .hobby-card {
+        padding: 40px;
+    }
+
+    .hobby-card h2{
+        font-size: 1.2rem;
+    }
+
+    .hobby-card i{
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .cards-container-2 {
+        padding: 10px;
+    }
+
+    .cards h3{
+        font-size: 0.9rem;
+    }
+
+    .cards p {
+        font-size: 0.8rem;
+    }
+
+    .card-vid{
+        width: 60px;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

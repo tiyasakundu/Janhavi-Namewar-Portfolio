@@ -255,7 +255,7 @@ body.scrolled nav {
 .profile-section {
     display: flex;
     align-items: center;
-    padding-left: 120px;
+    padding-left: 200px;
     margin-bottom: 30px;
 }
 
@@ -283,14 +283,14 @@ body.scrolled nav {
     position: relative;
     color: #2980b9;
     font-size: 1.2em;
-    padding: 0 180px; /* Increased left padding for better alignment */
+    padding: 0 260px; /* Increased left padding for better alignment */
     margin-bottom: 150px;
 }
 
 /* Typing Dots Styling */
 .typing-dots.project-dots {
     position: absolute;
-    left: 12%; /* Adjust the position relative to name bubble */
+    left: 20%; /* Adjust the position relative to name bubble */
     top: 20px;
     bottom: 5px; /* Adjust vertical position if needed */
     width: 50px; /* Adjust width to accommodate larger dots */
@@ -361,8 +361,8 @@ body.scrolled nav {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-bottom: 25px;
-    width: 90%; /* Full width card */
-    height: 400px;
+    width: 100%; /* Full width card */
+    height: 450px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
     transform-origin: top left;
@@ -380,10 +380,10 @@ body.scrolled nav {
 
 /* Project Images */
 .project-image {
-    width: 450px;
-    height: auto;
+    width: auto;
+    height: 300px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 30px;
     margin-right: 60px;
 }
 
