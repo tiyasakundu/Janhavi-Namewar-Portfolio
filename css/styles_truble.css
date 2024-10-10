@@ -162,8 +162,28 @@ body.scrolled nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -80px;
 }
+
+.project-bg {
+    margin-top:-80px;
+}
+
+/* Decrease the size for specific images
+.project-bg:nth-child(2),
+.project-bg:nth-child(3),
+.project-bg:nth-child(5),
+.project-bg:nth-child(6),
+.project-bg:nth-child(7),
+.project-bg:nth-child(8),
+.project-bg:nth-child(9),
+.project-bg:nth-child(10),
+.project-bg:nth-child(11),
+.project-bg:nth-child(12) {
+    width: 75% !important; 
+} */
+
+/* .project-bg:nth-child(2),
+.project-bg */
 
 /* .mockup {
     display: flex;

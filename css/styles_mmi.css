@@ -161,7 +161,10 @@ body.scrolled nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -80px;
+}
+
+.project-bg {
+    margin-top:-80px;
 }
 
 .mockup {
