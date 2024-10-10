@@ -77,24 +77,39 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
-/* For small screens (max-width: 760px) */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 768px) {
     .hamburger, .cross {
         display:contents;
     }
 
-    
     nav {
-        height: 60px;
+        width: 100%;
+        padding: 20px 40px;
         display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
     }
 
     nav .logo {
-        height: 40px;
-        margin-left: 10px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     nav ul {
@@ -150,35 +165,35 @@ body.scrolled nav {
     margin-top: -80px;
 }
 
-.mockup {
+/* .mockup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .mockup img {
-    width: 700px; /* Make the card smaller to appear as a box */
-    height: 500px; /* Set height to create square cards */
-    gap: 30px; /* Space between smaller cards */
+    width: 700px; 
+    height: 500px; 
+    gap: 30px; 
     background-color: transparent;
 }
 
 
 /* Extra Images Division */
-.extra-images {
+/* .extra-images {
     display: flex;
-    justify-content: center; /* Center the images */
-    gap: 60px; /* Space between the images */
-    margin-top: 100px; /* Space above the new section */
+    justify-content: center; 
+    gap: 60px; 
+    margin-top: 100px; 
     margin-bottom: 100px;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    flex-wrap: wrap; 
 }
 
 .extra-images img {
-    width: 300px; /* Adjust size of images */
-    height: auto; /* Fixed height for the images */
-    object-fit: cover; /* Ensure the images cover the container */
-}
+    width: 300px;
+    height: auto; 
+    object-fit: cover; 
+} */ 
 
 
 /* Button container styling */
@@ -329,11 +344,11 @@ footer .copyright {
     }
 
     footer h3{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     footer p {
-        font-size: 0.5rem; /* Even smaller footer text */
+        font-size: 0.6rem; /* Even smaller footer text */
     }
 }
 
@@ -347,19 +362,19 @@ footer .copyright {
         height: auto; /* Maintain aspect ratio */
     }
 
-    .mockup img {
-        width: 100%; /* Make images full-width */
-        height: auto; /* Adjust height for aspect ratio */
+    /* .mockup img {
+        width: 100%; 
+        height: auto; 
     }
 
     .extra-images {
-        flex-direction: column; /* Stack images vertically */
-        gap: 30px; /* Reduced space between images */
+        flex-direction: column; 
+        gap: 30px; 
     }
 
     .extra-images img {
-        width: 90%; /* Make images more responsive */
-    }
+        width: 90%; 
+    } */
 
     .button-container {
         flex-direction: row; /* Stack buttons vertically */
@@ -372,24 +387,25 @@ footer .copyright {
 
     .project-bg img {
         width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
+        height: auto; 
+        margin: 0;
     }
 
-    .mockup img {
-        width: 90%; /* Make images responsive */
-        height: auto; /* Adjust height for aspect ratio */
+    /* .mockup img {
+        width: 90%; 
+        height: auto; 
         flex-direction: row;
     }
 
     .extra-images {
-        flex-direction: column; /* Stack images vertically */
-        gap: 40px; /* Adjust space between images */
+        flex-direction: column; 
+        gap: 40px; 
         align-items: center;
     }
 
     .extra-images img {
-        width: 40%; /* Make images full-width */
-    }
+        width: 40%; 
+    } */
 
     .button-container {
         flex-direction: row;
@@ -413,20 +429,20 @@ footer .copyright {
         height: auto;
     }
 
-    .mockup img {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Maintain aspect ratio */
+    /* .mockup img {
+        width: 100%; 
+        height: auto; 
     }
 
     .extra-images {
-        flex-direction: column; /* Stack images vertically */
-        gap: 20px; /* Adjust space between images */
+        flex-direction: column; 
+        gap: 20px; 
         align-items: center;
     }
 
     .extra-images img {
-        width: 50%; /* Make images full-width */
-    }
+        width: 50%; 
+    } */
 
     .button-container {
         flex-direction: row;
@@ -435,9 +451,33 @@ footer .copyright {
     }
 
     .nav-button {
-        padding: 8px 16px; /* Smaller button padding */
+        padding: 8px 10px; /* Smaller button padding */
         width: 140px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 412px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (width: 540px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.6rem;
         text-align: center;
     }
 }

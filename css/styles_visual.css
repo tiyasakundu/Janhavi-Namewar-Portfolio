@@ -640,8 +640,13 @@ footer .copyright {
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
         padding: 12px 20px;
         font-size: 1.3rem;
-        left: 67%; /* Center the buttons */
+        left: 63%; /* Center the buttons */
         bottom: 35%;
+    }
+
+    .image-btn1 i, .image-btn2 i, .image-btn3 i, .image-btn4 i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
     }
 
     .card img {
@@ -730,7 +735,7 @@ footer .copyright {
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
         padding: 10px 20px;
         font-size: 0.8rem;
-        left: 65%; /* Center the buttons */
+        left: 63%; /* Center the buttons */
         bottom: 40%;
     }
 
@@ -803,7 +808,7 @@ footer .copyright {
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
         padding: 9px 18px;
         font-size: 0.8rem;
-        left: 58%; /* Center the buttons */
+        left: 55%; /* Center the buttons */
         bottom: 40%;
     }
 

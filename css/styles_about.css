@@ -1099,7 +1099,7 @@ footer .copyright {
     .intro-card {
         margin-top: -20px;
         padding: 30px;
-        border-radius: 30px;
+        border-radius: 24px;
         border: 2px solid #297fb94d;
         flex-direction: column;
         margin-left: 60px;
@@ -1176,7 +1176,7 @@ footer .copyright {
     }
 
     .card {
-        border-radius: 30px;
+        border-radius: 24px;
         border: 2px solid #297fb94d;
     }
 
@@ -1186,7 +1186,7 @@ footer .copyright {
     }
 
     .hobby-card {
-        border-radius: 30px;
+        border-radius: 24px;
         border: 2px solid #297fb94d;
         padding: 60px;
     }
@@ -1201,7 +1201,7 @@ footer .copyright {
     }
 
     .cards-container-2 {
-        padding: 10px;
+        padding: 30px;
     }
 
     .scroll-up-btn {
@@ -1228,7 +1228,7 @@ footer .copyright {
     }
 
     .cards-container-2 {
-        padding: 10px;
+        padding: 30px;
     }
 
     .cards h3{

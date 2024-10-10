@@ -76,24 +76,39 @@ body.scrolled nav {
     background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on scroll */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
-/* For small screens (max-width: 760px) */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 768px) {
     .hamburger, .cross {
         display:contents;
     }
 
-    
     nav {
-        height: 60px;
+        width: 100%;
+        padding: 20px 40px;
         display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
     }
 
     nav .logo {
-        height: 40px;
-        margin-left: 10px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     nav ul {
@@ -406,6 +421,7 @@ footer .copyright {
     .project-bg img {
         width: 100vw; /* Ensure it still covers the viewport */
         height: auto; /* Allow the image to resize proportionally */
+        margin: 0;
     }
 
     .button-container {
@@ -478,6 +494,12 @@ footer .copyright {
         font-size: 0.7rem;
         text-align: center;
     }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 412px){
@@ -532,10 +554,10 @@ footer .copyright {
     }
 
     footer h3{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     footer p {
-        font-size: 0.5rem; /* Even smaller footer text */
+        font-size: 0.6rem; /* Even smaller footer text */
     }
 }

@@ -77,6 +77,96 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffffb1;
+    }
+
+    nav ul li a {
+        color: #333;
+    }
+
+}
+
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 768px) {
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffffb1;
+    }
+
+    nav .logo {
+        height: 30px;
+        margin-left: 0px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        color: #333;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
+}
+
 .project-bg img{
     position: relative; /* Ensures children are positioned relative to this container */
     width: 100%;
@@ -112,6 +202,8 @@ body.scrolled nav {
     background-color: #1e5f89; /* Slightly darker blue on hover */
     transform:scale(1.1) ;
 }
+
+
 
 
 /* Footer Section */
@@ -199,4 +291,130 @@ footer .copyright {
 .scroll-up-btn:hover {
     background-color: #1e5f89; /* Darker blue on hover */
     transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    footer .social-icons {
+        font-size: 1.5rem;
+        gap: 15px;
+    }
+
+    footer h3 {
+        font-size: 1rem;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer h3{
+        font-size: 0.6rem;
+    }
+
+    footer p {
+        font-size: 0.6rem; /* Even smaller footer text */
+    }
+}
+
+
+/* Responsiveness of body */
+
+/* For devices with max width 768px */
+@media (max-width: 768px) {
+
+    .project-bg img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px; /* Reduced space between buttons */
+    }
+}
+
+/* For devices with max width 1024px */
+@media (max-width: 1024px) {
+
+    .project-bg img {
+        width: 100vw; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
+        margin: 0;
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 30px; /* Smaller button padding */
+        width: 220px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+/* For devices with max width 480px */
+@media (max-width: 480px) {
+
+    .project-bg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 8px 16px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 412px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (width: 540px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.6rem;
+        text-align: center;
+    }
 }
