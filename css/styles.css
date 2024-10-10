@@ -1570,6 +1570,8 @@ footer .copyright {
         height: auto; /* Let the height adjust based on content */
         padding: 30px;
         margin-top: 10px;
+        border-radius: 30px;
+        border: 2px solid #297fb94d;
     }
 
     .project-info {
@@ -1629,7 +1631,7 @@ footer .copyright {
     }
 
     .typing-dots.heading-dots {
-        left: 24%;
+        left: 15%;
     }
 
     .typing-dots.heading-dots div, .typing-dots.chat-dots div, .typing-dots.second-dots div{
@@ -1653,6 +1655,7 @@ footer .copyright {
         width: 45%; /* Full width for cards */
         height:100px;
         margin-top:10px;
+        border: 2px solid #297fb94d;
     }
 
     .button-container {
@@ -1681,6 +1684,7 @@ footer .copyright {
         padding: 30px;
         margin-top: 10px;
         margin-bottom: 20px;
+        border: 2px solid #297fb94d;
     }
 
     .about-me-card p {

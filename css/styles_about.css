@@ -1073,16 +1073,21 @@ footer .copyright {
         font-size: 15px;
     }
 
+    .profile-image {
+        width: 30px; /* Smaller profile image */
+        height: 30px;
+    }
+
     .title-section h1{
         margin-top: -20px;
         font-size: 16px;
-        margin-left: 80px;
+        margin-left: 65px;
     }
     
     .typing-dots.about-dots {
         width:30px;
-        margin-top: -30px;
-        left:21%;
+        margin-top: -60px;
+        left:17%;
     }
 
     .typing-dots.about-dots div {
@@ -1093,9 +1098,11 @@ footer .copyright {
     
     .intro-card {
         margin-top: -20px;
-        padding: 40px;
+        padding: 30px;
+        border-radius: 30px;
+        border: 2px solid #297fb94d;
         flex-direction: column;
-        margin-left: 80px;
+        margin-left: 60px;
         margin-right: 40px;
         margin-bottom: 20px;
     }
@@ -1126,7 +1133,8 @@ footer .copyright {
 
     .resume-btn {
         font-size: 12px;
-        padding: 8px 16px;
+        border-radius: 15px;
+        padding: 6px 16px;
         margin-top: 20px;
     }
 
@@ -1135,7 +1143,7 @@ footer .copyright {
     }
 
     #worked-with-section {
-        padding:0 80px;
+        padding:0 60px;
         padding-right: 40px;
     }
 
@@ -1145,7 +1153,7 @@ footer .copyright {
 
     .typing-dots.heading-dots {
         width:40px;
-        left:20%;
+        left: 15%;
     }
 
     .typing-dots.heading-dots div {
@@ -1167,12 +1175,19 @@ footer .copyright {
         font-size: 0.9rem;
     }
 
+    .card {
+        border-radius: 30px;
+        border: 2px solid #297fb94d;
+    }
+
     .hobby {
-        padding: 0 80px;
+        padding: 0 60px;
         padding-right: 40px;
     }
 
     .hobby-card {
+        border-radius: 30px;
+        border: 2px solid #297fb94d;
         padding: 60px;
     }
 
@@ -1198,10 +1213,6 @@ footer .copyright {
 }
 
 @media (max-width: 392px){
-    .hobby {
-        padding: 0 60px;
-        padding-right: 40px;
-    }
 
     .hobby-card {
         padding: 40px;

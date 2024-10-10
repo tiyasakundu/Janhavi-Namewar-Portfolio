@@ -708,6 +708,10 @@ footer .copyright {
         width: 50px; /* Smaller profile image */
         height: 50px;
     }
+
+    .profile-section {
+        padding-left: 100px;
+    }
     
     .skill-buttons {
         flex-direction: row; /* Align buttons in a row */
@@ -748,6 +752,14 @@ footer .copyright {
         padding-bottom: 0px;
     }
 
+    .projects-section{
+        padding: 0 160px;
+    }
+
+    .project-image {
+        border-radius: 15px;
+    }
+
     .p-card h2 {
         font-size: 1.6em;
     }
@@ -779,62 +791,6 @@ footer .copyright {
 
 /* Responsive for 768px */
 @media (max-width: 768px) {
-    .profile-image {
-        width: 50px; /* Smaller profile image */
-        height: 50px;
-    }
-
-    .skill-buttons {
-        flex-direction: row; /* Align buttons in a row */
-        align-items: center;
-        gap: 30px; /* Increased gap for tablet screens */
-    }
-
-    .skill-btn1 {
-        padding: 8px 55px; /* Medium padding */
-        font-size: 0.8rem;
-    }
-
-    .skill-btn2 {
-        padding: 8px 10px;
-        font-size: 0.8rem;
-    }
-
-    .skill-buttons i{
-        margin-left: 20px;
-        opacity: 1;
-    }
-
-    .p-card {
-        flex-direction: column;
-        height: auto;
-        padding: 40px;
-    }
-
-    .project-image {
-        width: 80%; /* Adjust image size for medium screens */
-        margin-left: 60px;
-    }
-
-    .project-info0, .project-info1, .project-info2, .project-info3 {
-        width: 100%;
-        padding: 40px;
-        padding-bottom: 0px;
-    }
-
-    .case-study-btn {
-        padding: 12px 25px;
-        font-size: 0.9em;
-    }
-}
-
-
-/* Responsive for 480px */
-@media (max-width: 480px) {
-
-    .profile-section {
-        padding: 0 40px;
-    }
 
     .profile-section h1{
         font-size: 1em;
@@ -866,16 +822,105 @@ footer .copyright {
         opacity: 1;
     }
 
+    .p-card {
+        flex-direction: column;
+        height: auto;
+        padding: 40px;
+    }
+
+    .project-image {
+        width: auto;
+        height: 210px;
+    }
+
+    .project-info0, .project-info1, .project-info2, .project-info3 {
+        width: 100%;
+        padding: 40px;
+        padding-bottom: 0px;
+    }
+
+    .project-info  h2 {
+        font-size: 1em;
+    }
+
+    .project-info h3 {
+        font-size: 0.9em;
+    }
+
+    .project-info p {
+        font-size: 0.8em;
+    }
+
+    .case-study-btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .typing-dots.project-dots {
+        width: 30px; /* Adjust width to accommodate larger dots */
+        height: 10px;
+        left: 24%;
+    }
+
+    .typing-dots.project-dots div {
+        width: 6px;  /* Increased dot width */
+        height: 6px;
+    }
+}
+
+
+/* Responsive for 480px */
+@media (max-width: 480px) {
+
+    .profile-section {
+        padding: 0 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-section h1{
+        font-size: 1em;
+    }
+
+    .profile-image {
+        width: 30px; /* Smaller profile image */
+        height: 30px;
+    }
+
+    .skill-buttons {
+        flex-direction: row; /* Align buttons in a row */
+        align-items: center;
+        gap: 20px; /* Increased gap for tablet screens */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .skill-btn1 {
+        padding: 8px 55px; /* Medium padding */
+        font-size: 0.8rem;
+    }
+
+    .skill-btn2 {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
+    }
+
     .projects-section {
-        padding: 0 80px;
-        padding-right: 50px;
+        padding: 0 60px;
+        padding-right: 40px;
     }
     
     .p-card {
         flex-direction: column;
         height: auto;
         margin-top: 10px;
+        border-radius: 30px;
         padding: 30px; /* Reduce padding for small screens */
+        border: 2px solid #297fb94d;
     }
 
     .project-image {
