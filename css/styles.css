@@ -1504,18 +1504,22 @@ footer .copyright {
 } */
 
 @media (max-width: 480px) {
+    .profile{
+        gap:10px;
+    }
+
     .bubble-name{
-        width: 85%;
+        width: 90%;
         border-radius: 15px;
         top: -40px;
-        height: 48%;
+        height: 49%;
         font-size: 12px; /* Smaller bubble text */
         padding: 10px 20px; /* Smaller bubble padding */
         
     }
 
     .bubble-1, .bubble-2 {
-        width: 80% ;
+        width: 85% ;
         max-width: 250px;
         font-size: 12px;
         border-radius: 15px;
@@ -1534,8 +1538,8 @@ footer .copyright {
     }
 
     .profile-img {
-        width: 40px; /* Smaller profile image */
-        height: 40px;
+        width: 30px; /* Smaller profile image */
+        height: 30px;
     }
     
     .resume-btn {
@@ -1556,8 +1560,8 @@ footer .copyright {
     }
 
     .featured-projects {
-        padding: 0 80px; /* Reduce padding for smaller screens */
-        padding-right: 50px;
+        padding: 0 60px; /* Reduce padding for smaller screens */
+        padding-right: 40px;
         margin-bottom: 30px;
     }
 
@@ -1615,8 +1619,8 @@ footer .copyright {
     }
 
     .experience {
-        padding: 0 85px; /* Reduce padding */
-        padding-right: 50px;
+        padding: 0 60px; /* Reduce padding */
+        padding-right: 40px;
     }
 
     .typing-dots.heading-dots, .typing-dots.chat-dots, .typing-dots.second-dots {
@@ -1647,7 +1651,7 @@ footer .copyright {
 
     .card {
         width: 45%; /* Full width for cards */
-        height:80px;
+        height:100px;
         margin-top:10px;
     }
 
@@ -1667,8 +1671,8 @@ footer .copyright {
     }
     
     .about-me-section {
-        padding: 0 70px; /* Reduce padding */
-        padding-right: 50px;
+        padding: 0 60px; /* Reduce padding */
+        padding-right: 40px;
     }
 
     .about-me-card {
