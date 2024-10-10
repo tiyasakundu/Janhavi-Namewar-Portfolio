@@ -77,22 +77,40 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
+
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
 /* For small screens (max-width: 760px) */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .hamburger, .cross {
-        display: contents;
+        display:contents;
     }
 
     nav {
-        height: 60px;
+        width: 100%;
+        padding: 20px 40px;
         display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
     }
 
     nav .logo {
-        height: 40px;
-        margin-left: 10px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     nav ul {
@@ -580,11 +598,11 @@ footer .copyright {
     }
 
     footer h3{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     footer p {
-        font-size: 0.5rem; /* Even smaller footer text */
+        font-size: 0.6rem; /* Even smaller footer text */
     }
 }
 
@@ -606,6 +624,11 @@ footer .copyright {
     .skill-btn2 {
         padding: 12px 20px;
         font-size: 1.5rem;
+    }
+
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
     }
 
     .card {
@@ -688,6 +711,11 @@ footer .copyright {
         font-size: 1rem;
     }
 
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
+    }
+
     .image-cards {
         flex-direction: column; /* Stack cards vertically */
         align-items: center; /* Center align cards */
@@ -767,6 +795,11 @@ footer .copyright {
         font-size: 0.8rem;
     }
 
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
+    }
+
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
         padding: 9px 18px;
         font-size: 0.8rem;
@@ -811,5 +844,9 @@ footer .copyright {
         transition: none; /* Disable transition */
     }
 
-
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
 }

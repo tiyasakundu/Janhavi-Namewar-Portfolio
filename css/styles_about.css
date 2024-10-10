@@ -106,24 +106,38 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 
 /* For small screens (max-width: 760px) */
 @media (max-width: 768px) {
-    
     .hamburger, .cross {
         display:contents;
     }
 
     nav {
-        height: 60px;
+        width: 100%;
+        padding: 20px 40px;
         display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
     }
 
     nav .logo {
-        height: 40px;
-        margin-left: 10px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     nav ul {
@@ -333,13 +347,18 @@ body.scrolled nav {
     margin-bottom: 30px;
 }
 
-.intro-text p {
+.hidden-p {
+    display: none;
+}
+
+.visible-p {
+    display: block;
     font-size: 1.1rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.intro-text p strong {
+.visible-p strong {
     font-weight: 600;
 }
 
@@ -809,246 +828,371 @@ footer .copyright {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .intro-section {
+    .profile-image {
+        width: 50px; /* Smaller profile image */
+        height: 50px;
+    }
+
+    .profile-section h1 {
+        font-size: 1.2rem;
+    }
+
+    .title-section {
+        width:100%;
+    }
+
+    .title-section h1 {
+        margin-right: 80px;
+        margin-left: 160px;
+    }
+
+    .typing-dots.about-dots {
+        left:15%;
+    }
+
+    .typing-dots.heading-dots{
+        left:15%;
+    }
+
+    /* Intro Card */
+    .intro-card {
         flex-direction: column;
+        margin-left: 160px;
     }
 
-    .intro-text {
-        text-align: left;
-        max-width: 90%;
-        padding: 20px;
+    .visible-p{
+        display: block;
     }
 
-    .intro-text h1 {
-        font-size: 3rem;
+    .hidden-p {
+        display: none;
     }
 
-    .intro-text h2 {
-        font-size: 1.9rem;
-    }
-
-    .intro-text h3 {
-        font-size: 2rem;
-    }
-
-    .intro-text p {
-        font-size: 1.5rem;
-    }
 
     .intro-image {
-        margin-top: 20px;
+        margin-top: 30px;
+    }
+
+    .intro-image img {
+        max-width: 250px;
+    }
+
+    .resume-btn {
+        padding: 10px 22px; /* Smaller button padding */
+    }
+
+    #worked-with-section {
+        padding:0 160px;
+    }
+
+    
+
+    /* Cards Container */
+    .cards-container {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .card {
-        width: 40%;
+        width: 100%;
+        margin-top: 10px;
     }
 
-    #worked-with-section h2{
-        font-size: 2rem;
+    .card-vid {
+        width:80px;
     }
 
-    .hobby h2{
-        font-size: 2rem;
+    .cards-container-2 .card:nth-child(1) .card-vid {
+        width:100px;
     }
 
-    .hobby i{
-        font-size:1.4rem;
-        width: 100%; /* Adjust the width as needed to fit in two lines */
-        line-height: 1.5; /* Improve readability */
+
+    .cards-container .card:nth-child(1) .card-img {
+        max-width: 200px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    /* Specific image size adjustment for 2nd, 3rd, and 4th cards */
+    .cards-container .card:nth-child(2) .card-img,
+    .cards-container .card:nth-child(3) .card-img,
+    .cards-container .card:nth-child(4) .card-img {
+        max-height: 100px; /* Decrease the size for these specific cards */
     }
 
-    .cards h3{
-        font-size: 1.3rem;
+    #worked-with-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
 
-    .cards p{
-        font-size: 1rem;
+    #worked-with-section h4 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    #worked-with-section ul {
+        font-size: 1.2rem;
+    }
+
+    .hobby {
+        padding: 0 160px;
+    }
+
+    .cards{
+        padding:10px;
+    }
+
+    .card-vid {
+        margin-bottom: 5px;
+    }
+
+    .cards-container-2 {
+        gap:90px;
+    }
+
+    .hobby-card {
+        padding: 120px;
     }
 }
 
 @media (max-width: 768px) {
-    .intro-text h1 {
-        font-size: 2rem;
-    }
 
-    .intro-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .intro-text h3 {
-        font-size: 1.7rem;
-    }
-
-    .intro-text p {
+    .profile-section h1 {
         font-size: 1.2rem;
     }
 
-    .card {
-        width: 45%;
+    .title-section h1 {
+        font-size: 1.6rem;
+        margin-left: 160px;
+        margin-right: 60px;
     }
 
-    .intro-image img{
-        width: 90%;
+    .typing-dots.about-dots {
+        left:20%;
     }
 
-    #worked-with-section h2{
-        font-size: 1.8rem;
+    /* Intro Card */
+    .intro-card {
+        flex-direction: column;
+        margin-left: 160px;
+        margin-right: 80px;
     }
 
-    .hobby h2{
-        font-size: 1.8rem;
+    .visible-p{
+        display: block;
     }
 
-    .hobby i{
-        font-size:1.2rem;
-        width: 100%; /* Adjust the width as needed to fit in two lines */
-        line-height: 1.5; /* Improve readability */
+    .hidden-p {
+        display: none;
     }
 
-    .cards h3{
-        font-size: 1.2rem;
-    }
-
-    .cards p{
-        font-size: 1rem;
-    }
-}
-
-@media (width: 540px) {
-
-    .intro-text{
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    .intro-text h1 {
-        font-size: 1.5rem;
-    }
-
-    .intro-text h2 {
-        font-size: 1.2rem;
-    }
-
-    .intro-text h3 {
-        font-size: 1.3rem;
-    }
-
-    .intro-text p {
-        font-size: 0.9rem;
+    .intro-image {
+        margin-top: 30px;
     }
 
     .intro-image img {
-        max-width: 300px;
-    }
-
-    .card {
-        width: 80%;
+        max-width: 250px;
     }
 
     .resume-btn {
-        padding: 10px 20px;
+        padding: 10px 22px; /* Smaller button padding */
     }
 
-    .intro-image img{
-        width: 90%;
+    #worked-with-section {
+        padding:0 160px;
+        padding-right: 100px;
+    }
+
+    /* Cards Container */
+    .cards-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-vid {
+        margin-bottom: 5px;
+    }
+
+    .card {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .cards-container-2 {
+        gap:70px;
+        padding: 20px;
     }
 
     .cards{
-        width: 30%;
-    }
-
-    #worked-with-section h2{
-        font-size: 1.5rem;
-    }
-
-    .hobby h2{
-        font-size: 1.5rem;
-    }
-
-    .hobby i{
-        font-size:1rem;
-        width: 100%; /* Adjust the width as needed to fit in two lines */
-        line-height: 1.5; /* Improve readability */
+        padding:10px;
     }
 
     .cards h3{
         font-size: 1rem;
     }
 
-    .cards p{
+    .cards p {
         font-size: 0.9rem;
+    }
+
+    .cards-container .card:nth-child(1) .card-img {
+        max-width: 100px;
+        margin-top: 30px;
+    }
+    
+    /* Specific image size adjustment for 2nd, 3rd, and 4th cards */
+    .cards-container .card:nth-child(2) .card-img,
+    .cards-container .card:nth-child(3) .card-img,
+    .cards-container .card:nth-child(4) .card-img {
+        max-height: 40px; /* Decrease the size for these specific cards */
+    }
+
+    .hobby {
+        padding: 0 160px;
+        padding-right: 100px;
+    }
+
+    .hobby-card h2{
+        font-size: 2rem;
+    }
+
+    .hobby-card i{
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
 }
 
 
 @media (max-width: 480px) {
-
-    .intro-text{
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    .intro-text h1 {
-        font-size: 1.5rem;
+    .profile-section {
+        padding-top: 40px;
+        padding-left: 20px;
     }
 
-    .intro-text h2 {
-        font-size: 1rem;
+    .profile-section h1{
+        font-size: 15px;
     }
 
-    .intro-text h3 {
-        font-size: 1.1rem;
+    .title-section h1{
+        margin-top: -20px;
+        font-size: 16px;
+        margin-left: 80px;
+    }
+    
+    .typing-dots.about-dots {
+        width:30px;
+        margin-top: -30px;
+        left:21%;
     }
 
-    .intro-text p {
-        font-size: 0.8rem;
+    .typing-dots.about-dots div {
+        width: 6px;
+        height: 6px;
+    }
+
+    
+    .intro-card {
+        margin-top: -20px;
+        padding: 40px;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
+    .intro-card h3{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .visible-p{
+        display: none;
+    }
+
+    .hidden-p{
+        display: block;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .intro-card h2 {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .intro-text {
+        padding-right: 0px;
+    }
+
+    .resume-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        margin-top: 20px;
     }
 
     .intro-image img {
         max-width: 200px;
     }
 
-    .card {
-        width: 80%;
+    #worked-with-section {
+        padding:0 80px;
+        padding-right: 40px;
     }
 
-    .resume-btn {
-        padding: 8px 16px;
+    .title h1 {
+        font-size: 1.8rem;
     }
 
-    .intro-image img{
-        width: 90%;
+    .typing-dots.heading-dots {
+        width:40px;
+        left:20%;
     }
 
-    .cards{
-        width: 40%;
+    .typing-dots.heading-dots div {
+        width:8px;
+        height:8px;
     }
 
-    .cards:nth-child(1) {
-        width: 50%;
+    #worked-with-section h3 {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
     }
 
-    .cards:nth-child(2) .card-vid {
-        margin-top: 20px;
-    }
-
-    #worked-with-section h2{
-        font-size: 1.5rem;
-    }
-
-    .hobby h2{
-        font-size: 1.5rem;
-    }
-
-    .hobby i{
-        width: 100%; /* Adjust the width as needed to fit in two lines */
-        line-height: 1.5; /* Improve readability */
-        font-size:0.9rem;
-    }
-
-    .cards h3{
+    #worked-with-section h4 {
         font-size: 1rem;
+        margin-bottom: 20px;
     }
 
-    .cards p{
+    #worked-with-section ul {
         font-size: 0.9rem;
     }
+
+    .hobby {
+        padding: 0 80px;
+        padding-right: 40px;
+    }
+
+    .hobby-card {
+        padding: 60px;
+    }
+
+    .hobby-card h2{
+        font-size: 1.4rem;
+    }
+
+    .hobby-card i{
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .cards-container-2 {
+        padding: 10px;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
 }

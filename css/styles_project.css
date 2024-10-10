@@ -107,24 +107,39 @@ body.scrolled nav {
 }
 
 
-/* For small screens (max-width: 760px) */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 768px) {
     .hamburger, .cross {
         display:contents;
     }
 
-    
     nav {
-        height: 60px;
+        width: 100%;
+        padding: 20px 40px;
         display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
     }
 
     nav .logo {
-        height: 40px;
-        margin-left: 10px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     nav ul {
@@ -338,7 +353,6 @@ body.scrolled nav {
 .p-card {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 50px;
     background-color: #ffffff; /* Dark card background */
@@ -347,8 +361,8 @@ body.scrolled nav {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-bottom: 25px;
-    width: 100%; /* Full width card */
-    height: 450px;
+    width: 90%; /* Full width card */
+    height: 400px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
     transform-origin: top left;
@@ -366,39 +380,16 @@ body.scrolled nav {
 
 /* Project Images */
 .project-image {
-    width: 500px;
+    width: 450px;
     height: auto;
     object-fit: cover;
     border-radius: 15px;
     margin-right: 60px;
 }
 
-/* Project Info */
-.project-info0, .project-info1, .project-info2, .project-info3 {
-    flex-grow: 1;
-}
-
-/* .project-info0 h2, .project-info1 h2, .project-info2 h2, .project-info3 h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.project-info0 h3, .project-info1 h3, .project-info2 h3, .project-info3 h3 {
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    text-decoration: underline;
-}
-
-.project-info0 p, .project-info1 p, .project-info2 p, .project-info3 p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-} */
-
 /* General case study button styling */
 .case-study-btn {
-    padding: 12px 30px;
+    padding: 10px 25px;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -432,7 +423,6 @@ body.scrolled nav {
 /* Project Info 0 */
 .project-info0 {
     width: 50%;
-    padding-top: 40px;
     background-color: transparent;
     border-radius: 15px;
 }
@@ -472,7 +462,6 @@ body.scrolled nav {
 /* Project Info 0 */
 .project-info1 {
     width: 50%;
-    padding-top: 40px;
     background-color: transparent;
     border-radius: 15px;
 }
@@ -510,7 +499,6 @@ body.scrolled nav {
 /* Project Info 1 */
 .project-info2 {
     width: 50%;
-    padding-top: 10px;
     background-color: transparent;
     border-radius: 15px;
 }
@@ -548,7 +536,6 @@ body.scrolled nav {
 /* Project Info 2 */
 .project-info3 {
     width: 50%;
-    padding-top: 10px;
     padding-bottom: 40px;
     background-color: transparent;
     border-radius: 15px;
@@ -703,11 +690,11 @@ footer .copyright {
     }
 
     footer h3{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     footer p {
-        font-size: 0.5rem; /* Even smaller footer text */
+        font-size: 0.6rem; /* Even smaller footer text */
     }
 }
 
@@ -716,6 +703,12 @@ footer .copyright {
 
 /* Responsive for 1024px */
 @media (max-width: 1024px) {
+
+    .profile-image {
+        width: 50px; /* Smaller profile image */
+        height: 50px;
+    }
+    
     .skill-buttons {
         flex-direction: row; /* Align buttons in a row */
         align-items: center;
@@ -732,74 +725,65 @@ footer .copyright {
         font-size: 1.5rem;
     }
 
-    .projects-section {
-        margin: 0;
-        display: flex;
-        flex-direction: column; /* Stack project cards vertically */
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
     }
 
-    .project-card1, .project-card2, .project-card3 {
-        width: 100%; /* Full width for mobile */
-        display: flex;
-        flex-direction: column; /* Stack image and text vertically */
-        padding: 20px; /* Padding for project cards */
-        margin-bottom: 20px; /* Space between cards */
+    .p-card {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        padding: 60px;
     }
 
-    /* Image styling */
     .project-image {
-        width: 70%; /* Full width of the card */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the container */
-        opacity: 1; /* Fully visible */
-        border-radius: 35px;
-        transform: translateX(0);
+        width: 80%; /* Adjust image size for medium screens */
+        margin-left: 60px;
     }
 
-    /* Project Info Styling */
-    .project-info0, .project-info1, .project-info2 {
-        text-align: left; /* Center align text for better presentation */
-        padding: 60px; /* Adjust padding for smaller screens */
-        width: 90%;
+    .project-info0, .project-info1, .project-info2, .project-info3 {
+        width: 100%; /* Allow text to take more width */
+        padding: 40px;
+        padding-bottom: 0px;
     }
 
-    .project-card1, .project-card2, .project-card3 {
-        flex-direction: column; /* Ensure the card content stacks vertically */
+    .p-card h2 {
+        font-size: 1.6em;
     }
 
-    .project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
-        display: none;
+    .project-info h3 {
+        font-size: 1.2em;
     }
 
-    .project-info0 h2, .project-info1 h2, .project-info2 h2 {
-        font-size: 2rem; /* Adjust heading size */
+    .project-info p {
+        font-size: 1em;
     }
 
-    .project-info0 h3, .project-info1 h3, .project-info2 h3 {
-        font-size: 1.8rem; /* Adjust heading size */
+    .case-study-btn {
+        padding: 12px 28px;
+        font-size: 1em;
     }
 
-    .project-info0 p, .project-info1 p, .project-info2 p {
-        font-size: 1.4rem; /* Adjust paragraph size */
+    .typing-dots.project-dots {
+        left: 20%;
     }
 
-    .projects-section .project-card1 .case-study-btn,
-    .projects-section .project-card2 .case-study-btn,
-    .projects-section .project-card3 .case-study-btn{
-        font-size: 1.5rem;
-        padding: 12px 20px;
+    .case-study-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
     }
-
-    .project-card3{
-        margin-bottom: 0;
-    }
-
 
 }
 
 
 /* Responsive for 768px */
 @media (max-width: 768px) {
+    .profile-image {
+        width: 50px; /* Smaller profile image */
+        height: 50px;
+    }
+
     .skill-buttons {
         flex-direction: row; /* Align buttons in a row */
         align-items: center;
@@ -816,72 +800,51 @@ footer .copyright {
         font-size: 0.8rem;
     }
 
-    .projects-section {
-        margin: 0;
-        display: flex;
-        flex-direction: column; /* Stack project cards vertically */
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
     }
 
-    .project-card1, .project-card2, .project-card3 {
-        width: 100%; /* Full width for mobile */
-        display: flex;
-        flex-direction: column; /* Stack image and text vertically */
-        padding: 20px; /* Padding for project cards */
-        margin-bottom: 20px; /* Space between cards */
+    .p-card {
+        flex-direction: column;
+        height: auto;
+        padding: 40px;
     }
 
-    /* Image styling */
     .project-image {
-        width: 60%; /* Full width of the card */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the container */
-        opacity: 1; /* Fully visible */
-        border-radius: 20px;
-        transform: translateX(0);
+        width: 80%; /* Adjust image size for medium screens */
+        margin-left: 60px;
     }
 
-    /* Project Info Styling */
-    .project-info0, .project-info1, .project-info2 {
-        text-align: left; /* Center align text for better presentation */
-        padding: 30px; /* Adjust padding for smaller screens */
-        width: 90%;
+    .project-info0, .project-info1, .project-info2, .project-info3 {
+        width: 100%;
+        padding: 40px;
+        padding-bottom: 0px;
     }
 
-    .project-card1, .project-card2, .project-card3 {
-        flex-direction: column; /* Ensure the card content stacks vertically */
-    }
-
-    .project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
-        display: none;
-    }
-
-    .project-info0 h2, .project-info1 h2, .project-info2 h2 {
-        font-size: 1.2rem; /* Adjust heading size */
-    }
-
-    .project-info0 h3, .project-info1 h3, .project-info2 h3 {
-        font-size: 1rem; /* Adjust heading size */
-    }
-
-    .project-info0 p, .project-info1 p, .project-info2 p {
-        font-size: 0.7rem; /* Adjust paragraph size */
-    }
-
-    .projects-section .project-card1 .case-study-btn,
-    .projects-section .project-card2 .case-study-btn,
-    .projects-section .project-card3 .case-study-btn{
-        font-size: 0.8rem;
-        padding: 10px 20px;
-    }
-
-    .project-card3{
-        margin-bottom: 0;
+    .case-study-btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
     }
 }
 
 
 /* Responsive for 480px */
 @media (max-width: 480px) {
+
+    .profile-section {
+        padding: 0 40px;
+    }
+
+    .profile-section h1{
+        font-size: 1em;
+    }
+
+    .profile-image {
+        width: 40px; /* Smaller profile image */
+        height: 40px;
+    }
+
     .skill-buttons {
         flex-direction: row; /* Align buttons in a row */
         align-items: center;
@@ -898,64 +861,70 @@ footer .copyright {
         font-size: 0.8rem;
     }
 
+    .skill-buttons i{
+        margin-left: 20px;
+        opacity: 1;
+    }
+
     .projects-section {
-        margin: 0;
-        display: flex;
-        flex-direction: column; /* Stack project cards vertically */
+        padding: 0 80px;
+        padding-right: 50px;
+    }
+    
+    .p-card {
+        flex-direction: column;
+        height: auto;
+        margin-top: 10px;
+        padding: 30px; /* Reduce padding for small screens */
     }
 
-    .project-card1, .project-card2, .project-card3 {
-        width: 100%; /* Full width for mobile */
-        display: flex;
-        flex-direction: column; /* Stack image and text vertically */
-        padding: 20px; /* Padding for project cards */
-        margin-bottom: 20px; /* Space between cards */
-    }
-
-    /* Image styling */
     .project-image {
-        width: 80%; /* Full width of the card */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the container */
-        opacity: 1; /* Fully visible */
-        transform: translateX(0);
+        width: 100%;
+        height: auto;
     }
 
-    /* Project Info Styling */
-    .project-info0, .project-info1, .project-info2 {
-        text-align: left; /* Center align text for better presentation */
-        padding: 15px; /* Adjust padding for smaller screens */
-        width: 90%;
+    .case-study-btn {
+        padding: 10px 20px; /* Reduce button padding */
+        font-size: 0.6rem; /* Smaller button text */
     }
 
-    .project-card1, .project-card2, .project-card3 {
-        flex-direction: column; /* Ensure the card content stacks vertically */
+    .project-info0, .project-info1, .project-info2, .project-info3 {
+        width: 100%;
+        padding: 10px;
+        padding-bottom: 0px;
     }
 
-    .project-info0 .triangle, .project-info1 .triangle, .project-info2 .triangle {
-        display: none;
+    .project-info  h2 {
+        font-size: 16px;
     }
 
-    .project-info0 h2, .project-info1 h2, .project-info2 h2 {
-        font-size: 1.2rem; /* Adjust heading size */
+    .project-info h3 {
+        font-size: 14px;
     }
 
-    .project-info0 h3, .project-info1 h3, .project-info2 h3 {
-        font-size: 1rem; /* Adjust heading size */
+    .project-info p {
+        font-size: 12px;
     }
 
-    .project-info0 p, .project-info1 p, .project-info2 p {
-        font-size: 0.7rem; /* Adjust paragraph size */
+    .typing-dots.project-dots {
+        width: 30px; /* Adjust width to accommodate larger dots */
+        height: 10px;
+        left: 24%;
     }
 
-    .projects-section .project-card1 .case-study-btn,
-    .projects-section .project-card2 .case-study-btn,
-    .projects-section .project-card3 .case-study-btn{
-        font-size: 0.8rem;
-        padding: 10px 20px;
+    .typing-dots.project-dots div {
+        width: 6px;  /* Increased dot width */
+        height: 6px;
     }
 
-    .project-card3{
-        margin-bottom: 0;
+    .case-study-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
     }
 }
