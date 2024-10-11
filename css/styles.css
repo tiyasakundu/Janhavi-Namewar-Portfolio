@@ -224,7 +224,7 @@ body.scrolled nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
 }
 
@@ -369,11 +369,11 @@ body.scrolled nav {
     font-weight: 500;
     background-color: #2980b9;
     color: white;
-    padding: 25px 35px;
+    padding: 20px 30px;
     margin-left: 6px;
     border-radius: 19px;
     position: relative;
-    font-size: 21px;
+    font-size: 19px;
     opacity: 0; /* Hidden initially */
     transform-origin: top left; /* Set origin for top-left zoom */
     transform: scale(0.2); /* Start scaled down */
@@ -482,7 +482,7 @@ body.scrolled nav {
 .featured-projects {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     position: relative;
     color: #2980b9;
@@ -493,7 +493,7 @@ body.scrolled nav {
 
 .typing-dots.heading-dots {
     position: absolute;
-    left: 13%; /* Adjust the position relative to name bubble */
+    left: 22%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
     width: 50px; /* Adjust width to accommodate larger dots */
@@ -575,10 +575,9 @@ body.scrolled nav {
     border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
-    margin-left: 120px;
     margin-top: 40px;
     margin-bottom: 25px;
-    width: 80%; /* Full width card */
+    width: 100%; /* Full width card */
     height: 450px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
@@ -717,7 +716,7 @@ body.scrolled nav {
 .about-me-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     position: relative;
     color: #2980b9;
@@ -740,7 +739,7 @@ body.scrolled nav {
     margin: 10px 0;
     margin-top: 40px;
     margin-bottom: 100px;
-    width: 80%; /* Full width card */
+    width: 100%; /* Full width card */
     height: 400px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
@@ -831,7 +830,7 @@ body.scrolled nav {
     left: 22%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 50px; /* Adjust width to accommodate larger dots */
+    width: 40px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -843,8 +842,8 @@ body.scrolled nav {
 }
 
 .typing-dots.heading-worked-dots div {
-    width: 10px;  /* Increased dot width */
-    height: 10px;
+    width: 9px;  /* Increased dot width */
+    height: 9px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -892,7 +891,7 @@ body.scrolled nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 100px;
     max-width: 1250px;
     margin: 0 auto;
     padding: 10px 0;
@@ -900,7 +899,7 @@ body.scrolled nav {
 }
 
 /* Individual Card Styling */
-.card {
+.worked-card {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -923,30 +922,30 @@ body.scrolled nav {
 }
 
 
-.card:hover {
+.worked-card:hover {
     transform: scale(1.05);
 }
 
 .card-img {
-    width: 100%;
+    width: 90%;
     height: auto;
     max-width: 150px;
     object-fit: contain;  /* Ensures image is contained without distorting */
 }
 
-.cards-container .card:nth-child(1) .card-img {
+.cards-container .worked-card:nth-child(1) .card-img {
     max-width: 200px;
     margin-top: 10px;
 }
 
 /* Specific image size adjustment for 2nd, 3rd, and 4th cards */
-.cards-container .card:nth-child(2) .card-img,
-.cards-container .card:nth-child(3) .card-img,
-.cards-container .card:nth-child(4) .card-img {
+.cards-container .worked-card:nth-child(2) .card-img,
+.cards-container .worked-card:nth-child(3) .card-img,
+.cards-container .worked-card:nth-child(4) .card-img {
     max-height: 75px; /* Decrease the size for these specific cards */
 }
 
-.card h3 {
+.worked-card h3 {
     font-weight: 600;
     font-size: 1.2rem;
     margin: 10px 0;
