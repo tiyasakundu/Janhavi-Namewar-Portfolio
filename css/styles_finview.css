@@ -157,28 +157,38 @@ body.scrolled nav {
 }
 
 
-.project-bg img{
-    width: 100%; /* Adjust the height as needed */
+.project-bg {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
+    margin-top: -80px;
+}
+
+.project-bg div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg img {
+    width: 100%; /* Default width for images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.project-bg {
-    margin-top:-80px;
-}
-
-.mockup {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.mockup img {
-    width: 700px; /* Make the card smaller to appear as a box */
-    height: 500px; /* Set height to create square cards */
-    gap: 30px; /* Space between smaller cards */
-    background-color: transparent;
+/* Specific images with reduced width */
+.project-bg div:nth-child(3) img,
+.project-bg div:nth-child(4) img,
+.project-bg div:nth-child(5) img,
+.project-bg div:nth-child(6) img,
+.project-bg div:nth-child(7) img,
+.project-bg div:nth-child(8) img,
+.project-bg div:nth-child(9) img,
+.project-bg div:nth-child(10) img,
+.project-bg div:nth-child(11) img,
+.project-bg div:nth-child(12) img {
+    width: 80% !important; /* Smaller width for specific images */
 }
 
 /* Button container styling */
