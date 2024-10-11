@@ -151,7 +151,7 @@ function scrollToTop() {
 
 function reveal() {
     var reveals = document.querySelectorAll(".project-card, .about-me-card, .hobby-card");
-    var revealcard = document.querySelectorAll(".card");
+    // var revealcard = document.querySelectorAll(".card");
     var revealbutton = document.querySelectorAll(".button-container");
     var revealTitle = document.querySelectorAll(".title");
     var revealTitleH1 = document.querySelectorAll(".title h1, .typing-dots.heading-dots");
@@ -205,17 +205,17 @@ function reveal() {
         // }
     }
 
-    for (var i = 0; i < revealcard.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = revealcard[i].getBoundingClientRect().top;
-        var elementVisible = 300;
+    // for (var i = 0; i < revealcard.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = revealcard[i].getBoundingClientRect().top;
+    //     var elementVisible = 300;
     
-        if (elementTop < windowHeight - elementVisible) {
-            revealcard[i].classList.add("active");}
-        // } else {
-        //     revealTitleH1[i].classList.remove("active");
-        // }
-    }
+    //     if (elementTop < windowHeight - elementVisible) {
+    //         revealcard[i].classList.add("active");}
+    //     // } else {
+    //     //     revealTitleH1[i].classList.remove("active");
+    //     // }
+    // }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
