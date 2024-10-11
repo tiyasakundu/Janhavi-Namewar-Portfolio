@@ -482,12 +482,12 @@ body.scrolled nav {
 .featured-projects {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     position: relative;
     color: #2980b9;
     font-size: 1.2em;
-    padding: 0 300px; /* Increased left padding for better alignment */
+    padding: 0 180px; /* Increased left padding for better alignment */
     margin-bottom: 100px;
 }
 
@@ -531,6 +531,11 @@ body.scrolled nav {
     animation-delay: 0.4s;
 }
 
+.title {
+    align-self: flex-start; /* Align the title to the left of the container */
+    margin-left: 20px; /* Add a bit of space from the left side */
+}
+
 /* Featured Projects Title as Bubble */
 .title h1 {
     font-family: 'Gilroy-Bold', sans-serif;
@@ -570,9 +575,10 @@ body.scrolled nav {
     border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
+    margin-left: 120px;
     margin-top: 40px;
     margin-bottom: 25px;
-    width: 100%; /* Full width card */
+    width: 80%; /* Full width card */
     height: 450px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
@@ -712,12 +718,12 @@ body.scrolled nav {
 .about-me-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     position: relative;
     color: #2980b9;
     font-size: 1.2em;
-    padding: 0 300px; /* Increased left padding for better alignment */
+    padding: 0 180px; /* Increased left padding for better alignment */
 }
 
 .about-me-card {
@@ -735,7 +741,7 @@ body.scrolled nav {
     margin: 10px 0;
     margin-top: 40px;
     margin-bottom: 100px;
-    width: 100%; /* Full width card */
+    width: 80%; /* Full width card */
     height: 400px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
@@ -1187,6 +1193,7 @@ footer .copyright {
         flex-direction: column; /* Stack the image and text vertically */
         height: auto; /* Let the height adjust based on content */
         padding: 80px;
+        margin-left: 0;
         margin-top: 10px;
     }
 
