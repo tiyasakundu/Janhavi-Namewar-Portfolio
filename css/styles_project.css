@@ -255,13 +255,13 @@ body.scrolled nav {
 .profile-section {
     display: flex;
     align-items: center;
-    padding-left: 200px;
+    padding-left: 300px;
     margin-bottom: 30px;
 }
 
 .profile-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
@@ -270,7 +270,7 @@ body.scrolled nav {
 
 .profile-section h1 {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #2980b9;
 }
 
@@ -283,7 +283,7 @@ body.scrolled nav {
     position: relative;
     color: #2980b9;
     font-size: 1.2em;
-    padding: 0 260px; /* Increased left padding for better alignment */
+    padding: 0 360px; /* Increased left padding for better alignment */
     margin-bottom: 150px;
 }
 
@@ -356,13 +356,13 @@ body.scrolled nav {
     justify-content: space-between;
     padding: 50px;
     background-color: #ffffff; /* Dark card background */
-    border-radius: 40px;
+    border-radius: 30px;
     border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-bottom: 25px;
     width: 100%; /* Full width card */
-    height: 450px;
+    height: 370px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
     transform-origin: top left;
@@ -381,20 +381,20 @@ body.scrolled nav {
 /* Project Images */
 .project-image {
     width: auto;
-    height: 300px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 30px;
-    margin-right: 60px;
+    border-radius: 15px;
+    margin-right: 30px;
 }
 
 /* General case study button styling */
 .case-study-btn {
-    padding: 10px 25px;
+    padding: 10px 16px;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
     display: inline-flex;
     align-items: center;
@@ -422,37 +422,39 @@ body.scrolled nav {
 
 /* Project Info 0 */
 .project-info0 {
-    width: 50%;
+    width: 80%;
     background-color: transparent;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 .project-info0 h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: #033353;
     margin-bottom: 10px;
 }
 
 .project-info0 h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 10px;
     color: #959494;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .project-info0 p{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 .projects-section .project-card1 p{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 /* Specific styling for each project card */
 .project-card1 .case-study-btn {
+    margin-top: 20px;
     background-color: #033353;
 }
 
@@ -461,33 +463,34 @@ body.scrolled nav {
 
 /* Project Info 0 */
 .project-info1 {
-    width: 50%;
+    width: 80%;
     background-color: transparent;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 .project-info1 h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
     color: #088F8F;
     margin-bottom: 10px;
 }
 
 .project-info1 h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 10px;
     color: #959494;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .project-info1 p{
-    font-size: 1.1rem;
+    font-size: 0.75rem;
 }
 
 .projects-section .project-card2 p{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .project-card2 .case-study-btn {
@@ -498,36 +501,38 @@ body.scrolled nav {
 
 /* Project Info 1 */
 .project-info2 {
-    width: 50%;
+    width: 80%;
     background-color: transparent;
     border-radius: 15px;
 }
 
 .project-info2 h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: #0A68A7;
     margin-bottom: 10px;
 }
 
 .project-info2 h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 10px;
     color: #959494;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .project-info2 p{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 .projects-section .project-card3 p{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .project-card3 .case-study-btn {
+    margin-top: 30px;
     background-color: #0A68A7;
 }
 
@@ -535,34 +540,35 @@ body.scrolled nav {
 
 /* Project Info 2 */
 .project-info3 {
-    width: 50%;
+    width: 80%;
     padding-bottom: 40px;
     background-color: transparent;
     border-radius: 15px;
 }
 
 .project-info3 h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: #048BCE;
     margin-bottom: 10px;
 }
 
 .project-info3 h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 0.9rem;
     margin-top: 20px;
     color: #959494;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .project-info3 p{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 .projects-section .project-card4 p{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .project-card4 .case-study-btn {
@@ -743,7 +749,7 @@ footer .copyright {
 
     .project-image {
         width: 80%; /* Adjust image size for medium screens */
-        margin-left: 60px;
+        margin-left: 30px;
     }
 
     .project-info0, .project-info1, .project-info2, .project-info3 {

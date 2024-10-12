@@ -189,14 +189,14 @@ body.scrolled nav {
 .profile-section {
     display: flex;
     align-items: center;
-    padding-left: 100px;
+    padding-left: 250px;
     padding-top: 60px;
     margin-bottom: 30px;
 }
 
 .profile-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
@@ -205,17 +205,17 @@ body.scrolled nav {
 
 .profile-section h1 {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #2980b9;
 }
 
 /* Typing Dots Styling */
 .typing-dots.about-dots {
     position: absolute;
-    left: 12%; /* Adjust the position relative to name bubble */
+    left: 20%; /* Adjust the position relative to name bubble */
     top: 220px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 50px; /* Adjust width to accommodate larger dots */
+    width: 40px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -227,8 +227,8 @@ body.scrolled nav {
 
 
 .typing-dots.about-dots div {
-    width: 10px;  /* Increased dot width */
-    height: 10px;
+    width: 8px;  /* Increased dot width */
+    height: 8px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -275,7 +275,7 @@ body.scrolled nav {
 
 /* Main Container */
 .container {
-    max-width: 1400px;
+    max-width: 1150px;
     margin: 0 auto;
 }
 
@@ -283,12 +283,13 @@ body.scrolled nav {
 .title-section {
     text-align: left;
     margin-bottom: 50px;
-    width:60%;
+    width:80%;
 }
 
 .title-section h1 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2.4rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #2980b9;
     margin-left: 120px;
     margin-bottom: 10px;
@@ -342,8 +343,9 @@ body.scrolled nav {
 }
 
 .intro-text h3 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 1.6rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
     margin-bottom: 30px;
 }
 
@@ -353,7 +355,7 @@ body.scrolled nav {
 
 .visible-p {
     display: block;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin-bottom: 20px;
     color: #333;
 }
@@ -363,8 +365,9 @@ body.scrolled nav {
 }
 
 .intro-text h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
     color: #333;
     margin-top: 30px;
 }
@@ -377,7 +380,8 @@ body.scrolled nav {
     background-color: transparent;
     border: 2px solid #2980b9;
     margin-left: 5px;
-    border-radius: 20px;
+    border-radius: 15px;
+    font-size: 1rem;
     color: #2980b9;
     cursor: pointer;
     transition: all 0.3s;
@@ -385,7 +389,6 @@ body.scrolled nav {
     text-decoration: none;
     align-items: center;
     gap: 10px;
-    font-size: 18px;
 }
 
 /* On hover, change the button color and tilt the icon */
@@ -400,7 +403,7 @@ body.scrolled nav {
 }
 
 .resume-btn i {
-    font-size: 1.2em;
+    /* font-size: 0.9rem; */
     transition: transform 0.3s ease; /* Smooth rotation when tilting */
 }
 
@@ -411,7 +414,7 @@ body.scrolled nav {
 }
 
 .intro-image img {
-    width: 80%;
+    width: 100%;
     max-width: 350px;
     height: auto;
 }
@@ -428,7 +431,7 @@ body.scrolled nav {
     color: #2980b9;
     font-size: 1.2em;
     background-color: none;
-    padding: 0 180px; /* Increased left padding for better alignment */
+    padding: 0 300px; /* Increased left padding for better alignment */
 }
 
 #worked-with-section h3 {
@@ -445,10 +448,10 @@ body.scrolled nav {
 
 .typing-dots.heading-dots {
     position: absolute;
-    left: 13%; /* Adjust the position relative to name bubble */
+    left: 20%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 50px; /* Adjust width to accommodate larger dots */
+    width: 40px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -464,8 +467,8 @@ body.scrolled nav {
 }
 
 .typing-dots.heading-dots div {
-    width: 10px;  /* Increased dot width */
-    height: 10px;
+    width: 8px;  /* Increased dot width */
+    height: 8px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -485,9 +488,9 @@ body.scrolled nav {
 
 /* Featured Projects Title as Bubble */
 .title h1 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 2.7rem; /* Size of the heading */
-    font-weight: bold;
+    font-family: 'Manrope', sans-serif;
+    font-size: 2rem; /* Size of the heading */
+    font-weight: 600;
     color: #1e5f89;
     margin: 15px 0; /* Removed padding and adjusted margin */
     background-color: transparent;
@@ -566,7 +569,7 @@ body.scrolled nav {
 }
 
 .card h3 {
-    font-family: 'Gilroy-Regular', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 300;
     font-size: 1.2rem;
     margin: 10px 0;
@@ -617,7 +620,7 @@ body.scrolled nav {
     color: #333;
     font-size: 1.2em;
     background-color: none;
-    padding: 0 180px;
+    padding: 0 300px;
     margin-bottom: 60px;
 }
 
@@ -645,7 +648,8 @@ body.scrolled nav {
 
 /* Title and Subtitle */
 .hobby-card h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
     font-size: 2.2rem;
     margin-bottom: 20px;
     color: #2980b9;             /* Heading color */

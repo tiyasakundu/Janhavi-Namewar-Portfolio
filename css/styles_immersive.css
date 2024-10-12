@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background: white;
+    background: #050328;
     color: #333;
     overflow-x: hidden;
 }
@@ -167,13 +167,34 @@ body.scrolled nav {
     }
 }
 
-.project-bg img{
-    position: relative; /* Ensures children are positioned relative to this container */
-    width: 100%;
-    background-size: cover; /* Ensures image covers the entire area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat;
+.project-bg {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
     margin-top: -80px;
+}
+
+.project-bg div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg img {
+    width: 100%; /* Default width for images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Specific images with reduced width */
+.project-bg div:nth-child(2) img,
+.project-bg div:nth-child(3) img,
+.project-bg div:nth-child(4) img,
+.project-bg div:nth-child(5) img,
+.project-bg div:nth-child(7) img,
+.project-bg div:nth-child(8) img {
+    width: 80% !important; /* Smaller width for specific images */
 }
 
 /* Button container styling */
@@ -211,7 +232,7 @@ footer {
     text-align: center;
     margin-top: 80px;
     padding: 10px 0; /* Adds padding to create space inside the footer */
-    background-color: transparent; /* Adjusted background color */
+    background-color: white; /* Adjusted background color */
     /* border-top-left-radius: 50px; 
     border-top-right-radius:50px; */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */

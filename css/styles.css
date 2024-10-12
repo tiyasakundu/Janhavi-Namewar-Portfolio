@@ -194,7 +194,7 @@ body.scrolled nav {
     margin-top: 100px;
     height: 50%;
     position: relative;
-    padding-left: 240px;
+    padding-left: 300px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -210,8 +210,8 @@ body.scrolled nav {
 }
 
 .profile-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid #ccc;
     position: relative;
@@ -224,7 +224,7 @@ body.scrolled nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    max-width: 700px;
+    max-width: 650px;
     width: 100%;
 }
 
@@ -487,13 +487,13 @@ body.scrolled nav {
     position: relative;
     color: #2980b9;
     font-size: 1.2em;
-    padding: 0 300px; /* Increased left padding for better alignment */
+    padding: 0 360px; /* Increased left padding for better alignment */
     margin-bottom: 100px;
 }
 
 .typing-dots.heading-dots {
     position: absolute;
-    left: 22%; /* Adjust the position relative to name bubble */
+    left: 25%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
     width: 50px; /* Adjust width to accommodate larger dots */
@@ -533,14 +533,14 @@ body.scrolled nav {
 
 .title {
     align-self: flex-start; /* Align the title to the left of the container */
-    margin-left: 20px; /* Add a bit of space from the left side */
+    /* margin-left: 20px;  */
 }
 
 /* Featured Projects Title as Bubble */
 .title h1 {
-    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 2rem; /* Size of the heading */
-    font-weight: bold;
+    font-weight: 600;
     color: #1e5f89;
     margin: 15px 0; /* Removed padding and adjusted margin */
     background-color: transparent;
@@ -571,14 +571,14 @@ body.scrolled nav {
     justify-content: space-between;
     padding: 60px;
     background-color: #ffffff; /* Dark card background */
-    border-radius: 40px;
+    border-radius: 30px;
     border: 3px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-top: 40px;
     margin-bottom: 25px;
     width: 100%; /* Full width card */
-    height: 450px;
+    height: 370px;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
     transform-origin: top left;
@@ -597,31 +597,31 @@ body.scrolled nav {
 
 /* Project information text styling */
 .project-info {
-    flex: 1;
-    padding-right: 60px; /* Space between text and image */
+    padding-right: 20px; /* Space between text and image */
 }
 
 .project-info h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-size: 1.8rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .project-item1 .project-info h2 {
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .project-info p {
     font-size: 0.8rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .project-info h3 {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #959494;
     text-decoration: underline;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .project-item1 h2 {
@@ -629,6 +629,7 @@ body.scrolled nav {
 }
 
 .project-item2 h2 {
+    font-size: 1.4rem;
     color: #088F8F;
 }
 
@@ -645,7 +646,7 @@ body.scrolled nav {
 }
 
 .project-image {
-    flex-basis: 55%; /* Reserve space for the image */
+    flex-basis: 110%; /* Reserve space for the image */
     background-color: transparent;
 }
 
@@ -694,14 +695,14 @@ body.scrolled nav {
 
 /* Specific button styles */
 .project-item1 .case-study-btn {
-    bottom: 100px;
-    left: 6.5%;
+    bottom: 65px;
+    left: 7%;
     background-color: #033353;
 }
 
 .project-item2 .case-study-btn {
-    bottom: 95px;
-    left: 6.5%;
+    bottom: 50px;
+    left: 7%;
     background-color: #088F8F;
 }
 
@@ -725,7 +726,7 @@ body.scrolled nav {
     position: relative;
     color: #2980b9;
     font-size: 1.2em;
-    padding: 0 300px; /* Increased left padding for better alignment */
+    padding: 0 360px; /* Increased left padding for better alignment */
 }
 
 .about-me-card {
@@ -766,8 +767,8 @@ body.scrolled nav {
     color: #333;
     line-height: 1.6;
     margin-top: 50px;
-    margin-right: 200px;
-    margin-left: 200px;
+    margin-right: 140px;
+    margin-left: 140px;
 }
 
 .about-me-card p span {
@@ -824,15 +825,16 @@ body.scrolled nav {
     justify-content: flex-start;
     position: relative;
     margin-top: 70px;
+    margin-left: 20px;
     color: #2980b9;
     /* font-size: 1.2em; */
     background-color: none;
-    padding: 0 300px; /* Increased left padding for better alignment */
+    padding: 0 350px; /* Increased left padding for better alignment */
 }
 
 .typing-dots.heading-worked-dots {
     position: absolute;
-    left: 22%; /* Adjust the position relative to name bubble */
+    left: 25%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
     width: 40px; /* Adjust width to accommodate larger dots */
@@ -868,13 +870,13 @@ body.scrolled nav {
 
 .title-1 {
     align-self: flex-start; /* Align the title to the left of the container */
-    margin-left: 20px; /* Add a bit of space from the left side */
+    /* margin-left: 20px; */
 }
 
 .title-1 h1 {
-    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 2rem; /* Size of the heading */
-    font-weight: bold;
+    font-weight: 600;
     color: #1e5f89;
     /* margin: 15px 0; Removed padding and adjusted margin */
     background-color: transparent;
@@ -896,7 +898,7 @@ body.scrolled nav {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    column-gap: 5px;
+    column-gap: 20px;
     max-width: 1250px;
     padding: 20px 0;
     margin-bottom: 30px;
@@ -907,13 +909,12 @@ body.scrolled nav {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 16%;
-    height: 100px;
+    width: 20%;
+    height: 120px;
     border: 2px solid #297fb94d;
     color: #333;
     padding: 30px 20px;
     margin-top: 10px;
-    margin-left: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -939,7 +940,7 @@ body.scrolled nav {
 }
 
 .cards-container .worked-card:nth-child(1) .card-img {
-    max-width: 200px;
+    max-width: 300px;
     margin-top: 10px;
 }
 
@@ -947,7 +948,7 @@ body.scrolled nav {
 .cards-container .worked-card:nth-child(2) .card-img,
 .cards-container .worked-card:nth-child(3) .card-img,
 .cards-container .worked-card:nth-child(4) .card-img {
-    max-height: 45px; /* Decrease the size for these specific cards */
+    max-height: 70px; /* Decrease the size for these specific cards */
 }
 
 .worked-card h3 {
@@ -961,7 +962,7 @@ body.scrolled nav {
     justify-content: flex-start; /* Centers the button horizontally */
     width: 100%; /* Ensures the container takes the full width */
     margin-top: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     transition: all 0.3s;
     opacity: 0; /* Hidden initially */
     transform: translateY(20px);
@@ -991,7 +992,7 @@ body.scrolled nav {
 .details-btn-1 {
     display: inline-block;
     padding: 10px 15px; /* Original padding */
-    font-size: 0.9rem; /* Original font size */
+    font-size: 1rem; /* Original font size */
     color: #2980b9;
     background-color: transparent;
     border: 2px solid #2980b9;
@@ -1014,7 +1015,9 @@ body.scrolled nav {
 
 /* Button hover effect */
 .details-btn-1:hover {
-    transform: scale(1.1); /* Slight enlargement on hover */
+    background-color: #2980b9;
+    color:white;
+    /* transform: scale(1.1);  */
 }
 
 /* Icon appears and moves into place on hover */
