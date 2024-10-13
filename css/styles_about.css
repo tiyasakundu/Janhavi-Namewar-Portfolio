@@ -189,7 +189,7 @@ body.scrolled nav {
 .profile-section {
     display: flex;
     align-items: center;
-    padding-left: 250px;
+    padding-left: 240px;
     padding-top: 60px;
     margin-bottom: 30px;
 }
@@ -289,7 +289,7 @@ body.scrolled nav {
 .title-section h1 {
     font-family: 'Manrope', sans-serif;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #2980b9;
     margin-left: 120px;
     margin-bottom: 10px;
@@ -318,12 +318,12 @@ body.scrolled nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px;
-    padding-left: 50px;
+    padding: 80px;
+    padding-left: 80px;
     margin: 0 auto;
     margin-left: 120px;
     margin-right: 120px;
-    border: 3px solid #297fb94d;
+    border: 2px solid #297fb94d;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -338,13 +338,13 @@ body.scrolled nav {
 .intro-text {
     flex: 1;
     padding-right: 20px;
-    max-width: 600px;
+    max-width: 400px;
     text-align: left;
 }
 
 .intro-text h3 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 30px;
 }
@@ -366,7 +366,7 @@ body.scrolled nav {
 
 .intro-text h2 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.3rem;
     color: #333;
     margin-top: 30px;
@@ -380,7 +380,7 @@ body.scrolled nav {
     background-color: transparent;
     border: 2px solid #2980b9;
     margin-left: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 1rem;
     color: #2980b9;
     cursor: pointer;
@@ -434,17 +434,17 @@ body.scrolled nav {
     padding: 0 300px; /* Increased left padding for better alignment */
 }
 
-#worked-with-section h3 {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
+/* #worked-with-section h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
     color: #333;
 }
 
 #worked-with-section h4 {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
     color: #333;
-}
+} */
 
 .typing-dots.heading-dots {
     position: absolute;
@@ -490,7 +490,7 @@ body.scrolled nav {
 .title h1 {
     font-family: 'Manrope', sans-serif;
     font-size: 2rem; /* Size of the heading */
-    font-weight: 600;
+    font-weight: 700;
     color: #1e5f89;
     margin: 15px 0; /* Removed padding and adjusted margin */
     background-color: transparent;
@@ -519,7 +519,7 @@ body.scrolled nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 40px;
     max-width: 1250px;
     margin: 0 auto;
@@ -530,9 +530,9 @@ body.scrolled nav {
 .card {
     background-color: white;
     border-radius: 20px;
-    border: 3px solid #297fb94d;
+    border: 2px solid #297fb94d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 23%;
+    width: 23.90%;
     padding: 30px 20px;
     margin-top: 40px;
     text-align: center;
@@ -571,14 +571,17 @@ body.scrolled nav {
 .card h3 {
     font-family: 'Manrope', sans-serif;
     font-weight: 300;
-    font-size: 1.2rem;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 20px;
     margin: 10px 0;
 }
 
 .card h4 {
     font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* Ensure list items in cards show bullets */
@@ -594,7 +597,7 @@ body.scrolled nav {
 /* Optional: Styling for the list items */
 .card ul li {
     margin-bottom: 10px;    /* Adds spacing between the list items */
-    font-size: 0.9rem;        /* Adjusts font size if needed */
+    font-size: 0.8rem;        /* Adjusts font size if needed */
     color: #333;            /* Ensures consistent text color */
 }
 
@@ -627,7 +630,7 @@ body.scrolled nav {
 .hobby-card {
     background-color: white;    /* White background for the whole card */
     border-radius: 30px;    
-    border: 3px solid #297fb94d;    /* Rounded corners for the card */
+    border: 2px solid #297fb94d;    /* Rounded corners for the card */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 1200px;          /* Limit the card width */
     padding: 80px;             /* Padding inside the card */
@@ -682,8 +685,8 @@ body.scrolled nav {
 
 /* Video in Cards */
 .card-vid {
-    width: 100px;                   /* Set width for the videos */
-    height: 100px;                  /* Set height to match width */
+    width: 80px;                   /* Set width for the videos */
+    height: 80px;                  /* Set height to match width */
     margin-bottom: 15px;            /* Space between video and text */
 }
 

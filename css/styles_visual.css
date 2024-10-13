@@ -173,7 +173,7 @@ body.scrolled nav {
     background-color: white;
     color: #333;
     border: 2px solid #2980b9;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -211,7 +211,7 @@ body.scrolled nav {
     background-color: #2980b9;
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -245,7 +245,7 @@ body.scrolled nav {
     color: white;
     border: none;
     text-decoration: none;
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 10px; /* Rounded corners */
     font-size: 16px;
     cursor: pointer;
     text-align: center;
@@ -299,8 +299,11 @@ body.scrolled nav {
     width: 500px;
     border-radius: 20px;
     overflow: hidden;
-    /* margin-top: 20px; Add some space above the card */
     background-color: transparent;
+}
+
+.card:nth-child(4), .card:nth-child(5) {
+    margin-top: 20px;
 }
 
 .card-text {
@@ -339,7 +342,8 @@ body.scrolled nav {
 }
 
 .card-text h2 {
-    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
     color: #727272;
     padding-bottom: 5px;
 }
@@ -349,7 +353,8 @@ body.scrolled nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 400px;
+    position: fixed;
     animation: bounce 2s infinite;
     color: #2980b9;
     font-size: 4rem;
