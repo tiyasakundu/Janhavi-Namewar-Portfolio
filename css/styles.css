@@ -233,7 +233,7 @@ body.scrolled nav {
     position: absolute;
     top: -16px; /* Adjust this to place it above the typing dots */
     left: 5%;
-    font-size: 19px;
+    font-size: 16px;
     color: #2980b9;
     opacity: 0; /* Hidden initially */
     animation: fadeInText 0.85s forwards ease-in-out;
@@ -261,7 +261,7 @@ body.scrolled nav {
     border-radius: 20px;
     text-align: left;
     width: 67%;
-    font-size: 17px;
+    font-size: 16px;
     position: absolute;
     top: -50px;
     height: 49%;
@@ -373,7 +373,7 @@ body.scrolled nav {
     margin-left: 6px;
     border-radius: 19px;
     position: relative;
-    font-size: 19px;
+    font-size: 17px;
     opacity: 0; /* Hidden initially */
     transform-origin: top left; /* Set origin for top-left zoom */
     transform: scale(0.2); /* Start scaled down */
@@ -488,7 +488,7 @@ body.scrolled nav {
     color: #2980b9;
     font-size: 1.2em;
     padding: 0 360px; /* Increased left padding for better alignment */
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .typing-dots.heading-dots {
@@ -572,7 +572,7 @@ body.scrolled nav {
     padding: 60px;
     background-color: #ffffff; /* Dark card background */
     border-radius: 30px;
-    border: 3px solid #297fb94d; /* Border similar to the image */
+    border: 2px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     margin-top: 40px;
@@ -634,26 +634,20 @@ body.scrolled nav {
     color: #088F8F;
 }
 
-.project-item3 h2 {
-    color: #0A68A7;
-}
-
-.project-item4 h2 {
-    color: #048BCE;
-}
 
 .project-info a.case-study-btn {
     margin-top: 10px;
 }
 
 .project-image {
-    flex-basis: 110%; /* Reserve space for the image */
+    max-width: 55%;
     background-color: transparent;
 }
 
 .project-image img {
     width: 100%; /* Ensure the image fills the container */
     height: auto;
+    object-fit: cover;
     border-radius: 15px; /* Rounded corners for the image */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -702,21 +696,9 @@ body.scrolled nav {
 }
 
 .project-item2 .case-study-btn {
-    bottom: 50px;
+    bottom: 65px;
     left: 7%;
     background-color: #088F8F;
-}
-
-.project-item3 .case-study-btn {
-    bottom: 60px;
-    left: 4%;
-    background-color: #0A68A7;
-}
-
-.project-item4 .case-study-btn {
-    bottom: 60px;
-    left: 4%;
-    background-color: #048BCE;
 }
 
 .about-me-section {
@@ -731,23 +713,17 @@ body.scrolled nav {
 }
 
 .about-me-card {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #f6f6f6; /* Dark card background */
+    background-color: #f6f6f6;
+    padding: 60px;
     border-radius: 30px;
-    border: 3px solid #297fb94d; /* Border similar to the image */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
-    margin-top: 40px;
+    border: 2px solid #297fb94d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 100px;
-    width: 100%; /* Full width card */
-    height: 400px;
-    color: #333; /* Text color for better contrast */
+    width: 100%; /* Set a max-width to limit container size */
+    /* height: 400px; */
     opacity: 0; 
     transform-origin: top left;
     transform: scale(0.2);
@@ -762,23 +738,40 @@ body.scrolled nav {
     transform: scale(1);
 }
 
+.about-me-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
-.about-me-card p {
-    font-size: 1.4rem;
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    /* border-radius: 15px; */
+    width: 40%; /* Each card takes 30% of the container width */
+    text-align: center; 
+}
+
+.about-me-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.about-me-content h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.about-me-content p {
+    font-size: 0.8rem;
+    /* line-height: 1.6; */
     color: #333;
-    line-height: 1.6;
-    margin-top: 50px;
-    margin-right: 140px;
-    margin-left: 140px;
-}
-
-.about-me-card p span {
-    font-style: italic;
-    color: #2980b9; /* Highlighted part in blue */
-}
-
-.about-me-card p i {
-    color: #2980b9; /* The 'useful' word styled */
 }
 
 /* About Me button styling */
@@ -1084,7 +1077,7 @@ body.scrolled nav {
     position: relative;
     font-size: 1.5rem;
     margin-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -1226,6 +1219,84 @@ footer .copyright {
 
 /* ------------------------ RESPONSIVE STYLES ------------------------ */
 
+@media screen and (max-width: 1440px) {
+    .project-item1 h2 {
+        font-size: 1rem;
+    }
+    
+    .project-item2 h2 {
+        font-size: 1rem;
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 80px;
+        left: 8%;
+    }
+    
+    .project-item2 .case-study-btn {
+        bottom: 80px;
+        left: 8%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .intro{
+        padding-left: 240px;
+    }
+
+    .featured-projects{
+        padding: 0 320px;
+        padding-right: 300px;
+    }
+
+    .project-card {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .experience{
+        padding: 0 300px;
+    }
+
+    .project-item1 h2 {
+        font-size: 1rem;
+    }
+    
+    .project-item2 h2 {
+        font-size: 1rem;
+    }
+
+    .project-info h3{
+        font-size: 0.8rem;
+    }
+
+    .project-info p {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 100px;
+        left: 6%;
+    }
+    
+    .project-item2 .case-study-btn {
+        bottom: 80px;
+        left: 6%;
+    }
+
+    .about-me-section{
+        padding: 0 320px;
+    }
+}
+
+
+
 @media (max-width: 1024px) {
     .intro {
         margin-top: 150px;
@@ -1289,6 +1360,13 @@ footer .copyright {
         margin-bottom: 20px; /* Add bottom margin */
     }
 
+    .project-image {
+        max-width: 100%;
+    }
+
+    .project-info p{
+        margin-bottom: 20px;
+    }
 
     .experience {
         padding: 0 170px; /* Reduce padding */
