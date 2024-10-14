@@ -177,6 +177,10 @@ body.scrolled nav {
     background-repeat: no-repeat;
 }
 
+.hidden-image {
+    display: none;
+}
+
 /* Positioning for stacking images */
 .image-stack {
     position: relative;
@@ -197,49 +201,280 @@ body.scrolled nav {
 }
 
 /* Specific images with reduced width */
-.project-bg div:nth-child(3) img,
-.project-bg div:nth-child(4) img,
+/* .project-bg div:nth-child(2) img, */
 .project-bg div:nth-child(5) img,
 .project-bg div:nth-child(6) img,
-.project-bg div:nth-child(7) img,
 .project-bg div:nth-child(8) img,
 .project-bg div:nth-child(9) img,
 .project-bg div:nth-child(10) img,
-.project-bg div:nth-child(11) img,
 .project-bg div:nth-child(12) img,
-.project-bg div:nth-child(13) img {
+.project-bg div:nth-child(14) img,
+.project-bg div:nth-child(15) img,
+.project-bg div:nth-child(17) img,
+.project-bg div:nth-child(19) img,
+.project-bg div:nth-child(20) img {
     width: 80% !important; /* Smaller width for specific images */
 }
 
-/* .mockup {
+/* Button over the Truble 5 image */
+.truble-5-container {
+    position: relative; /* Ensure the button is positioned relative to the image container */
+}
+
+.truble-5-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 17%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10; /* Ensure the button is above the image */
+}
+
+.truble-5-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.truble-5-btn:hover {
+    background-color: #66B4B3;
+    color:white;
+    /* transform: scale(1.1);  */
+}
+
+.truble-5-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(0); /* Slide it to the right of the text */
+}
+
+/* Button over the Truble 8 image positioned at the bottom right */
+.truble-8-container {
+    position: relative; /* Ensure the button is positioned relative to the image container */
+}
+
+.truble-8-btn {
+    position: absolute;
+    bottom: 17%;
+    right: 24%;
+    /* left:68%; */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.truble-8-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.truble-8-btn:hover {
+    background-color: #66B4B3;
+    color: white;
+}
+
+.truble-8-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Button over the Truble 9 image positioned on the left */
+.truble-9-container {
+    position: relative; /* Ensure the button is positioned relative to the image container */
+}
+
+.truble-9-btn {
+    position: absolute;
+    bottom: 50%;
+    left: 17%; /* Positioned to the left side */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.truble-9-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.truble-9-btn:hover {
+    background-color: #66B4B3;
+    color: white;
+}
+
+.truble-9-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Button over the Truble 11 image positioned on the top left */
+.truble-11-container {
+    position: relative; /* Ensure the button is positioned relative to the image container */
+}
+
+.truble-11-btn {
+    position: absolute;
+    top: 24%; /* Positioned to the top */
+    left: 16%; /* Positioned to the left */
+    /* bottom:72.5%; */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.truble-11-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.truble-11-btn:hover {
+    background-color: #66B4B3;
+    color: white;
+}
+
+.truble-11-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Button over the Truble 12 image positioned on the top left */
+.truble-12-container {
+    position: relative;
+}
+
+.truble-12-btn {
+    position: absolute;
+    top: 30%;
+    left: 16%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.truble-12-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.truble-12-btn:hover {
+    background-color: #66B4B3;
+    color: white;
+}
+
+.truble-12-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Button over the Truble 13 image positioned on the top left */
+.truble-13-container {
+    position: relative;
+}
+
+.truble-13-btn {
+    position: absolute;
+    top: 17%;
+    left: 16%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.truble-13-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.truble-13-btn:hover {
+    background-color: #66B4B3;
+    color: white;
+}
+
+.truble-13-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Overlay container (hidden by default) */
+.overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.mockup img {
-    width: 700px; 
-    height: 500px; 
-    gap: 30px; 
-    background-color: transparent;
+/* Show the overlay when active */
+.overlay-container.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-
-/* Extra Images Division */
-/* .extra-images {
-    display: flex;
-    justify-content: center; 
-    gap: 60px; 
-    margin-top: 100px; 
-    margin-bottom: 100px;
-    flex-wrap: wrap; 
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
 }
 
-.extra-images img {
-    width: 300px;
-    height: auto; 
-    object-fit: cover; 
-} */ 
+/* The image displayed in the overlay */
+.overlay-image-popup {
+    max-width: 90%;
+    max-height: 80%;
+}
 
 
 /* Button container styling */
@@ -349,6 +584,7 @@ footer .copyright {
     height: 50px; /* Button height */
     font-size: 24px; /* Font size */
     cursor: pointer; /* Pointer cursor on hover */
+    z-index: 30;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
     transition: background-color 0.3s, transform 0.3s; /* Transition effects */
 }
@@ -398,6 +634,9 @@ footer .copyright {
     }
 }
 
+
+/* <----------------------responsive---------------------> */
+
 /* Media Queries */
 
 /* For devices with max width 768px */
@@ -411,8 +650,70 @@ footer .copyright {
 /* For devices with max width 1024px */
 @media (max-width: 1024px) {
 
+    .project-bg div:nth-child(5) img,
+    .project-bg div:nth-child(6) img,
+    .project-bg div:nth-child(8) img,
+    .project-bg div:nth-child(9) img,
+    .project-bg div:nth-child(10) img,
+    .project-bg div:nth-child(12) img,
+    .project-bg div:nth-child(14) img,
+    .project-bg div:nth-child(15) img,
+    .project-bg div:nth-child(17) img,
+    .project-bg div:nth-child(19) img,
+    .project-bg div:nth-child(20) img {
+        width: 100% !important; 
+    }
+
+    .image-stack {
+        display: none !important;
+    }
+
+    .hidden-image {
+        display: block !important;
+    }
+
     .project-bg {
         margin-top: 0;
+    }
+
+    .truble-5-btn,
+    .truble-8-btn,
+    .truble-9-btn,
+    .truble-11-btn,
+    .truble-12-btn,
+    .truble-13-btn {
+        font-size: 0.9rem;
+    }
+
+    .truble-5-btn i,
+    .truble-8-btn i,
+    .truble-9-btn i,
+    .truble-11-btn i,
+    .truble-12-btn i,
+    .truble-13-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .truble-5-btn {
+        left:8.5%;
+        bottom: 14px;
+    }
+
+    .truble-8-btn {
+        right:18%;
+        bottom: 12%;
+    }
+
+    .truble-9-btn {
+        left:8.5%;
+        bottom: 45%;
+    }
+
+    .truble-11-btn,
+    .truble-12-btn,
+    .truble-13-btn {
+        left:7.5%;
     }
 
     .button-container {
@@ -431,20 +732,57 @@ footer .copyright {
 
 /* For devices with max width 480px */
 @media (max-width: 480px) {
-    /* .mockup img {
-        width: 100%; 
-        height: auto; 
+
+    .truble-5-btn,
+    .truble-8-btn,
+    .truble-9-btn,
+    .truble-11-btn,
+    .truble-12-btn,
+    .truble-13-btn {
+        padding: 6px 10px;
+        border-radius: 5px;
     }
 
-    .extra-images {
-        flex-direction: column; 
-        gap: 20px; 
-        align-items: center;
+    .truble-5-btn {
+        bottom: 0px;
+        /* padding: 8px 10px; */
+        font-size: 0.6rem;
     }
 
-    .extra-images img {
-        width: 50%; 
-    } */
+    .truble-8-btn {
+        bottom: 9%;
+        right: 15%;
+        /* padding: 8px 10px; */
+        font-size: 0.6rem;
+    }
+
+    .truble-9-btn {
+        bottom: 40%;
+        /* padding: 8px 10px; */
+        font-size: 0.6rem;
+    }
+
+    .truble-11-btn {
+        /* top: 12%; */
+        /* left: 8%; */
+        /* padding: 8px 10px; */
+        font-size: 0.6rem;
+    }
+
+    .truble-12-btn {
+        /* top: 15%; */
+        /* left: 8%; */
+        /* padding: 8px 10px; */
+        font-size: 0.6rem;
+    }
+
+    .truble-13-btn {
+        /* top: 10%; */
+        /* left: 8%; */
+        /* padding: 8px 10px; */
+        font-size: 0.6rem;
+    }
+
 
     .button-container {
         flex-direction: row;
@@ -481,5 +819,25 @@ footer .copyright {
         width: 140px;
         font-size: 0.6rem;
         text-align: center;
+    }
+}
+
+@media (width:350px){
+    .truble-5-btn,
+    .truble-8-btn,
+    .truble-9-btn,
+    .truble-11-btn,
+    .truble-12-btn,
+    .truble-13-btn {
+        padding: 6px 10px;
+        border-radius: 5px;
+        font-size: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    nav ul li a {
+        font-size: 15px;
     }
 }
