@@ -175,7 +175,7 @@ body.scrolled nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .hidden-image {
@@ -224,7 +224,7 @@ body.scrolled nav {
 
 .truble-5-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 120px;
     left: 15.6%;
     padding: 10px 20px;
     font-size: 1rem;
@@ -263,7 +263,7 @@ body.scrolled nav {
 
 .truble-8-btn {
     position: absolute;
-    bottom: 17%;
+    bottom: 24%;
     right: 24%;
     /* left:68%; */
     padding: 10px 20px;
@@ -302,7 +302,7 @@ body.scrolled nav {
 
 .truble-9-btn {
     position: absolute;
-    bottom: 50%;
+    bottom: 55%;
     left: 15.6%; /* Positioned to the left side */
     padding: 10px 20px;
     font-size: 1rem;
@@ -340,7 +340,7 @@ body.scrolled nav {
 
 .truble-11-btn {
     position: absolute;
-    top: 24%; /* Positioned to the top */
+    top: 22%; /* Positioned to the top */
     left: 14.5%; /* Positioned to the left */
     /* bottom:72.5%; */
     padding: 10px 20px;
@@ -379,7 +379,7 @@ body.scrolled nav {
 
 .truble-12-btn {
     position: absolute;
-    top: 30%;
+    top: 26%;
     left: 14.6%;
     padding: 10px 20px;
     font-size: 1rem;
@@ -417,7 +417,7 @@ body.scrolled nav {
 
 .truble-13-btn {
     position: absolute;
-    top: 17%;
+    top: 14%;
     left: 14.6%;
     padding: 10px 20px;
     font-size: 1rem;
