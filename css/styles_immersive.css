@@ -185,6 +185,7 @@ body.scrolled nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 60px;
 }
 
 /* Specific images with reduced width */

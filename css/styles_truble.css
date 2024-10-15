@@ -175,6 +175,7 @@ body.scrolled nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 60px;
 }
 
 .hidden-image {
@@ -188,7 +189,7 @@ body.scrolled nav {
 
 .base-image {
     position: relative;
-    max-width: 80%; /* Base image takes the full width of its container */
+    max-width: 83%; /* Base image takes the full width of its container */
     z-index: 1; /* Lower layer */
 }
 
@@ -213,7 +214,7 @@ body.scrolled nav {
 .project-bg div:nth-child(17) img,
 .project-bg div:nth-child(19) img,
 .project-bg div:nth-child(20) img {
-    width: 80% !important; /* Smaller width for specific images */
+    width: 83% !important; /* Smaller width for specific images */
 }
 
 /* Button over the Truble 5 image */
@@ -224,7 +225,7 @@ body.scrolled nav {
 .truble-5-btn {
     position: absolute;
     bottom: 20px;
-    left: 17%;
+    left: 15.6%;
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -233,6 +234,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10; /* Ensure the button is above the image */
+    transition: transform 0.3s ease;
 }
 
 .truble-5-btn i {
@@ -246,7 +248,7 @@ body.scrolled nav {
 .truble-5-btn:hover {
     background-color: #66B4B3;
     color:white;
-    /* transform: scale(1.1);  */
+    transform: scale(1.1); 
 }
 
 .truble-5-btn:hover i {
@@ -272,6 +274,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .truble-8-btn i {
@@ -284,6 +287,7 @@ body.scrolled nav {
 .truble-8-btn:hover {
     background-color: #66B4B3;
     color: white;
+    transform: scale(1.1); 
 }
 
 .truble-8-btn:hover i {
@@ -299,7 +303,7 @@ body.scrolled nav {
 .truble-9-btn {
     position: absolute;
     bottom: 50%;
-    left: 17%; /* Positioned to the left side */
+    left: 15.6%; /* Positioned to the left side */
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -308,6 +312,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .truble-9-btn i {
@@ -320,6 +325,7 @@ body.scrolled nav {
 .truble-9-btn:hover {
     background-color: #66B4B3;
     color: white;
+    transform: scale(1.1); 
 }
 
 .truble-9-btn:hover i {
@@ -335,7 +341,7 @@ body.scrolled nav {
 .truble-11-btn {
     position: absolute;
     top: 24%; /* Positioned to the top */
-    left: 16%; /* Positioned to the left */
+    left: 14.5%; /* Positioned to the left */
     /* bottom:72.5%; */
     padding: 10px 20px;
     font-size: 1rem;
@@ -345,6 +351,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .truble-11-btn i {
@@ -357,6 +364,7 @@ body.scrolled nav {
 .truble-11-btn:hover {
     background-color: #66B4B3;
     color: white;
+    transform: scale(1.1); 
 }
 
 .truble-11-btn:hover i {
@@ -372,7 +380,7 @@ body.scrolled nav {
 .truble-12-btn {
     position: absolute;
     top: 30%;
-    left: 16%;
+    left: 14.6%;
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -381,6 +389,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .truble-12-btn i {
@@ -393,6 +402,7 @@ body.scrolled nav {
 .truble-12-btn:hover {
     background-color: #66B4B3;
     color: white;
+    transform: scale(1.1);
 }
 
 .truble-12-btn:hover i {
@@ -408,7 +418,7 @@ body.scrolled nav {
 .truble-13-btn {
     position: absolute;
     top: 17%;
-    left: 16%;
+    left: 14.6%;
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -417,6 +427,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .truble-13-btn i {
@@ -429,6 +440,7 @@ body.scrolled nav {
 .truble-13-btn:hover {
     background-color: #66B4B3;
     color: white;
+    transform: scale(1.1);
 }
 
 .truble-13-btn:hover i {

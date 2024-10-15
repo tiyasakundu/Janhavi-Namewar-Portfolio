@@ -1,0 +1,1174 @@
+/* Featured Projects Section */
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start;
+    position: relative;
+    color: #2980b9;
+    font-size: 1.2em;
+    background-color: none;
+    padding: 0 180px; /* Increased left padding for better alignment */
+}
+
+/* Typing Dots for heading */
+.typing-dots.heading-dots {
+    position: absolute;
+    left: 15px; /* Move the dots slightly right to match the heading */
+    top: 0; /* Keep the vertical position aligned with the heading */
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    z-index: 1; /* Ensure dots appear above other elements */
+    opacity: 0; /* Hidden by default */
+    animation: fadeInDots 0.85s forwards ease-in-out;
+    animation-delay: 0.5s; /* Adjust delay for when typing dots appear */
+}
+
+/* Adjust individual dot delay */
+.typing-dots.heading-dots div:nth-child(1) {
+    animation-delay: 0.6s; /* Delay for first dot */
+}
+.typing-dots.heading-dots div:nth-child(2) {
+    animation-delay: 0.8s; /* Delay for second dot */
+}
+.typing-dots.heading-dots div:nth-child(3) {
+    animation-delay: 1s; /* Delay for third dot */
+}
+
+/* Animation for fading in and out the dots */
+@keyframes fadeInDots {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Featured Projects Title as Bubble */
+.title h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 2.7rem; /* Size of the heading */
+    font-weight: bold;
+    color: #1e5f89;
+    margin: 15px 0; /* Removed padding and adjusted margin */
+    background-color: transparent;
+    padding: 5px 5px;
+    border-radius: 20px;
+    text-align: left;
+    width: fit-content; /* Fit the width of the content */
+    height: auto;
+    z-index: 0;
+    opacity: 0; /* Hidden initially */
+    transform-origin: top left;
+    transform: scale(0.2); /* Start scaled down */
+    animation: zoomInLeft 0.5s forwards ease-in-out;
+    animation-delay: 1.3s; /* Heading appears after the typing dots disappear */
+}
+
+/* Project Image Bubbles */
+.project-item1, .project-item2 {
+    position: relative;
+    display: inline-block;
+    width: calc(90% - 60px); /* Ensure images take full width, minus gaps */
+    margin: 10px 0; /* Use margin for vertical spacing */
+    opacity: 0; /* Hidden initially */
+    transform-origin: top left;
+    transform: scale(0.2);
+    animation: zoomInLeft 0.5s forwards ease-in-out;
+}
+
+/* Adjust animation delay for individual items */
+.project-item1 {
+    animation-delay: 1.8s; /* Delay for bubble 1 */
+}
+
+.project-item2 {
+    animation-delay: 2.3s; /* Delay for bubble 2 */
+}
+
+/* Image styling */
+.project-item1 img, .project-item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation to zoom in from top-left */
+@keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Button Styling remains unchanged */
+.case-study-btn {
+    position: absolute;
+    padding: 12px 22px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* Ensure button stays above the image */
+}
+
+.project-item1 .case-study-btn {
+    bottom: 60px; /* Distance from the bottom */
+    left: 5%;
+    background-color: #088F8F;
+    border: 2px solid #088F8F;
+}
+
+.project-item2 .case-study-btn {
+    bottom: 75px; /* Distance from the bottom */
+    left: 7%;
+    background-color: #0A68A7;
+    border: 2px solid #0A68A7;
+}
+
+.project-item1 .case-study-btn:hover {
+    transform: scale(1.1);
+    background-color: #086d6d;
+}
+
+.project-item2 .case-study-btn:hover {
+    background-color: #074e7d;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/* Typing dots animation */
+.typing-dots {
+    position: absolute;
+    left: 5%; /* Adjust the position relative to name bubble */
+    top: 15px;
+    bottom: 5px; /* Adjust vertical position if needed */
+    width: 40px; /* Adjust width to accommodate larger dots */
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Appears above the name bubble */
+    opacity: 0; /* Hidden by default */
+    animation: fadeInDots 0.85s forwards ease-in-out;
+}
+
+.typing-dots.second-dots {
+    animation-delay: 1.5s; /* Delay for the second typing dots */
+    top: 100px;
+}
+
+.typing-dots div {
+    width: 8px;  /* Increased dot width */
+    height: 8px;
+    background-color: #2980b9;
+    border-radius: 50%;
+    animation: bounceDots 0.5s infinite ease-in-out;
+}
+
+.typing-dots div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-dots div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+
+
+
+/* Typing Dots for Projects */
+.typing-dots.project-dots {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    opacity: 0; /* Hidden by default */
+    position: relative;
+    margin-bottom: 15px; /* Space between dots and project cards */
+    animation: fadeInDots 0.85s forwards ease-in-out; /* Typing dots appear */
+}
+
+/* Updated Timing for Project Dots */
+.project-dots1 {
+    animation-delay: 6s; /* After heading appears */
+}
+
+.project-dots2 {
+    animation-delay: 9s; /* After first project card appears */
+}
+
+.project-dots3 {
+    animation-delay: 12s; /* After second project card appears */
+}
+
+.project-dots4 {
+    animation-delay: 15s; /* After third project card appears */
+}
+
+/* Adjust the bounce effect for each dot */
+.project-dots1 div:nth-child(1) {
+    animation-delay: 0s; /* Delay for first dot */
+}
+.project-dots1 div:nth-child(2) {
+    animation-delay: 0.2s; /* Delay for second dot */
+}
+.project-dots1 div:nth-child(3) {
+    animation-delay: 0.4s; /* Delay for third dot */
+}
+
+/* Repeat the pattern for other dots */
+.project-dots2 div:nth-child(1) {
+    animation-delay: 0s;
+}
+.project-dots2 div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.project-dots2 div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.project-dots3 div:nth-child(1) {
+    animation-delay: 0s;
+}
+.project-dots3 div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.project-dots3 div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.project-dots4 div:nth-child(1) {
+    animation-delay: 0s;
+}
+.project-dots4 div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.project-dots4 div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Animation for fading in and out the dots */
+@keyframes fadeInDots {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Bouncing dots animation */
+@keyframes bounceDots {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Project Card Animations */
+.project-item1 {
+    animation-delay: 5.5s; /* Show after the first dots appear */
+}
+
+.project-item2 {
+    animation-delay: 7s; /* Show after the second dots appear */
+}
+
+.project-item3 {
+    animation-delay: 9.5s; /* Show after the third dots appear */
+}
+
+.project-item4 {
+    animation-delay: 11s; /* Show after the fourth dots appear */
+}
+
+
+
+.experience .typing-dots.heading-dots {
+    position: absolute;
+    left: 13%; /* Adjust the position relative to name bubble */
+    top: 30px;
+    bottom: 5px; /* Adjust vertical position if needed */
+    width: 40px; /* Adjust width to accommodate larger dots */
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Appears above the name bubble */
+    opacity: 0; /* Hidden by default */
+    animation: fadeInDots 0.85s forwards ease-in-out;
+    animation-delay: 4s; /* Adjust delay for when typing dots appear */
+}
+
+.experience .typing-dots.heading-dots div {
+    width: 8px;  /* Increased dot width */
+    height: 8px;
+    background-color: #2980b9;
+    border-radius: 50%;
+    animation: bounceDots 0.5s infinite ease-in-out;
+}
+
+.typing-dots.heading-dots div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-dots.heading-dots div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots.heading-dots div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Gaurav Mishra (@GMishx)
+22:02
+https://webflow.com/blog/parallax-scrolling?msockid=30c5688dc8d2687b16b47d86c96069a9
+Gaurav Mishra (@GMishx)
+22:15
+https://alvarotrigo.com/blog/css-animations-scroll/
+Gaurav Mishra (@GMishx)
+00:30
+document.getElementById("image-holder").innerHTML = "<img src='image.png' alt='The Image' />"; */
+
+
+
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width of the carousel */
+    margin-bottom: 60px;
+}
+
+.carousel-inner {
+    display: flex; /* Ensure images are in a row */
+    transition: transform 0.5s ease-in-out;
+    animation: move 60s linear infinite; /* Default infinite animation on larger screens */
+}
+
+.carousel-track {
+    display: flex; /* Display images in a row */
+    width: 200%;
+}
+
+.carousel-img {
+    height: 300px; /* Fixed height for images */
+    /* width: 200px; Fixed width for images */
+    margin: 20px 20px; /* Space between images */
+    border-radius: 20px;
+    object-fit: cover; /* Cover the container */
+    transition: transform 0.5s ease;
+    filter: brightness(0.7);
+}
+
+/* Image hover to brighten */
+.carousel-img:hover {
+    filter: brightness(1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust depending on the number of items */
+    }
+}
+
+
+// Function to apply or remove infinite animation based on screen size
+function handleCarouselAnimation() {
+    carousels.forEach(carousel => {
+        const carouselInner = carousel.querySelector('.carousel-track');
+        const carouselContent = Array.from(carouselInner.children);
+        
+        // Remove any previously cloned items to prevent duplication
+        while (carouselInner.children.length > carouselContent.length) {
+            carouselInner.removeChild(carouselInner.lastChild);
+        }
+
+        // Clone each item and append to the track for infinite effect
+        carouselContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            carouselInner.appendChild(duplicatedItem);
+        });
+
+        // Check screen width and apply animation only if width is above 1024px
+        if (window.innerWidth > 1024) {
+            // Set initial animation for larger screens
+            carouselInner.style.animation = "move 30s linear infinite";
+
+            // Enable hover pause/resume on larger screens
+            carouselInner.addEventListener('mouseenter', () => {
+                carouselInner.style.animationPlayState = 'paused'; // Pause the animation
+            });
+
+            carouselInner.addEventListener('mouseleave', () => {
+                carouselInner.style.animationPlayState = 'running'; // Resume the animation
+            });
+        } else {
+            // Remove animation for smaller screens and enable horizontal scrolling
+            carouselInner.style.animation = 'none'; // Disable animation
+            carouselInner.style.overflowX = 'auto'; // Enable horizontal scrolling
+            carouselInner.style.scrollBehavior = 'smooth'; // Smooth scrolling
+
+            // Add event listener for horizontal scroll (optional functionality)
+            carouselInner.addEventListener('scroll', () => {
+                // Optional functionality on scroll (you can add code here if needed)
+            });
+
+            // Hide the scrollbar for a cleaner look
+            carouselInner.style.scrollbarWidth = 'none'; // Firefox
+            carouselInner.style.msOverflowStyle = 'none'; // IE/Edge
+        }
+
+    });
+}
+
+
+/* Add responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image {
+        margin-top: 20px;
+        flex-basis: auto;
+        width: 100%; /* Full width image on smaller screens */
+    }
+}
+
+
+/* Hover color changes
+.project-item1 .case-study-btn:hover {
+    background-color: #052a43;
+}
+
+.project-item2 .case-study-btn:hover {
+    background-color: #065757;
+}
+
+.project-item3 .case-study-btn:hover {
+    background-color: #074e7d;
+}
+
+.project-item4 .case-study-btn:hover {
+    background-color: #036292;
+} */
+
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 760px) {
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    nav {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
+}
+
+
+
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    footer .social-icons {
+        font-size: 1.5rem;
+        gap: 15px;
+    }
+
+    footer h3 {
+        font-size: 1rem;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer h3{
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.5rem; /* Even smaller footer text */
+    }
+}
+
+/* ------------------------ RESPONSIVE STYLES ------------------------ */
+
+@media (max-width: 1024px) {
+    .profile {
+        max-width: 90%; /* Increase profile width on smaller screens */
+    }
+
+    .title h1 {
+        font-size: 2.2rem; /* Decrease font size */
+        padding-left: 50px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Two items per row */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    .case-study-btn {
+        padding: 10px 18px; /* Adjust button padding */
+        font-size: 16px; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 13%;
+        left: 8%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 13%;
+        left: 8%;
+    }
+
+    .experience .title h1 {
+        font-size: 2.2rem; /* Decrease font size */
+        padding-left: 50px; /* Adjust padding */
+    }
+
+    .card {
+        width: 45%; /* Adjust card width for two per row */
+        height: auto; /* Adjust height for flexibility */
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .intro {
+        padding-left: 50px; /* Reduce padding */
+        height: 40vh;
+    }
+
+    .profile-img {
+        width: 50px; /* Smaller profile image */
+        height: 50px;
+    }
+
+    .bubble-name{
+        width: 100%;
+        border-radius: 15px;
+        top: -40px;
+        height: 47%;
+        font-size: 18px; /* Smaller bubble text */
+        padding: 10px 20px; /* Smaller bubble padding */
+        
+    }
+
+    .bubble-1, .bubble-2 {
+        width: 95% ;
+        max-width: 300px;
+        font-size: 16px;
+        border-radius: 15px;
+        padding: 10px 20px
+    }
+
+    .typing-text {
+        font-size: 18px; /* Smaller typing text */
+        top: -30px;
+    }
+
+    .resume-btn {
+        padding: 8px 20px; /* Smaller button padding */
+        font-size: 16px; /* Smaller button text */
+        border-radius: 15px;
+    }
+
+    .arrow {
+        font-size: 3rem; /* Smaller size for mobile */
+        bottom: 30px; /* Adjust position closer to the bottom */
+        left: 47%;
+    }
+
+    .title h1 {
+        font-size: 1.6rem; /* Decrease font size */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 0px; /* Space between items */
+    }
+
+    .case-study-btn {
+        padding: 8px 10px; /* Further adjust button padding */
+        font-size: 14px; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 15%;
+        left: 9%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 18%;
+        left: 8%;
+    }
+    .experience .title h1 {
+        font-size: 1.6rem; /* Decrease font size */
+        padding-left: 20px; /* Adjust padding */
+    }
+
+    .cards-container {
+        flex-direction: row; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 40%; /* Adjust card width for mobile */
+        height: 220px; /* Adjust height for flexibility */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding-left: 20px; /* Reduce padding */
+        height: 50vh;
+    }
+
+    .profile-img {
+        width: 40px; /* Smaller profile image */
+        height: 40px;
+    }
+
+    .bubble-name{
+        width: 94%;
+        border-radius: 15px;
+        top: -40px;
+        height: 47%;
+        font-size: 16px; /* Smaller bubble text */
+        padding: 10px 20px; /* Smaller bubble padding */
+        
+    }
+
+    .bubble-1, .bubble-2 {
+        width: 90% ;
+        max-width: 250px;
+        font-size: 14px;
+        border-radius: 15px;
+        padding: 8px 15px
+    }
+
+    .typing-text {
+        font-size: 14px; /* Smaller typing text */
+        top: -30px;
+    }
+
+    .resume-btn {
+        padding: 8px 20px; /* Smaller button padding */
+    }
+
+    .arrow {
+        font-size: 3rem; /* Smaller size for mobile */
+        bottom: 30px; /* Adjust position closer to the bottom */
+        left: 47%;
+    }
+
+    .title h1 {
+        font-size: 1.4rem; /* Decrease font size */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 15px; /* Space between items */
+    }
+
+    .case-study-btn {
+        padding: 6px 8px; /* Further adjust button padding */
+        font-size: 0.8rem; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 15%;
+        left: 8%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 15%;
+        left: 7%;
+    }
+
+    .experience .title h1 {
+        font-size: 1.4rem; /* Decrease font size */
+        padding-left: 20px; /* Adjust padding */
+    }
+
+    .cards-container {
+        flex-direction: row; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 40%; /* Adjust card width for mobile */
+        height: 220px; /* Adjust height for flexibility */
+    }
+
+    .card h3 {
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    .details-btn {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .tagline .text{
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .case-study-btn {
+        padding: 6px 8px; /* Further adjust button padding */
+        font-size: 0.6rem; /* Decrease font size */
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding-left: 20px; /* Reduce padding */
+        height: 40vh;
+    }
+
+    .bubble-name{
+        width: 85%;
+        border-radius: 15px;
+        top: -40px;
+        height: 48%;
+        font-size: 14px; /* Smaller bubble text */
+        padding: 10px 20px; /* Smaller bubble padding */
+        
+    }
+
+    .bubble-1, .bubble-2 {
+        width: 80% ;
+        max-width: 250px;
+        font-size: 12px;
+        border-radius: 15px;
+        padding: 8px 15px
+    }
+
+    .typing-text {
+        font-size: 14px; /* Smaller typing text */
+        top: -30px;
+    }
+
+    .intro {
+        padding-left: 20px; /* Reduce padding */
+        height: 60vh;
+    }
+
+    .profile-img {
+        width: 40px; /* Smaller profile image */
+        height: 40px;
+    }
+    
+    .resume-btn {
+        padding: 5px 15px; /* Even smaller button padding */
+        border-radius: 10px;
+        font-size: 12px; /* Smaller button text */
+    }
+
+    .arrow {
+        font-size: 2rem; /* Slightly increase size for large screens */
+        bottom: 60px; /* Move slightly higher */
+        left: 47%;
+    }
+
+    .title h1 {
+        font-size: 1.2rem; /* Decrease font size */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .project-item1,
+    .project-item2 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 5px; /* Space between items */
+    }
+
+    .case-study-btn {
+        padding: 3px 5px; /* Further adjust button padding */
+        font-size: 9px; /* Decrease font size */
+    }
+
+    .project-item1 .case-study-btn {
+        bottom: 12%;
+        left: 6%;
+    }
+
+    .project-item2 .case-study-btn {
+        bottom: 12%;
+        left: 5%;
+    }
+    
+
+    .experience .title h1 {
+        font-size: 1.2rem; /* Decrease font size */
+    }
+
+    .cards-container {
+        flex-direction: row; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 40%; /* Adjust card width for mobile */
+        height: 140px; /* Adjust height for flexibility */
+    }
+
+    .card h3 {
+        font-weight: 600;
+        font-size: 0.6rem;
+        margin: 10px 0;
+    }
+
+    .details-btn {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    color: #2980b9;
+    font-size: 1.2em;
+    padding: 0 360px; /* Increased left padding for better alignment */
+}
+
+.about-me-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f6f6f6; /* Dark card background */
+    border-radius: 30px;
+    border: 3px solid #297fb94d; /* Border similar to the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 100%; /* Full width card */
+    height: 400px;
+    color: #333; /* Text color for better contrast */
+    opacity: 0; 
+    transform-origin: top left;
+    transform: scale(0.2);
+    /* transition: transform 2s ease-in-out;  */
+    transition-property: transform, opacity;
+    transition-duration: 0.75s;
+    transition-behavior: ease-in-out;
+}
+
+.about-me-card.active {
+    opacity:1;
+    transform: scale(1);
+}
+
+
+.about-me-card p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 50px;
+    margin-right: 140px;
+    margin-left: 140px;
+}
+
+.about-me-card p span {
+    font-style: italic;
+    color: #2980b9; /* Highlighted part in blue */
+}
+
+.about-me-card p i {
+    color: #2980b9; /* The 'useful' word styled */
+}
+
+/* About Me button styling */
+.about-me-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Styling for the Font Awesome arrow icon */
+.about-me-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the About Me button */
+.about-me-btn:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Arrow icon appears and slides into place on hover */
+.about-me-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(0); /* Slide it to the right of the text */
+}
+
+
+
+
+
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 360px;
+    text-align: center;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 60px;
+    border-radius: 30px;
+    border: 2px solid #297fb94d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+    width: 100%; /* Set a max-width to limit container size */
+    /* height: 400px; */
+    opacity: 0; 
+    transform-origin: top left;
+    transform: scale(0.2);
+    /* transition: transform 2s ease-in-out;  */
+    transition-property: transform, opacity;
+    transition-duration: 0.75s;
+    transition-behavior: ease-in-out;
+}
+
+.about-me-container.active {
+    opacity:1;
+    transform: scale(1);
+}
+
+
+/* .title {
+    margin-bottom: 30px;
+    text-align: center;
+} */
+
+.about-me-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.about-me-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    /* border-radius: 15px; */
+    width: 40%; /* Each card takes 30% of the container width */
+    text-align: center; 
+}
+
+.about-me-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.about-me-card h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.about-me-card p {
+    font-size: 0.8rem;
+    /* line-height: 1.6; */
+    color: #333;
+}
+
+.about-me-btn-container {
+    margin-top: 30px;
+}
+
+.about-me-btn {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.about-me-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.about-me-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-me-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-card {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px 0;
+    }
+}
