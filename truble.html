@@ -157,7 +157,39 @@
     </button>
 
     <script src="scripts\script.js"></script>
-    <script src="scripts\script_truble.js"></script>
+    <script>
+        // Function to handle overlay actions
+        function handleOverlay(buttonId, overlayContainerId, closeBtnId) {
+            const overlayBtn = document.getElementById(buttonId);
+            const overlayContainer = document.getElementById(overlayContainerId);
+            const closeOverlay = document.getElementById(closeBtnId);
+
+            // Show the overlay when the button is clicked
+            overlayBtn.addEventListener('click', function() {
+                overlayContainer.classList.add('active');
+            });
+
+            // Close the overlay when the close button is clicked
+            closeOverlay.addEventListener('click', function() {
+                overlayContainer.classList.remove('active');
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlayContainer.addEventListener('click', function(e) {
+                if (e.target === overlayContainer) {
+                    overlayContainer.classList.remove('active');
+                }
+            });
+        }
+
+        // Apply the overlay function for all buttons and containers
+        handleOverlay('trubleOverlayBtn', 'overlayContainer', 'closeOverlay');
+        handleOverlay('truble8OverlayBtn', 'overlayContainer8', 'closeOverlay8');
+        handleOverlay('truble9OverlayBtn', 'overlayContainer9', 'closeOverlay9');
+        handleOverlay('truble11OverlayBtn', 'overlayContainer11', 'closeOverlay11');
+        handleOverlay('truble12OverlayBtn', 'overlayContainer12', 'closeOverlay12');
+        handleOverlay('truble13OverlayBtn', 'overlayContainer13', 'closeOverlay13');
+    </script>
     
 </body>
 </html>

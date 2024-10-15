@@ -181,15 +181,138 @@ body.scrolled nav {
 .project-bg div:nth-child(3) img,
 .project-bg div:nth-child(4) img,
 .project-bg div:nth-child(5) img,
-.project-bg div:nth-child(6) img,
-.project-bg div:nth-child(7) img,
 .project-bg div:nth-child(8) img,
 .project-bg div:nth-child(9) img,
 .project-bg div:nth-child(10) img,
-.project-bg div:nth-child(11) img,
-.project-bg div:nth-child(12) img {
+.project-bg div:nth-child(12) img,
+.project-bg div:nth-child(13) img,
+.project-bg div:nth-child(14) img,
+.project-bg div:nth-child(16) img,
+.project-bg div:nth-child(17) img {
     width: 80% !important; /* Smaller width for specific images */
 }
+
+.finview-5-container, .finview-8-container, .finview-11-container {
+    position: relative; /* Enable absolute positioning for child elements */
+}
+
+
+/* Positioning the middle left button */
+.finview-5-btn {
+    position: absolute;
+    top: 64%; /* Center vertically */
+    /* bottom:32%; */
+    left: 18.5%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0173B0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Positioning the bottom left button */
+.finview-5-bottom-btn {
+    position: absolute;
+    left: 18.5%;
+    bottom: 0px; /* 10px from the bottom */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0173B0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.finview-8-bottom-btn {
+    position: absolute;
+    left: 17%;
+    bottom: 10px; /* 10px from the bottom */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0173B0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.finview-11-bottom-btn {
+    position: absolute;
+    left: 17%;
+    bottom: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0173B0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.finview-5-btn i, .finview-5-bottom-btn i, .finview-8-bottom-btn i, .finview-11-bottom-btn i{
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.finview-5-btn:hover, .finview-5-bottom-btn:hover, .finview-8-bottom-btn:hover, .finview-11-bottom-btn:hover {
+    background-color: #0173B0;
+    color:white;
+    /* transform: scale(1.1);  */
+}
+
+.finview-5-btn:hover i, .finview-5-bottom-btn:hover i, .finview-8-bottom-btn:hover i, .finview-11-bottom-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(0); /* Slide it to the right of the text */
+}
+
+.overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show the overlay when active */
+.overlay-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* The image displayed in the overlay */
+.overlay-image-popup {
+    max-width: 90%;
+    max-height: 80%;
+}
+
 
 /* Button container styling */
 .button-container {
@@ -345,7 +468,7 @@ footer .copyright {
     }
 }
 
-/* Responsiveness for body */
+/* <------------------- Responsiveness for body ----------------------------> */
 
 /* For devices with max width 768px */
 @media (max-width: 768px) {
@@ -364,17 +487,47 @@ footer .copyright {
 /* For devices with max width 1024px */
 @media (max-width: 1024px) {
 
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-        margin: 0;
+    /* Specific images with reduced width */
+    .project-bg div:nth-child(3) img,
+    .project-bg div:nth-child(4) img,
+    .project-bg div:nth-child(5) img,
+    .project-bg div:nth-child(8) img,
+    .project-bg div:nth-child(9) img,
+    .project-bg div:nth-child(10) img,
+    .project-bg div:nth-child(12) img,
+    .project-bg div:nth-child(13) img,
+    .project-bg div:nth-child(14) img,
+    .project-bg div:nth-child(16) img,
+    .project-bg div:nth-child(17) img {
+        width: 100% !important; 
     }
 
-    /* .mockup img {
-        width: 90%; 
-        height: auto; 
-        flex-direction: row;
-    } */
+    .project-bg {
+        margin-top: 0;
+    }
+
+    .finview-5-btn,
+    .finview-5-bottom-btn,
+    .finview-8-bottom-btn,
+    .finview-11-bottom-btn {
+        font-size: 0.9rem;
+    }
+
+    .finview-5-btn i,
+    .finview-5-bottom-btn i,
+    .finview-8-bottom-btn i,
+    .finview-11-bottom-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .finview-5-btn, .finview-5-bottom-btn{
+        left:10.5%;
+    }
+
+    .finview-8-bottom-btn, .finview-11-bottom-btn {
+        left:9%;
+    }
 
     .button-container {
         flex-direction: row;
@@ -393,15 +546,22 @@ footer .copyright {
 /* For devices with max width 480px */
 @media (max-width: 480px) {
 
-    .project-bg img {
-        width: 100%;
-        height: auto;
+    .finview-5-btn,
+    .finview-5-bottom-btn,
+    .finview-8-bottom-btn,
+    .finview-11-bottom-btn {
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-size: 0.6rem;
     }
-    
-    /* .mockup img {
-        width: 100%; 
-        height: auto; 
-    } */
+
+    .finview-5-bottom-btn {
+        bottom:-5px;
+    }
+
+    .finview-8-bottom-btn, .finview-11-bottom-btn {
+        bottom: 2px;
+    }
 
     .button-container {
         flex-direction: row;
@@ -439,5 +599,24 @@ footer .copyright {
         width: 140px;
         font-size: 0.6rem;
         text-align: center;
+    }
+}
+
+@media (width:350px){
+    .finview-5-btn,
+    .finview-5-bottom-btn,
+    .finview-8-bottom-btn,
+    .finview-11-bottom-btn {
+        padding: 5px 7px;
+        border-radius: 5px;
+        font-size: 0.2rem;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+
+    nav ul li a {
+        font-size: 15px;
     }
 }

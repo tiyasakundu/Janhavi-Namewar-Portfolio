@@ -34,26 +34,71 @@
         <div><img src="images\Finview\finview 2.svg" alt="Finview 2"></div>
         <div><img src="images\Finview\finview 3.svg" alt="Finview 3"></div>
         <div><img src="images\Finview\finview 4.svg" alt="Finview 4"></div>
-        <div><img src="images\Finview\finview 5.svg" alt="Finview 5"></div>
+
+        <!-- Finview 5 container with buttons -->
+        <div class="finview-5-container">
+            <img src="images/Finview/finview 5.svg" alt="Finview 5" class="finview-5-image">
+            
+            <!-- Button positioned in the middle left -->
+            <button class="overlay-trigger-btn finview-5-btn" id="finview5OverlayBtn">Insights<i class="fa-solid fa-arrow-right"></i></button>
+            
+            <!-- Button positioned in the bottom left -->
+            <button class="overlay-trigger-btn finview-5-bottom-btn" id="finview5BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+
+        <!-- Overlay for first button (Insights) -->
+        <div id="overlayContainer5" class="overlay-container">
+            <span class="close-btn" id="closeOverlay5">&times;</span>
+            <img src="images/Finview/finview 5-1.svg" alt="Finview 5 Overlay Insights" class="overlay-image-popup">
+        </div>
+
+        <!-- Overlay for second button (Details) -->
+        <div id="overlayContainer5Bottom" class="overlay-container">
+            <span class="close-btn" id="closeOverlay5Bottom">&times;</span>
+            <img src="images/Finview/finview 5-2.svg" alt="Finview 5 Overlay Details" class="overlay-image-popup">
+        </div>
+
         <div><img src="images\Finview\finview 6.svg" alt="Finview 6"></div>
         <div><img src="images\Finview\finview 7.svg" alt="Finview 7"></div>
-        <div><img src="images\Finview\finview 8.svg" alt="Finview 8"></div>
+        
+        <!-- Finview 8 container with button -->
+        <div class="finview-8-container">
+            <img src="images/Finview/finview 8.svg" alt="Finview 8" class="finview-8-image">
+            
+            <!-- Button positioned in the bottom left -->
+            <button class="overlay-trigger-btn finview-8-bottom-btn" id="finview8BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Overlay for Finview 8 button -->
+        <div id="overlayContainer8Bottom" class="overlay-container">
+            <span class="close-btn" id="closeOverlay8Bottom">&times;</span>
+            <img src="images/Finview/finview 8-1.svg" alt="Finview 8 Overlay Info" class="overlay-image-popup">
+        </div>
+
         <div><img src="images\Finview\finview 9.svg" alt="Finview 9"></div>
         <div><img src="images\Finview\finview 10.svg" alt="Finview 10"></div>
-        <div><img src="images\Finview\finview 11.svg" alt="Finview 11"></div>
+        
+        <!-- Finview 11 container with button -->
+        <div class="finview-11-container">
+            <img src="images/Finview/finview 11.svg" alt="Finview 11" class="finview-11-image">
+
+            <!-- Button positioned in the bottom left -->
+            <button class="overlay-trigger-btn finview-11-bottom-btn" id="finview11BottomOverlayBtn">
+                View<i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Overlay for Finview 11 button -->
+        <div id="overlayContainer11Bottom" class="overlay-container">
+            <span class="close-btn" id="closeOverlay11Bottom">&times;</span>
+            <img src="images/Finview/finview 11-1.svg" alt="Finview 11 Overlay" class="overlay-image-popup">
+        </div>
+
         <div><img src="images\Finview\finview 12.svg" alt="Finview 12"></div>
         <div><img src="images\Finview\finview 13.svg" alt="Finview 13"></div>
-        <!-- <div><img src="images\Finview\finview 14.svg" alt="Finview 14"></div> -->
-    </div>
-
-    <!-- <div class="mockup">
-        <img src="images\Finvue Mockups\12.png" alt="Mockup1">
-        <img src="images\Finvue Mockups\13.png" alt="Mockup2">
-        <img src="images\Finvue Mockups\14.png" alt="Mockup3">
-        <img src="images\Finvue Mockups\15.png" alt="Mockup4">
-        <img src="images\Finvue Mockups\16.png" alt="Mockup5">
-        <img src="images\Finvue Mockups\17.png" alt="Mockup6">
-    </div> -->
+        <div><img src="images\Finview\finview 14.svg" alt="Finview 14"></div>
+    </section>
 
     <div class="button-container">
         <a href="truble.html" class="nav-button">Previous project</a>
@@ -84,6 +129,42 @@
     </button>
 
     <script src="scripts\script.js"></script>
+    <script>
+        // Function to handle the overlay toggling
+        function setupOverlay(overlayBtnId, overlayContainerId, closeOverlayId) {
+            const overlayBtn = document.getElementById(overlayBtnId);
+            const overlayContainer = document.getElementById(overlayContainerId);
+            const closeOverlay = document.getElementById(closeOverlayId);
+
+            // Show the overlay when the button is clicked
+            overlayBtn.addEventListener('click', function() {
+                overlayContainer.classList.add('active');
+            });
+
+            // Close the overlay when the close button is clicked
+            closeOverlay.addEventListener('click', function() {
+                overlayContainer.classList.remove('active');
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlayContainer.addEventListener('click', function(e) {
+                if (e.target === overlayContainer) {
+                    overlayContainer.classList.remove('active');
+                }
+            });
+        }
+
+        // Setup for Finview 5 buttons
+        setupOverlay('finview5OverlayBtn', 'overlayContainer5', 'closeOverlay5');
+        setupOverlay('finview5BottomOverlayBtn', 'overlayContainer5Bottom', 'closeOverlay5Bottom');
+
+        // Setup for Finview 8 button
+        setupOverlay('finview8BottomOverlayBtn', 'overlayContainer8Bottom', 'closeOverlay8Bottom');
+
+        // Setup for Finview 11 button
+        setupOverlay('finview11BottomOverlayBtn', 'overlayContainer11Bottom', 'closeOverlay11Bottom');
+
+    </script>
     
 </body>
 </html>
