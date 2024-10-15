@@ -430,7 +430,8 @@ body.scrolled nav {
 .project-info0 h2 {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
     color: #033353;
     margin-bottom: 10px;
 }
@@ -454,7 +455,7 @@ body.scrolled nav {
 
 /* Specific styling for each project card */
 .project-card1 .case-study-btn {
-    margin-top: 20px;
+    margin-top: 0px;
     background-color: #033353;
 }
 
