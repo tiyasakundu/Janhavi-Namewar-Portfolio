@@ -717,7 +717,7 @@ body.scrolled nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color: white;
     padding: 60px;
     border-radius: 30px;
     border: 2px solid #297fb94d;
