@@ -28,7 +28,7 @@
         </ul>
     </nav>
 
-    <div class="project-bg">
+    <section class="project-bg">
         <div><img src="images\Emosign\Emosign 1.svg" alt="Emosign"></div>
         <div><img src="images\Emosign\Emosign 2.svg" alt="Emosign"></div>
         <div><img src="images\Emosign\Emosign 3.svg" alt="Emosign"></div>
@@ -38,15 +38,29 @@
         <div><img src="images\Emosign\Emosign 7.svg" alt="Emosign"></div>
         <div><img src="images\Emosign\Emosign 8.svg" alt="Emosign"></div>
         <div><img src="images\Emosign\Emosign 9.svg" alt="Emosign"></div>
+        
+        
+    <!-- Button to trigger overlay -->
+    <div class="button-container">
+        <button class="overlay-trigger-btn" id="emosignOverlayBtn">View Gameplay<i class="fa-solid fa-arrow-right"></i></button>
+    </div>    
+
+    <!-- The overlay image container for the button (initially hidden) -->
+    <div id="overlayContainer" class="overlay-container">
+        <span class="close-btn" id="closeOverlay">&times;</span>
+        <img src="images\Emosign\Gameplay.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup">
+    </div>
+
+
         <div><img src="images\Emosign\Emosign 10.svg" alt="Emosign"></div>
         <div><img src="images\Emosign\Emosign 11.svg" alt="Emosign"></div>
         <div><img src="images\Emosign\Emosign 12.svg" alt="Emosign"></div>
-    </div>
+    </section>
 
     <div class="button-container">
         <!-- <a href="finview.html" class="nav-button">Previous project</a> -->
-        <a href="visual.html" class="nav-button">View all projects</a>
-        <a href="ecoglee.html" class="nav-button">Next project</a>
+        <a href="visual.html" class="nav-button"><i class="fa-solid fa-arrow-left"></i>View all projects</a>
+        <a href="ecoglee.html" class="nav-button">Next project<i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <!-- Footer Section -->
@@ -72,6 +86,35 @@
     </button>
 
     <script src="scripts\script.js"></script>
+    <script>
+        // Setup the overlay for the Emosign "View Gameplay" button
+        setupOverlay('emosignOverlayBtn', 'overlayContainer', 'closeOverlay');
+
+        // Reusable function to set up the overlay toggling
+        function setupOverlay(overlayBtnId, overlayContainerId, closeOverlayId) {
+            const overlayBtn = document.getElementById(overlayBtnId);
+            const overlayContainer = document.getElementById(overlayContainerId);
+            const closeOverlay = document.getElementById(closeOverlayId);
+
+            // Show the overlay when the button is clicked
+            overlayBtn.addEventListener('click', function() {
+                overlayContainer.classList.add('active');
+            });
+
+            // Close the overlay when the close button is clicked
+            closeOverlay.addEventListener('click', function() {
+                overlayContainer.classList.remove('active');
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlayContainer.addEventListener('click', function(e) {
+                if (e.target === overlayContainer) {
+                    overlayContainer.classList.remove('active');
+                }
+            });
+        }
+
+    </script>
     
 </body>
 </html>

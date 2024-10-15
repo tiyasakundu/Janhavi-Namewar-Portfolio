@@ -211,17 +211,42 @@ body.scrolled nav {
     padding: 15px 30px;
     background-color: #2980b9; /* Light blue background */
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: #1e5f89; /* Slightly darker blue on hover */
-    transform:scale(1.1) ;
+    background-color: #1e5f89;
+}
+
+.nav-button i.fa-arrow-left {
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0;
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.nav-button i.fa-arrow-right {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0;
+    transform: translateX(10px); /* Initially shifted right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the left arrow */
+.nav-button:hover i.fa-arrow-left {
+    opacity: 1; /* Make the left arrow visible */
+    transform: translateX(-5px); /* Move it slightly more to the left */
+}
+
+/* Hover effect for the right arrow */
+.nav-button:hover i.fa-arrow-right {
+    opacity: 1; /* Make the right arrow visible */
+    transform: translateX(5px); /* Move it slightly more to the right */
 }
 
 

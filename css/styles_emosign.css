@@ -185,10 +185,85 @@ body.scrolled nav {
 .project-bg div:nth-child(7) img,
 .project-bg div:nth-child(8) img,
 .project-bg div:nth-child(9) img,
-.project-bg div:nth-child(10) img,
-.project-bg div:nth-child(11) img {
+.project-bg div:nth-child(12) img,
+.project-bg div:nth-child(13) img {
     width: 80% !important; /* Smaller width for specific images */
 }
+
+.button-container {
+    height: 150px; /* Set a specific height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add padding if needed */
+    padding: 20px;
+}
+
+/* Overlay container styling */
+.overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show the overlay when active */
+.overlay-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Close button inside the overlay */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* The image inside the overlay */
+.overlay-image-popup {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+/* Button styling */
+.overlay-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0173B0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-trigger-btn i {
+    margin-left: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay-trigger-btn:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 /* Button container styling */
 .button-container {
@@ -204,17 +279,42 @@ body.scrolled nav {
     padding: 15px 30px;
     background-color: #2980b9; /* Light blue background */
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: #1e5f89; /* Slightly darker blue on hover */
-    transform:scale(1.1) ;
+    background-color: #1e5f89;
+}
+
+.nav-button i.fa-arrow-left {
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0;
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.nav-button i.fa-arrow-right {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0;
+    transform: translateX(10px); /* Initially shifted right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the left arrow */
+.nav-button:hover i.fa-arrow-left {
+    opacity: 1; /* Make the left arrow visible */
+    transform: translateX(-5px); /* Move it slightly more to the left */
+}
+
+/* Hover effect for the right arrow */
+.nav-button:hover i.fa-arrow-right {
+    opacity: 1; /* Make the right arrow visible */
+    transform: translateX(5px); /* Move it slightly more to the right */
 }
 
 /* Footer Section */

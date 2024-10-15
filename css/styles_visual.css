@@ -182,12 +182,11 @@ body.scrolled nav {
     white-space: nowrap;
 }
 
-/* Arrow icon inside the button */
-.skill-btn1 i {
-    margin-left: 10px; /* Space between text and arrow */
-    opacity: 0; /* Initially hidden */
-    transform: translateX(-10px); /* Shifted left initially */
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.skill-btn1 i{
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0;
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
 /* Hover effect for skill-btn1 */
@@ -197,10 +196,9 @@ body.scrolled nav {
     transform: scale(1.05); /* Slight scaling effect */
 }
 
-/* Arrow icon transition on hover */
-.skill-btn1:hover i {
-    opacity: 1; /* Make arrow visible */
-    transform: translateX(0); /* Slide arrow into place */
+.skill-btn1:hover i{
+    opacity: 1; /* Make the left arrow visible */
+    transform: translateX(-5px); /* Move it slightly more to the left */
 }
 
 

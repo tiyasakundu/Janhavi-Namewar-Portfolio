@@ -176,14 +176,38 @@ body.scrolled nav {
     background-repeat: no-repeat;
 }
 
+.hidden-image {
+    display: none;
+}
+
+.image-stack {
+    position: relative;
+}
+
+
+.base-image {
+    position: relative;
+    max-width: 80%; /* Base image takes the full width of its container */
+    z-index: 1; /* Lower layer */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Higher layer to be placed on top */
+    width: 100%; /* Full viewport width for the overlay image */
+}
+
 /* Specific images with reduced width */
-.project-bg div:nth-child(2) img,
+/* .project-bg div:nth-child(2) img, */
 .project-bg div:nth-child(4) img,
 .project-bg div:nth-child(6) img,
 .project-bg div:nth-child(7) img,
 .project-bg div:nth-child(9) img,
 .project-bg div:nth-child(10) img,
-.project-bg div:nth-child(11) img {
+.project-bg div:nth-child(11) img,
+.project-bg div:nth-child(12) img {
     width: 80% !important; /* Smaller width for specific images */
 }
 
@@ -202,18 +226,44 @@ body.scrolled nav {
     padding: 15px 30px;
     background-color: #2980b9; /* Light blue background */
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: #1e5f89; /* Slightly darker blue on hover */
-    transform:scale(1.1) ;
+    background-color: #1e5f89;
 }
+
+.nav-button i.fa-arrow-left {
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0;
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.nav-button i.fa-arrow-right {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0;
+    transform: translateX(10px); /* Initially shifted right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the left arrow */
+.nav-button:hover i.fa-arrow-left {
+    opacity: 1; /* Make the left arrow visible */
+    transform: translateX(-5px); /* Move it slightly more to the left */
+}
+
+/* Hover effect for the right arrow */
+.nav-button:hover i.fa-arrow-right {
+    opacity: 1; /* Make the right arrow visible */
+    transform: translateX(5px); /* Move it slightly more to the right */
+}
+
 
 /* Footer Section */
 footer {
@@ -346,17 +396,6 @@ footer .copyright {
 
 /* For devices with max width 768px */
 @media (max-width: 768px) {
-
-    .project-bg img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    /* .mockup img {
-        width: 100%; 
-        height: auto; 
-    } */
-
     .button-container {
         flex-direction: column; /* Stack buttons vertically */
         gap: 20px; /* Reduced space between buttons */
@@ -366,17 +405,27 @@ footer .copyright {
 /* For devices with max width 1024px */
 @media (max-width: 1024px) {
 
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-        margin: 0;
+    .project-bg {
+        margin-top: 0;
     }
 
-    /* .mockup img {
-        width: 90%; 
-        height: auto; 
-        flex-direction: row;
-    } */
+    .project-bg div:nth-child(4) img,
+    .project-bg div:nth-child(6) img,
+    .project-bg div:nth-child(7) img,
+    .project-bg div:nth-child(9) img,
+    .project-bg div:nth-child(10) img,
+    .project-bg div:nth-child(11) img,
+    .project-bg div:nth-child(12) img {
+        width: 100% !important;
+    }
+
+    .image-stack {
+        display: none !important;
+    }
+
+    .hidden-image {
+        display: block !important;
+    }
 
     .button-container {
         flex-direction: row;
@@ -441,5 +490,12 @@ footer .copyright {
         width: 140px;
         font-size: 0.6rem;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    nav ul li a {
+        font-size: 15px;
     }
 }
