@@ -768,6 +768,10 @@ body.scrolled nav {
     height:60px;
 }
 
+.about-me-cards div:nth-child(3) img {
+    margin-top: 10px;
+}
+
 
 .about-me-content h2 {
     font-family: 'Manrope', sans-serif;
