@@ -201,13 +201,13 @@ body.scrolled nav {
 
 /* Specific images with reduced width */
 /* .project-bg div:nth-child(2) img, */
-.project-bg div:nth-child(4) img,
-.project-bg div:nth-child(6) img,
+.project-bg div:nth-child(5) img,
 .project-bg div:nth-child(7) img,
-.project-bg div:nth-child(9) img,
+.project-bg div:nth-child(8) img,
 .project-bg div:nth-child(10) img,
 .project-bg div:nth-child(11) img,
-.project-bg div:nth-child(12) img {
+.project-bg div:nth-child(12) img,
+.project-bg div:nth-child(13) img {
     width: 80% !important; /* Smaller width for specific images */
 }
 
@@ -231,11 +231,11 @@ body.scrolled nav {
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #1e5f89;
+    transform: scale(1.1);
 }
 
 .nav-button i.fa-arrow-left {
@@ -434,15 +434,37 @@ footer .copyright {
     }
 
     .nav-button {
-        padding: 10px 30px; /* Smaller button padding */
+        padding: 10px 20px; /* Smaller button padding */
         width: 220px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
+    }
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 10px; /* Space between icon and text */
+        opacity: 1;
     }
 }
 
 /* For devices with max width 480px */
 @media (max-width: 480px) {
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 0px;
+        /* margin-left: 2px;  */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 2px; /* Space between icon and text */
+        opacity: 1;
+    }
+
 
     .project-bg img {
         width: 100%;

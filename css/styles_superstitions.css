@@ -268,11 +268,11 @@ body.scrolled nav {
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #1e5f89; /* Slightly darker blue on hover */
+    transform: scale(1.1);
 }
 
 .nav-button i.fa-arrow-left {
@@ -448,10 +448,20 @@ footer .copyright {
     }
 
     .nav-button {
-        padding: 10px 30px; /* Smaller button padding */
+        padding: 10px 20px; /* Smaller button padding */
         width: 220px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
+    }
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 10px; /* Space between icon and text */
+        opacity: 1;
     }
 }
 
@@ -481,6 +491,18 @@ footer .copyright {
 }
 
 @media (max-width: 480px) {
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 0px;
+        /* margin-left: 2px;  */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 2px; /* Space between icon and text */
+        opacity: 1;
+    }
+
     .card {
         width: 100%; /* Full width cards on small screens */
         height: 200px; /* Adjust height */

@@ -762,6 +762,13 @@ body.scrolled nav {
     margin-bottom: 20px;
 }
 
+.about-me-cards div:nth-child(1) img, 
+.about-me-cards div:nth-child(2) img {
+    width:60px;
+    height:60px;
+}
+
+
 .about-me-content h2 {
     font-family: 'Manrope', sans-serif;
     font-size: 1rem;

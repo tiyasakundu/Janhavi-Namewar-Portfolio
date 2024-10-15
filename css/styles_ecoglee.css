@@ -197,11 +197,11 @@ body.scrolled nav {
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #1e5f89;
+    transform: scale(1.1);
 }
 
 .nav-button i.fa-arrow-left {
@@ -402,15 +402,37 @@ footer .copyright {
     }
 
     .nav-button {
-        padding: 10px 30px; /* Smaller button padding */
+        padding: 10px 20px; /* Smaller button padding */
         width: 220px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
+    }
+
+    
+    .nav-button i.fa-arrow-left {
+        margin-right: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 10px; /* Space between icon and text */
+        opacity: 1;
     }
 }
 
 /* For devices with max width 480px */
 @media (max-width: 480px) {
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 0px;
+        /* margin-left: 2px;  */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 2px; /* Space between icon and text */
+        opacity: 1;
+    }
 
     .project-bg img {
         width: 100%;
