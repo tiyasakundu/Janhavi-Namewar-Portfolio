@@ -188,7 +188,7 @@ body.scrolled nav {
 }
 
 /* Specific images with reduced width */
-.project-bg div:nth-child(2) img,
+/* .project-bg div:nth-child(2) img, */
 .project-bg div:nth-child(3) img,
 .project-bg div:nth-child(4) img,
 .project-bg div:nth-child(5) img,
