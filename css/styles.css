@@ -231,7 +231,7 @@ body.scrolled nav {
 /* Typing text ("Janhavi is typing") */
 .typing-text {
     position: absolute;
-    top: -16px; /* Adjust this to place it above the typing dots */
+    top: -20px; 
     left: 5%;
     font-size: 16px;
     color: #2980b9;
@@ -366,7 +366,6 @@ body.scrolled nav {
 
 /* Chat bubble animations */
 .bubble-1, .bubble-2 {
-    font-weight: 600;
     background-color: #2980b9;
     color: white;
     padding: 20px 30px;
@@ -496,7 +495,7 @@ body.scrolled nav {
     left: 25%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 50px; /* Adjust width to accommodate larger dots */
+    width: 45px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -512,8 +511,8 @@ body.scrolled nav {
 }
 
 .typing-dots.heading-dots div {
-    width: 10px;  /* Increased dot width */
-    height: 10px;
+    width: 9px;  /* Increased dot width */
+    height: 9px;
     background-color: #2980b9;
     border-radius: 50%;
     animation: bounceDots 0.5s infinite ease-in-out;
@@ -540,9 +539,9 @@ body.scrolled nav {
 .title h1 {
     font-family: 'Manrope', sans-serif;
     font-size: 2rem; /* Size of the heading */
-    font-weight: 700;
+    font-weight: 600;
     color: #1e5f89;
-    margin: 15px 0; /* Removed padding and adjusted margin */
+    /* margin: 15px 0; Removed padding and adjusted margin */
     background-color: transparent;
     padding: 5px 5px;
     border-radius: 20px;
@@ -575,7 +574,7 @@ body.scrolled nav {
     border: 2px solid #297fb94d; /* Border similar to the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     margin-bottom: 25px;
     width: 100%; /* Full width card */
     height: 370px;
@@ -602,7 +601,7 @@ body.scrolled nav {
 
 .project-info h2 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.3;
     margin-bottom: 10px;
@@ -614,7 +613,7 @@ body.scrolled nav {
 
 .project-info p {
     font-size: 0.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .project-info h3 {
@@ -626,7 +625,7 @@ body.scrolled nav {
 }
 
 .project-item1 h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #033353;
 }
 
@@ -656,7 +655,7 @@ body.scrolled nav {
 /* Button Styling */
 .case-study-btn {
     position: absolute;
-    padding: 10px 16px;
+    padding: 9px 16px;
     color: white;
     border: none;
     text-decoration: none;
@@ -781,14 +780,14 @@ body.scrolled nav {
 }
 
 .about-me-content p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     /* line-height: 1.6; */
     color: #333;
 }
 
 /* About Me button styling */
 .about-me-btn {
-    margin-top: 20px;
+    margin-top: 50px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #2980b9;
@@ -831,11 +830,11 @@ body.scrolled nav {
     justify-content: flex-start;
     position: relative;
     margin-top: 70px;
-    margin-left: 20px;
+    margin-left: 10px;
     color: #2980b9;
     /* font-size: 1.2em; */
     background-color: none;
-    padding: 0 350px; /* Increased left padding for better alignment */
+    padding: 0 360px; /* Increased left padding for better alignment */
 }
 
 .typing-dots.heading-worked-dots {
@@ -843,7 +842,7 @@ body.scrolled nav {
     left: 25%; /* Adjust the position relative to name bubble */
     top: 30px;
     bottom: 5px; /* Adjust vertical position if needed */
-    width: 40px; /* Adjust width to accommodate larger dots */
+    width: 45px; /* Adjust width to accommodate larger dots */
     height: 10px;
     display: flex;
     justify-content: space-between;
@@ -882,7 +881,7 @@ body.scrolled nav {
 .title-1 h1 {
     font-family: 'Manrope', sans-serif;
     font-size: 2rem; /* Size of the heading */
-    font-weight: 700;
+    font-weight: 600;
     color: #1e5f89;
     /* margin: 15px 0; Removed padding and adjusted margin */
     background-color: transparent;
@@ -1233,11 +1232,19 @@ footer .copyright {
 
 @media screen and (max-width: 1440px) {
     .project-item1 h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .project-item2 h2 {
         font-size: 1rem;
+    }
+
+    .project-item1 h3 {
+        font-size: 0.8rem;
+    }
+
+    .project-item1 p {
+        font-size: 0.75rem;
     }
 
     .project-item1 .case-study-btn {
@@ -1248,6 +1255,14 @@ footer .copyright {
     .project-item2 .case-study-btn {
         bottom: 80px;
         left: 8%;
+    }
+
+    .about-me-card {
+        padding:40px;
+    }
+
+    .about-me-content p {
+        font-size: 0.8rem;
     }
 }
 
@@ -1272,11 +1287,11 @@ footer .copyright {
     }
 
     .experience{
-        padding: 0 300px;
+        padding: 0 320px;
     }
 
     .project-item1 h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .project-item2 h2 {
@@ -1293,7 +1308,7 @@ footer .copyright {
     }
 
     .project-item1 .case-study-btn {
-        bottom: 100px;
+        bottom: 80px;
         left: 6%;
     }
     
@@ -1312,7 +1327,7 @@ footer .copyright {
 @media (max-width: 1024px) {
     .intro {
         margin-top: 150px;
-        padding-left: 100px; 
+        padding-left: 80px; 
         height: 20vh;
     }
 
@@ -1381,14 +1396,18 @@ footer .copyright {
     }
 
     .experience {
-        padding: 0 170px; /* Reduce padding */
+        padding: 0 150px; /* Reduce padding */
         padding-right: 120px;
         padding-top: 40px;
     }
 
+    .typing-dots.heading-worked-dots {
+        left:15%;
+    }
+
     .featured-projects {
-        padding: 0 170px; /* Reduce padding for smaller screens */
-        padding-right: 120px;
+        padding: 0 150px; /* Reduce padding for smaller screens */
+        padding-right: 100px;
         margin-bottom: 30px;
     }
 
@@ -1428,16 +1447,16 @@ footer .copyright {
 
     .project-item1 .case-study-btn {
         padding: 10px 16px; 
-        font-size: 1em; 
+        font-size: 1rem; 
         bottom: 8%; 
-        left: 35%;
+        left: 37%;
     }
 
     .project-item2 .case-study-btn {
         padding: 10px 16px; 
-        font-size: 1em; 
-        bottom: 6%; 
-        left: 35%;
+        font-size: 1rem; 
+        bottom: 8%; 
+        left: 37%;
     }
 
 
@@ -1462,7 +1481,7 @@ footer .copyright {
 
     .details-btn {
         margin-top: 10px;
-        font-size: 1em;
+        font-size: 1rem;
         padding: 10px 16px;
     }
 
@@ -1473,7 +1492,7 @@ footer .copyright {
     
     .details-btn-1 {
         margin-top: 10px;
-        font-size: 1em;
+        font-size: 1rem;
         padding: 10px 16px;
     }
 
@@ -1483,8 +1502,8 @@ footer .copyright {
     }
 
     .about-me-section {
-        padding: 0 170px; 
-        padding-right: 120px;
+        padding: 0 150px; 
+        padding-right: 100px;
     }
 
     .about-me-card {
@@ -1495,15 +1514,18 @@ footer .copyright {
         margin-bottom: 20px;
     }
 
-    .about-me-card p {
-        font-size: 1.2em;
-        margin-right: 0px;
-        margin-left: 0px;
+    .about-me-content h2 {
+        font-size: 0.9rem;
+    }
+
+    .about-me-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 
     .about-me-btn {
         padding: 10px 20px; 
-        font-size: 1.2rem; 
+        font-size: 1rem; 
     }
 
     .about-me-btn i {
@@ -1516,7 +1538,7 @@ footer .copyright {
 @media (max-width: 768px) {
     .intro {
         margin-top: 150px;
-        padding-left: 100px; 
+        padding-left: 80px; 
         height: 20vh;
     }
 
@@ -1567,14 +1589,18 @@ footer .copyright {
         left: 47%;
     }
 
+    .typing-dots.heading-worked-dots {
+        left:20%;
+    }
+
     .title h1 {
         font-size: 1.8em; /* Decrease font size */
         /* padding-left: 20px; */
     }
 
     .featured-projects {
-        padding: 0 170px; /* Reduce padding for smaller screens */
-        padding-right: 120px;
+        padding: 0 150px; /* Reduce padding for smaller screens */
+        padding-right: 100px;
         margin-bottom: 30px;
     }
 
@@ -1615,16 +1641,15 @@ footer .copyright {
         padding: 8px 16px; 
         font-size: 1em; 
         bottom: 8%; 
-        left: 27%;
+        left: 30%;
     }
 
     .project-item2 .case-study-btn {
         padding: 8px 16px; 
         font-size: 1em; 
         bottom: 6%; 
-        left: 27%;
+        left: 30%;
     }
-
 
     .case-study-btn i {
         margin-left: 20px; /* Space between text and icon */
@@ -1642,12 +1667,12 @@ footer .copyright {
     }
 
     .experience {
-        padding: 0 170px; /* Reduce padding */
-        padding-right: 120px;
+        padding: 0 150px; /* Reduce padding */
+        padding-right: 100px;
     }
 
     .cards-container {
-        gap:60px;
+        gap:20px;
         justify-content: left;
         padding: 0; /* Remove padding */
         flex-direction: row; 
@@ -1688,16 +1713,21 @@ footer .copyright {
     }
 
     .about-me-section {
-        padding: 0 170px; 
-        padding-right: 120px;
+        padding: 0 150px; 
+        padding-right: 100px;
     }
 
-    .about-me-card {
-        flex-direction: column; /* Stack the image and text vertically */
+    .about-me-cards {
+        flex-direction: column ; /* Stack the image and text vertically */
         height: auto; /* Let the height adjust based on content */
         padding: 30px;
         margin-top: 10px;
         margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .about-me-content {
+        width:80%;
     }
 
     .about-me-card p {
@@ -1707,6 +1737,7 @@ footer .copyright {
     }
 
     .about-me-btn {
+        margin-top: 20px;
         padding: 8px 16px; 
         font-size: 1rem; 
     }
@@ -1714,6 +1745,18 @@ footer .copyright {
     .about-me-btn i {
         margin-left: 20px; /* Space between text and icon */
         opacity: 1; /* Initially hidden */
+    }
+
+    .about-me-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-cards div:nth-child(1) img, 
+    .about-me-cards div:nth-child(2) img {
+        width:70px;
+        height:70px;
     }
 
     .tagline .text{
@@ -1765,7 +1808,7 @@ footer .copyright {
     }
 
     .intro {
-        margin-top: 150px;
+        margin-top: 100px;
         padding-left: 20px; /* Reduce padding */
         height: 20vh;
     }
@@ -1776,8 +1819,14 @@ footer .copyright {
     }
     
     .resume-btn {
-        padding: 5px 15px; /* Even smaller button padding */
-        border-radius: 10px;
+        padding: 5px 19px; /* Even smaller button padding */
+        border-radius: 5px;
+        font-size: 12px; /* Smaller button text */
+    }
+
+    .details-btn-1 {
+        padding: 5px 6px; /* Even smaller button padding */
+        border-radius: 5px;
         font-size: 12px; /* Smaller button text */
     }
 
@@ -1788,12 +1837,16 @@ footer .copyright {
     }
 
     .title h1 {
-        font-size: 1.2em; /* Decrease font size */
+        font-size: 1em; /* Decrease font size */
         /* padding-left: 20px; */
     }
 
     .title-1 h1 {
-        font-size: 1.2em; /* Decrease font size */
+        font-size: 1em; /* Decrease font size */
+    }
+
+    .experience {
+        margin-left: 0px;
     }
 
     .featured-projects {
@@ -1840,6 +1893,7 @@ footer .copyright {
     .project-item1 .case-study-btn {
         padding: 6px 8px; 
         font-size: 0.6rem; 
+        border-radius: 5px;
         bottom: 7%; 
         left: 24%;
     }
@@ -1847,10 +1901,10 @@ footer .copyright {
     .project-item2 .case-study-btn {
         padding: 6px 8px; 
         font-size: 0.6rem; 
+        border-radius: 5px;
         bottom: 5%; 
         left: 24%;
     }
-
 
     .case-study-btn i {
         margin-left: 20px; /* Space between text and icon */
@@ -1862,16 +1916,22 @@ footer .copyright {
         padding-right: 40px;
     }
 
-    .typing-dots.heading-dots, .typing-dots.chat-dots, .typing-dots.second-dots {
+    .typing-dots.heading-dots, .typing-dots.chat-dots, .typing-dots.second-dots, .typing-dots.heading-worked-dots {
         width: 30px; /* Adjust width to accommodate larger dots */
         height: 10px;
     }
 
     .typing-dots.heading-dots {
-        left: 15%;
+        top:20px;
+        left: 17%;
     }
 
-    .typing-dots.heading-dots div, .typing-dots.chat-dots div, .typing-dots.second-dots div{
+    .typing-dots.heading-worked-dots{
+        top:20px;
+        left:18%;
+    }
+
+    .typing-dots.heading-dots div, .typing-dots.chat-dots div, .typing-dots.second-dots div, .typing-dots.heading-worked-dots div{
         width: 6px;  /* Increased dot width */
         height: 6px;
     }
@@ -1889,7 +1949,7 @@ footer .copyright {
     }
 
     .worked-card {
-        width: 45%; /* Full width for cards */
+        width: 39%; /* Full width for cards */
         height:100px;
         margin-top:10px;
         border: 2px solid #297fb94d;
@@ -1901,8 +1961,9 @@ footer .copyright {
     }
 
     .details-btn {
-        font-size: 0.8em;
-        padding: 10px 16px;
+        font-size: 0.6em;
+        padding: 8px 10px;
+        border-radius: 5px;
     }
 
     .details-btn i {
@@ -1915,23 +1976,34 @@ footer .copyright {
         padding-right: 40px;
     }
 
-    .about-me-card {
+    .about-me-cards {
         flex-direction: column; /* Stack the image and text vertically */
         height: auto; /* Let the height adjust based on content */
-        padding: 30px;
+        padding: 0px;
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-radius: 24px;
-        border: 2px solid #297fb94d;
+    }
+
+    .about-me-content {
+        width:100%;
+        padding: 0;
+    }
+
+    .about-me-card h2 {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
     }
 
     .about-me-card p {
-        font-size: 0.7em;
+        font-size: 0.6rem;
         margin-right: 0px;
         margin-left: 0px;
+        margin-bottom: 10px;
     }
 
     .about-me-btn {
+        margin-top: 10px;
         padding: 6px 8px; 
         font-size: 0.8rem; 
     }
@@ -1939,6 +2011,18 @@ footer .copyright {
     .about-me-btn i {
         margin-left: 20px; /* Space between text and icon */
         opacity: 1; /* Initially hidden */
+    }
+
+    .about-me-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+
+    .about-me-cards div:nth-child(1) img, 
+    .about-me-cards div:nth-child(2) img {
+        width:60px;
+        height:60px;
     }
 
     .tagline .text{

@@ -200,9 +200,9 @@ body.scrolled nav {
 /* Positioning the middle left button */
 .finview-5-btn {
     position: absolute;
-    top: 64%; /* Center vertically */
+    top: 60%; /* Center vertically */
     /* bottom:32%; */
-    left: 18.5%;
+    left: 20%;
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -216,8 +216,8 @@ body.scrolled nav {
 /* Positioning the bottom left button */
 .finview-5-bottom-btn {
     position: absolute;
-    left: 18.5%;
-    bottom: 0px; /* 10px from the bottom */
+    left: 20%;
+    bottom: 60px; /* 10px from the bottom */
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -230,8 +230,8 @@ body.scrolled nav {
 
 .finview-8-bottom-btn {
     position: absolute;
-    left: 17%;
-    bottom: 10px; /* 10px from the bottom */
+    left: 22%;
+    bottom: 100px; /* 10px from the bottom */
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -245,7 +245,7 @@ body.scrolled nav {
 .finview-11-bottom-btn {
     position: absolute;
     left: 17%;
-    bottom: 10px;
+    bottom: 80px;
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -536,7 +536,7 @@ footer .copyright {
     .finview-5-bottom-btn,
     .finview-8-bottom-btn,
     .finview-11-bottom-btn {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .finview-5-btn i,
@@ -548,11 +548,16 @@ footer .copyright {
     }
 
     .finview-5-btn, .finview-5-bottom-btn{
-        left:10.5%;
+        left:13%;
     }
 
-    .finview-8-bottom-btn, .finview-11-bottom-btn {
-        left:9%;
+    .finview-8-bottom-btn {
+        left:15%;
+    }
+
+    .finview-11-bottom-btn {
+        left: 10%;
+        bottom:50px;
     }
 
     .button-container {
