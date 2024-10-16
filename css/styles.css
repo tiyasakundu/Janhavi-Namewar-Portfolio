@@ -1342,6 +1342,10 @@ footer .copyright {
         height: 20vh;
     }
 
+    .profile {
+        max-width: 80%;
+    }
+
     .profile-img {
         width: 50px; /* Smaller profile image */
         height: 50px;
