@@ -106,7 +106,6 @@ body.scrolled nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
 }
 
-
 @media (max-width: 1024px) {
     nav {
         width: 100%;
@@ -185,7 +184,6 @@ body.scrolled nav {
         display: block; /* Show the cross when menu is active */
     }
 }
-
 
 /* Skill Buttons Styles */
 .skill-buttons {
