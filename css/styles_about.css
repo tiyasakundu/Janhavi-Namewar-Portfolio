@@ -282,7 +282,7 @@ body.scrolled nav {
 /* Title Section */
 .title-section {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width:80%;
 }
 
@@ -327,7 +327,7 @@ body.scrolled nav {
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     opacity:0;
     transform-origin: top left;
     transform: scale(0.2); /* Start scaled down */
@@ -873,9 +873,13 @@ footer .copyright {
         padding-right: 200px;
     }
 
+    .card ul {
+        padding-left: 0px;
+    }
+
     .hobby{
         padding-left : 270px;
-        padding-right:240px;
+        padding-right: 270px;
     }
 }
 

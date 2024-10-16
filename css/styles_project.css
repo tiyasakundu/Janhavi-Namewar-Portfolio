@@ -362,7 +362,7 @@ body.scrolled nav {
     margin: 10px 0;
     margin-bottom: 25px;
     width: 100%; /* Full width card */
-    height: 370px;
+    height: auto;
     color: #333; /* Text color for better contrast */
     opacity: 0; 
     transform-origin: top left;
@@ -542,7 +542,7 @@ body.scrolled nav {
 /* Project Info 2 */
 .project-info3 {
     width: 80%;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     background-color: transparent;
     border-radius: 15px;
 }
@@ -727,10 +727,6 @@ footer .copyright {
         font-size: 0.7rem;
     }
 
-    .p-card {
-        height: 340px;
-    }
-
     .project-card2 .case-study-btn,
     .project-card3 .case-study-btn,
     .project-card4 .case-study-btn {
@@ -750,10 +746,10 @@ footer .copyright {
     }
 
     .profile-section{
-        padding-left: 240px;
+        padding-left: 210px;
     }
     .projects-section{
-        padding: 0 300px;
+        padding: 0 270px;
     }
 
     .project-image{
@@ -762,10 +758,6 @@ footer .copyright {
 
     .project-info h2{
         font-size: 1rem;
-    }
-
-    .p-card {
-        height: 320px;
     }
 
 }
