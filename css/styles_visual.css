@@ -7,9 +7,38 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background: white;
     color: #333;
     overflow-x: hidden;
+    position: relative;
+    min-height: 200vh; /* Ensures enough content to test scrolling */
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keeps video behind the content */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Keeps content above video */
+    text-align: center;
+    padding: 20px;
 }
 
 /* Navigation Bar */
@@ -162,14 +191,14 @@ body.scrolled nav {
 .skill-buttons {
     display: flex;
     justify-content: center;
-    gap: 120px; /* Increased gap */
+    gap: 50px; /* Increased gap */
     margin: 40px 0;
 }
 
 /* UI UX Button (Make it larger) */
 .skill-btn1 {
     font-family: 'Work Sans', sans-serif;
-    padding: 15px 65px; 
+    padding: 12px 65px; 
     background-color: white;
     color: #333;
     border: 2px solid #2980b9;
@@ -205,7 +234,7 @@ body.scrolled nav {
 /* Visual & Creative Skills Button (Make it smaller) */
 .skill-btn2 {
     font-family: 'Work Sans', sans-serif;
-    padding: 15px 25px; 
+    padding: 12px 25px; 
     background-color: #2980b9;
     color: white;
     border: none;
@@ -227,8 +256,10 @@ body.scrolled nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px; /* Space between cards */
+    padding-left: 170px;
+    padding-right: 170px;
     padding-top: 40px;
-    background-image: url('visual design.png');
+    background-color: transparent;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -237,9 +268,9 @@ body.scrolled nav {
 /* Button Styles */
 .image-btn1 , .image-btn2 , .image-btn3 , .image-btn4 {
     position: absolute;
-    padding: 15px 40px;
+    padding: 10px 20px;
     margin-top: 230px;
-    left: 280px;
+    left: 250px;
     color: white;
     border: none;
     text-decoration: none;
@@ -294,7 +325,7 @@ body.scrolled nav {
 /* Card Styles */
 .card {
     position: relative; /* Make card container relatively positioned */
-    width: 500px;
+    width: 430px;
     border-radius: 20px;
     overflow: hidden;
     background-color: transparent;
@@ -341,7 +372,7 @@ body.scrolled nav {
 
 .card-text h2 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     color: #727272;
     padding-bottom: 5px;
 }
@@ -350,12 +381,14 @@ body.scrolled nav {
 .arrow-container {
     display: flex;
     justify-content: center;
+    left:48.5%;
     width: 100%;
     margin-top: 400px;
     position: fixed;
     animation: bounce 2s infinite;
     color: #2980b9;
     font-size: 4rem;
+    z-index: 30;
 }
 
 /* Bouncing animation for arrow */
@@ -611,6 +644,13 @@ footer .copyright {
 
 /* Responsiveness for body */
 
+@media screen and (max-width: 1280px) {
+
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
 /* Responsive section for 1024px */
 @media (max-width: 1024px) {
     .skill-buttons {
@@ -632,6 +672,11 @@ footer .copyright {
     .skill-buttons i{
         margin-left: 20px;
         opacity: 1;
+    }
+
+    .image-cards{
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .card {
@@ -736,7 +781,7 @@ footer .copyright {
     }
 
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
-        padding: 10px 20px;
+        padding: 10px 15px;
         font-size: 0.8rem;
         left: 63%; /* Center the buttons */
         bottom: 40%;
@@ -790,17 +835,19 @@ footer .copyright {
     .skill-buttons {
         flex-direction: row; /* Align buttons in a row */
         align-items: center;
-        gap: 30px; /* Increased gap for tablet screens */
+        gap: 10px; /* Increased gap for tablet screens */
     }
 
     .skill-btn1 {
-        padding: 8px 55px; /* Medium padding */
-        font-size: 0.8rem;
+        padding: 8px 40px; /* Medium padding */
+        font-size: 0.7rem;
+        border-radius: 5px;
     }
 
     .skill-btn2 {
         padding: 8px 10px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        border-radius: 5px;
     }
 
     .skill-buttons i{
@@ -809,8 +856,9 @@ footer .copyright {
     }
 
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
-        padding: 9px 18px;
-        font-size: 0.8rem;
+        padding: 9px 13px;
+        font-size: 0.7rem;
+        /* border-radius: 5px; */
         left: 55%; /* Center the buttons */
         bottom: 40%;
     }
@@ -856,5 +904,10 @@ footer .copyright {
         font-size: 20px;
         width: 40px;
         height: 40px;
+    }
+}
+@media (max-width:350px) {
+    .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
+        left:52%;
     }
 }

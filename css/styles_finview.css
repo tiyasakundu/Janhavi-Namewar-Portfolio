@@ -211,6 +211,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 /* Positioning the bottom left button */
@@ -226,6 +227,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .finview-8-bottom-btn {
@@ -240,6 +242,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .finview-11-bottom-btn {
@@ -254,6 +257,7 @@ body.scrolled nav {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
 .finview-5-btn i, .finview-5-bottom-btn i, .finview-8-bottom-btn i, .finview-11-bottom-btn i{
@@ -267,7 +271,7 @@ body.scrolled nav {
 .finview-5-btn:hover, .finview-5-bottom-btn:hover, .finview-8-bottom-btn:hover, .finview-11-bottom-btn:hover {
     background-color: #0173B0;
     color:white;
-    /* transform: scale(1.1);  */
+    transform: scale(1.1); 
 }
 
 .finview-5-btn:hover i, .finview-5-bottom-btn:hover i, .finview-8-bottom-btn:hover i, .finview-11-bottom-btn:hover i {
@@ -496,6 +500,12 @@ footer .copyright {
 
 /* <------------------- Responsiveness for body ----------------------------> */
 
+@media screen and (max-width: 1280px) {
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
 /* For devices with max width 768px */
 @media (max-width: 768px) {
 
@@ -625,6 +635,7 @@ footer .copyright {
     .nav-button {
         padding: 8px 10px; /* Smaller button padding */
         width: 140px;
+        border-radius: 5px;
         font-size: 0.7rem;
         text-align: center;
     }

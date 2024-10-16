@@ -552,9 +552,6 @@ body.scrolled nav {
     opacity: 0;
 }
 
-.title.active {
-    /* opacity: 1; */
-}
 
 .title h1.animate{
     transform-origin: top left;
@@ -607,9 +604,6 @@ body.scrolled nav {
     margin-bottom: 10px;
 }
 
-.project-item1 .project-info h2 {
-    /* margin-top: 10px; */
-}
 
 .project-info p {
     font-size: 0.8rem;
@@ -691,13 +685,13 @@ body.scrolled nav {
 /* Specific button styles */
 .project-item1 .case-study-btn {
     bottom: 65px;
-    left: 7%;
+    /* left: 7%; */
     background-color: #033353;
 }
 
 .project-item2 .case-study-btn {
     bottom: 65px;
-    left: 7%;
+    /* left: 7%; */
     background-color: #088F8F;
 }
 
@@ -774,9 +768,10 @@ body.scrolled nav {
 
 .about-me-content h2 {
     font-family: 'Manrope', sans-serif;
+    font-weight: 600;
     font-size: 1rem;
     color: #2980b9;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .about-me-content p {
@@ -850,7 +845,7 @@ body.scrolled nav {
     z-index: 1; /* Appears above the name bubble */
     opacity: 0; /* Hidden by default */
     animation: fadeInDots 0.85s forwards ease-in-out;
-    animation-delay: 4s;
+    animation-delay: 3.5s;
 }
 
 .typing-dots.heading-worked-dots div {
@@ -894,7 +889,7 @@ body.scrolled nav {
     transform-origin: top left; /* Set origin for top-left zoom */
     transform: scale(0.2); /* Start scaled down */
     animation: zoomInLeft 0.5s forwards ease-in-out;
-    animation-delay: 5s; /* Sync with the name bubble */
+    animation-delay: 4.4s; /* Sync with the name bubble */
 }
 
 
@@ -929,7 +924,7 @@ body.scrolled nav {
     transform-origin: top left; /* Set origin for top-left zoom */
     transform: scale(0.2); /* Start scaled down */
     animation: zoomInLeft 0.5s forwards ease-in-out;
-    animation-delay: 5.5s; /* Sync with the name bubble */
+    animation-delay: 5s; /* Sync with the name bubble */
 }
 
 
@@ -972,7 +967,7 @@ body.scrolled nav {
     opacity: 0; /* Hidden initially */
     transform: translateY(20px);
     animation: fadeInResume 0.5s forwards ease-in-out;
-    animation-delay: 6s; /* Show after chat bubbles */
+    animation-delay: 5.5s; /* Show after chat bubbles */
 }
 
 .button-container {
@@ -1249,12 +1244,12 @@ footer .copyright {
 
     .project-item1 .case-study-btn {
         bottom: 80px;
-        left: 8%;
+        /* left: 8%; */
     }
     
     .project-item2 .case-study-btn {
         bottom: 80px;
-        left: 8%;
+        /* left: 8%; */
     }
 
     .about-me-card {
@@ -1309,12 +1304,12 @@ footer .copyright {
 
     .project-item1 .case-study-btn {
         bottom: 80px;
-        left: 6%;
+        /* left: 6%; */
     }
     
     .project-item2 .case-study-btn {
         bottom: 80px;
-        left: 6%;
+        /* left: 6%; */
     }
 
     .about-me-section{
@@ -1449,14 +1444,14 @@ footer .copyright {
         padding: 10px 16px; 
         font-size: 1rem; 
         bottom: 8%; 
-        left: 37%;
+        /* left: 37%; */
     }
 
     .project-item2 .case-study-btn {
         padding: 10px 16px; 
         font-size: 1rem; 
         bottom: 8%; 
-        left: 37%;
+        /* left: 37%; */
     }
 
 
@@ -1641,14 +1636,14 @@ footer .copyright {
         padding: 8px 16px; 
         font-size: 1em; 
         bottom: 8%; 
-        left: 30%;
+        /* left: 30%; */
     }
 
     .project-item2 .case-study-btn {
         padding: 8px 16px; 
         font-size: 1em; 
         bottom: 6%; 
-        left: 30%;
+        /* left: 30%; */
     }
 
     .case-study-btn i {
@@ -1786,7 +1781,7 @@ footer .copyright {
 
     .bubble-name{
         width: 90%;
-        border-radius: 15px;
+        border-radius: 8px;
         top: -40px;
         height: 49%;
         font-size: 12px; /* Smaller bubble text */
@@ -1798,7 +1793,7 @@ footer .copyright {
         width: 85% ;
         max-width: 250px;
         font-size: 12px;
-        border-radius: 15px;
+        border-radius: 8px;
         padding: 8px 15px
     }
 
@@ -1837,12 +1832,12 @@ footer .copyright {
     }
 
     .title h1 {
-        font-size: 1em; /* Decrease font size */
+        font-size: 1rem; /* Decrease font size */
         /* padding-left: 20px; */
     }
 
     .title-1 h1 {
-        font-size: 1em; /* Decrease font size */
+        font-size: 1rem; /* Decrease font size */
     }
 
     .experience {
@@ -1860,7 +1855,7 @@ footer .copyright {
         height: auto; /* Let the height adjust based on content */
         padding: 30px;
         margin-top: 10px;
-        border-radius: 24px;
+        border-radius: 10px;
         border: 2px solid #297fb94d;
     }
 
@@ -1870,15 +1865,15 @@ footer .copyright {
     }
 
     .project-info h2 {
-        font-size: 16px;
-    }
-
-    .project-info h3 {
         font-size: 14px;
     }
 
-    .project-info p {
+    .project-info h3 {
         font-size: 12px;
+    }
+
+    .project-info p {
+        font-size: 10px;
     }
 
     .project-image {
@@ -1886,7 +1881,7 @@ footer .copyright {
     }
 
     .project-image img {
-        border-radius: 15px;
+        border-radius: 5px;
         margin-bottom:30px;
     }
 
@@ -1895,7 +1890,7 @@ footer .copyright {
         font-size: 0.6rem; 
         border-radius: 5px;
         bottom: 7%; 
-        left: 24%;
+        /* left: 24%; */
     }
 
     .project-item2 .case-study-btn {
@@ -1903,7 +1898,7 @@ footer .copyright {
         font-size: 0.6rem; 
         border-radius: 5px;
         bottom: 5%; 
-        left: 24%;
+        /* left: 24%; */
     }
 
     .case-study-btn i {
@@ -1952,6 +1947,7 @@ footer .copyright {
         width: 39%; /* Full width for cards */
         height:100px;
         margin-top:10px;
+        border-radius: 8px;
         border: 2px solid #297fb94d;
     }
 
@@ -1976,13 +1972,16 @@ footer .copyright {
         padding-right: 40px;
     }
 
+    .about-me-card{
+        border-radius: 10px;
+    }
     .about-me-cards {
         flex-direction: column; /* Stack the image and text vertically */
         height: auto; /* Let the height adjust based on content */
         padding: 0px;
         margin-top: 10px;
         margin-bottom: 10px;
-        border-radius: 24px;
+        border-radius: 10px;
     }
 
     .about-me-content {
@@ -2006,6 +2005,7 @@ footer .copyright {
         margin-top: 10px;
         padding: 6px 8px; 
         font-size: 0.8rem; 
+        border-radius: 5px;
     }
 
     .about-me-btn i {

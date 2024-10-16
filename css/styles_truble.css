@@ -856,6 +856,7 @@ footer .copyright {
     .nav-button {
         padding: 8px 10px; /* Smaller button padding */
         width: 140px;
+        border-radius: 5px;
         font-size: 0.7rem;
         text-align: center;
     }

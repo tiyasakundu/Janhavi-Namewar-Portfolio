@@ -44,7 +44,7 @@
 <rect x="-15" y="377" width="137.681" height="59.6975" fill="url(#pattern0_398_2513)"/>
 <path d="M84.498 410.076L92.2963 411.421L100.901 419.219L101.977 441.001L78.582 438.58L81.0022 417.606L82.6156 413.034L82.8846 411.152L84.498 410.076Z" fill="white"/>
 <g filter="url(#filter4_d_398_2513)">
-<rect x="-15" y="176" width="530" height="125" rx="27" fill="#EBEBEB"/>
+<rect x="14" y="176" width="530" height="125" rx="27" fill="#EBEBEB"/>
 </g>
 <g filter="url(#filter5_i_398_2513)">
 <circle cx="68.5" cy="238.5" r="18.5" fill="#D9D9D9"/>
@@ -95,7 +95,7 @@
 <pattern id="pattern0_398_2513" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_398_2513" transform="matrix(0.000811043 0 0 0.00187051 -0.000993114 -1.0991)"/>
 </pattern>
-<filter id="filter4_d_398_2513" x="-19" y="176" width="538" height="133" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter4_d_398_2513" x="10" y="176" width="538" height="133" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>

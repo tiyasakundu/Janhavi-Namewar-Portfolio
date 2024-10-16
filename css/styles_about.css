@@ -282,7 +282,7 @@ body.scrolled nav {
 /* Title Section */
 .title-section {
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width:80%;
 }
 
@@ -501,10 +501,6 @@ body.scrolled nav {
     height: auto;
     z-index: 0;
     opacity: 0;
-}
-
-.title.active {
-    /* opacity: 1; */
 }
 
 .title h1.animate{
@@ -1028,6 +1024,10 @@ footer .copyright {
         left:20%;
     }
 
+    .typing-dots.heading-dots{
+        left:20%;
+    }
+
     /* Intro Card */
     .intro-card {
         flex-direction: column;
@@ -1127,7 +1127,7 @@ footer .copyright {
     }
 
     .profile-section h1{
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .profile-image {
@@ -1152,11 +1152,22 @@ footer .copyright {
         height: 6px;
     }
 
+    .typing-dots.heading-dots {
+        width:30px;
+        /* margin-top: -60px; */
+        left:17%;
+    }
+
+    .typing-dots.heading-dots div {
+        width: 6px;
+        height: 6px;
+    }
+
     
     .intro-card {
         margin-top: -20px;
         padding: 30px;
-        border-radius: 24px;
+        border-radius: 10px;
         border: 2px solid #297fb94d;
         flex-direction: column;
         margin-left: 60px;
@@ -1165,7 +1176,7 @@ footer .copyright {
     }
 
     .intro-card h3{
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 20px;
     }
 
@@ -1175,13 +1186,13 @@ footer .copyright {
 
     .hidden-p{
         display: block;
-        font-size: 12px;
+        font-size: 11px;
         margin-bottom: 10px;
     }
 
     .intro-card h2 {
         margin-top: 20px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .intro-text {
@@ -1190,13 +1201,13 @@ footer .copyright {
 
     .resume-btn {
         font-size: 12px;
-        border-radius: 15px;
+        border-radius: 5px;
         padding: 6px 16px;
         margin-top: 20px;
     }
 
     .intro-image img {
-        max-width: 200px;
+        max-width: 150px;
     }
 
     #worked-with-section {
@@ -1205,35 +1216,41 @@ footer .copyright {
     }
 
     .title h1 {
-        font-size: 1.8rem;
-    }
-
-    .typing-dots.heading-dots {
-        width:40px;
-        left: 15%;
-    }
-
-    .typing-dots.heading-dots div {
-        width:8px;
-        height:8px;
+        font-size: 1rem;
     }
 
     #worked-with-section h3 {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
     }
 
     #worked-with-section h4 {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
     #worked-with-section ul {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .card-img{
+        margin-bottom: 10px;
+    }
+
+    .cards-container .card:nth-child(1) .card-img {
+        max-width: 100px;
+        margin-top: 10px;
+    }
+    
+    /* Specific image size adjustment for 2nd, 3rd, and 4th cards */
+    .cards-container .card:nth-child(2) .card-img,
+    .cards-container .card:nth-child(3) .card-img,
+    .cards-container .card:nth-child(4) .card-img {
+        max-height: 40px; /* Decrease the size for these specific cards */
     }
 
     .card {
-        border-radius: 24px;
+        border-radius: 10px;
         border: 2px solid #297fb94d;
     }
 

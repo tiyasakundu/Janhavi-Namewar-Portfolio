@@ -12,6 +12,14 @@
 </head>
 
 <body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images\11.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <!-- Navigation Bar -->
     <nav>
         <img src="images/Logo.png" alt="Logo" class="logo">
@@ -56,7 +64,7 @@
     </div>
 
     <!-- Arrow in Next Row -->
-    <div class="arrow-container">
+    <div class="arrow-container" id="arrowContainer">
         <span><i class="fa-solid fa-angle-down"></i></span>
     </div>
 
@@ -97,7 +105,7 @@
 </div> -->
 
 <!-- Carousel Section -->
-<div class="carousel-container">
+<section id="carousel-visual" class="carousel-container">
     <button class="carousel-arrow left-arrow" id="left-arrow">&#8249;</button>
     <div class="carousel">
         <div class="carousel-track">
@@ -112,7 +120,7 @@
         </div>
     </div>
     <button class="carousel-arrow right-arrow" id="right-arrow">&#8250;</button>
-</div>
+</section>
 
 <!-- Fullscreen Image Modal -->
 <div id="fullscreenModal" class="fullscreen-modal">
@@ -245,6 +253,26 @@
                 modal.style.display = 'none'; // Hide the modal when Esc is pressed
             }
         });
+
+        // Select the arrow container and the carousel section
+const arrowContainer = document.getElementById('arrowContainer');
+const carouselSection = document.getElementById('carousel-visual');
+
+// Create an Intersection Observer to detect when the arrow enters the carousel section
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Hide arrow container when it is within the carousel section
+        if (entry.isIntersecting) {
+            arrowContainer.style.display = 'none'; // Hide the arrow container
+        } else {
+            arrowContainer.style.display = 'block'; // Show it again if it is not in the carousel section
+        }
+    });
+});
+
+// Observe the carousel section
+observer.observe(carouselSection);
+
     </script>
 
     <script src="scripts\script.js"></script>
