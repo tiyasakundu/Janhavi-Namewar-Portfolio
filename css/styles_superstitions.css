@@ -164,6 +164,13 @@ body.scrolled nav {
     margin-top: -80px;
 }
 
+.project-bg3 img {
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Center image cards */
 .image-cards {
     display: flex;

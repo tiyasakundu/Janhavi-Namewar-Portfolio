@@ -212,7 +212,8 @@ body.scrolled nav {
 .project-bg div:nth-child(15) img,
 .project-bg div:nth-child(17) img,
 .project-bg div:nth-child(19) img,
-.project-bg div:nth-child(20) img {
+.project-bg div:nth-child(20) img,
+.project-bg div:nth-child(22) img {
     width: 83% !important; /* Smaller width for specific images */
 }
 
@@ -714,7 +715,8 @@ footer .copyright {
     .project-bg div:nth-child(15) img,
     .project-bg div:nth-child(17) img,
     .project-bg div:nth-child(19) img,
-    .project-bg div:nth-child(20) img {
+    .project-bg div:nth-child(20) img,
+    .project-bg div:nth-child(22) img {
         width: 100% !important; 
     }
 

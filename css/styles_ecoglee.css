@@ -164,6 +164,13 @@ body.scrolled nav {
     margin-top: -80px;
 }
 
+.project-bg1 img{
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Video Styles */
 .video {
     display: flex;
@@ -368,6 +375,11 @@ footer .copyright {
         width: 100%;
         height: auto; /* Maintain aspect ratio */
     }
+    
+    .project-bg1 img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
 
     .mockup img {
         width: 100%; /* Make images full-width */
@@ -393,6 +405,11 @@ footer .copyright {
         width: 100vw; /* Ensure it still covers the viewport */
         height: auto; /* Allow the image to resize proportionally */
         margin: 0;
+    }
+
+    .project-bg1 img {
+        width: 100vw; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
     }
 
     .mockup img {
@@ -443,6 +460,11 @@ footer .copyright {
     .project-bg img {
         width: 100%;
         height: auto;
+    }
+
+    .project-bg1 img {
+        width: 100%; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
     }
     
     .mockup img {

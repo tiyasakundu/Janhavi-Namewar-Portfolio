@@ -207,7 +207,8 @@ body.scrolled nav {
 .project-bg div:nth-child(10) img,
 .project-bg div:nth-child(11) img,
 .project-bg div:nth-child(12) img,
-.project-bg div:nth-child(13) img {
+.project-bg div:nth-child(13) img,
+.project-bg div:nth-child(14) img {
     width: 80% !important; /* Smaller width for specific images */
 }
 
@@ -415,13 +416,14 @@ footer .copyright {
         margin-top: 0;
     }
 
-    .project-bg div:nth-child(4) img,
-    .project-bg div:nth-child(6) img,
+    .project-bg div:nth-child(5) img,
     .project-bg div:nth-child(7) img,
-    .project-bg div:nth-child(9) img,
+    .project-bg div:nth-child(8) img,
     .project-bg div:nth-child(10) img,
     .project-bg div:nth-child(11) img,
-    .project-bg div:nth-child(12) img {
+    .project-bg div:nth-child(12) img,
+    .project-bg div:nth-child(13) img,
+    .project-bg div:nth-child(14) img{
         width: 100% !important;
     }
 

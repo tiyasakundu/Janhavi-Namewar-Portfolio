@@ -163,6 +163,13 @@ body.scrolled nav {
     margin-top: -80px;
 }
 
+.project-bg1 img {
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .video {
     margin: 60px auto; /* Center horizontally and space vertically */
     display: flex;
@@ -458,6 +465,11 @@ footer .copyright {
         margin: 0;
     }
 
+    .project-bg1 img {
+        width: 100vw; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
+    }
+
     .button-container {
         flex-direction: row;
         gap: 50px; /* Adjust gap for small screens */
@@ -501,6 +513,11 @@ footer .copyright {
         width: 100%;
         height: auto; /* Maintain aspect ratio */
     }
+    
+    .project-bg1 img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
 
     .button-container {
         flex-direction: row; /* Stack buttons vertically */
@@ -534,6 +551,11 @@ footer .copyright {
     }
 
     .project-bg img {
+        width: 100%;
+        height: auto;
+    } 
+    
+    .project-bg1 img {
         width: 100%;
         height: auto;
     }
