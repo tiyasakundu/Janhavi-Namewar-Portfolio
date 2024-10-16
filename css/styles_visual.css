@@ -387,7 +387,7 @@ body.scrolled nav {
     position: fixed;
     animation: bounce 2s infinite;
     color: #2980b9;
-    font-size: 4rem;
+    font-size: 3rem;
     z-index: 30;
 }
 
@@ -397,7 +397,7 @@ body.scrolled nav {
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-40px);
+        transform: translateY(-20px);
     }
     60% {
         transform: translateY(-10px);

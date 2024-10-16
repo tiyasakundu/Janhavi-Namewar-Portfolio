@@ -649,14 +649,14 @@ body.scrolled nav {
 .hobby-card h2 {
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #2980b9;             /* Heading color */
 }
 
 .hobby-card i {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 40px;
     color: #7b7b7b;             /* Gray for the subtitle text */
 }
@@ -681,21 +681,21 @@ body.scrolled nav {
 
 /* Video in Cards */
 .card-vid {
-    width: 80px;                   /* Set width for the videos */
-    height: 80px;                  /* Set height to match width */
+    width: 70px;                   /* Set width for the videos */
+    height: 70px;                  /* Set height to match width */
     margin-bottom: 15px;            /* Space between video and text */
 }
 
 /* Card Titles */
 .cards h3 {
     font-weight: 500;
-    font-size: 1.2rem;        /* Font size */
+    font-size: 1.1rem;        /* Font size */
     margin: 10px 0;           /* Margin for spacing */
 }
 
 /* Card Descriptions */
 .cards p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #7b7b7b;
     margin-top: 0;
 }
@@ -1262,7 +1262,7 @@ footer .copyright {
     .hobby-card {
         border-radius: 24px;
         border: 2px solid #297fb94d;
-        padding: 60px;
+        padding: 50px;
     }
 
     .hobby-card h2{
@@ -1275,7 +1275,7 @@ footer .copyright {
     }
 
     .cards-container-2 {
-        padding: 30px;
+        padding: 20px;
     }
 
     .scroll-up-btn {
@@ -1289,7 +1289,7 @@ footer .copyright {
 @media (max-width: 392px){
 
     .hobby-card {
-        padding: 40px;
+        padding: 30px;
     }
 
     .hobby-card h2{
@@ -1302,7 +1302,7 @@ footer .copyright {
     }
 
     .cards-container-2 {
-        padding: 30px;
+        padding: 20px;
     }
 
     .cards h3{
@@ -1321,5 +1321,11 @@ footer .copyright {
         font-size: 20px;
         width: 40px;
         height: 40px;
+    }
+}
+
+@media (max-width:344px) {
+    .hobby-card {
+        padding: 20px;
     }
 }
