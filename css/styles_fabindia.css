@@ -284,6 +284,46 @@ body.scrolled nav {
     display: flex;
 }
 
+/* Fullscreen Modal Styles */
+.fullscreen-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Ensure it's above the carousel */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Fullscreen Image */
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Close Button Styles */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 4;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.1); /* Slight scaling on hover */
+}
+
 .carousel-img {
     height: 350px; /* Fixed height for images */
     width: 250px; /* Fixed width for images */

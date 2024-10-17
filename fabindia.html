@@ -38,7 +38,7 @@
             <img src="images\FabIndia\Fabindia 3-1.svg" alt="FabIndia 3-1" class="overlay-image">
         </div>
         <div><img src="images\FabIndia\Fabindia hidden.svg" alt="FabIndia hidden" class="hidden-image"></div>
-        
+
         <div><img src="images\FabIndia\Fabindia 4.svg" alt="FabIndia 4"></div>
         <div><img src="images\FabIndia\Fabindia 5.svg" alt="FabIndia 5"></div>
         <div><img src="images\FabIndia\Fabindia 6.svg" alt="FabIndia 6"></div>
@@ -69,6 +69,13 @@
         </div>
         <button class="carousel-arrow right-arrow" id="right-arrow">&#8250;</button>
     </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreenModal" class="fullscreen-modal">
+        <span class="close-btn">&times;</span> <!-- Close button -->
+        <img class="fullscreen-img" id="expandedImg" alt="Expanded Image">
+    </div>
+
     <div class="carousel-2">
         <div class="carousel-inner-2">
             <div class="slide active">
@@ -153,6 +160,51 @@
     <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <script>
+                // Get the modal and close button
+                const modal = document.getElementById('fullscreenModal');
+        const modalImg = document.getElementById('expandedImg');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Get all images in the carousel
+        const images = document.querySelectorAll('.carousel-img');
+
+        // Loop through the images and add a click event listener
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // When an image is clicked, display it in the modal
+                modal.style.display = 'flex'; // Show the modal (flex for centering)
+                modalImg.src = image.src; // Set the src of the expanded image to the clicked image's src
+            });
+        });
+
+        // Close the modal when the close button is clicked
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none'; // Hide the modal
+        });
+
+        // Optionally close the modal if clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none'; // Hide the modal
+            }
+        });
+
+        // Optional: Close the modal when 'Esc' is pressed
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none'; // Hide the modal when Esc is pressed
+            }
+        });
+
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none'; // Hide the modal when Esc is pressed
+            }
+        });
+    </script>
 
     <script src="scripts\script_fabindia.js"></script>
     
