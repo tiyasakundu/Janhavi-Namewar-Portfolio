@@ -155,20 +155,99 @@ body.scrolled nav {
     }
 }
 
-.project-bg img {
-    width: 100%; /* Adjust the height as needed */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.project-bg {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
     margin-top: -80px;
 }
 
-.project-bg1 img {
-    width: 100%; /* Adjust the height as needed */
+.project-bg div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg img {
+    width: 100%; /* Default width for images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.project-bg div:nth-child(2),
+.project-bg div:nth-child(7) {
+    background-color: #FFFED3;
+}
+
+.project-bg-2 div:nth-child(1) {
+    background-color: #FFFED3;
+}
+
+.project-bg-1 {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.project-bg-1 div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg-1 img {
+    width: 100%; /* Default width for images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-bg-2 {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.project-bg-2 div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg-2 img {
+    width: 100%; /* Default width for images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hidden-image {
+    display: none;
+}
+
+.image-stack {
+    position: relative;
+}
+
+.base-image {
+    max-width: 100%; /* Base image takes full width of its container */
+    height: auto; /* Ensures aspect ratio is maintained */
+    position: relative;
+    z-index: 1; /* Lower layer */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 80% !important; /* 80% of the width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Higher layer */
+}
+
+
 
 .video {
     margin: 60px auto; /* Center horizontally and space vertically */
@@ -295,6 +374,24 @@ body.scrolled nav {
 
 .next {
     right: 10px;
+}
+
+.project-bg div:nth-child(2) img,
+.project-bg div:nth-child(4) img,
+.project-bg div:nth-child(5) img,
+.project-bg div:nth-child(7) img,
+.project-bg div:nth-child(8) img {
+    width: 80% !important; /* Smaller width for specific images */
+}
+
+.project-bg-1 div:nth-child(1) img,
+.project-bg-1 div:nth-child(2) img {
+    width: 80% !important; /* Smaller width for specific images */
+}
+
+.project-bg-2 div:nth-child(1) img,
+.project-bg-2 div:nth-child(2) img {
+    width: 80% !important; /* Smaller width for specific images */
 }
 
 
@@ -449,25 +546,45 @@ footer .copyright {
 
 
 @media (max-width: 1024px) {
+
+    .project-bg div:nth-child(2) img,
+    .project-bg div:nth-child(4) img,
+    .project-bg div:nth-child(5) img,
+    .project-bg div:nth-child(7) img,
+    .project-bg div:nth-child(8) img {
+        width: 100% !important; /* Smaller width for specific images */
+    }
+
+    .project-bg-1 div:nth-child(1) img,
+    .project-bg-1 div:nth-child(2) img {
+        width: 100% !important; /* Smaller width for specific images */
+    }
+
+    .project-bg-2 div:nth-child(1) img,
+    .project-bg-2 div:nth-child(2) img {
+        width: 100% !important; /* Smaller width for specific images */
+    }
+
+    .image-stack {
+        display: none !important;
+    }
+
+    .hidden-image {
+        display: block !important;
+    }
+
+    .project-bg {
+        margin-top: 0;
+    }
+
     .video img {
-        width: 100%; /* Make video image responsive */
-        max-width: 800px; /* Limit max width */
+        width: 80%; /* Make video image responsive */
+        max-width: 700px; /* Limit max width */
     }
 
     .carousel-img {
         width: 200px; /* Adjust image width for medium screens */
         height: 300px; /* Maintain aspect ratio */
-    }
-
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-        margin: 0;
-    }
-
-    .project-bg1 img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
     }
 
     .button-container {
@@ -501,22 +618,12 @@ footer .copyright {
     }
 
     .video img {
-        width: 100%; /* Make video image responsive */
+        width: 65%; /* Make video image responsive */
         height: auto; /* Maintain aspect ratio */
     }
 
     .carousel-img {
         width: 200px; /* Further adjust image width for small screens */
-    }
-
-    .project-bg img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-    
-    .project-bg1 img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
     }
 
     .button-container {
@@ -539,7 +646,7 @@ footer .copyright {
     }
 
     .video img {
-        width: 100%; /* Ensure it takes full width */
+        width: 80%; /* Ensure it takes full width */
         height: auto; /* Maintain aspect ratio */
     }
 
@@ -550,14 +657,12 @@ footer .copyright {
         border-radius: 10px;
     }
 
-    .project-bg img {
-        width: 100%;
-        height: auto;
-    } 
-    
-    .project-bg1 img {
-        width: 100%;
-        height: auto;
+    .carousel-2 {
+        width:80%;
+    }
+
+    .prev , .next {
+        font-size: 2rem;
     }
 
     .button-container {
