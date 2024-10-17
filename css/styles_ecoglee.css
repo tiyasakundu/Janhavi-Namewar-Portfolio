@@ -156,16 +156,21 @@ body.scrolled nav {
     }
 }
 
-.project-bg img{
-    width: 100%; /* Adjust the height as needed */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.project-bg {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
     margin-top: -80px;
 }
 
-.project-bg1 img{
-    width: 100%; /* Adjust the height as needed */
+.project-bg div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg img {
+    width: 100%; /* Default width for images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -183,6 +188,17 @@ body.scrolled nav {
     height: auto; /* Maintain aspect ratio */
     background-size: cover;
     background-position: center;
+}
+
+.project-bg div:nth-child(2) img,
+.project-bg div:nth-child(4) img,
+.project-bg div:nth-child(6) img,
+.project-bg div:nth-child(7) img,
+.project-bg div:nth-child(8) img,
+.project-bg div:nth-child(9) img,
+.project-bg div:nth-child(11) img,
+.project-bg div:nth-child(13) img {
+    width: 80% !important;
 }
 
 /* Button container styling */
@@ -375,16 +391,6 @@ footer .copyright {
         width: 100%;
         height: auto; /* Maintain aspect ratio */
     }
-    
-    .project-bg1 img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .mockup img {
-        width: 100%; /* Make images full-width */
-        height: auto; /* Adjust height for aspect ratio */
-    }
 
     .button-container {
         flex-direction: column; /* Stack buttons vertically */
@@ -401,21 +407,19 @@ footer .copyright {
 /* For devices with max width 1024px */
 @media (max-width: 1024px) {
 
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-        margin: 0;
+    .project-bg {
+        margin-top: 0;
     }
 
-    .project-bg1 img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-    }
-
-    .mockup img {
-        width: 90%; /* Make images responsive */
-        height: auto; /* Adjust height for aspect ratio */
-        flex-direction: row;
+    .project-bg div:nth-child(2) img,
+    .project-bg div:nth-child(4) img,
+    .project-bg div:nth-child(6) img,
+    .project-bg div:nth-child(7) img,
+    .project-bg div:nth-child(8) img,
+    .project-bg div:nth-child(9) img,
+    .project-bg div:nth-child(11) img,
+    .project-bg div:nth-child(13) img {
+        width: 100% !important;
     }
 
     .button-container {
@@ -460,16 +464,6 @@ footer .copyright {
     .project-bg img {
         width: 100%;
         height: auto;
-    }
-
-    .project-bg1 img {
-        width: 100%; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
-    }
-    
-    .mockup img {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Maintain aspect ratio */
     }
 
     .button-container {
