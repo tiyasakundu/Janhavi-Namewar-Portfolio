@@ -46,7 +46,7 @@ window.onload = function() {
             observer.observe(image);
         });
     
-        document.getElementById("ecoglee-image").innerHTML = "<img src='images/Ecoglee SVG.svg' height=0 width=0 />";
+        // document.getElementById("ecoglee-image").innerHTML = "<img src='images/Ecoglee SVG.svg' height=0 width=0 />";
         // document.getElementById("immersive-image").innerHTML = "<img src='images/Siemens.svg' height=0 width=0 />";
         // document.getElementById("finview-image").innerHTML = "<img src='images/Finvue SVG.svg' height=0 width=0 />";
         // document.getElementById("mmi-image").innerHTML = "<img src='images/MMI SVG.svg' height=0 width=0 />";
