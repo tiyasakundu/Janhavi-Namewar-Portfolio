@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: center; /* Centers the navigation */
     align-items: center;
-    background-color: #ffffff22; /* Adjusted background color */
+    background-color: #ffffffb1; /* Adjusted background color */
     padding: 20px 40px; /* Adjust padding as needed */
     border-bottom-left-radius: 35px; /* Rounded corners */
     border-bottom-right-radius: 35px;
@@ -49,7 +49,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #333;
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 20px; /* Rounded links to match the style */
@@ -86,13 +86,8 @@ body.scrolled nav {
         border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
-        background-color: #ffffffb1;
+        background-color: #fff;
     }
-
-    nav ul li a {
-        color: #333;
-    }
-
 }
 
 
@@ -111,7 +106,6 @@ body.scrolled nav {
         border-bottom-right-radius: 0px;
         justify-content: space-between;
         align-items: center;
-        background-color: #ffffffb1;
     }
 
     nav .logo {
@@ -139,10 +133,6 @@ body.scrolled nav {
 
     nav ul li {
         margin: 20px 0;
-    }
-
-    nav ul li a {
-        color: #333;
     }
 
     /* Hamburger and Cross Icons */
@@ -391,12 +381,6 @@ footer .copyright {
 
 /* For devices with max width 768px */
 @media (max-width: 768px) {
-
-    .project-bg img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-
     .button-container {
         flex-direction: column; /* Stack buttons vertically */
         gap: 20px; /* Reduced space between buttons */
@@ -406,9 +390,7 @@ footer .copyright {
 /* For devices with max width 1024px */
 @media (max-width: 1024px) {
 
-    .project-bg img {
-        width: 100vw; /* Ensure it still covers the viewport */
-        height: auto; /* Allow the image to resize proportionally */
+    .project-bg {
         margin-top: 0;
     }
 
@@ -448,11 +430,6 @@ footer .copyright {
     .nav-button i.fa-arrow-right {
         margin-left: 2px; /* Space between icon and text */
         opacity: 1;
-    }
-
-    .project-bg img {
-        width: 100%;
-        height: auto;
     }
 
     .button-container {
