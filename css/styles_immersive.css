@@ -409,7 +409,7 @@ footer .copyright {
     .project-bg img {
         width: 100vw; /* Ensure it still covers the viewport */
         height: auto; /* Allow the image to resize proportionally */
-        margin: 0;
+        margin-top: 0;
     }
 
     .button-container {
