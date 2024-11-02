@@ -1,0 +1,554 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the navigation */
+    align-items: center;
+    background-color: #ffffffb1; /* Adjusted background color */
+    padding: 20px 40px; /* Adjust padding as needed */
+    border-bottom-left-radius: 35px; /* Rounded corners */
+    border-bottom-right-radius: 35px;
+    margin: auto; /* Center the nav bar horizontally */
+    width: 60%; /* Adjust the width to fit in the center */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+}
+
+nav .logo {
+    height: 35px;
+    margin-left: 30px;
+}
+
+/* Nav list */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the items within the navbar */
+    width: 100%; /* Full width to evenly space items */
+    max-width: 1200px; /* Maximum width for the navbar */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded links to match the style */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide hamburger for now */
+.hamburger, .cross {
+    display: none;
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+}
+
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 768px) {
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 30px;
+        margin-left: 0px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
+}
+
+.project-bg img {
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -80px;
+}
+
+.project-bg3 img {
+    width: 100%; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Center image cards */
+.image-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between smaller cards */
+    margin: 40px 0;
+}
+
+/* Card Styles for Small Boxes */
+.card {
+    position: relative;
+    width: 500px; /* Adjusted width for smaller screens */
+    height: 250px; /* Set height to create square cards */
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire card */
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden; /* Hide overflow to show only active slide */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Optional: Set a max width */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-inner {
+    display: flex; /* Align slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: rgb(34, 34, 34);
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 3rem;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Project Background for Carousel */
+.project-bg2 {
+    background-color: #79838b;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the content */
+}
+
+.project-bg2 img {
+    width: 100%; /* Make it responsive */
+    max-width: 800px; /* Optional: Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    margin-top: 50px; /* Adjust this based on the spacing you want */
+    margin-bottom: 60px;
+}
+
+/* Button styles */
+.nav-button {
+    padding: 15px 30px;
+    background-color: #2980b9; /* Light blue background */
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-button i.fa-arrow-left {
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0;
+    transform: translateX(-10px); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.nav-button i.fa-arrow-right {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0;
+    transform: translateX(10px); /* Initially shifted right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the left arrow */
+.nav-button:hover i.fa-arrow-left {
+    opacity: 1; /* Make the left arrow visible */
+    transform: translateX(-5px); /* Move it slightly more to the left */
+}
+
+/* Hover effect for the right arrow */
+.nav-button:hover i.fa-arrow-right {
+    opacity: 1; /* Make the right arrow visible */
+    transform: translateX(5px); /* Move it slightly more to the right */
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 10px 0; /* Adds padding to create space inside the footer */
+    background-color: transparent; /* Adjusted background color */
+    /* border-top-left-radius: 50px; 
+    border-top-right-radius:50px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    font-size: 1rem; /* Slightly reduced font size */
+    width: 100%;
+    margin: 0 auto;
+    color: #333; /* Darker text color for better contrast */
+}
+
+/* Social icons */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap for smaller icons */
+    margin: 20px 0; /* Adjusts space around icons */
+    font-size: 1.5rem; /* Icon size */
+    color: #333;
+}
+
+footer .social-icons a {
+    color: #333; /* Set icon color */
+    width:45px;
+    background-color: rgba(255, 255, 255, 0.497);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    transition: color 0.3s ease; /* Smooth transitions */
+    text-decoration: none; /* Remove underline */
+}
+
+
+footer .social-icons a:hover {
+    background-color: #0077b5; /* Blue background on hover (LinkedIn example) */
+    color: #fff; /* White icon color on hover */
+}
+
+/* Footer text */
+footer h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666; /* Lighter color for subtext */
+}
+
+/* Copyright section */
+footer .copyright {
+    font-size: 0.8rem;
+    color: #888; /* Lighter gray for copyright text */
+    margin-top: 10px;
+}
+
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: none; /* Initially hidden */
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.scroll-up-btn:hover {
+    background-color: #1e5f89; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    footer .social-icons {
+        font-size: 1.5rem;
+        gap: 15px;
+    }
+
+    footer h3 {
+        font-size: 1rem;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer h3{
+        font-size: 0.6rem;
+    }
+
+    footer p {
+        font-size: 0.6rem; /* Even smaller footer text */
+    }
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 1280px) {
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .card {
+        width: 280px; /* Reduce card width */
+        height: 180px; /* Reduce card height */
+    }
+
+    .project-bg img {
+        width: 100vw; /* Ensure it still covers the viewport */
+        height: auto; /* Allow the image to resize proportionally */
+        margin: 0;
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 20px; /* Smaller button padding */
+        width: 220px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-bg img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .prev, .next {
+        font-size: 2rem; /* Reduce button size */
+    }
+
+    .carousel {
+        max-width: 100%; /* Ensure carousel is responsive */
+    }
+
+    .project-bg2 img {
+        width: 90%; /* Make image take up most of the width on smaller screens */
+        max-width: none; /* Remove max width restriction for smaller screens */
+    }
+
+    .button-container {
+        flex-direction: row; /* Stack buttons vertically */
+        gap: 20px; /* Reduced space between buttons */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 0px;
+        /* margin-left: 2px;  */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 2px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .card {
+        width: 100%; /* Full width cards on small screens */
+        height: 200px; /* Adjust height */
+    }
+
+    .project-bg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem; /* Further reduce button size */
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

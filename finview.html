@@ -1,1 +1,173 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Finview</title><link rel="icon" href="./images/Logo.png" type="image/png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet"><link rel="stylesheet" href="./css/styles_finview.min.css"></head><body><nav><img src="./images/Logo.png" alt="Logo" class="logo"><div class="hamburger" onclick="toggleMenu()">&#9776;</div><div class="cross" onclick="toggleMenu()">&#10005;</div><ul><li><a href="index.html">Home</a></li><li><a href="project.html" class="active">Projects</a></li><li><a href="about.html">About me</a></li><li><a href="#contact">Contact</a></li></ul></nav><section class="project-bg"><div><img src="./images/Finview\finview 1.svg" alt="Finview 1"></div><div><img src="./images/Finview\finview 2.svg" alt="Finview 2"></div><div><img src="./images/Finview\finview 3.svg" alt="Finview 3"></div><div><img src="./images/Finview\finview 4.svg" alt="Finview 4"></div><div class="finview-5-container"><img src="./images/Finview/finview 5.svg" alt="Finview 5" class="finview-5-image"> <button class="overlay-trigger-btn finview-5-btn" id="finview5OverlayBtn">Insights<i class="fa-solid fa-arrow-right"></i></button> <button class="overlay-trigger-btn finview-5-bottom-btn" id="finview5BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button></div><div id="overlayContainer5" class="overlay-container"><span class="close-btn" id="closeOverlay5">&times;</span> <img src="./images/Finview/finview 5-1.svg" alt="Finview 5 Overlay Insights" class="overlay-image-popup"></div><div id="overlayContainer5Bottom" class="overlay-container"><span class="close-btn" id="closeOverlay5Bottom">&times;</span> <img src="./images/Finview/finview 5-2.svg" alt="Finview 5 Overlay Details" class="overlay-image-popup"></div><div><img src="./images/Finview\finview 6.svg" alt="Finview 6"></div><div><img src="./images/Finview\finview 7.svg" alt="Finview 7"></div><div class="finview-8-container"><img src="./images/Finview/finview 8.svg" alt="Finview 8" class="finview-8-image"> <button class="overlay-trigger-btn finview-8-bottom-btn" id="finview8BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button></div><div id="overlayContainer8Bottom" class="overlay-container"><span class="close-btn" id="closeOverlay8Bottom">&times;</span> <img src="./images/Finview/finview 8-1.svg" alt="Finview 8 Overlay Info" class="overlay-image-popup"></div><div><img src="./images/Finview\finview 9.svg" alt="Finview 9"></div><div><img src="./images/Finview\finview 10.svg" alt="Finview 10"></div><div class="finview-11-container"><img src="./images/Finview/finview 11.svg" alt="Finview 11" class="finview-11-image"> <button class="overlay-trigger-btn finview-11-bottom-btn" id="finview11BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button></div><div id="overlayContainer11Bottom" class="overlay-container"><span class="close-btn" id="closeOverlay11Bottom">&times;</span> <img src="./images/Finview/finview 11-1.svg" alt="Finview 11 Overlay" class="overlay-image-popup"></div><div><img src="./images/Finview\finview 12.svg" alt="Finview 12"></div><div><img src="./images/Finview\finview 13.svg" alt="Finview 13"></div><div><img src="./images/Finview\finview 14.svg" alt="Finview 14"></div><div><img src="./images/Finview\finview 15.svg" alt="Finview 14"></div></section><div class="button-container"><a href="truble.html" class="nav-button"><i class="fa-solid fa-arrow-left"></i>Previous project</a> <a href="project.html" class="nav-button">View all projects</a> <a href="mmi.html" class="nav-button">Next project<i class="fa-solid fa-arrow-right"></i></a></div><footer id="contact"><div class="social-icons"><a href="mailto:janhavinamewar@gmail.com" target="_blank"><i class="fas fa-envelope"></i> </a><a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank"><i class="fab fa-linkedin"></i> </a><a href="https://www.behance.net/janhavinamewar_10" target="_blank"><i class="fab fa-behance"></i></a></div><h3>Thank you for your interest in my work. Lets connect!</h3><p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p></footer><button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button><script src="./scripts/script.min.js"></script><script>function setupOverlay(e,t,o){e=document.getElementById(e);let n=document.getElementById(t);t=document.getElementById(o);e.addEventListener("click",function(){n.classList.add("active")}),t.addEventListener("click",function(){n.classList.remove("active")}),n.addEventListener("click",function(e){e.target===n&&n.classList.remove("active")})}setupOverlay("finview5OverlayBtn","overlayContainer5","closeOverlay5"),setupOverlay("finview5BottomOverlayBtn","overlayContainer5Bottom","closeOverlay5Bottom"),setupOverlay("finview8BottomOverlayBtn","overlayContainer8Bottom","closeOverlay8Bottom"),setupOverlay("finview11BottomOverlayBtn","overlayContainer11Bottom","closeOverlay11Bottom")</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finview</title>
+    <link rel="icon" href="images\Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet">
+    <link rel="stylesheet" href="css\styles_finview.css">
+</head>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="cross" onclick="toggleMenu()">
+            &#10005; <!-- Cross icon -->
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-bg">
+        <div><img src="images\Finview\finview 1.svg" alt="Finview 1"></div>
+        <div><img src="images\Finview\finview 2.svg" alt="Finview 2"></div>
+        <div><img src="images\Finview\finview 3.svg" alt="Finview 3"></div>
+        <div><img src="images\Finview\finview 4.svg" alt="Finview 4"></div>
+
+        <!-- Finview 5 container with buttons -->
+        <div class="finview-5-container">
+            <img src="images/Finview/finview 5.svg" alt="Finview 5" class="finview-5-image">
+            
+            <!-- Button positioned in the middle left -->
+            <button class="overlay-trigger-btn finview-5-btn" id="finview5OverlayBtn">Insights<i class="fa-solid fa-arrow-right"></i></button>
+            
+            <!-- Button positioned in the bottom left -->
+            <button class="overlay-trigger-btn finview-5-bottom-btn" id="finview5BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+
+        <!-- Overlay for first button (Insights) -->
+        <div id="overlayContainer5" class="overlay-container">
+            <span class="close-btn" id="closeOverlay5">&times;</span>
+            <img src="images/Finview/finview 5-1.svg" alt="Finview 5 Overlay Insights" class="overlay-image-popup">
+        </div>
+
+        <!-- Overlay for second button (Details) -->
+        <div id="overlayContainer5Bottom" class="overlay-container">
+            <span class="close-btn" id="closeOverlay5Bottom">&times;</span>
+            <img src="images/Finview/finview 5-2.svg" alt="Finview 5 Overlay Details" class="overlay-image-popup">
+        </div>
+
+        <div><img src="images\Finview\finview 6.svg" alt="Finview 6"></div>
+        <div><img src="images\Finview\finview 7.svg" alt="Finview 7"></div>
+        
+        <!-- Finview 8 container with button -->
+        <div class="finview-8-container">
+            <img src="images/Finview/finview 8.svg" alt="Finview 8" class="finview-8-image">
+            
+            <!-- Button positioned in the bottom left -->
+            <button class="overlay-trigger-btn finview-8-bottom-btn" id="finview8BottomOverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Overlay for Finview 8 button -->
+        <div id="overlayContainer8Bottom" class="overlay-container">
+            <span class="close-btn" id="closeOverlay8Bottom">&times;</span>
+            <img src="images/Finview/finview 8-1.svg" alt="Finview 8 Overlay Info" class="overlay-image-popup">
+        </div>
+
+        <div><img src="images\Finview\finview 9.svg" alt="Finview 9"></div>
+        <div><img src="images\Finview\finview 10.svg" alt="Finview 10"></div>
+        
+        <!-- Finview 11 container with button -->
+        <div class="finview-11-container">
+            <img src="images/Finview/finview 11.svg" alt="Finview 11" class="finview-11-image">
+
+            <!-- Button positioned in the bottom left -->
+            <button class="overlay-trigger-btn finview-11-bottom-btn" id="finview11BottomOverlayBtn">
+                View<i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Overlay for Finview 11 button -->
+        <div id="overlayContainer11Bottom" class="overlay-container">
+            <span class="close-btn" id="closeOverlay11Bottom">&times;</span>
+            <img src="images/Finview/finview 11-1.svg" alt="Finview 11 Overlay" class="overlay-image-popup">
+        </div>
+
+        <div><img src="images\Finview\finview 12.svg" alt="Finview 12"></div>
+        <div><img src="images\Finview\finview 13.svg" alt="Finview 13"></div>
+        <div><img src="images\Finview\finview 14.svg" alt="Finview 14"></div>
+        <div><img src="images\Finview\finview 15.svg" alt="Finview 14"></div>
+    </section>
+
+    <div class="button-container">
+        <a href="truble.html" class="nav-button"><i class="fa-solid fa-arrow-left"></i>Previous project</a>
+        <a href="project.html" class="nav-button">View all projects</a>
+        <a href="mmi.html" class="nav-button">Next project<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="mailto:janhavinamewar@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <h3>Thank you for your interest in my work. Lets connect!</h3>
+        <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
+    </footer>
+
+            <!-- Scroll Up Button -->
+    <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="scripts\script.js"></script>
+    <script>
+        // Function to handle the overlay toggling
+        function setupOverlay(overlayBtnId, overlayContainerId, closeOverlayId) {
+            const overlayBtn = document.getElementById(overlayBtnId);
+            const overlayContainer = document.getElementById(overlayContainerId);
+            const closeOverlay = document.getElementById(closeOverlayId);
+
+            // Show the overlay when the button is clicked
+            overlayBtn.addEventListener('click', function() {
+                overlayContainer.classList.add('active');
+            });
+
+            // Close the overlay when the close button is clicked
+            closeOverlay.addEventListener('click', function() {
+                overlayContainer.classList.remove('active');
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlayContainer.addEventListener('click', function(e) {
+                if (e.target === overlayContainer) {
+                    overlayContainer.classList.remove('active');
+                }
+            });
+        }
+
+        // Setup for Finview 5 buttons
+        setupOverlay('finview5OverlayBtn', 'overlayContainer5', 'closeOverlay5');
+        setupOverlay('finview5BottomOverlayBtn', 'overlayContainer5Bottom', 'closeOverlay5Bottom');
+
+        // Setup for Finview 8 button
+        setupOverlay('finview8BottomOverlayBtn', 'overlayContainer8Bottom', 'closeOverlay8Bottom');
+
+        // Setup for Finview 11 button
+        setupOverlay('finview11BottomOverlayBtn', 'overlayContainer11Bottom', 'closeOverlay11Bottom');
+
+    </script>
+    
+</body>
+</html>
