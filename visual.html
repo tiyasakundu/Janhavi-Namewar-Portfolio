@@ -1,1 +1,338 @@
-<!DOCTYPE html><html lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Visual & Creative Skills</title><link rel="icon" href="images\Logo.png" type="image/png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet"><link rel="stylesheet" href="css/styles_visual.css"><div class="video-background"><video autoplay muted loop playsinline><source src="images\11.mp4" type="video/mp4">Your browser does not support the video tag.</video></div><nav><img src="images/Logo.png" alt="Logo" class="logo"><div class="hamburger" onclick="toggleMenu()">&#9776;</div><div class="cross" onclick="toggleMenu()">&#10005;</div><ul><li><a href="index.html">Home</a><li><a href="project.html" class="active">Projects</a><li><a href="about.html">About me</a><li><a href="#contact">Contact</a></ul></nav><div class="skill-buttons"><a href="project.html"><button class="skill-btn1"><i class="fa-solid fa-arrow-left"></i>UI UX</button></a> <a href="visual.html"><button class="skill-btn2">Visual & Creative Skills</button></a></div><div class="image-cards"><div class="card"><img src="images/Emosign Card.png" alt="Emosign" class="image"> <a href="emosign.html" class="image-btn1">View Project <i class="fa-solid fa-arrow-right"></i></a><div class="card-text"><h2>Emosign</h2><p>Research | Card Game</div></div><div class="card"><img src="images/Ecoglee.png" alt="Ecoglee" class="image"> <a href="ecoglee.html" class="image-btn2">View Project <i class="fa-solid fa-arrow-right"></i></a><div class="card-text"><h2>Ecoglee</h2><p>Branding</div></div><div class="arrow-container" id="arrowContainer"><span><i class="fa-solid fa-angle-down"></i></span></div><div class="card"><img src="images/Fabindia.png" alt="Fabindia" class="image"> <a href="fabindia.html" class="image-btn3">View Project <i class="fa-solid fa-arrow-right"></i></a><div class="card-text"><h2>Fabindia</h2><p>Packaging</div></div><div class="card"><img src="images/Superstitions.png" alt="Superstitions" class="image"> <a href="superstitions.html" class="image-btn4">View Project <i class="fa-solid fa-arrow-right"></i></a><div class="card-text"><h2>Superstitions</h2><p>Publication</div></div></div><section id="carousel-visual" class="carousel-container"><button class="carousel-arrow left-arrow" id="left-arrow">&#8249;</button><div class="carousel"><div class="carousel-track"><img src="images/Illustrations/Assignment 3.png" alt="I1" class="carousel-img"> <img src="images/Illustrations/Assignment 5.jpg" alt="I2" class="carousel-img"> <img src="images/Illustrations/Assignment 7.jpg" alt="I3" class="carousel-img"> <img src="images/Illustrations/Assignment- 6.jpg" alt="I4" class="carousel-img"> <img src="images/Illustrations/unnamed (1).png" alt="I5" class="carousel-img"> <img src="images/Illustrations/unnamed.png" alt="I6" class="carousel-img"> <img src="images/Illustrations/Untitled-Artwork - 2023-04-20T025607.912.png" alt="I7" class="carousel-img"> <img src="images/Illustrations/Untitled-Artwork - 2023-04-20T030736.358.png" alt="I8" class="carousel-img"></div></div><button class="carousel-arrow right-arrow" id="right-arrow">&#8250;</button></section><div id="fullscreenModal" class="fullscreen-modal"><span class="close-btn">&times;</span><img class="fullscreen-img" id="expandedImg" alt="Expanded Image"></div><footer id="contact"><div class="social-icons"><a href="mailto:janhavinamewar@gmail.com" target="_blank"><i class="fas fa-envelope"></i> </a><a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank"><i class="fab fa-linkedin"></i> </a><a href="https://www.behance.net/janhavinamewar_10" target="_blank"><i class="fab fa-behance"></i></a></div><h3>Thank you for your interest in my work. Lets connect!</h3><p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</footer><button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button><script>document.addEventListener("DOMContentLoaded",()=>{function e(){var e=document.querySelector("nav ul"),o=document.querySelector(".hamburger"),r=document.querySelector(".cross");e.classList.toggle("show"),o.classList.toggle("hidden"),r.classList.toggle("visible")}function o(){var e=document.querySelector("nav ul"),o=document.querySelector(".hamburger"),r=document.querySelector(".cross");e.classList.remove("show"),o.classList.remove("hidden"),r.classList.remove("visible")}document.querySelector(".hamburger").addEventListener("click",e),document.querySelector(".cross").addEventListener("click",e),document.querySelectorAll("nav ul li a").forEach(e=>{e.addEventListener("click",o)})});let scrollUpBtn=document.getElementById("scrollUpBtn");function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}window.onscroll=function(){200<document.body.scrollTop||200<document.documentElement.scrollTop?scrollUpBtn.style.display="block":scrollUpBtn.style.display="none"};let carouselTrack=document.querySelector(".carousel"),leftArrow=document.getElementById("left-arrow"),rightArrow=document.getElementById("right-arrow");function checkArrows(){var e=carouselTrack.scrollWidth-carouselTrack.clientWidth;carouselTrack.scrollLeft<=0?leftArrow.style.display="none":leftArrow.style.display="block",carouselTrack.scrollLeft>=e?rightArrow.style.display="none":rightArrow.style.display="block"}checkArrows(),carouselTrack.addEventListener("scroll",checkArrows),leftArrow.addEventListener("click",()=>{var e=document.querySelector(".carousel-img").clientWidth+40;carouselTrack.scrollBy({left:-e,behavior:"smooth"})}),rightArrow.addEventListener("click",()=>{var e=document.querySelector(".carousel-img").clientWidth+40;carouselTrack.scrollBy({left:e,behavior:"smooth"})});let modal=document.getElementById("fullscreenModal"),modalImg=document.getElementById("expandedImg"),closeBtn=document.querySelector(".close-btn"),images=document.querySelectorAll(".carousel-img"),arrowContainer=(images.forEach(e=>{e.addEventListener("click",()=>{modal.style.display="flex",modalImg.src=e.src})}),closeBtn.addEventListener("click",()=>{modal.style.display="none"}),modal.addEventListener("click",e=>{e.target===modal&&(modal.style.display="none")}),document.addEventListener("keydown",e=>{"Escape"===e.key&&(modal.style.display="none")}),document.addEventListener("keydown",e=>{"Escape"===e.key&&(modal.style.display="none")}),document.getElementById("arrowContainer")),carouselSection=document.getElementById("carousel-visual"),observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting?arrowContainer.style.display="none":arrowContainer.style.display="block"})});observer.observe(carouselSection)</script><script src="scripts\script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual & Creative Skills</title>
+    <link rel="icon" href="images\Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_visual.css">
+</head>
+
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images\11.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="cross" onclick="toggleMenu()">
+            &#10005; <!-- Cross icon -->
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Skill Buttons -->
+    <div class="skill-buttons">
+        <a href="project.html"><button class="skill-btn1"><i class="fa-solid fa-arrow-left"></i>UI UX</button></a>
+        <a href="visual.html"><button class="skill-btn2">Visual Design</button></a>
+    </div>
+
+<!-- Image Cards Section -->
+<div class="image-cards">
+    <!-- Row 1 -->
+    <div class="card">
+        <img src="images/Emosign Card.png" alt="Emosign" class="image">
+        <a href="emosign.html" class="image-btn1">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="card-text">
+            <h2>Emosign</h2>
+            <p>Research | Card Game</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/Ecoglee.png" alt="Ecoglee" class="image">
+        <a href="ecoglee.html" class="image-btn2">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="card-text">
+            <h2>Ecoglee</h2>
+            <p>Branding</p>
+        </div>
+    </div>
+
+    <!-- Arrow in Next Row -->
+    <div class="arrow-container" id="arrowContainer">
+        <span><i class="fa-solid fa-angle-down"></i></span>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="card">
+        <img src="images/Fabindia.png" alt="Fabindia" class="image">
+        <a href="fabindia.html" class="image-btn3">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="card-text">
+            <h2>Fabindia</h2>
+            <p>Packaging</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/Superstitions.png" alt="Superstitions" class="image">
+        <a href="superstitions.html" class="image-btn4">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="card-text">
+            <h2>Superstitions</h2>
+            <p>Publication</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Carousel Section -->
+<!-- <div class="carousel">    
+    <div class="carousel-inner">
+        <div class="carousel-track">
+            <img src="images/Illustrations/Assignment 3.png" alt="I1" class="carousel-img">
+            <img src="images/Illustrations/Assignment 5.jpg" alt="I2" class="carousel-img">
+            <img src="images/Illustrations/Assignment 7.jpg" alt="I3" class="carousel-img">
+            <img src="images/Illustrations/Assignment- 6.jpg" alt="I4" class="carousel-img">
+            <img src="images/Illustrations/unnamed (1).png" alt="I5" class="carousel-img">
+            <img src="images/Illustrations/unnamed.png" alt="I6" class="carousel-img">
+            <img src="images/Illustrations/Untitled-Artwork - 2023-04-20T025607.912.png" alt="I7" class="carousel-img">
+            <img src="images/Illustrations/Untitled-Artwork - 2023-04-20T030736.358.png" alt="I8" class="carousel-img">
+        </div>
+    </div>
+</div> -->
+
+<!-- Carousel Section -->
+<section id="carousel-visual" class="carousel-container">
+    <button class="carousel-arrow left-arrow" id="left-arrow">&#8249;</button>
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="images/Illustrations/Assignment 3.png" alt="I1" class="carousel-img">
+            <img src="images/Illustrations/Assignment 5.jpg" alt="I2" class="carousel-img">
+            <img src="images/Illustrations/Assignment 7.jpg" alt="I3" class="carousel-img">
+            <img src="images/Illustrations/Assignment- 6.jpg" alt="I4" class="carousel-img">
+            <img src="images/Illustrations/unnamed (1).png" alt="I5" class="carousel-img">
+            <img src="images/Illustrations/unnamed.png" alt="I6" class="carousel-img">
+            <img src="images/Illustrations/Untitled-Artwork - 2023-04-20T025607.912.png" alt="I7" class="carousel-img">
+            <img src="images/Illustrations/Untitled-Artwork - 2023-04-20T030736.358.png" alt="I8" class="carousel-img">
+        </div>
+    </div>
+    <button class="carousel-arrow right-arrow" id="right-arrow">&#8250;</button>
+</section>
+
+<!-- Fullscreen Image Modal -->
+<div id="fullscreenModal" class="fullscreen-modal">
+    <span class="close-btn">&times;</span> <!-- Close button -->
+    <img class="fullscreen-img" id="expandedImg" alt="Expanded Image">
+</div>
+
+
+<!-- <div id="ecoglee-image" style="display: none;"></div>
+<div id="emosign-image" style="display: none;"></div>
+<div id="superstitions-image" style="display: none;"></div>
+<div id="fabindia-image" style="display: none;"></div> -->
+
+    
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="mailto:janhavinamewar@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <h3>Thank you for your interest in my work. Lets connect!</h3>
+        <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
+    </footer>
+    
+        <!-- Scroll Up Button -->
+        <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            function toggleMenu() {
+                const menu = document.querySelector('nav ul');
+                const hamburger = document.querySelector('.hamburger');
+                const cross = document.querySelector('.cross');
+
+                // Toggle the menu and icons
+                menu.classList.toggle('show');
+                hamburger.classList.toggle('hidden');
+                cross.classList.toggle('visible');
+            }
+
+            // Close the menu when a menu item is clicked
+            function closeMenu() {
+                const menu = document.querySelector('nav ul');
+                const hamburger = document.querySelector('.hamburger');
+                const cross = document.querySelector('.cross');
+
+                menu.classList.remove('show');
+                hamburger.classList.remove('hidden');
+                cross.classList.remove('visible');
+            }
+
+            // Add event listener for hamburger click
+            document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+            // Add event listener for cross click
+            document.querySelector('.cross').addEventListener('click', toggleMenu);
+
+            // Close the menu when any menu item is clicked
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+
+
+        // Get the button
+        const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+        // Show the button when scrolling down
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollUpBtn.style.display = "block"; // Show button
+            } else {
+                scrollUpBtn.style.display = "none"; // Hide button
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll effect
+            });
+        }
+        
+        
+        // Select carousel and arrows
+        const carouselTrack = document.querySelector('.carousel');
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+
+        // Function to check if at the start or end and hide/show arrows
+        function checkArrows() {
+            const maxScrollLeft = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+            
+            // Hide left arrow if at the start
+            if (carouselTrack.scrollLeft <= 0) {
+                leftArrow.style.display = 'none';
+            } else {
+                leftArrow.style.display = 'block';
+            }
+            
+            // Hide right arrow if at the end
+            if (carouselTrack.scrollLeft >= maxScrollLeft) {
+                rightArrow.style.display = 'none';
+            } else {
+                rightArrow.style.display = 'block';
+            }
+        }
+
+        // Call checkArrows on load to set the initial state
+        checkArrows();
+
+        // Add event listener to scroll event to check arrow visibility during scroll
+        carouselTrack.addEventListener('scroll', checkArrows);
+
+        // Arrow click functionality
+        leftArrow.addEventListener('click', () => {
+            // Scroll left by the width of one image plus its margin
+            const imgWidth = document.querySelector('.carousel-img').clientWidth + 40; // Add margin
+            carouselTrack.scrollBy({
+                left: -imgWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        rightArrow.addEventListener('click', () => {
+            // Scroll right by the width of one image plus its margin
+            const imgWidth = document.querySelector('.carousel-img').clientWidth + 40; // Add margin
+            carouselTrack.scrollBy({
+                left: imgWidth,
+                behavior: 'smooth'
+            });
+        });
+
+
+
+        // Get the modal and close button
+        const modal = document.getElementById('fullscreenModal');
+        const modalImg = document.getElementById('expandedImg');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Get all images in the carousel
+        const images = document.querySelectorAll('.carousel-img');
+
+        // Loop through the images and add a click event listener
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // When an image is clicked, display it in the modal
+                modal.style.display = 'flex'; // Show the modal (flex for centering)
+                modalImg.src = image.src; // Set the src of the expanded image to the clicked image's src
+            });
+        });
+
+        // Close the modal when the close button is clicked
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none'; // Hide the modal
+        });
+
+        // Optionally close the modal if clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none'; // Hide the modal
+            }
+        });
+
+        // Optional: Close the modal when 'Esc' is pressed
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none'; // Hide the modal when Esc is pressed
+            }
+        });
+
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none'; // Hide the modal when Esc is pressed
+            }
+        });
+
+        // Select the arrow container and the carousel section
+        const arrowContainer = document.getElementById('arrowContainer');
+        const carouselSection = document.getElementById('carousel-visual');
+
+        // Create an Intersection Observer to detect when the arrow enters the carousel section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Hide arrow container when it is within the carousel section
+                if (entry.isIntersecting) {
+                    arrowContainer.style.display = 'none'; // Hide the arrow container
+                } else {
+                    arrowContainer.style.display = 'block'; // Show it again if it is not in the carousel section
+                }
+            });
+        });
+
+        // Observe the carousel section
+        observer.observe(carouselSection);
+    </script>
+
+    <script src="scripts\script.js"></script>
+
+</body>
+</html>

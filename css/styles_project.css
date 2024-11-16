@@ -197,11 +197,11 @@ body.scrolled nav {
 /* UI UX Button (Make it larger) */
 .skill-btn1 {
     font-family: "Work Sans", sans-serif;
-    padding: 12px 75px; /* Increased padding for a larger button */
-    background-color: #2980b9;
+    padding: 12px 70px; /* Increased padding for a larger button */
+    background-color: #1b547a;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -216,11 +216,11 @@ body.scrolled nav {
 /* Skill Button 2 Styling */
 .skill-btn2 {
     font-family: "Work Sans", sans-serif;
-    padding: 12px 25px;
-    background-color: white;
-    color: #333;
-    border: 2px solid #2980b9;
-    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -231,7 +231,7 @@ body.scrolled nav {
 
 /* Arrow icon inside the button */
 .skill-btn2 i {
-    margin-left: 10px; /* Space between text and arrow */
+    margin-left: 20px; /* Space between text and arrow */
     opacity: 0; /* Initially hidden */
     transform: translateX(-10px); /* Shifted left initially */
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -392,7 +392,7 @@ body.scrolled nav {
     padding: 10px 16px;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
@@ -785,7 +785,7 @@ footer .copyright {
     .case-study-btn{
         font-size: 0.8rem;
         padding: 8px 12px;
-        border-radius: 5px;
+        border-radius: 15px;
     }
 }
 
@@ -1029,15 +1029,15 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 8px 55px; /* Medium padding */
+        padding: 8px 50px; /* Medium padding */
         font-size: 0.7rem;
-        border-radius: 5px;
+        border-radius: 15px;
     }
 
     .skill-btn2 {
         padding: 8px 10px;
         font-size: 0.7rem;
-        border-radius: 5px;
+        border-radius: 15px;
     }
 
     .skill-buttons i{
@@ -1066,7 +1066,7 @@ footer .copyright {
     }
 
     .case-study-btn {
-        padding: 10px 20px; /* Reduce button padding */
+        padding: 6px 10px; /* Reduce button padding */
         font-size: 0.6rem; /* Smaller button text */
     }
 
