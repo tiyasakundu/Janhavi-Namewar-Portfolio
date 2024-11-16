@@ -1,1 +1,686 @@
-*{box-sizing:border-box;margin:0;padding:0}body{background:#fff;color:#333;font-family:Work Sans,sans-serif;overflow-x:hidden}nav{align-items:center;background-color:#ffffffb1;border-bottom-left-radius:35px;border-bottom-right-radius:35px;box-shadow:0 4px 15px rgba(0,0,0,.1);display:flex;justify-content:center;margin:auto;padding:20px 40px;position:sticky;top:0;width:60%;z-index:1000}nav .logo{height:35px;margin-left:30px}nav ul{display:flex;justify-content:center;list-style:none;max-width:1200px;width:100%}nav ul li{margin:0 20px}nav ul li a{border-radius:20px;color:#333;font-size:18px;padding:10px 20px;text-decoration:none;transition:background-color .3s ease}nav ul li a.active,nav ul li a:hover{text-decoration:underline}html{scroll-behavior:smooth}.cross,.hamburger{display:none}body.scrolled nav{background-color:hsla(0,0%,100%,.9);box-shadow:0 2px 5px rgba(0,0,0,.1)}@media (max-width:1024px){nav{align-items:center;border-bottom-left-radius:0;border-bottom-right-radius:0;display:flex;justify-content:space-between;padding:20px 40px;width:100%}}@media (max-width:768px){.cross,.hamburger{display:contents}nav{align-items:center;border-bottom-left-radius:0;border-bottom-right-radius:0;display:flex;justify-content:space-between;padding:20px 40px;width:100%}nav .logo{height:30px;margin-left:0}nav ul{align-items:center;background-color:#fff;display:none;flex-direction:column;height:100vh;justify-content:center;left:0;position:absolute;top:0;width:100%;z-index:100}nav ul.show{display:flex}nav ul li{margin:20px 0}.cross,.hamburger{cursor:pointer;font-size:24px;margin-right:10px;z-index:101}.cross,.hamburger.hidden{display:none}.cross.visible{display:block}}.project-bg{flex-direction:column;margin-top:-80px}.project-bg,.project-bg div{display:flex;justify-content:center}.project-bg div{width:100%}.project-bg img{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.hidden-image{display:none}.base-image,.image-stack{position:relative}.base-image{max-width:83%;z-index:1}.overlay-image{left:0;position:absolute;top:0;width:100%;z-index:2}.project-bg div:nth-child(10) img,.project-bg div:nth-child(12) img,.project-bg div:nth-child(14) img,.project-bg div:nth-child(15) img,.project-bg div:nth-child(17) img,.project-bg div:nth-child(19) img,.project-bg div:nth-child(20) img,.project-bg div:nth-child(22) img,.project-bg div:nth-child(5) img,.project-bg div:nth-child(6) img,.project-bg div:nth-child(8) img,.project-bg div:nth-child(9) img{width:83%!important}.truble-5-container{position:relative}.truble-5-btn{background-color:#66b4b3;border:none;border-radius:10px;bottom:80px;color:#fff;cursor:pointer;font-size:1rem;left:14.6%;padding:10px 20px;position:absolute;transition:transform .3s ease;z-index:10}.truble-5-btn i{margin-left:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.truble-5-btn:hover{background-color:#66b4b3;color:#fff;transform:scale(1.1)}.truble-5-btn:hover i{opacity:1;transform:translateX(0)}.truble-8-container{position:relative}.truble-8-btn{background-color:#66b4b3;border:none;border-radius:10px;bottom:24%;color:#fff;cursor:pointer;font-size:1rem;padding:10px 20px;position:absolute;right:24%;transition:transform .3s ease;z-index:10}.truble-8-btn i{margin-left:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.truble-8-btn:hover{background-color:#66b4b3;color:#fff;transform:scale(1.1)}.truble-8-btn:hover i{opacity:1;transform:translateX(0)}.truble-9-container{position:relative}.truble-9-btn{background-color:#66b4b3;border:none;border-radius:10px;bottom:55%;color:#fff;cursor:pointer;font-size:1rem;left:14.4%;padding:10px 20px;position:absolute;transition:transform .3s ease;z-index:10}.truble-9-btn i{margin-left:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.truble-9-btn:hover{background-color:#66b4b3;color:#fff;transform:scale(1.1)}.truble-9-btn:hover i{opacity:1;transform:translateX(0)}.truble-11-container{position:relative}.truble-11-btn{background-color:#66b4b3;border:none;border-radius:10px;color:#fff;cursor:pointer;font-size:1rem;left:14%;padding:10px 20px;position:absolute;top:26%;transition:transform .3s ease;z-index:10}.truble-11-btn i{margin-left:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.truble-11-btn:hover{background-color:#66b4b3;color:#fff;transform:scale(1.1)}.truble-11-btn:hover i{opacity:1;transform:translateX(0)}.truble-12-container{position:relative}.truble-12-btn{background-color:#66b4b3;border:none;border-radius:10px;color:#fff;cursor:pointer;font-size:1rem;left:14%;padding:10px 20px;position:absolute;top:30%;transition:transform .3s ease;z-index:10}.truble-12-btn i{margin-left:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.truble-12-btn:hover{background-color:#66b4b3;color:#fff;transform:scale(1.1)}.truble-12-btn:hover i{opacity:1;transform:translateX(0)}.truble-13-container{position:relative}.truble-13-btn{background-color:#66b4b3;border:none;border-radius:10px;color:#fff;cursor:pointer;font-size:1rem;left:14%;padding:10px 20px;position:absolute;top:23%;transition:transform .3s ease;z-index:10}.truble-13-btn i{margin-left:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.truble-13-btn:hover{background-color:#66b4b3;color:#fff;transform:scale(1.1)}.truble-13-btn:hover i{opacity:1;transform:translateX(0)}.overlay-container{align-items:center;background-color:rgba(0,0,0,.8);display:flex;height:100%;justify-content:center;left:0;opacity:0;position:fixed;top:0;transition:opacity .3s ease-in-out,visibility .3s ease-in-out;visibility:hidden;width:100%;z-index:1001}.overlay-container.active{opacity:1;visibility:visible}.close-btn{color:#fff;cursor:pointer;font-size:2rem;position:absolute;right:20px;top:20px}.overlay-image-popup{max-height:80%;max-width:90%}.button-container{display:flex;gap:170px;justify-content:center;margin-bottom:60px;margin-top:50px}.nav-button{background-color:#2980b9;border:none;border-radius:10px;color:#fff;cursor:pointer;font-size:1rem;padding:15px 30px;text-decoration:none;transition:transform .3s ease}.nav-button:hover{transform:scale(1.1)}.nav-button i.fa-arrow-left{margin-right:10px;opacity:0;transform:translateX(-10px);transition:transform .3s ease,opacity .3s ease}.nav-button i.fa-arrow-right{margin-left:10px;opacity:0;transform:translateX(10px);transition:transform .3s ease,opacity .3s ease}.nav-button:hover i.fa-arrow-left{opacity:1;transform:translateX(-5px)}.nav-button:hover i.fa-arrow-right{opacity:1;transform:translateX(5px)}footer{background-color:transparent;color:#333;font-size:1rem;margin:0 auto;padding:10px 0;text-align:center;width:100%}footer .social-icons{color:#333;display:flex;font-size:1.5rem;gap:20px;justify-content:center;margin:20px 0}footer .social-icons a{background-color:hsla(0,0%,100%,.497);border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,.1);color:#333;padding:10px;text-decoration:none;transition:color .3s ease;width:45px}footer .social-icons a:hover{background-color:#0077b5;color:#fff}footer h3{color:#333;font-size:1rem;font-weight:600;margin-bottom:20px;margin-top:20px}footer p{color:#666;font-size:.9rem;margin-bottom:20px}footer .copyright{color:#888;font-size:.8rem;margin-top:10px}.scroll-up-btn{background-color:#2980b9;border:none;border-radius:50%;bottom:20px;box-shadow:0 4px 8px rgba(0,0,0,.2);color:#fff;cursor:pointer;display:none;font-size:24px;height:50px;position:fixed;right:20px;transition:background-color .3s,transform .3s;width:50px;z-index:30}.scroll-up-btn:hover{background-color:#1e5f89;transform:scale(1.1)}@media (max-width:768px){footer{font-size:1.3rem;padding:15px}footer .social-icons{font-size:1.5rem;gap:15px}footer h3{font-size:1rem}footer p{font-size:.9rem}}@media (max-width:480px){footer{font-size:1rem;padding:10px}footer .social-icons{font-size:1rem;gap:10px}footer h3,footer p{font-size:.6rem}}@media screen and (max-width:1280px){nav ul li a{font-size:15px}.truble-5-btn{bottom:60px}.truble-8-btn{bottom:21%}.truble-9-btn{bottom:53%}}@media (max-width:768px){.button-container{flex-direction:row;gap:20px}}@media (max-width:1024px){.project-bg div:nth-child(10) img,.project-bg div:nth-child(12) img,.project-bg div:nth-child(14) img,.project-bg div:nth-child(15) img,.project-bg div:nth-child(17) img,.project-bg div:nth-child(19) img,.project-bg div:nth-child(20) img,.project-bg div:nth-child(22) img,.project-bg div:nth-child(5) img,.project-bg div:nth-child(6) img,.project-bg div:nth-child(8) img,.project-bg div:nth-child(9) img{width:100%!important}.image-stack{display:none!important}.hidden-image{display:block!important}.project-bg{margin-top:0}.truble-11-btn,.truble-12-btn,.truble-13-btn,.truble-5-btn,.truble-8-btn,.truble-9-btn{font-size:.9rem}.truble-11-btn i,.truble-12-btn i,.truble-13-btn i,.truble-5-btn i,.truble-8-btn i,.truble-9-btn i{margin-left:20px;opacity:1}.truble-5-btn{bottom:40px;left:7%}.truble-8-btn{bottom:22%;right:18%}.truble-9-btn{bottom:51%;left:7%}.truble-11-btn,.truble-12-btn,.truble-13-btn{left:7%}.button-container{flex-direction:row;gap:20px;padding:20px}.nav-button{font-size:1.1rem;padding:10px 20px;text-align:center;width:220px}.nav-button i.fa-arrow-left{margin-right:10px;opacity:1}.nav-button i.fa-arrow-right{margin-left:10px;opacity:1}}@media (max-width:480px){.nav-button i.fa-arrow-left{margin-right:0;opacity:1}.nav-button i.fa-arrow-right{margin-left:2px;opacity:1}.truble-11-btn,.truble-12-btn,.truble-13-btn,.truble-5-btn,.truble-8-btn,.truble-9-btn{border-radius:5px;padding:4px 8px}.truble-5-btn{bottom:10px;font-size:.6rem}.truble-8-btn{bottom:20%;font-size:.6rem;right:15%}.truble-9-btn{bottom:50%;font-size:.6rem}.truble-11-btn{font-size:.6rem;top:26%}.truble-12-btn{font-size:.6rem;top:33%}.truble-13-btn{font-size:.6rem;top:23%}.button-container{flex-direction:row;gap:20px;padding:10px}.nav-button{border-radius:5px;font-size:.7rem;padding:8px 10px;text-align:center;width:140px}.scroll-up-btn{font-size:20px;height:40px;width:40px}}@media (max-width:412px){.nav-button{font-size:.5rem;padding:8px 10px;text-align:center;width:140px}}@media (width:540px){.nav-button{font-size:.6rem;padding:8px 10px;text-align:center;width:140px}}@media (width:350px){.truble-11-btn,.truble-12-btn,.truble-13-btn,.truble-5-btn,.truble-8-btn,.truble-9-btn{border-radius:5px;font-size:.3rem;padding:6px 10px}}@media screen and (max-width:1280px){nav ul li a{font-size:15px}}
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the navigation */
+    align-items: center;
+    background-color: #ffffffb1; /* Adjusted background color */
+    padding: 20px 40px; /* Adjust padding as needed */
+    border-bottom-left-radius: 35px; /* Rounded corners */
+    border-bottom-right-radius: 35px;
+    margin: auto; /* Center the nav bar horizontally */
+    width: 60%; /* Adjust the width to fit in the center */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+}
+
+nav .logo {
+    height: 35px;
+    margin-left: 30px;
+}
+
+/* Nav list */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the items within the navbar */
+    width: 100%; /* Full width to evenly space items */
+    max-width: 1200px; /* Maximum width for the navbar */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded links to match the style */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide hamburger for now */
+.hamburger, .cross {
+    display: none;
+}
+
+/* Change navbar background on scroll */
+body.scrolled nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+}
+
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+/* For small screens (max-width: 760px) */
+@media (max-width: 768px) {
+    .hamburger, .cross {
+        display:contents;
+    }
+
+    nav {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        height: 30px;
+        margin-left: 0px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger and Cross Icons */
+    .hamburger, .cross {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .cross {
+        display: none; /* Initially hide the cross */
+    }
+
+    /* Toggle visibility of hamburger and cross */
+    .hamburger.hidden {
+        display: none; /* Hide the hamburger when menu is active */
+    }
+
+    .cross.visible {
+        display: block; /* Show the cross when menu is active */
+    }
+}
+
+
+.project-bg {
+    display: flex;
+    flex-direction: column; /* Ensures the images wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
+    margin-top: -80px;
+}
+
+.project-bg div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-bg img {
+    width: 100%; /* Default width for images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hidden-image {
+    display: none;
+}
+
+/* Positioning for stacking images */
+.image-stack {
+    position: relative;
+}
+
+.base-image {
+    position: relative;
+    max-width: 83%; /* Base image takes the full width of its container */
+    z-index: 1; /* Lower layer */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Higher layer to be placed on top */
+    width: 100%; /* Full viewport width for the overlay image */
+}
+
+/* Specific images with reduced width */
+/* .project-bg div:nth-child(3) img, */
+.project-bg div:nth-child(4) img,
+.project-bg div:nth-child(5) img,
+.project-bg div:nth-child(6) img,
+.project-bg div:nth-child(7) img,
+.project-bg div:nth-child(8) img,
+.project-bg div:nth-child(9) img,
+.project-bg div:nth-child(10) img,
+.project-bg div:nth-child(11) img,
+.project-bg div:nth-child(12) img,
+.project-bg div:nth-child(13) img,
+.project-bg div:nth-child(14) img,
+.project-bg div:nth-child(15) img, 
+.project-bg div:nth-child(16) img,
+.project-bg div:nth-child(17) img,
+.project-bg div:nth-child(18) img,
+.project-bg div:nth-child(19) img {
+    width: 83% !important; /* Smaller width for specific images */
+}
+
+.project-bg div:nth-child(4),
+.project-bg div:nth-child(6),
+.project-bg div:nth-child(11) {
+    background-color: #329D9C;
+}
+
+.project-bg div:nth-child(19) {
+    background-color: #EAEAEA;
+}
+
+/* Button over the Truble 5 image */
+.truble-18-container {
+    position: relative; /* Ensure the button is positioned relative to the image container */
+}
+
+.truble-18-btn {
+    position: absolute;
+    bottom: 80px;
+    align-self: center;
+    padding: 10px 30px;
+    padding-left: 50px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 10; /* Ensure the button is above the image */
+    transition: transform 0.3s ease;
+}
+
+.truble-18-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.truble-18-btn:hover {
+    background-color: #66B4B3;
+    color:white;
+    transform: scale(1.1); 
+}
+
+.truble-18-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(10px); /* Slide it to the right of the text */
+}
+
+
+/* Overlay container (hidden by default) */
+.overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show the overlay when active */
+.overlay-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* The image displayed in the overlay */
+.overlay-image-popup {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 170px;
+    margin-top: 50px; /* Adjust this based on the spacing you want */
+    margin-bottom: 60px;
+}
+
+/* Button styles */
+.nav-button {
+    padding: 15px 30px;
+    background-color: #2980b9; /* Light blue background */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-button-left{
+    padding-left: 20px;
+    padding-right: 40px;
+}
+.nav-button-right{
+    padding-left: 50px;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-button i.fa-arrow-left {
+    margin-right: 10px; /* Space between icon and text */
+    opacity: 0;
+    transform: translateX(0); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.nav-button i.fa-arrow-right {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0;
+    transform: translateX(0); /* Initially shifted right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the left arrow */
+.nav-button:hover i.fa-arrow-left {
+    opacity: 1; /* Make the left arrow visible */
+    transform: translateX(-10px); /* Move it slightly more to the left */
+}
+
+/* Hover effect for the right arrow */
+.nav-button:hover i.fa-arrow-right {
+    opacity: 1; /* Make the right arrow visible */
+    transform: translateX(10px); /* Move it slightly more to the right */
+}
+
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 10px 0; /* Adds padding to create space inside the footer */
+    background-color: transparent; /* Adjusted background color */
+    /* border-top-left-radius: 50px; 
+    border-top-right-radius:50px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    font-size: 1rem; /* Slightly reduced font size */
+    width: 100%;
+    margin: 0 auto;
+    color: #333; /* Darker text color for better contrast */
+}
+
+/* Social icons */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap for smaller icons */
+    margin: 20px 0; /* Adjusts space around icons */
+    font-size: 1.5rem; /* Icon size */
+    color: #333;
+}
+
+footer .social-icons a {
+    color: #333; /* Set icon color */
+    width:45px;
+    background-color: rgba(255, 255, 255, 0.497);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    transition: color 0.3s ease; /* Smooth transitions */
+    text-decoration: none; /* Remove underline */
+}
+
+
+footer .social-icons a:hover {
+    background-color: #0077b5; /* Blue background on hover (LinkedIn example) */
+    color: #fff; /* White icon color on hover */
+}
+
+/* Footer text */
+footer h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666; /* Lighter color for subtext */
+}
+
+/* Copyright section */
+footer .copyright {
+    font-size: 0.8rem;
+    color: #888; /* Lighter gray for copyright text */
+    margin-top: 10px;
+}
+
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: none; /* Initially hidden */
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 30;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.scroll-up-btn:hover {
+    background-color: #1e5f89; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    footer .social-icons {
+        font-size: 1.5rem;
+        gap: 15px;
+    }
+
+    footer h3 {
+        font-size: 1rem;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1rem; /* Smaller font size on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    footer .social-icons {
+        font-size: 1rem; /* Further reduce icon size */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    footer h3{
+        font-size: 0.6rem;
+    }
+
+    footer p {
+        font-size: 0.6rem; /* Even smaller footer text */
+    }
+}
+
+
+/* <----------------------responsive---------------------> */
+
+/* Media Queries */
+
+@media screen and (max-width: 1280px) {
+    nav ul li a {
+        font-size: 15px;
+    }   
+
+    .truble-5-btn {
+        bottom: 60px;
+    }
+
+    .truble-8-btn {
+        bottom:21%;
+    }
+
+    .truble-9-btn {
+        bottom:53%;
+    }
+}
+
+/* For devices with max width 768px */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: row; /* Stack buttons vertically */
+        gap: 20px; /* Reduced space between buttons */
+    }
+}
+
+/* For devices with max width 1024px */
+@media (max-width: 1024px) {
+
+    .project-bg div:nth-child(4) img,
+    .project-bg div:nth-child(5) img,
+    .project-bg div:nth-child(6) img,
+    .project-bg div:nth-child(7) img,
+    .project-bg div:nth-child(8) img,
+    .project-bg div:nth-child(9) img,
+    .project-bg div:nth-child(10) img,
+    .project-bg div:nth-child(11) img,
+    .project-bg div:nth-child(12) img,
+    .project-bg div:nth-child(13) img,
+    .project-bg div:nth-child(14) img,
+    .project-bg div:nth-child(15) img, 
+    .project-bg div:nth-child(16) img,
+    .project-bg div:nth-child(17) img,
+    .project-bg div:nth-child(18) img,
+    .project-bg div:nth-child(19) img {
+        width: 100% !important; 
+    }
+
+    .image-stack {
+        display: none !important;
+    }
+
+    .hidden-image {
+        display: block !important;
+    }
+
+    .project-bg {
+        margin-top: 0;
+    }
+
+    .truble-18-btn {
+        font-size: 0.9rem;
+        bottom: 50px;
+    }
+
+    .truble-18-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 20px; /* Smaller button padding */
+        width: 220px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 10px; /* Space between icon and text */
+        opacity: 1;
+    }
+}
+
+/* For devices with max width 480px */
+@media (max-width: 480px) {
+
+    .nav-button i.fa-arrow-left {
+        margin-right: 5px;
+        /* margin-left: 2px;  */
+        opacity: 1;
+    }
+
+    .nav-button i.fa-arrow-right {
+        margin-left: 5px; /* Space between icon and text */
+        opacity: 1;
+    }
+
+    .truble-18-btn {
+        padding: 4px 15px;
+        border-radius: 15px;
+        font-size: 0.6rem;
+        bottom: 10px;
+    }
+
+    .truble-18-btn i.fa-arrow-right {
+        margin-left: 8px;
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 20px; /* Adjust gap for small screens */
+        padding: 10px;
+    }
+
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        border-radius: 15px;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .scroll-up-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 412px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (width: 540px){
+    .nav-button {
+        padding: 8px 10px; /* Smaller button padding */
+        width: 140px;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .truble-18-btn {
+        padding: 4px 8px;
+        padding-left: 19px;
+        border-radius: 15px;
+        font-size: 0.7rem;
+        bottom: 30px;
+    }
+}
+
+@media (width:350px){
+    .truble-18-btn {
+        padding: 6px 10px;
+        padding-left: 12px;
+        font-size: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    nav ul li a {
+        font-size: 15px;
+    }
+}

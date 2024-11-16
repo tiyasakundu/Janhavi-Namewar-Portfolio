@@ -214,12 +214,20 @@ body.scrolled nav {
     padding: 15px 30px;
     background-color: #2980b9; /* Light blue background */
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     text-decoration: none;
     font-size: 1rem;
     color: white;
     cursor: pointer;
     transition: transform 0.3s ease;
+}
+
+.nav-button-left{
+    padding-left: 20px;
+    padding-right: 40px;
+}
+.nav-button-right{
+    padding-left: 50px;
 }
 
 .nav-button:hover {
@@ -229,27 +237,27 @@ body.scrolled nav {
 .nav-button i.fa-arrow-left {
     margin-right: 10px; /* Space between icon and text */
     opacity: 0;
-    transform: translateX(-10px); /* Initially shifted left */
+    transform: translateX(0); /* Initially shifted left */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
 .nav-button i.fa-arrow-right {
     margin-left: 10px; /* Space between text and icon */
     opacity: 0;
-    transform: translateX(10px); /* Initially shifted right */
+    transform: translateX(0); /* Initially shifted right */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
 /* Hover effect for the left arrow */
 .nav-button:hover i.fa-arrow-left {
     opacity: 1; /* Make the left arrow visible */
-    transform: translateX(-5px); /* Move it slightly more to the left */
+    transform: translateX(-10px); /* Move it slightly more to the left */
 }
 
 /* Hover effect for the right arrow */
 .nav-button:hover i.fa-arrow-right {
     opacity: 1; /* Make the right arrow visible */
-    transform: translateX(5px); /* Move it slightly more to the right */
+    transform: translateX(10px); /* Move it slightly more to the right */
 }
 
 
@@ -452,13 +460,13 @@ footer .copyright {
 @media (max-width: 480px) {
 
     .nav-button i.fa-arrow-left {
-        margin-right: 0px;
+        margin-right: 5px;
         /* margin-left: 2px;  */
         opacity: 1;
     }
 
     .nav-button i.fa-arrow-right {
-        margin-left: 2px; /* Space between icon and text */
+        margin-left: 5px; /* Space between icon and text */
         opacity: 1;
     }
 
@@ -472,8 +480,8 @@ footer .copyright {
     .nav-button {
         padding: 8px 10px; /* Smaller button padding */
         width: 140px;
-        border-radius: 5px;
-        font-size: 0.7rem;
+        border-radius: 15px;
+        font-size: 0.6rem;
         text-align: center;
     }
 
@@ -501,19 +509,6 @@ footer .copyright {
         text-align: center;
     }
 }
-
-/* @media (width:350px){
-    .truble-5-btn,
-    .truble-8-btn,
-    .truble-9-btn,
-    .truble-11-btn,
-    .truble-12-btn,
-    .truble-13-btn {
-        padding: 6px 10px;
-        border-radius: 5px;
-        font-size: 0.3rem;
-    }
-} */
 
 @media screen and (max-width: 1280px) {
     nav ul li a {

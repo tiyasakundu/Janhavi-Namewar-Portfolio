@@ -1,1 +1,143 @@
-<!DOCTYPE html><html lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emosign</title><link rel="icon" href="images\Logo.png" type="image/png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet"><link rel="stylesheet" href="css\styles_emosign.css"><nav><img src="images/Logo.png" alt="Logo" class="logo"><div class="hamburger" onclick="toggleMenu()">&#9776;</div><div class="cross" onclick="toggleMenu()">&#10005;</div><ul><li><a href="index.html">Home</a><li><a href="project.html" class="active">Projects</a><li><a href="about.html">About me</a><li><a href="#contact">Contact</a></ul></nav><section class="project-bg"><div><img src="images/Emosign/Emosign 1.svg" alt="Emosign"></div><div><img src="images/Emosign/Emosign 2.svg" alt="Emosign"></div><div><img src="images/Emosign/Emosign 3.svg" alt="Emosign"></div><div class="emosign-container"><img src="images/Emosign/Emosign 4.svg" alt="Emosign 4" class="emosign-image"> <button class="overlay-trigger-btn bottom-left-btn" id="emosign4OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button></div><div class="emosign-container"><img src="images/Emosign/Emosign 5.svg" alt="Emosign 5" class="emosign-image"> <button class="overlay-trigger-btn bottom-left-btn" id="emosign5OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button></div><div><img src="images/Emosign/Emosign 6.svg" alt="Emosign"></div><div><img src="images/Emosign/Emosign 7.svg" alt="Emosign"></div><div><img src="images/Emosign/Emosign 8.svg" alt="Emosign"></div><div class="emosign-container"><img src="images/Emosign/Emosign 9.svg" alt="Emosign 9" class="emosign-image"> <button class="overlay-trigger-btn bottom-left-btn" id="emosign9OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button></div><div><img src="images/Emosign/Emosign 10.svg" alt="Emosign"></div><div><img src="images/Emosign/Emosign 11.svg" alt="Emosign"></div><div><img src="images/Emosign/Emosign 12.svg" alt="Emosign"></div><div id="overlayContainer4" class="overlay-container"><span class="close-btn" id="closeOverlay4">&times;</span> <img src="images\Emosign\Emosign 4-1.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup"></div><div id="overlayContainer5" class="overlay-container"><span class="close-btn" id="closeOverlay5">&times;</span> <img src="images\Emosign\Emosign 5-1.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup"></div><div id="overlayContainer9" class="overlay-container"><span class="close-btn" id="closeOverlay9">&times;</span> <img src="images\Emosign\Emosign 9-1.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup"></div></section><div class="button-container"><a href="visual.html" class="nav-button"><i class="fa-solid fa-arrow-left"></i>View all projects</a> <a href="ecoglee.html" class="nav-button">Next project<i class="fa-solid fa-arrow-right"></i></a></div><footer id="contact"><div class="social-icons"><a href="mailto:janhavinamewar@gmail.com" target="_blank"><i class="fas fa-envelope"></i> </a><a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank"><i class="fab fa-linkedin"></i> </a><a href="https://www.behance.net/janhavinamewar_10" target="_blank"><i class="fab fa-behance"></i></a></div><h3>Thank you for your interest in my work. Lets connect!</h3><p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</footer><button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button><script src="scripts\script.js"></script><script>function setupOverlay(e,t,n){e=document.getElementById(e);let a=document.getElementById(t);t=document.getElementById(n);e.addEventListener("click",function(){a.classList.add("active")}),t.addEventListener("click",function(){a.classList.remove("active")}),a.addEventListener("click",function(e){e.target===a&&a.classList.remove("active")})}setupOverlay("emosign4OverlayBtn","overlayContainer4","closeOverlay4"),setupOverlay("emosign5OverlayBtn","overlayContainer5","closeOverlay5"),setupOverlay("emosign9OverlayBtn","overlayContainer9","closeOverlay9")</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emosign</title>
+    <link rel="icon" href="images\Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet">
+    <link rel="stylesheet" href="css\styles_emosign.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="cross" onclick="toggleMenu()">
+            &#10005; <!-- Cross icon -->
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-bg">
+        <div><img src="images/Emosign/Emosign 1.svg" alt="Emosign"></div>
+        <div><img src="images/Emosign/Emosign 2.svg" alt="Emosign"></div>
+        <div><img src="images/Emosign/Emosign 3.svg" alt="Emosign"></div>
+    
+        <!-- Emosign 4 with overlay button -->
+        <div class="emosign-container">
+            <img src="images/Emosign/Emosign 4.svg" alt="Emosign 4" class="emosign-image">
+            <button class="overlay-trigger-btn bottom-left-btn" id="emosign4OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        
+        <!-- Emosign 5 with overlay button -->
+        <div class="emosign-container">
+            <img src="images/Emosign/Emosign 5.svg" alt="Emosign 5" class="emosign-image">
+            <button class="overlay-trigger-btn bottom-left-btn" id="emosign5OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        
+        <div><img src="images/Emosign/Emosign 6.svg" alt="Emosign"></div>
+        <div><img src="images/Emosign/Emosign 7.svg" alt="Emosign"></div>
+        <div><img src="images/Emosign/Emosign 8.svg" alt="Emosign"></div>
+    
+        <!-- Emosign 9 with overlay button -->
+        <div class="emosign-container">
+            <img src="images/Emosign/Emosign 9.svg" alt="Emosign 9" class="emosign-image">
+            <button class="overlay-trigger-btn bottom-left-btn" id="emosign9OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        
+        <div><img src="images/Emosign/Emosign 10.svg" alt="Emosign"></div>
+        <div><img src="images/Emosign/Emosign 11.svg" alt="Emosign"></div>
+        <div><img src="images/Emosign/Emosign 12.svg" alt="Emosign"></div>
+    
+        <!-- Overlays for the buttons -->
+        <div id="overlayContainer4" class="overlay-container">
+            <span class="close-btn" id="closeOverlay4">&times;</span>
+            <img src="images\Emosign\Emosign 4-1.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup">
+        </div>
+        
+        <div id="overlayContainer5" class="overlay-container">
+            <span class="close-btn" id="closeOverlay5">&times;</span>
+            <img src="images\Emosign\Emosign 5-1.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup">
+        </div>
+        
+        <div id="overlayContainer9" class="overlay-container">
+            <span class="close-btn" id="closeOverlay9">&times;</span>
+            <img src="images\Emosign\Emosign 9-1.svg" alt="Emosign Gameplay Overlay" class="overlay-image-popup">
+        </div>
+    </section>
+    
+
+    <div class="button-container">
+        <!-- <a href="finview.html" class="nav-button">Previous project</a> -->
+        <a href="visual.html" class="nav-button nav-button-left"><i class="fa-solid fa-arrow-left"></i>View all projects</a>
+        <a href="ecoglee.html" class="nav-button nav-button-right">Next project<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="mailto:janhavinamewar@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <h3>Thank you for your interest in my work. Lets connect!</h3>
+        <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
+    </footer>
+
+            <!-- Scroll Up Button -->
+    <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="scripts\script.js"></script>
+    <script>
+        // Function to handle overlay functionality
+        function setupOverlay(overlayBtnId, overlayContainerId, closeOverlayId) {
+            const overlayBtn = document.getElementById(overlayBtnId);
+            const overlayContainer = document.getElementById(overlayContainerId);
+            const closeOverlay = document.getElementById(closeOverlayId);
+
+            // Show the overlay when the button is clicked
+            overlayBtn.addEventListener('click', function() {
+                overlayContainer.classList.add('active');
+            });
+
+            // Close the overlay when the close button is clicked
+            closeOverlay.addEventListener('click', function() {
+                overlayContainer.classList.remove('active');
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlayContainer.addEventListener('click', function(e) {
+                if (e.target === overlayContainer) {
+                    overlayContainer.classList.remove('active');
+                }
+            });
+        }
+
+        // Apply overlay functionality to Emosign 4, 5, and 9
+        setupOverlay('emosign4OverlayBtn', 'overlayContainer4', 'closeOverlay4');
+        setupOverlay('emosign5OverlayBtn', 'overlayContainer5', 'closeOverlay5');
+        setupOverlay('emosign9OverlayBtn', 'overlayContainer9', 'closeOverlay9');
+    </script>
+    
+</body>
+</html>

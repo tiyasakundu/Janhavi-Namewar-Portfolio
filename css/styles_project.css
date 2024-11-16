@@ -197,7 +197,7 @@ body.scrolled nav {
 /* UI UX Button (Make it larger) */
 .skill-btn1 {
     font-family: "Work Sans", sans-serif;
-    padding: 12px 70px; /* Increased padding for a larger button */
+    padding: 12px 75px; /* Increased padding for a larger button */
     background-color: #1b547a;
     color: white;
     border: none;
@@ -217,6 +217,7 @@ body.scrolled nav {
 .skill-btn2 {
     font-family: "Work Sans", sans-serif;
     padding: 12px 20px;
+    padding-left: 50px;
     background-color: #2980b9;
     color: white;
     border: none;
@@ -390,6 +391,7 @@ body.scrolled nav {
 /* General case study button styling */
 .case-study-btn {
     padding: 10px 16px;
+    padding-left: 32px;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -862,7 +864,7 @@ footer .copyright {
         margin-left: 30px;
     }
 
-    .project-info0, .project-info1, .project-info2, .project-info3 {
+    .project-info0, .project-info1, .project-info2, .project-info3, .project-info4 {
         width: 100%; /* Allow text to take more width */
         padding: 40px;
         padding-bottom: 0px;
@@ -967,7 +969,7 @@ footer .copyright {
         height: auto;
     }
 
-    .project-info0, .project-info1, .project-info2, .project-info3 {
+    .project-info0, .project-info1, .project-info2, .project-info3, .project-info4 {
         width: 100%;
         padding: 40px;
         padding-bottom: 0px;
@@ -1035,7 +1037,7 @@ footer .copyright {
     }
 
     .skill-btn2 {
-        padding: 8px 10px;
+        padding: 8px 15px;
         font-size: 0.7rem;
         border-radius: 15px;
     }
@@ -1070,7 +1072,7 @@ footer .copyright {
         font-size: 0.6rem; /* Smaller button text */
     }
 
-    .project-info0, .project-info1, .project-info2, .project-info3 {
+    .project-info0, .project-info1, .project-info2, .project-info3, .project-info4 {
         width: 100%;
         padding: 10px;
         padding-bottom: 0px;

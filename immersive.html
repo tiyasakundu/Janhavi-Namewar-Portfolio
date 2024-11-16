@@ -1,1 +1,75 @@
-<!DOCTYPE html><html lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Immersive Navigation</title><link rel="icon" href="images\Logo.png" type="image/png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet"><link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet"><link rel="stylesheet" href="css\styles_immersive.css"><nav><img src="images/Logo.png" alt="Logo" class="logo"><div class="hamburger" onclick="toggleMenu()">&#9776;</div><div class="cross" onclick="toggleMenu()">&#10005;</div><ul><li><a href="index.html">Home</a><li><a href="project.html" class="active">Projects</a><li><a href="about.html">About me</a><li><a href="#contact">Contact</a></ul></nav><section class="project-bg"><div><img src="images\Immersive\Immersive 1.svg" alt="Immersive 1"></div><div><img src="images\Immersive\Immersive 2.svg" alt="Immersive 2"></div><div><img src="images\Immersive\Immersive 3.svg" alt="Immersive 3"></div><div><img src="images\Immersive\Immersive 4.svg" alt="Immersive 4"></div><div><img src="images\Immersive\Immersive 5.svg" alt="Immersive 5"></div><div><img src="images\Immersive\Immersive 6.svg" alt="Immersive 6"></div><div><img src="images\Immersive\Immersive 7.svg" alt="Immersive 7"></div><div><img src="images\Immersive\Immersive 8.svg" alt="Immersive 8"></div><div class="button-container"><a href="project.html" class="nav-button"><i class="fa-solid fa-arrow-left"></i>View all projects</a> <a href="easygo.html" class="nav-button">Next project<i class="fa-solid fa-arrow-right"></i></a></div><footer id="contact"><div class="social-icons"><a href="mailto:janhavinamewar@gmail.com" target="_blank"><i class="fas fa-envelope"></i> </a><a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank"><i class="fab fa-linkedin"></i> </a><a href="https://www.behance.net/janhavinamewar_10" target="_blank"><i class="fab fa-behance"></i></a></div><h3>Thank you for your interest in my work. Lets connect!</h3><p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</footer><button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button><script src="scripts\script.js"></script></section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersive Navigation</title>
+    <link rel="icon" href="images\Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet">
+    <link rel="stylesheet" href="css\styles_immersive.css">
+</head>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="cross" onclick="toggleMenu()">
+            &#10005; <!-- Cross icon -->
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-bg">
+        <div><img src="images\Immersive\Immersive 1.svg" alt="Immersive 1"></div>
+        <div><img src="images\Immersive\Immersive 2.svg" alt="Immersive 2"></div>
+        <div><img src="images\Immersive\Immersive 3.svg" alt="Immersive 3"></div>
+        <div><img src="images\Immersive\Immersive 4.svg" alt="Immersive 4"></div>
+        <div><img src="images\Immersive\Immersive 5.svg" alt="Immersive 5"></div>
+        <div><img src="images\Immersive\Immersive 6.svg" alt="Immersive 6"></div>
+        <div><img src="images\Immersive\Immersive 7.svg" alt="Immersive 7"></div>
+        <div><img src="images\Immersive\Immersive 8.svg" alt="Immersive 8"></div>
+    </div>
+
+    <div class="button-container">
+        <a href="project.html" class="nav-button nav-button-left"><i class="fa-solid fa-arrow-left"></i>View all projects</a>
+        <a href="easygo.html" class="nav-button nav-button-right">Next project<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+        <!-- Footer Section -->
+        <footer id="contact">
+            <div class="social-icons">
+                <a href="mailto:janhavinamewar@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+            <h3>Thank you for your interest in my work. Lets connect!</h3>
+            <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
+        </footer>
+    
+        <!-- Scroll Up Button -->
+        <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        
+        <script src="scripts\script.js"></script>
+
+</body>
+</html>

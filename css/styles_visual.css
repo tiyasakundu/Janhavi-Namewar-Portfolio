@@ -196,7 +196,8 @@ body.scrolled nav {
 /* UI UX Button (Make it larger) */
 .skill-btn1 {
     font-family: 'Work Sans', sans-serif;
-    padding: 12px 50px; 
+    padding: 12px 60px; 
+    padding-right: 80px;
     background-color: #2980b9;
     color: white;
     border: none;
@@ -232,7 +233,7 @@ body.scrolled nav {
 /* Visual & Creative Skills Button (Make it smaller) */
 .skill-btn2 {
     font-family: 'Work Sans', sans-serif;
-    padding: 12px 35px; 
+    padding: 12px 50px; 
     background-color: #1b547a;
     color: white;
     border: none;
@@ -267,13 +268,14 @@ body.scrolled nav {
 .image-btn1 , .image-btn2 , .image-btn3 , .image-btn4 {
     position: absolute;
     padding: 10px 20px;
+    padding-left: 40px;
     margin-top: 230px;
     left: 250px;
     color: white;
     border: none;
     text-decoration: none;
-    border-radius: 10px; /* Rounded corners */
-    font-size: 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -324,7 +326,7 @@ body.scrolled nav {
 .card {
     position: relative; /* Make card container relatively positioned */
     width: 430px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     overflow: hidden;
     background-color: transparent;
 }
@@ -717,20 +719,8 @@ footer .copyright {
 
     .carousel-img {
         height: 300px; /* Reduce image height */
+        width: 150px;
         margin: 15px; /* Adjust spacing between images */
-    }
-
-    /* Stop the infinite animation for small screens */
-    .carousel-inner {
-        width: 100%;
-        animation: none; /* Disable animation */
-        overflow-x: scroll; /* Enable scrolling on small screens */
-    }
-
-    .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease;
-        width: 100%;
     }
     
 
@@ -837,15 +827,15 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 8px 40px; /* Medium padding */
+        padding: 8px 30px; /* Medium padding */
         font-size: 0.7rem;
-        border-radius: 5px;
+        border-radius: 15px;
     }
 
     .skill-btn2 {
-        padding: 8px 10px;
+        padding: 8px 30px;
         font-size: 0.7rem;
-        border-radius: 5px;
+        border-radius: 15px;
     }
 
     .skill-buttons i{
