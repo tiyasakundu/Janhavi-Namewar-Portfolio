@@ -660,13 +660,13 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 12px 85px; /* Medium padding */
-        font-size: 1.5rem;
+        padding-right: 65px;
+        padding-left: 50px;
+        font-size: 1rem;
     }
 
     .skill-btn2 {
-        padding: 12px 20px;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .skill-buttons i{
@@ -686,10 +686,11 @@ footer .copyright {
     }
 
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
-        padding: 12px 20px;
-        font-size: 1.3rem;
-        left: 63%; /* Center the buttons */
-        bottom: 35%;
+        padding: 12px 16px;
+        padding-left: 32px;
+        font-size: 1rem;
+        left: 65%; /* Center the buttons */
+        bottom: 37%;
     }
 
     .image-btn1 i, .image-btn2 i, .image-btn3 i, .image-btn4 i {
@@ -719,7 +720,7 @@ footer .copyright {
 
     .carousel-img {
         height: 300px; /* Reduce image height */
-        width: 150px;
+        width: 230px;
         margin: 15px; /* Adjust spacing between images */
     }
     
@@ -743,12 +744,10 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 10px 55px; /* Medium padding */
         font-size: 1rem;
     }
 
     .skill-btn2 {
-        padding: 10px 10px;
         font-size: 1rem;
     }
 
@@ -769,15 +768,15 @@ footer .copyright {
     }
 
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
-        padding: 10px 15px;
-        font-size: 0.8rem;
-        left: 63%; /* Center the buttons */
-        bottom: 40%;
+        padding: 8px 15px;
+        padding-left: 30px;
+        font-size: 0.9rem;
+        left: 55%; /* Center the buttons */
     }
 
     /* Image height adjustment */
     .card img {
-        height: 200px; /* Adjust image height for smaller screens */
+        height: 250px; /* Adjust image height for smaller screens */
     }
 
     .card-text {
@@ -796,11 +795,6 @@ footer .copyright {
         display: none;
     }
 
-    .carousel-img {
-        height: 200px; /* Further reduce image height */
-        margin: 10px; /* Reduce margin between images */
-    }
-
     /* Stop the infinite animation for small screens */
     .carousel-inner {
         animation: none; /* Disable animation */
@@ -815,8 +809,6 @@ footer .copyright {
         filter: none; /* No brightness change */
         transition: none; /* Disable transition */
     }
-
-
 }
 
 @media (max-width: 480px) {
@@ -827,13 +819,14 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 8px 30px; /* Medium padding */
+        padding: 8px 25px; /* Medium padding */
+        padding-right: 50px;
         font-size: 0.7rem;
         border-radius: 15px;
     }
 
     .skill-btn2 {
-        padding: 8px 30px;
+        padding: 8px 40px;
         font-size: 0.7rem;
         border-radius: 15px;
     }
@@ -844,8 +837,9 @@ footer .copyright {
     }
 
     .image-btn1, .image-btn2, .image-btn3, .image-btn4 {
-        padding: 9px 13px;
-        font-size: 0.7rem;
+        padding: 6px 10px;
+        padding-left: 20px;
+        font-size: 0.6rem;
         /* border-radius: 5px; */
         left: 55%; /* Center the buttons */
         bottom: 40%;
@@ -870,6 +864,7 @@ footer .copyright {
 
     .carousel-img {
         height: 200px; /* Small image height for mobile */
+        width: 150px;
         margin: 5px; /* Minimal spacing for mobile */
     }
 
@@ -879,6 +874,7 @@ footer .copyright {
     }
 
     .card img {
+        height: 200px;
         cursor:default;
     }
 

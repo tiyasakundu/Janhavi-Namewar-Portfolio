@@ -784,11 +784,6 @@ footer .copyright {
         margin-top: 40px;
     }
 
-    .case-study-btn{
-        font-size: 0.8rem;
-        padding: 8px 12px;
-        border-radius: 15px;
-    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -837,12 +832,11 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 12px 85px; /* Medium padding */
         font-size: 1rem;
     }
 
     .skill-btn2 {
-        padding: 12px 20px;
+        padding-left: 40px;
         font-size: 1rem;
     }
 
@@ -891,8 +885,9 @@ footer .copyright {
     }
 
     .case-study-btn {
-        padding: 12px 28px;
-        font-size: 1em;
+        padding: 12px 16px;
+        padding-left: 32px;
+        font-size: 1rem;
     }
 
     .project-card1 .case-study-btn,
@@ -939,13 +934,11 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 8px 55px; /* Medium padding */
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .skill-btn2 {
-        padding: 8px 10px;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .skill-buttons i{
@@ -988,7 +981,7 @@ footer .copyright {
     }
 
     .case-study-btn {
-        padding: 12px 25px;
+        /* padding: 12px 25px; */
         font-size: 0.9em;
     }
 
@@ -1031,13 +1024,14 @@ footer .copyright {
     }
 
     .skill-btn1 {
-        padding: 8px 50px; /* Medium padding */
+        padding: 8px 58px; /* Medium padding */
         font-size: 0.7rem;
         border-radius: 15px;
     }
 
     .skill-btn2 {
         padding: 8px 15px;
+        padding-left: 30px;
         font-size: 0.7rem;
         border-radius: 15px;
     }
@@ -1069,6 +1063,7 @@ footer .copyright {
 
     .case-study-btn {
         padding: 6px 10px; /* Reduce button padding */
+        padding-left: 20px;
         font-size: 0.6rem; /* Smaller button text */
     }
 
