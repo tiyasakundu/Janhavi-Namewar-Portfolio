@@ -198,10 +198,11 @@ body.scrolled nav {
 .skill-btn1 {
     font-family: "Work Sans", sans-serif;
     padding: 12px 75px; /* Increased padding for a larger button */
-    background-color: #1b547a;
+    background-color: #2980b9;
     color: white;
     border: none;
     border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -218,8 +219,9 @@ body.scrolled nav {
     font-family: "Work Sans", sans-serif;
     padding: 12px 20px;
     padding-left: 50px;
-    background-color: #2980b9;
-    color: white;
+    background-color: #daefff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    color: #2980b9;
     border: none;
     border-radius: 30px;
     font-size: 1rem;

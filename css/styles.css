@@ -628,6 +628,11 @@ body.scrolled nav {
     color: #237660;
 }
 
+.project-item3 h2 {
+    font-size: 1.2rem;
+    color: #088F8F;
+}
+
 
 .project-info a.case-study-btn {
     margin-top: 10px;
@@ -694,6 +699,12 @@ body.scrolled nav {
     bottom: 65px;
     /* left: 7%; */
     background-color: #237660;
+}
+
+.project-item3 .case-study-btn {
+    bottom: 75px;
+    /* left: 7%; */
+    background-color: #088F8F;
 }
 
 .about-me-section {
