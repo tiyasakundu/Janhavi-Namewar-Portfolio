@@ -1254,6 +1254,10 @@ footer .copyright {
         font-size: 1rem;
     }
 
+    .project-item3 h2 {
+        font-size: 1rem;
+    }
+
     .project-item1 h3 {
         font-size: 0.9rem;
     }
@@ -1324,6 +1328,10 @@ footer .copyright {
         font-size: 1rem;
     }
 
+    .project-item3 h2 {
+        font-size: 1rem;
+    }
+
     .project-info h3{
         font-size: 0.9rem;
     }
@@ -1343,9 +1351,16 @@ footer .copyright {
         /* left: 6%; */
     }
 
+    .project-item3 .case-study-btn {
+        bottom: 60px;
+        /* left: 6%; */
+    }
+
     .about-me-section{
         padding: 0 300px;
+        padding-right: 270px;
     }
+    
 }
 
 
