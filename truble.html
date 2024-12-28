@@ -51,31 +51,42 @@
         <div><img src="images/Truble/truble 10.svg" alt="Truble-10"></div>
         <div><img src="images/Truble/truble 11.svg" alt="Truble-11"></div>
         <div><img src="images/Truble/truble 12.svg" alt="Truble-12"></div>
-        <div><img src="images/Truble/truble 13.svg" alt="Truble-13"></div>
+
+        <div class="truble-13-container">
+            <img src="images/Truble/truble 13.svg" alt="Truble-13" class="truble-13-image">
+            <!-- Button to trigger the overlay for Truble 13 -->
+            <button class="overlay-trigger-btn truble-13-btn" id="truble13OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- The overlay image container for Truble 13 (hidden by default) -->
+        <div id="overlayContainer13" class="overlay-container">
+            <span class="close-btn" id="closeOverlay13">&times;</span>
+            <img src="images/Truble/truble 13-1.svg" alt="Truble-13-Overlay" class="overlay-image-popup">
+        </div>
+
         <div><img src="images/Truble/truble 14.svg" alt="Truble-14"></div>
         <div><img src="images/Truble/truble 15.svg" alt="Truble-15"></div>
-        <div><img src="images/Truble/truble 16.svg" alt="Truble-16"></div>
+
+        <!-- Truble 16 container with button -->
+        <div class="truble-16-container">
+            <img src="images/Truble/truble 16.svg" alt="Truble-16" class="truble-16-image">
+            <!-- Button to trigger the overlay for Truble 16 -->
+            <button class="overlay-trigger-btn truble-16-btn" id="truble16OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- The overlay image container for Truble 16 (hidden by default) -->
+        <div id="overlayContainer16" class="overlay-container">
+            <span class="close-btn" id="closeOverlay16">&times;</span>
+            <img src="images/Truble/truble 16-1.svg" alt="Truble-16-Overlay" class="overlay-image-popup">
+        </div>
+        
         <div><img src="images/Truble/truble 17.svg" alt="Truble-17"></div>
-
-        <!-- Truble 18 container with button -->
-        <div class="truble-18-container">
-            <img src="images/Truble/truble 18.svg" alt="Truble-18" class="truble-18-image">
-            <!-- Button to trigger the overlay for Truble 18 -->
-            <button class="overlay-trigger-btn truble-18-btn" id="truble18OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-
-        <!-- The overlay image container for Truble 18 (hidden by default) -->
-        <div id="overlayContainer18" class="overlay-container">
-            <span class="close-btn" id="closeOverlay18">&times;</span>
-            <img src="images/Truble/truble 18-1.svg" alt="Truble-18-Overlay" class="overlay-image-popup">
-        </div>
-
-        <div><img src="images/Truble/truble 19.svg" alt="Truble-19"></div>
+        <div><img src="images/Truble/truble 18.svg" alt="Truble-18"></div>
     </section>
     
 
     <div class="button-container">
-        <a href="easygo.html" class="nav-button nav-button-left"><i class="fa-solid fa-arrow-left"></i>Previous project</a>
+        <a href="umang.html" class="nav-button nav-button-left"><i class="fa-solid fa-arrow-left"></i>Previous project</a>
         <a href="project.html" class="nav-button">View all projects</a>
         <a href="mmi.html" class="nav-button nav-button-right">Next project<i class="fa-solid fa-arrow-right"></i></a>
     </div>
@@ -130,7 +141,7 @@
         }
 
         // Apply the overlay function for all buttons and containers
-        handleOverlay('truble18OverlayBtn', 'overlayContainer18', 'closeOverlay18');
+        handleOverlay('truble16OverlayBtn', 'overlayContainer16', 'closeOverlay16');
     </script>
     
 </body>

@@ -213,32 +213,30 @@ body.scrolled nav {
 .project-bg div:nth-child(12) img,
 .project-bg div:nth-child(13) img,
 .project-bg div:nth-child(14) img,
-.project-bg div:nth-child(15) img, 
 .project-bg div:nth-child(16) img,
 .project-bg div:nth-child(17) img,
 .project-bg div:nth-child(18) img,
-.project-bg div:nth-child(19) img {
+.project-bg div:nth-child(21) img {
     width: 83% !important; /* Smaller width for specific images */
 }
 
-.project-bg div:nth-child(4),
 .project-bg div:nth-child(6),
 .project-bg div:nth-child(11) {
     background-color: #329D9C;
 }
 
-.project-bg div:nth-child(19) {
+.project-bg div:nth-child(18) {
     background-color: #EAEAEA;
 }
 
 /* Button over the Truble 5 image */
-.truble-18-container {
+.truble-16-container {
     position: relative; /* Ensure the button is positioned relative to the image container */
 }
 
-.truble-18-btn {
+.truble-16-btn {
     position: absolute;
-    bottom: 80px;
+    bottom: 40px;
     align-self: center;
     padding: 10px 30px;
     padding-left: 50px;
@@ -252,7 +250,7 @@ body.scrolled nav {
     transition: transform 0.3s ease;
 }
 
-.truble-18-btn i {
+.truble-16-btn i {
     margin-left: 10px; /* Space between text and icon */
     opacity: 0; /* Initially hidden */
     transform: translateX(0); /* Initially shifted left */
@@ -260,13 +258,54 @@ body.scrolled nav {
 }
 
 /* Button hover effect */
-.truble-18-btn:hover {
+.truble-16-btn:hover {
     background-color: #66B4B3;
     color:white;
     transform: scale(1.1); 
 }
 
-.truble-18-btn:hover i {
+.truble-16-btn:hover i {
+    opacity: 1; /* Make the icon visible */
+    transform: translateX(10px); /* Slide it to the right of the text */
+}
+
+/* Button over the Truble 5 image */
+.truble-13-container {
+    position: relative; /* Ensure the button is positioned relative to the image container */
+}
+
+.truble-13-btn {
+    position: absolute;
+    top: 280px;
+    left: 200px;
+    align-self: center;
+    padding: 10px 30px;
+    padding-left: 50px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #66B4B3;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 10; /* Ensure the button is above the image */
+    transition: transform 0.3s ease;
+}
+
+.truble-13-btn i {
+    margin-left: 10px; /* Space between text and icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0); /* Initially shifted left */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.truble-13-btn:hover {
+    background-color: #66B4B3;
+    color:white;
+    transform: scale(1.1); 
+}
+
+.truble-13-btn:hover i {
     opacity: 1; /* Make the icon visible */
     transform: translateX(10px); /* Slide it to the right of the text */
 }
@@ -511,16 +550,13 @@ footer .copyright {
         font-size: 15px;
     }   
 
-    .truble-5-btn {
-        bottom: 60px;
+    .truble-16-btn {
+        bottom: 30px;
     }
 
-    .truble-8-btn {
-        bottom:21%;
-    }
-
-    .truble-9-btn {
-        bottom:53%;
+    .truble-13-btn {
+        top: 240px;
+        left: 170px;
     }
 }
 
@@ -546,11 +582,10 @@ footer .copyright {
     .project-bg div:nth-child(12) img,
     .project-bg div:nth-child(13) img,
     .project-bg div:nth-child(14) img,
-    .project-bg div:nth-child(15) img, 
     .project-bg div:nth-child(16) img,
     .project-bg div:nth-child(17) img,
     .project-bg div:nth-child(18) img,
-    .project-bg div:nth-child(19) img {
+    .project-bg div:nth-child(21) img {
         width: 100% !important; 
     }
 
@@ -566,12 +601,27 @@ footer .copyright {
         margin-top: 0;
     }
 
-    .truble-18-btn {
+    .truble-16-btn {
+        padding: 10px 20px;
+        padding-left: 20px;
         font-size: 0.9rem;
-        bottom: 50px;
+        bottom: 15px;
     }
 
-    .truble-18-btn i {
+    .truble-16-btn i {
+        margin-left: 20px; /* Space between text and icon */
+        opacity: 1; /* Initially hidden */
+    }
+    
+    .truble-13-btn {
+        padding: 10px 20px;
+        padding-left: 20px;
+        font-size: 0.9rem;
+        top: 240px;
+        left: 60px;
+    }
+
+    .truble-13-btn i {
         margin-left: 20px; /* Space between text and icon */
         opacity: 1; /* Initially hidden */
     }
@@ -614,14 +664,26 @@ footer .copyright {
         opacity: 1;
     }
 
-    .truble-18-btn {
-        padding: 4px 15px;
+    .truble-16-btn {
+        padding: 4px 8px;
         border-radius: 15px;
-        font-size: 0.6rem;
-        bottom: 10px;
+        font-size: 0.5rem;
+        bottom: 8px;
     }
 
-    .truble-18-btn i.fa-arrow-right {
+    .truble-16-btn i.fa-arrow-right {
+        margin-left: 8px;
+    }
+    
+    .truble-13-btn {
+        padding: 4px 8px;
+        border-radius: 15px;
+        font-size: 0.5rem;
+        top: 90px;
+        left: 22px;
+    }
+
+    .truble-13-btn i.fa-arrow-right {
         margin-left: 8px;
     }
 
@@ -662,17 +724,30 @@ footer .copyright {
         font-size: 0.6rem;
         text-align: center;
     }
-    .truble-18-btn {
+    .truble-16-btn {
         padding: 4px 8px;
         padding-left: 19px;
         border-radius: 15px;
         font-size: 0.7rem;
-        bottom: 30px;
+        bottom: 10px;
+    }
+    .truble-13-btn {
+        padding: 4px 8px;
+        padding-left: 19px;
+        border-radius: 15px;
+        font-size: 0.7rem;
+        top: 120px;
+        left: 30px;
     }
 }
 
 @media (width:350px){
-    .truble-18-btn {
+    .truble-16-btn {
+        padding: 6px 10px;
+        padding-left: 12px;
+        font-size: 0.3rem;
+    }
+    .truble-13-btn {
         padding: 6px 10px;
         padding-left: 12px;
         font-size: 0.3rem;

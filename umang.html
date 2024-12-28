@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umang</title>
+    <link rel="icon" href="images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_umang.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="cross" onclick="toggleMenu()">
+            &#10005; <!-- Cross icon -->
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-bg">    
+        
+        <div class="image-stack">
+            <img src="images/Umang/umang 1.svg" alt="Umang-1" class="base-image">
+            <img src="images/Umang/umang 1-1.svg" alt="Umang-1-1" class="overlay-image">
+        </div>
+
+        <div><img src="images/Umang/umang 1 hidden.svg" alt="Umang hidden" class="hidden-image"></div>
+    
+        <div><img src="images/Umang/umang 2.svg" alt="Umang-2"></div>
+        <div><img src="images/Umang/umang 3.svg" alt="Umang-3"></div>
+        <div><img src="images/Umang/umang 4.svg" alt="Umang-4"></div>
+        <div><img src="images/Umang/umang 5.svg" alt="Umang-5"></div>
+        <div><img src="images/Umang/umang 6.svg" alt="Umang-6"></div>
+        <div><img src="images/Umang/umang 7.svg" alt="Umang-7"></div>
+        <div><img src="images/Umang/umang 8.svg" alt="Umang-8"></div>
+        <div><img src="images/Umang/umang 9.svg" alt="Umang-9"></div>
+
+        <div class="umang-10-container">
+            <img src="images/Umang/umang 10.svg" alt="Umang-10" class="umang-10-image">
+            <button class="overlay-trigger-btn umang-10-btn" id="umang10OverlayBtn">View<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div id="overlayContainer10" class="overlay-container">
+            <span class="close-btn" id="closeOverlay10">&times;</span>
+            <img src="images/Umang/umang 10-1.svg" alt="Umang-10-Overlay" class="overlay-image-popup">
+        </div>
+
+        <div><img src="images/Umang/umang 11.svg" alt="Umang-11"></div>
+        <div><img src="images/Umang/umang 12.svg" alt="Umang-12"></div>
+        <div><img src="images/Umang/umang 13.svg" alt="Umang-13"></div>
+        <div><img src="images/Umang/umang 14.svg" alt="Umang-14"></div>
+        <div><img src="images/Umang/umang 15.svg" alt="Umang-15"></div>
+        <div><img src="images/Umang/umang 17.svg" alt="Umang-17"></div>
+        <div><img src="images/Umang/umang 18.svg" alt="Umang-18"></div>
+        <div><img src="images/Umang/umang 19.svg" alt="Umang-19"></div>
+        <div><img src="images/Umang/umang 20.svg" alt="Umang-20"></div>
+        <div><img src="images/Umang/umang 21.svg" alt="Umang-21"></div>
+        <div><img src="images/Umang/umang 22.svg" alt="Umang-22"></div>
+    </section>
+    
+
+    <div class="button-container">
+        <a href="easygo.html" class="nav-button nav-button-left"><i class="fa-solid fa-arrow-left"></i>Previous project</a>
+        <a href="project.html" class="nav-button">View all projects</a>
+        <a href="truble.html" class="nav-button nav-button-right">Next project<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="mailto:janhavinamewar@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janhavi-namewar-79866121b" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.behance.net/janhavinamewar_10" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <h3>Thank you for your interest in my work. Lets connect!</h3>
+        <p>© 2024 Portfolio | Janhavi Namewar | All rights reserved.</p>
+    </footer>
+
+            <!-- Scroll Up Button -->
+    <button id="scrollUpBtn" class="scroll-up-btn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="scripts/script.js"></script>
+    <script>
+        // Function to handle overlay actions
+        function handleOverlay(buttonId, overlayContainerId, closeBtnId) {
+            const overlayBtn = document.getElementById(buttonId);
+            const overlayContainer = document.getElementById(overlayContainerId);
+            const closeOverlay = document.getElementById(closeBtnId);
+
+            // Show the overlay when the button is clicked
+            overlayBtn.addEventListener('click', function() {
+                overlayContainer.classList.add('active');
+            });
+
+            // Close the overlay when the close button is clicked
+            closeOverlay.addEventListener('click', function() {
+                overlayContainer.classList.remove('active');
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlayContainer.addEventListener('click', function(e) {
+                if (e.target === overlayContainer) {
+                    overlayContainer.classList.remove('active');
+                }
+            });
+        }
+
+        // Apply the overlay function for all buttons and containers
+        handleOverlay('umang10OverlayBtn', 'overlayContainer10', 'closeOverlay10');
+    </script>
+    
+</body>
+</html>
